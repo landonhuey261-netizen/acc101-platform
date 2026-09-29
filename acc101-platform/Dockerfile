@@ -16,7 +16,5 @@ RUN node scripts/make-icons.js
 EXPOSE 3000
 ENV PORT=3000
 
-# Persist the SQLite database across restarts
-VOLUME /app/data
 
 CMD ["node", "server.js"]
