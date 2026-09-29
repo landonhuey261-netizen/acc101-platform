@@ -1,0 +1,78 @@
+'use strict';
+
+const { escapeHtml, escAttr, layout, progressBar, progressRing } = require('./helpers');
+
+/**
+ * Home dashboard (GET /): lists the user's ENROLLED courses. Even with a
+ * single enrollment this list IS the home page (no auto-redirect).
+ * Each entry: progress ring, grade, "Continue where you left off" button
+ * pointing at the first incomplete module.
+ *
+ * opts: { showOnboarding } — true for brand-new accounts with no progress
+ * yet; renders the "How this works" card. Each enrolled course carries
+ * .grade (from db.computeGrades) and .continueModule ({num,slug,title}|null).
+ */
+function homePage(user, enrolled, opts) {
+  const showOnboarding = !!(opts && opts.showOnboarding);
+
+  const onboarding =
+    '<section class="card onboard" aria-labelledby="howItWorks">\n' +
+    '  <h2 id="howItWorks">How this works</h2>\n' +
+    '  <ol class="onboard-steps">\n' +
+    '    <li><strong>Learn.</strong> Read the lecture, key terms, and watch the video in each module.</li>\n' +
+    '    <li><strong>Practice.</strong> Work the assignment problems, check the solutions, and tick each problem you solved on your own.</li>\n' +
+    '    <li><strong>Check your understanding.</strong> Take the module quiz \u2014 instant feedback, and your best score saves automatically.</li>\n' +
+    '    <li><strong>Watch your grade grow.</strong> Everything saves automatically as you go. Your course grade is ' +
+    'Assignments 25%, Quizzes 25%, Midterm 20%, Final 30%. Letter grades: A \u2265 90, B \u2265 80, C \u2265 70, D \u2265 60, F &lt; 60.</li>\n' +
+    '  </ol>\n' +
+    '</section>\n';
+
+  const cards = enrolled.map((c) => {
+    const grade = c.grade || { total: 0, letter: 'F' };
+    const cm = c.continueModule;
+    const continueBlock = cm
+      ? '<p class="continue-row"><a class="btn btn-primary" href="/c/' + escAttr(c.slug) +
+        '/modules/' + escAttr(cm.slug) + '">Continue: Module ' + cm.num + ' \u2014 ' +
+        escapeHtml(cm.title) + '</a></p>\n'
+      : '<p class="continue-row"><span class="continue-note">You\u2019ve finished all 12 modules \u2014 nice work.</span> ' +
+        '<a class="btn btn-gold" href="/c/' + escAttr(c.slug) + '/gradebook">See my grades</a></p>\n';
+    return (
+      '<article class="card course-card">\n' +
+      '  <div class="course-card-top">\n' +
+      '    <div>\n' +
+      '      <h2><a href="/c/' + escAttr(c.slug) + '/dashboard">' + escapeHtml(c.title) + '</a></h2>\n' +
+      (c.description ? '      <p>' + escapeHtml(c.description) + '</p>\n' : '') +
+      '      <p class="grade-line"><span class="grade-badge grade-' + escapeHtml(grade.letter) + '">' +
+      escapeHtml(grade.letter) + '</span> <strong>' + escapeHtml(String(grade.total)) + '%</strong> course grade</p>\n' +
+      '    </div>\n' +
+      '    ' + progressRing(grade.total) + '\n' +
+      '  </div>\n' +
+      '  ' + progressBar(grade.total) + '\n' +
+      continueBlock +
+      '</article>'
+    );
+  }).join('\n');
+
+  const emptyState = enrolled.length === 0
+    ? '<div class="callout"><p>You are not enrolled in any courses yet. New courses will appear here when they launch.</p></div>\n'
+    : '';
+
+  return layout({
+    title: 'My courses',
+    user,
+    enrolled,
+    navActive: 'dashboard',
+    body:
+      '<section class="page-head">\n' +
+      '  <h1>My courses</h1>\n' +
+      '  <p class="section-sub">Welcome back, ' + escapeHtml(user.username) + '. Pick a course to continue learning.</p>\n' +
+      '</section>\n' +
+      (showOnboarding ? onboarding : '') +
+      emptyState +
+      '<section id="courses" aria-label="My courses">\n' +
+      '<div class="course-list">\n' + cards + '\n</div>\n' +
+      '</section>',
+  });
+}
+
+module.exports = { homePage };
