@@ -1,4 +1,7 @@
-FROM node:24-alpine
+# Base image comes from Google's mirror of Docker Hub: Railway's builds
+# were failing on auth.docker.io 504 timeouts (2026-10-09). Same official
+# node:24-alpine image, different download door.
+FROM mirror.gcr.io/library/node:24-alpine
 
 WORKDIR /app
 
