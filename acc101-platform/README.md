@@ -1,4 +1,4 @@
-# ACC 101 Course Platform
+# College Without College
 
 A full-stack, multi-course, self-paced college-style course web app. The flagship course is
 **ACC 101: Principles of Financial Accounting**, and the platform is designed from day one to

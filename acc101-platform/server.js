@@ -123,7 +123,7 @@ app.use((err, req, res, next) => {
 
 const PORT = Number(process.env.PORT) || 3000;
 app.listen(PORT, () => {
-  console.log('[acc101] ACC 101 Course Platform listening on port ' + PORT);
+  console.log('College Without College listening on port ' + PORT);
 });
 
 module.exports = app;

@@ -16,5 +16,8 @@ RUN node scripts/make-icons.js
 EXPOSE 3000
 ENV PORT=3000
 
+# NOTE: Railway does not allow VOLUME in Dockerfiles. Add a persistent
+# volume mounted at /app/data via the Railway dashboard instead —
+# that is where the SQLite database (data/app.db) lives.
 
 CMD ["node", "server.js"]

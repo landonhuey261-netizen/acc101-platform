@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * db.js — persistence layer for the ACC 101 Course Platform (multi-course).
+ * db.js — persistence layer for the College Without College (multi-course).
  *
  * Uses better-sqlite3. Database lives at
  * ./data/app.db (./data is created automatically if missing).
@@ -127,6 +127,13 @@ db.exec(`
     updated_at TEXT NOT NULL,
     PRIMARY KEY (user_id, course_id, lab_id)
   );
+  CREATE TABLE IF NOT EXISTS guide_views (
+    user_id INTEGER NOT NULL,
+    course_id INTEGER NOT NULL,
+    guide_id TEXT NOT NULL,
+    viewed_at TEXT NOT NULL,
+    PRIMARY KEY (user_id, course_id, guide_id)
+  );
   CREATE TABLE IF NOT EXISTS sessions (
     sid TEXT PRIMARY KEY,
     sess TEXT NOT NULL,
@@ -158,23 +165,32 @@ const ACC101_DEFAULT_DESC =
   'merchandising, inventory, receivables, long-term assets, liabilities, equity, cash flows, ' +
   'and financial statement analysis.';
 
-// Seed the acc101 course row. Prefer title/description from
-// content/courses/acc101/course.js when it exists; otherwise use defaults.
-(function seedAcc101() {
-  let title = ACC101_DEFAULT_TITLE;
-  let description = ACC101_DEFAULT_DESC;
-  try {
-    // eslint-disable-next-line global-require
-    const meta = require('./content/courses/acc101/course.js');
-    if (meta && typeof meta.title === 'string' && meta.title) title = meta.title;
-    if (meta && typeof meta.description === 'string' && meta.description) description = meta.description;
-  } catch (err) {
-    // Content is moved into place before integration testing; defaults apply until then.
-  }
-  db.prepare(
+// Seed one courses row per discovered course directory (content/courses/<slug>),
+// preferring title/description from each course's content metadata. Runs with
+// ON CONFLICT DO NOTHING so existing rows are never overwritten. Falls back to
+// seeding the ACC 101 defaults when content discovery fails, so the server's
+// requireCourse('acc101') startup check still reports missing content clearly.
+(function seedCourses() {
+  const insert = db.prepare(
     'INSERT INTO courses (slug, title, description, created_at) VALUES (?, ?, ?, ?)' +
     ' ON CONFLICT(slug) DO NOTHING'
-  ).run('acc101', title, description, nowIso());
+  );
+  let seeded = false;
+  try {
+    // eslint-disable-next-line global-require
+    const courses = require('./content/courses.js');
+    for (const course of courses.listCourses()) {
+      if (course && course.slug && course.title) {
+        insert.run(course.slug, course.title, course.description || '', nowIso());
+        seeded = true;
+      }
+    }
+  } catch (err) {
+    // Discovery failed; fall through to the ACC 101 default seed below.
+  }
+  if (!seeded) {
+    insert.run('acc101', ACC101_DEFAULT_TITLE, ACC101_DEFAULT_DESC, nowIso());
+  }
 })();
 
 const stmtCourseBySlug = db.prepare('SELECT * FROM courses WHERE slug = ?');
@@ -349,6 +365,18 @@ function getAssignmentChecks(userId, courseId) {
 function getModuleDone(userId, courseId) {
   return db.prepare(
     'SELECT module, done FROM module_done WHERE user_id = ? AND course_id = ?'
+  ).all(userId, courseId);
+}
+
+function recordGuideView(userId, courseId, guideId) {
+  db.prepare(
+    'INSERT OR IGNORE INTO guide_views (user_id, course_id, guide_id, viewed_at) VALUES (?, ?, ?, ?)'
+  ).run(userId, courseId, guideId, nowIso());
+}
+
+function getGuideViews(userId, courseId) {
+  return db.prepare(
+    'SELECT guide_id FROM guide_views WHERE user_id = ? AND course_id = ?'
   ).all(userId, courseId);
 }
 
@@ -715,6 +743,8 @@ module.exports = {
   getAssignmentChecks,
   getModuleDone,
   getLabScores,
+  recordGuideView,
+  getGuideViews,
   computeGrade,
   computeGrades,
   hasAnyProgress,
