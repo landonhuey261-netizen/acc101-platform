@@ -1,6 +1,6 @@
 'use strict';
 
-const { escapeHtml, escAttr, stripTags, layout, tutorBtn, assignmentPrompt, courseSidebar } = require('./helpers');
+const { escapeHtml, escAttr, stripTags, layout, tutorBtn, assignmentPrompt, courseSidebar, readAloudControls } = require('./helpers');
 
 function youtubeEmbedOk(url) {
   return typeof url === 'string' && /^https:\/\/www\.youtube\.com\/embed\//.test(url);
@@ -159,7 +159,8 @@ function modulePage(mod, opts) {
       '  <section id="learn" class="module-section">\n' +
       '    ' + stepHead(1, 'Learn') + '\n' +
       '    <p class="section-sub">Read through the lecture below. Worked examples show each idea in action.</p>\n' +
-      sections + '\n  </section>\n' +
+      '    ' + readAloudControls('learnReading') +
+      '    <div id="learnReading" data-ra-reading>\n' + sections + '\n    </div>\n  </section>\n' +
 
       '  <section id="key-terms" class="module-section">\n' +
       '    ' + stepHead(2, 'Key terms to know') + '\n' +

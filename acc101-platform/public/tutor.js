@@ -1,6 +1,6 @@
 'use strict';
 
-/* ACC 101 Course Platform — Course Tutor chat interface.
+/* College Without College — Course Tutor chat interface.
  * - loads conversation history from GET /api/c/:course/tutor/history
  * - sends messages to POST /api/c/:course/tutor/chat (Enter to send)
  * - picks up pre-attached question context left in sessionStorage by

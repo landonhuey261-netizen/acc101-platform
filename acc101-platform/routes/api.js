@@ -142,7 +142,12 @@ courseApi.post('/exams/:which', (req, res, next) => {
     const percent = total > 0 ? round1((score / total) * 100) : 0;
     const saved = db.saveExamScore(req.session.userId, req.courseId, which, percent);
     delete req.session[startKey]; // one graded submission per exam page load
-    res.json({ score, total, percent, best: saved.best, results });
+    const passPercent = exam.passPercent != null ? Number(exam.passPercent) : null;
+    res.json({
+      score, total, percent, best: saved.best, results,
+      passPercent,
+      verdict: passPercent != null ? (percent >= passPercent ? 'PASS' : 'BELOW STANDARD') : null,
+    });
   } catch (err) {
     next(err);
   }
@@ -230,7 +235,7 @@ function tutorRateLimited(userId) {
  * timestamp for this course's midterm or final (exam in progress).
  */
 function examInProgress(req) {
-  for (const which of ['midterm', 'final']) {
+  for (const which of Object.keys(req.course.exams || {})) {
     const key = 'examStart_' + req.course.slug + '_' + which;
     const startedAt = req.session[key];
     if (!startedAt) continue;

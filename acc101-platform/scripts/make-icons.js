@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * Generates the ACC 101 app icons with zero dependencies.
+ * Generates the College Without College app icons with zero dependencies.
  * Pure-Node PNG writer (node:zlib + node:fs only):
  *   - navy rounded-square background (#14365e)
  *   - gold border (#c9a227)
- *   - gold block-letter "A" built from rectangles
+ *   - gold block letters "CWC" built from rectangles
  *
  * Outputs:
  *   public/icons/icon-192.png
@@ -73,20 +73,40 @@ function inRoundedRect(x, y, size, radius, inset) {
   return false;
 }
 
-/** Block-letter "A" from rectangles: two legs, a top bar, and a crossbar. */
+/** Block letters "CWC" from a 7-row pixel grid: each filled cell becomes a rect. */
+const GLYPHS = {
+  C: ['.XXX', 'X...', 'X...', 'X...', 'X...', 'X...', '.XXX'],
+  W: ['X...X', 'X...X', 'X.X.X', 'X.X.X', 'X.X.X', 'X.X.X', '.X.X.'],
+};
 function letterRects(size) {
-  const w = size * 0.42;          // letter width
-  const h = size * 0.50;          // letter height
-  const t = size * 0.075;         // bar thickness
-  const cx = size / 2;
-  const top = (size - h) / 2;
-  const left = cx - w / 2;
-  return [
-    { x0: left, y0: top, x1: left + t, y1: top + h },                 // left leg
-    { x0: left + w - t, y0: top, x1: left + w, y1: top + h },        // right leg
-    { x0: left, y0: top, x1: left + w, y1: top + t },                // top bar (apex)
-    { x0: left, y0: top + h * 0.55, x1: left + w, y1: top + h * 0.55 + t }, // crossbar
-  ];
+  const word = ['C', 'W', 'C'];
+  const gap = 1; // empty grid columns between letters
+  const rows = 7;
+  const cols = word.reduce((n, ch) => n + GLYPHS[ch][0].length, 0) + gap * (word.length - 1);
+  const cell = Math.min((size * 0.74) / cols, (size * 0.56) / rows);
+  const blockW = cell * cols;
+  const blockH = cell * rows;
+  const x0 = (size - blockW) / 2;
+  const y0 = (size - blockH) / 2;
+  const rects = [];
+  let colOffset = 0;
+  for (const ch of word) {
+    const glyph = GLYPHS[ch];
+    for (let r = 0; r < rows; r += 1) {
+      for (let c = 0; c < glyph[r].length; c += 1) {
+        if (glyph[r][c] === 'X') {
+          rects.push({
+            x0: x0 + (colOffset + c) * cell,
+            y0: y0 + r * cell,
+            x1: x0 + (colOffset + c + 1) * cell,
+            y1: y0 + (r + 1) * cell,
+          });
+        }
+      }
+    }
+    colOffset += glyph[0].length + gap;
+  }
+  return rects;
 }
 
 function inRect(x, y, r) {

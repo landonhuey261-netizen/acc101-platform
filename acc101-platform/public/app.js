@@ -1,6 +1,6 @@
 'use strict';
 
-/* ACC 101 Course Platform — client interactivity.
+/* College Without College — client interactivity.
  * - solution toggles, assignment self-check save
  * - quiz / exam submit + instant feedback + tutor prompts
  * - exam countdown timer with auto-submit
@@ -199,6 +199,14 @@
       ' (' + esc(data.percent) + '%)' +
       (data.best != null ? ' \u00b7 Best so far: <strong>' + esc(data.best) + '%</strong>' : '') +
       '</div>';
+
+    if (data.verdict) {
+      var passedVerdict = data.verdict === 'PASS';
+      html += '<div class="quiz-score-banner ' + (passedVerdict ? 'is-correct' : 'is-wrong') + '" role="status">' +
+        'Verdict: <strong>' + esc(data.verdict) + '</strong>' +
+        (data.passPercent != null ? ' \u2014 the passing standard for this exam is ' + esc(data.passPercent) + '%' : '') +
+        '</div>';
+    }
 
     var questions = opts.questions; // array of {question, choices:[text], givenIdx}
     data.results.forEach(function (res, i) {
@@ -463,3 +471,217 @@
     });
   }
 })();
+
+/* READ-ALOUD-START */
+/* Read-aloud: sentence-by-sentence speechSynthesis with highlighting.
+ * Sentences are spoken as separate short utterances (avoids the long-utterance
+ * stalls and the Chrome pause bug); pause is cancel-and-bookmark, resume
+ * re-speaks the current sentence. Highlighting is sentence-level on purpose:
+ * word-boundary events are not reliable across browsers. */
+(function () {
+  function raSplitSentences(text) {
+    var src = String(text == null ? '' : text);
+    if (!src) return [];
+    // Protect decimal points (118.5 psig, 3.5 in. w.c.) so they are not
+    // mistaken for sentence ends; restored before the chunks are returned.
+    var DOT = '\u0001';
+    var work = src.replace(/(\d)\.(\d)/g, '$1' + DOT + '$2');
+    var chunks = [];
+    var re = /[^.!?…]+(?:[.!?…]+["'”’)\]]*)?\s*/g;
+    var m;
+    while ((m = re.exec(work)) !== null) {
+      if (m[0]) chunks.push(m[0].split(DOT).join('.'));
+      if (re.lastIndex === m.index) re.lastIndex += 1;
+    }
+    if (!chunks.length) return src.trim() ? [src] : [];
+    // The fragments must tile the source exactly; if not, keep the node whole
+    // so no text is ever lost, duplicated, or reordered on the page.
+    if (chunks.join('') !== src) return [src];
+    return chunks;
+  }
+
+  var RA_SKIP_TAGS = {
+    SCRIPT: 1, STYLE: 1, TEXTAREA: 1, INPUT: 1, SELECT: 1, BUTTON: 1, IFRAME: 1, NOSCRIPT: 1,
+  };
+
+  function raCollectSpans(root) {
+    return Array.prototype.slice.call(root.querySelectorAll('.ra-sentence')).filter(function (s) {
+      return s.textContent && s.textContent.trim();
+    });
+  }
+
+  function raChunkReading(root) {
+    var existing = raCollectSpans(root);
+    if (existing.length) return existing;
+    if (!document.createTreeWalker || !window.NodeFilter) return [];
+    var walker = document.createTreeWalker(root, window.NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        if (!node.data || !node.data.trim()) return window.NodeFilter.FILTER_REJECT;
+        var p = node.parentNode;
+        while (p && p !== root) {
+          if (RA_SKIP_TAGS[p.nodeName]) return window.NodeFilter.FILTER_REJECT;
+          p = p.parentNode;
+        }
+        return window.NodeFilter.FILTER_ACCEPT;
+      },
+    });
+    var nodes = [];
+    var n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    nodes.forEach(function (node) {
+      var chunks = raSplitSentences(node.data);
+      if (!chunks.length || !node.parentNode) return;
+      var frag = document.createDocumentFragment();
+      chunks.forEach(function (chunk) {
+        if (!chunk.trim()) {
+          frag.appendChild(document.createTextNode(chunk));
+          return;
+        }
+        var span = document.createElement('span');
+        span.className = 'ra-sentence';
+        span.textContent = chunk;
+        frag.appendChild(span);
+      });
+      node.parentNode.replaceChild(frag, node);
+    });
+    if (root.setAttribute) root.setAttribute('data-ra-chunked', '1');
+    return raCollectSpans(root);
+  }
+
+  function raInitPlayer(controlsEl) {
+    var targetId = controlsEl.getAttribute('data-ra-controls');
+    var root = targetId ? document.getElementById(targetId) : null;
+    if (!root) return;
+    var note = controlsEl.querySelector('.ra-note');
+    var speedSel = controlsEl.querySelector('[data-ra-speed]');
+    var buttons = {};
+    Array.prototype.forEach.call(controlsEl.querySelectorAll('[data-ra-action]'), function (b) {
+      buttons[b.getAttribute('data-ra-action')] = b;
+    });
+    var supported = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+    if (!supported) {
+      Object.keys(buttons).forEach(function (k) { buttons[k].disabled = true; });
+      if (speedSel) speedSel.disabled = true;
+      if (note) note.textContent = 'Read-aloud is not available in this browser.';
+      return;
+    }
+    var synth = window.speechSynthesis;
+    var spans = [];
+    var idx = -1;
+    var state = 'idle'; // idle | playing | paused
+    var rate = 1;
+    var token = 0; // invalidates stale utterance callbacks after cancel()
+
+    function ensureSpans() {
+      if (!spans.length) spans = raChunkReading(root);
+      return spans;
+    }
+    function clearHi() {
+      spans.forEach(function (s) { s.classList.remove('ra-active'); });
+    }
+    function highlight() {
+      clearHi();
+      var s = spans[idx];
+      if (s) {
+        s.classList.add('ra-active');
+        if (typeof s.scrollIntoView === 'function') {
+          try { s.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (e) { s.scrollIntoView(); }
+        }
+      }
+    }
+    function update() {
+      if (buttons.play) buttons.play.disabled = state === 'playing';
+      if (buttons.pause) buttons.pause.disabled = state !== 'playing';
+      if (buttons.resume) buttons.resume.disabled = state !== 'paused';
+      if (buttons.stop) buttons.stop.disabled = state === 'idle';
+      if (buttons.prev) buttons.prev.disabled = !(idx > 0);
+      if (buttons.next) buttons.next.disabled = !(spans.length && idx < spans.length - 1);
+    }
+    function halt() {
+      token += 1;
+      try { synth.cancel(); } catch (e) { /* ignore */ }
+    }
+    function stopAll() {
+      halt();
+      state = 'idle';
+      idx = -1;
+      clearHi();
+      update();
+    }
+    var api = { stop: stopAll };
+    function speak(i) {
+      var list = ensureSpans();
+      if (!list.length) {
+        if (note) note.textContent = 'Nothing to read here yet.';
+        return;
+      }
+      // Only one player speaks at a time; stopping the other player first
+      // keeps its cancel() from killing this player's utterance.
+      if (window._raActivePlayer && window._raActivePlayer !== api) {
+        var other = window._raActivePlayer;
+        window._raActivePlayer = api;
+        other.stop();
+      }
+      window._raActivePlayer = api;
+      idx = Math.max(0, Math.min(i, list.length - 1));
+      halt();
+      var my = token;
+      var text = list[idx].textContent.replace(/\s+/g, ' ').trim();
+      var u = new window.SpeechSynthesisUtterance(text);
+      u.rate = rate;
+      u.onend = function () {
+        if (my !== token || state !== 'playing') return;
+        if (idx < list.length - 1) speak(idx + 1);
+        else stopAll();
+      };
+      u.onerror = function () {
+        if (my === token && state === 'playing') stopAll();
+      };
+      state = 'playing';
+      highlight();
+      update();
+      synth.speak(u);
+    }
+
+    if (buttons.play) buttons.play.addEventListener('click', function () {
+      speak(state === 'paused' ? idx : (idx >= 0 ? idx : 0));
+    });
+    if (buttons.pause) buttons.pause.addEventListener('click', function () {
+      if (state !== 'playing') return;
+      halt();
+      state = 'paused';
+      update();
+    });
+    if (buttons.resume) buttons.resume.addEventListener('click', function () {
+      if (state === 'paused') speak(idx);
+    });
+    if (buttons.stop) buttons.stop.addEventListener('click', stopAll);
+    if (buttons.prev) buttons.prev.addEventListener('click', function () {
+      if (idx <= 0) return;
+      if (state === 'idle') { idx -= 1; highlight(); update(); }
+      else speak(idx - 1);
+    });
+    if (buttons.next) buttons.next.addEventListener('click', function () {
+      if (state === 'idle') {
+        ensureSpans();
+        if (idx < spans.length - 1) { idx += 1; highlight(); update(); }
+      } else speak(idx + 1);
+    });
+    if (speedSel) speedSel.addEventListener('change', function () {
+      var v = parseFloat(speedSel.value);
+      if (v > 0) {
+        rate = v;
+        if (state === 'playing') speak(idx);
+      }
+    });
+    window.addEventListener('pagehide', stopAll);
+    update();
+  }
+
+  function raInit() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ra-controls]'), raInitPlayer);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', raInit);
+  else raInit();
+})();
+/* READ-ALOUD-END */

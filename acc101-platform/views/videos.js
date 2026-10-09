@@ -61,9 +61,33 @@ const RESOURCES = [
   },
 ];
 
+function moduleResources(modules) {
+  const out = [];
+  for (const m of modules || []) {
+    const v = m.video;
+    if (!v || !v.title) continue;
+    let watchUrl = null;
+    if (v.embedUrl) {
+      const match = /youtube\.com\/embed\/([\w-]{6,})/.exec(v.embedUrl);
+      if (match) watchUrl = 'https://www.youtube.com/watch?v=' + match[1];
+    }
+    out.push({
+      title: v.title,
+      byline: 'Module ' + m.number + ' \u00b7 ' + m.title,
+      watchUrl,
+      embedUrl: v.embedUrl || null,
+      covers: v.note || '',
+      when: 'Watch with Module ' + m.number + ' \u2014 ' + m.title + '.',
+      more: Array.isArray(v.more) ? v.more : [],
+    });
+  }
+  return out;
+}
+
 function videosPage(user, course, enrolled, modules, doneByNum) {
   const base = '/c/' + course.slug;
-  const cards = RESOURCES.map((r) => {
+  const resources = course.slug === 'acc101' ? RESOURCES : moduleResources(modules);
+  const cards = resources.map((r) => {
     const embed = r.embedUrl
       ? '<div class="video-embed">\n' +
         '  <iframe src="' + escapeHtml(r.embedUrl) + '" title="' + escapeHtml(r.title) + '" ' +
@@ -78,7 +102,14 @@ function videosPage(user, course, enrolled, modules, doneByNum) {
       embed +
       '  <p><strong>What it covers:</strong> ' + escapeHtml(r.covers) + '</p>\n' +
       '  <p><strong>When to watch:</strong> ' + escapeHtml(r.when) + '</p>\n' +
-      '  <p><a class="btn btn-small" href="' + escapeHtml(r.watchUrl) + '" target="_blank" rel="noopener">Watch on YouTube</a></p>\n' +
+      (r.watchUrl
+        ? '  <p><a class="btn btn-small" href="' + escapeHtml(r.watchUrl) + '" target="_blank" rel="noopener">Watch on YouTube</a></p>\n'
+        : '') +
+      (r.more && r.more.length
+        ? '  <p><strong>More to watch:</strong> ' + r.more.map((m) =>
+            '<a href="' + escapeHtml(m.url) + '" target="_blank" rel="noopener">' + escapeHtml(m.title) + '</a>'
+          ).join(' \u00b7 ') + '</p>\n'
+        : '') +
       '</article>'
     );
   }).join('\n');
@@ -99,8 +130,13 @@ function videosPage(user, course, enrolled, modules, doneByNum) {
       '<section class="page-head">\n' +
       '  <p class="eyebrow"><a href="' + base + '/dashboard">' + escapeHtml(course.title) + '</a></p>\n' +
       '  <h1>Video Library</h1>\n' +
-      '  <p class="section-sub">Five hand-verified video resources, mapped to the weeks of the course. ' +
-      'Every module page also embeds the right video for that module.</p>\n' +
+      '  <p class="section-sub">' +
+      (course.slug === 'acc101'
+        ? 'Five hand-verified video resources, mapped to the weeks of the course. ' +
+          'Every module page also embeds the right video for that module.'
+        : 'Video lessons gathered from every module of this course. ' +
+          'Every module page also embeds the right video for that module.') +
+      '</p>\n' +
       '</section>\n' +
       '<div class="video-list">\n' + cards + '\n</div>',
   });

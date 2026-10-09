@@ -4,6 +4,13 @@ const { escapeHtml, escAttr, layout, progressBar, courseSidebar } = require('./h
 
 function labsListPage(user, course, enrolled, labs, bestBy, modules, doneByNum) {
   const base = '/c/' + course.slug;
+  const labsTitle = course.labsTitle || 'Accounting Labs';
+  const introCopy = course.labsTitle
+    ? 'Hands-on scenario labs: work each job like a real service call \u2014 make the call at ' +
+      'every decision point, check your work, and learn from the explanations. Labs count ' +
+      'toward the assignment portion of your grade.'
+    : 'Hands-on workpapers: fill in the numbers, check your work, and download ' +
+      'your completed sheet as a CSV. Labs count toward the assignment portion of your grade.';
   const cards = labs.map((lab) => {
     const best = bestBy[lab.id] || 0;
     const passed = best >= (lab.passing || 70);
@@ -20,7 +27,7 @@ function labsListPage(user, course, enrolled, labs, bestBy, modules, doneByNum) 
   }).join('\n');
 
   return layout({
-    title: 'Accounting Labs \u2014 ' + course.title,
+    title: labsTitle + ' \u2014 ' + course.title,
     user,
     enrolled,
     currentCourse: { slug: course.slug, title: course.title },
@@ -34,9 +41,8 @@ function labsListPage(user, course, enrolled, labs, bestBy, modules, doneByNum) 
     body:
       '<section class="page-head">\n' +
       '  <p class="eyebrow"><a href="' + base + '/dashboard">' + escapeHtml(course.title) + '</a></p>\n' +
-      '  <h1>Accounting Labs</h1>\n' +
-      '  <p class="section-sub">Hands-on workpapers: fill in the numbers, check your work, and download ' +
-      'your completed sheet as a CSV. Labs count toward the assignment portion of your grade.</p>\n' +
+      '  <h1>' + escapeHtml(labsTitle) + '</h1>\n' +
+      '  <p class="section-sub">' + introCopy + '</p>\n' +
       '</section>\n' +
       '<div class="two-col">\n' + cards + '\n</div>',
   });
@@ -86,7 +92,7 @@ function labPage(user, course, enrolled, lab, best, modules, doneByNum) {
     body:
       '<article class="lab-page">\n' +
       '  <header class="page-head">\n' +
-      '    <p class="eyebrow"><a href="' + base + '/labs">Accounting labs</a> \u00b7 ' + escapeHtml(course.title) + '</p>\n' +
+      '    <p class="eyebrow"><a href="' + base + '/labs">' + escapeHtml(course.labsTitle || 'Accounting labs') + '</a> \u00b7 ' + escapeHtml(course.title) + '</p>\n' +
       '    <h1>' + escapeHtml(lab.title) + '</h1>\n' +
       '    <p class="section-sub">Best score so far: <strong>' + escapeHtml(String(best || 0)) + '%</strong> ' +
       '\u00b7 passing: ' + escapeHtml(String(lab.passing || 70)) + '%</p>\n' +
@@ -102,7 +108,9 @@ function labPage(user, course, enrolled, lab, best, modules, doneByNum) {
       '    </div>\n' +
       '    <div class="save-row">\n' +
       '      <button type="submit" class="btn btn-gold btn-lg">Check my work</button>\n' +
-      '      <a class="btn" href="' + base + '/labs/' + escAttr(lab.id) + '/csv" download>Download CSV</a>\n' +
+      (typeof lab.csv === 'string'
+        ? '      <a class="btn" href="' + base + '/labs/' + escAttr(lab.id) + '/csv" download>Download CSV</a>\n'
+        : '') +
       '      <span class="save-status" id="labStatus" role="status" aria-live="polite"></span>\n' +
       '    </div>\n' +
       '  </form>\n' +

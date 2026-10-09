@@ -14,4 +14,5 @@ module.exports = {
   videos: require('./videos'),
   tutor: require('./tutor'),
   account: require('./account'),
+  guides: require('./guides'),
 };

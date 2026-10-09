@@ -12,7 +12,7 @@ function doneByNumFromGrade(grade) {
 }
 
 /** Per-course dashboard: module cards, grade summary, links. */
-function dashboardPage(user, course, enrolled, grade, modules) {
+function dashboardPage(user, course, enrolled, grade, modules, extra) {
   const base = '/c/' + course.slug;
 
   const cards = modules.map((m) => {
@@ -56,6 +56,7 @@ function dashboardPage(user, course, enrolled, grade, modules) {
       '  <h1>' + escapeHtml(course.title) + '</h1>\n' +
       (course.description ? '  <p class="section-sub">' + escapeHtml(course.description) + '</p>\n' : '') +
       '</section>\n' +
+      (extra && extra.programHtml ? extra.programHtml : '') +
 
       '<section class="grade-summary card">\n' +
       '  <div class="grade-summary-main">\n' +
@@ -80,6 +81,7 @@ function dashboardPage(user, course, enrolled, grade, modules) {
       '  </p>\n' +
       '</section>\n' +
 
+      (extra && extra.certHtml ? extra.certHtml : '') +
       '<section>\n' +
       '  <h2>Modules</h2>\n' +
       '  <div class="card-grid">\n' + cards + '\n  </div>\n' +
@@ -93,7 +95,7 @@ function dashboardPage(user, course, enrolled, grade, modules) {
       '    <p><a class="btn btn-primary" href="' + base + '/exams">Go to exams</a></p>\n' +
       '  </div>\n' +
       '  <div class="card">\n' +
-      '    <h2>Accounting labs</h2>\n' +
+      '    <h2>' + escapeHtml(course.labsTitle || 'Accounting labs') + '</h2>\n' +
       (labItems ? '    <ul class="lab-list">\n' + labItems + '\n    </ul>\n' : '    <p>Labs are being prepared.</p>\n') +
       '    <p><a class="btn btn-primary" href="' + base + '/labs">Go to labs</a></p>\n' +
       '  </div>\n' +

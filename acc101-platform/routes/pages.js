@@ -8,6 +8,8 @@ const courses = require('../content/courses');
 const views = require('../views');
 const { notFoundPage } = require('../views/auth');
 const { tutorEnabled } = require('../lib/tutor');
+const program = require('../lib/program');
+const certs = require('../lib/certs');
 
 const router = express.Router();
 
@@ -98,8 +100,34 @@ router.get('/c/:course/dashboard', requireAuth, resolveCourse, (req, res, next) 
   try {
     const nav = navFor(req);
     const grade = db.computeGrade(nav.user.id, req.courseId);
+    const titleOf = (slug) => {
+      const c = courses.getCourse(slug);
+      return c ? c.title : slug;
+    };
+    const programHtml = program.programBannerHtml(req.course, grade, titleOf);
+    let certHtml = '';
+    if (req.course.slug === 'hvac-cert-prep') {
+      const bestBy = {};
+      for (const r of db.getExamScores(nav.user.id, req.courseId)) bestBy[r.exam] = r.best;
+      const courseProgress = {};
+      for (const slug of certs.ALL_MAPPED_COURSES) {
+        const cid = db.getCourseId(slug);
+        if (cid) {
+          const rows = db.getModuleDone(nav.user.id, cid);
+          courseProgress[slug] = {
+            done: rows.filter((r) => r.done === 1).length,
+            total: 12,
+          };
+        }
+      }
+      const guideViews = new Set(
+        db.getGuideViews(nav.user.id, req.courseId).map((r) => r.guide_id)
+      );
+      certHtml = certs.renderCertPanel({ bestBy, courseProgress, guideViews });
+    }
     res.send(views.dashboard.dashboardPage(
-      nav.user, req.course, nav.enrolled, grade, req.course.modules.list
+      nav.user, req.course, nav.enrolled, grade, req.course.modules.list,
+      { programHtml, certHtml }
     ));
   } catch (err) {
     next(err);
@@ -213,6 +241,37 @@ router.get('/c/:course/labs/:id/csv', requireAuth, resolveCourse, (req, res, nex
     res.setHeader('Content-Type', 'text/csv; charset=utf-8');
     res.setHeader('Content-Disposition', 'attachment; filename="' + filename.replace(/"/g, '') + '"');
     res.send(lab.csv);
+  } catch (err) {
+    next(err);
+  }
+});
+
+/* ---------------- certification study guides ---------------- */
+
+router.get('/c/:course/guides', requireAuth, resolveCourse, (req, res, next) => {
+  try {
+    const nav = navFor(req);
+    if (!req.course.guides || !req.course.guides.length) {
+      return res.status(404).send(notFoundPage(nav.user, nav));
+    }
+    const viewed = new Set(
+      db.getGuideViews(nav.user.id, req.courseId).map((r) => r.guide_id)
+    );
+    res.send(views.guides.guidesListPage(nav.user, req.course, nav.enrolled, viewed,
+      req.course.modules.list, moduleDoneMap(nav.user.id, req.courseId)));
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get('/c/:course/guides/:guideId', requireAuth, resolveCourse, (req, res, next) => {
+  try {
+    const nav = navFor(req);
+    const guide = courses.findGuide(req.course, req.params.guideId);
+    if (!guide) return res.status(404).send(notFoundPage(nav.user, nav));
+    db.recordGuideView(nav.user.id, req.courseId, guide.id);
+    res.send(views.guides.guidePage(nav.user, req.course, nav.enrolled, guide,
+      req.course.modules.list, moduleDoneMap(nav.user.id, req.courseId)));
   } catch (err) {
     next(err);
   }

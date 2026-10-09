@@ -150,7 +150,8 @@ function courseSidebar(opts) {
     pageLink('dashboard', base + '/dashboard', 'Course dashboard') + '\n' +
     pageLink('gradebook', base + '/gradebook', 'See my grades') + '\n' +
     pageLink('exams', base + '/exams', 'Exams') + '\n' +
-    (course.labs && course.labs.length ? pageLink('labs', base + '/labs', 'Accounting labs') + '\n' : '') +
+    (course.guides && course.guides.length ? pageLink('guides', base + '/guides', 'Cert study guides') + '\n' : '') +
+    (course.labs && course.labs.length ? pageLink('labs', base + '/labs', course.labsTitle || 'Accounting labs') + '\n' : '') +
     pageLink('videos', base + '/videos', 'Video library') + '\n' +
     (hideTutorLinks ? '' : pageLink('tutor', base + '/tutor', 'Course tutor') + '\n') +
     '</ul>';
@@ -158,7 +159,8 @@ function courseSidebar(opts) {
   // Mobile stepper summary: current position in plain words.
   const pageLabels = {
     dashboard: 'Course dashboard', gradebook: 'Gradebook', exams: 'Exams',
-    labs: 'Accounting labs', videos: 'Video library', tutor: 'Course tutor',
+    labs: course.labsTitle || 'Accounting labs', videos: 'Video library', tutor: 'Course tutor',
+    guides: 'Cert study guides',
   };
   let summaryMain = 'Course contents';
   let summarySub = doneCount + ' of ' + modules.length + ' modules complete';
@@ -279,9 +281,9 @@ function layout(opts) {
     '<head>\n' +
     '<meta charset="utf-8">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-    '<meta name="description" content="ACC 101: Principles of Financial Accounting — a full self-paced college-style course with lectures, assignments, auto-graded quizzes, labs, exams, and a gradebook.">\n' +
+    '<meta name="description" content="College Without College — college-style courses, self-paced: lectures, assignments, auto-graded quizzes, labs, exams, and a gradebook. First course: ACC 101, Principles of Financial Accounting.">\n' +
     '<meta name="theme-color" content="#14365e">\n' +
-    '<title>' + escapeHtml(title) + ' | ACC 101</title>\n' +
+    '<title>' + escapeHtml(title) + ' | College Without College</title>\n' +
     '<link rel="stylesheet" href="/styles.css">\n' +
     '<link rel="manifest" href="/manifest.json">\n' +
     '<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">\n' +
@@ -293,8 +295,8 @@ function layout(opts) {
     '<header class="site-header">\n' +
     '  <div class="header-inner">\n' +
     '    <a class="brand" href="/">' +
-    '<span class="brand-mark" aria-hidden="true">A</span>' +
-    '<span class="brand-text">ACC 101 <em>Principles of Financial Accounting</em></span></a>\n' +
+    '<span class="brand-mark" aria-hidden="true">CWC</span>' +
+    '<span class="brand-text">College Without College <em>Self-paced college courses</em></span></a>\n' +
     '    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">\u2630</button>\n' +
     '    <nav class="main-nav" id="mainNav" aria-label="Primary">' + navLinks + '</nav>\n' +
     '    ' + userBlock + '\n' +
@@ -303,8 +305,8 @@ function layout(opts) {
     '<main id="main" class="container">\n' + mainInner + '\n</main>\n' +
     '<footer class="site-footer">\n' +
     '  <div class="container footer-inner">\n' +
-    '    <p><strong>ACC 101: Principles of Financial Accounting.</strong> ' +
-    'A self-paced, college-style course. All content is original and written for this course.</p>\n' +
+    '    <p><strong>College Without College.</strong> ' +
+    'College-style courses at your own pace — starting with ACC 101: Principles of Financial Accounting. All content is original and written for these courses.</p>\n' +
     '    <p class="footer-note">Study tip: attempt every assignment problem on your own before opening the solutions.</p>\n' +
     '  </div>\n' +
     '</footer>\n' +
@@ -314,6 +316,32 @@ function layout(opts) {
     scripts + '\n' +
     '</body>\n' +
     '</html>';
+}
+
+/**
+ * Read-aloud controls bar (browser speechSynthesis; wired up in
+ * public/app.js). targetId is the id of the reading container the controls
+ * speak and highlight. Rendered on module pages and study-guide pages.
+ */
+function readAloudControls(targetId) {
+  return (
+    '<div class="ra-controls no-print" data-ra-controls="' + escAttr(targetId) + '" role="group" aria-label="Read aloud controls">\n' +
+    '  <button type="button" class="btn btn-small btn-gold" data-ra-action="play">Listen</button>\n' +
+    '  <button type="button" class="btn btn-small" data-ra-action="pause" disabled>Pause</button>\n' +
+    '  <button type="button" class="btn btn-small" data-ra-action="resume" disabled>Resume</button>\n' +
+    '  <button type="button" class="btn btn-small" data-ra-action="stop" disabled>Stop</button>\n' +
+    '  <button type="button" class="btn btn-small" data-ra-action="prev" disabled>Prev sentence</button>\n' +
+    '  <button type="button" class="btn btn-small" data-ra-action="next" disabled>Next sentence</button>\n' +
+    '  <label class="ra-speed">Speed ' +
+    '<select data-ra-speed aria-label="Playback speed">' +
+    '<option value="0.75">0.75\u00d7</option>' +
+    '<option value="1" selected>1\u00d7</option>' +
+    '<option value="1.25">1.25\u00d7</option>' +
+    '<option value="1.5">1.5\u00d7</option>' +
+    '</select></label>\n' +
+    '  <span class="ra-note" role="status" aria-live="polite"></span>\n' +
+    '</div>\n'
+  );
 }
 
 module.exports = {
@@ -329,4 +357,5 @@ module.exports = {
   gradeBadge,
   courseSidebar,
   layout,
+  readAloudControls,
 };

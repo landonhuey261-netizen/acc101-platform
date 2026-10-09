@@ -1,6 +1,7 @@
 'use strict';
 
 const { escapeHtml, escAttr, layout, progressBar, progressRing } = require('./helpers');
+const program = require('../lib/program');
 
 /**
  * Home dashboard (GET /): lists the user's ENROLLED courses. Even with a
@@ -27,8 +28,19 @@ function homePage(user, enrolled, opts) {
     '  </ol>\n' +
     '</section>\n';
 
-  const cards = enrolled.map((c) => {
+  // Program courses first, in program order; standalone courses keep their order.
+  const ordered = [...enrolled].sort((a, b) => {
+    const sa = program.stepOf(a.slug);
+    const sb = program.stepOf(b.slug);
+    if (sa && sb) return sa.step - sb.step;
+    if (sa) return -1;
+    if (sb) return 1;
+    return 0;
+  });
+
+  const cards = ordered.map((c) => {
     const grade = c.grade || { total: 0, letter: 'F' };
+    const stepInfo = program.stepOf(c.slug);
     const cm = c.continueModule;
     const continueBlock = cm
       ? '<p class="continue-row"><a class="btn btn-primary" href="/c/' + escAttr(c.slug) +
@@ -42,6 +54,8 @@ function homePage(user, enrolled, opts) {
       '    <div>\n' +
       '      <h2><a href="/c/' + escAttr(c.slug) + '/dashboard">' + escapeHtml(c.title) + '</a></h2>\n' +
       (c.description ? '      <p>' + escapeHtml(c.description) + '</p>\n' : '') +
+      (stepInfo ? '      <p class="module-meta">Step ' + stepInfo.step + ' of ' + stepInfo.total +
+        ' \u00b7 HVAC/R Technology program</p>\n' : '') +
       '      <p class="grade-line"><span class="grade-badge grade-' + escapeHtml(grade.letter) + '">' +
       escapeHtml(grade.letter) + '</span> <strong>' + escapeHtml(String(grade.total)) + '%</strong> course grade</p>\n' +
       '    </div>\n' +

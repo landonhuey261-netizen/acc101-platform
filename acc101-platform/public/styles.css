@@ -62,9 +62,9 @@ a:hover { color: var(--gold-deep); }
 .brand { display: flex; align-items: center; gap: 0.6rem; color: #fff; text-decoration: none; margin-right: auto; }
 .brand:hover { color: #fff; }
 .brand-mark {
-  width: 2.2rem; height: 2.2rem; border-radius: 8px; background: var(--gold); color: var(--navy-deep);
+  min-width: 2.2rem; height: 2.2rem; padding: 0 0.5rem; border-radius: 8px; background: var(--gold); color: var(--navy-deep);
   display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--serif); font-weight: bold; font-size: 1.4rem; flex: none;
+  font-family: var(--serif); font-weight: bold; font-size: 0.95rem; letter-spacing: 0.03em; flex: none;
 }
 .brand-text { font-family: var(--serif); font-weight: bold; font-size: 1.05rem; line-height: 1.2; }
 .brand-text em { display: block; font-style: normal; font-family: var(--sans); font-weight: normal; font-size: 0.72rem; color: #cdd9e8; }
@@ -706,3 +706,24 @@ a.m-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 1px; }
     transition-duration: 0.001s !important;
   }
 }
+
+/* Read-aloud controls + sentence highlighting (speechSynthesis) */
+.ra-controls {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+  background: var(--gold-soft); border: 1px solid var(--gold);
+  border-radius: 8px; padding: 0.6rem 0.8rem; margin: 0 0 1rem;
+}
+.ra-controls .ra-speed {
+  font-weight: 600; color: var(--navy);
+  display: inline-flex; gap: 0.4rem; align-items: center;
+}
+.ra-controls select {
+  font: inherit; padding: 0.3rem; border-radius: 6px;
+  border: 1px solid var(--navy); background: #fff; color: var(--navy-deep);
+}
+.ra-controls .ra-note { color: var(--navy); font-size: 0.9rem; }
+.ra-sentence.ra-active {
+  background: #ffe9a8; color: var(--navy-deep);
+  border-radius: 3px; box-shadow: 0 0 0 2px #ffe9a8;
+}
+@media print { .ra-controls { display: none !important; } }

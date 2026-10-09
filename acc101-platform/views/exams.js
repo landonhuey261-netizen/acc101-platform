@@ -2,13 +2,26 @@
 
 const { escapeHtml, escAttr, stripTags, layout, courseSidebar } = require('./helpers');
 
+function examKeysOrdered(exams) {
+  const keys = Object.keys(exams || {});
+  const ordered = [];
+  if (keys.includes('midterm')) ordered.push('midterm');
+  for (const k of keys) {
+    if (k !== 'midterm' && k !== 'final') ordered.push(k);
+  }
+  if (keys.includes('final')) ordered.push('final');
+  return ordered;
+}
+
 function examsListPage(user, course, enrolled, exams, bestBy, modules, doneByNum) {
   const base = '/c/' + course.slug;
-  const cards = ['midterm', 'final'].map((which) => {
+  const cards = examKeysOrdered(exams).map((which) => {
     const exam = exams[which];
     if (!exam) return '';
     const best = bestBy[which] || 0;
-    const startLabel = which === 'midterm' ? 'Start the midterm' : 'Start the final';
+    const startLabel = which === 'midterm'
+      ? 'Start the midterm'
+      : which === 'final' ? 'Start the final' : 'Start this exam';
     return (
       '<article class="card exam-card">\n' +
       '  <h2>' + escapeHtml(exam.title || (which === 'midterm' ? 'Midterm Exam' : 'Final Exam')) + '</h2>\n' +
@@ -16,11 +29,17 @@ function examsListPage(user, course, enrolled, exams, bestBy, modules, doneByNum
       '    <div><dt>Questions</dt><dd>' + (exam.questions ? exam.questions.length : 0) + '</dd></div>\n' +
       '    <div><dt>Time limit</dt><dd>' + escapeHtml(String(exam.minutes)) + ' minutes</dd></div>\n' +
       '    <div><dt>Best score</dt><dd>' + escapeHtml(String(best)) + '%</dd></div>\n' +
+      (exam.passPercent != null
+        ? '    <div><dt>Passing standard</dt><dd>' + escapeHtml(String(exam.passPercent)) + '%</dd></div>\n'
+        : '') +
       '  </dl>\n' +
       '  <p class="section-sub">' +
       (which === 'midterm'
         ? 'Covers Modules 1\u20136. The timer starts when the exam page loads and auto-submits when time runs out.'
-        : 'Comprehensive: covers Modules 1\u201312. The timer starts when the exam page loads and auto-submits when time runs out.') +
+        : which === 'final'
+          ? 'Comprehensive: covers Modules 1\u201312. The timer starts when the exam page loads and auto-submits when time runs out.'
+          : (exam.coverage ? 'Covers ' + escapeHtml(exam.coverage) + '. ' : '') +
+            'The timer starts when the exam page loads and auto-submits when time runs out.') +
       '</p>\n' +
       '  <a class="btn btn-gold" href="' + base + '/exams/' + which + '">' + startLabel + '</a>\n' +
       '</article>'
@@ -90,7 +109,9 @@ function examPage(user, course, enrolled, which, exam, modules, doneByNum) {
       '  <header class="page-head">\n' +
       '    <h1>' + escapeHtml(exam.title || (which === 'midterm' ? 'Midterm Exam' : 'Final Exam')) + '</h1>\n' +
       '    <p class="section-sub">' + (exam.questions ? exam.questions.length : 0) +
-      ' questions \u00b7 ' + escapeHtml(String(exam.minutes)) + ' minutes \u00b7 auto-submits when time expires</p>\n' +
+      ' questions \u00b7 ' + escapeHtml(String(exam.minutes)) + ' minutes \u00b7 auto-submits when time expires' +
+      (exam.passPercent != null ? ' \u00b7 passing standard: ' + escapeHtml(String(exam.passPercent)) + '%' : '') +
+      '</p>\n' +
       '  </header>\n' +
       '  <div class="exam-timer-wrap" role="timer" aria-live="off">\n' +
       '    <span class="exam-timer-label">Time remaining</span>\n' +
