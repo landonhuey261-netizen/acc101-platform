@@ -97,32 +97,14 @@ function loadCourseDir(slug, dir) {
     labs = [];
   }
 
-  // Certification study guides are optional: only courses with a guides.js
-  // (currently hvac-cert-prep) have them.
-  let guides = [];
-  const guidesPath = path.join(dir, 'guides.js');
-  if (fs.existsSync(guidesPath)) {
-    const rawGuides = require(guidesPath);
-    if (Array.isArray(rawGuides)) {
-      guides = rawGuides.filter(
-        (g) => g && typeof g.id === 'string' && typeof g.title === 'string'
-      );
-    }
-  }
-
   return {
     slug,
     title: meta.title,
     description: meta.description || '',
-    labsTitle: meta.labsTitle || null,
-    subject: meta.subject || null,
-    tutorRole: meta.tutorRole || null,
-    askExample: meta.askExample || null,
     dir,
     modules: { list, bySlug, byNumber },
     exams,
     labs,
-    guides,
   };
 }
 
@@ -183,19 +165,15 @@ function findLab(course, id) {
   return (course.labs || []).find((l) => l && l.id === id) || null;
 }
 
-function findGuide(course, id) {
-  if (!course || !Array.isArray(course.guides)) return null;
-  return course.guides.find((g) => g.id === id) || null;
-}
-
 function validModuleNum(n) {
   const num = Number(n);
   return Number.isInteger(num) && num >= 1 && num <= 12 ? num : null;
 }
 
 function validExam(course, which) {
-  if (!course || !course.exams || typeof which !== 'string') return null;
-  return Object.prototype.hasOwnProperty.call(course.exams, which) ? which : null;
+  return (which === 'midterm' || which === 'final') && course.exams && course.exams[which]
+    ? which
+    : null;
 }
 
 module.exports = {
@@ -205,7 +183,6 @@ module.exports = {
   requireCourse,
   listCourses,
   findLab,
-  findGuide,
   validModuleNum,
   validExam,
 };
