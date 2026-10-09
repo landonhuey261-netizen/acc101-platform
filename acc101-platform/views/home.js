@@ -68,7 +68,48 @@ function homePage(user, enrolled, opts) {
   }).join('\n');
 
   const emptyState = enrolled.length === 0
-    ? '<div class="callout"><p>You are not enrolled in any courses yet. New courses will appear here when they launch.</p></div>\n'
+    ? '<div class="callout"><p>You are not enrolled in any courses yet. Browse the courses below and enroll in one to get started.</p></div>\n'
+    : '';
+
+  // Catalog of courses the user is NOT enrolled in yet (program order
+  // first), each with a one-click enroll form. This is how a logged-in
+  // user discovers the program — the public catalog landing page only
+  // shows to logged-out visitors.
+  const catalog = (opts && Array.isArray(opts.catalog)) ? opts.catalog : [];
+  const orderedCatalog = [...catalog].sort((a, b) => {
+    const sa = program.stepOf(a.slug);
+    const sb = program.stepOf(b.slug);
+    if (sa && sb) return sa.step - sb.step;
+    if (sa) return -1;
+    if (sb) return 1;
+    return 0;
+  });
+  const catalogCards = orderedCatalog.map((c) => {
+    const stepInfo = program.stepOf(c.slug);
+    return (
+      '<article class="card course-card">\n' +
+      '  <div class="course-card-top">\n' +
+      '    <div>\n' +
+      '      <h2>' + escapeHtml(c.title) + '</h2>\n' +
+      (c.description ? '      <p>' + escapeHtml(c.description) + '</p>\n' : '') +
+      (stepInfo ? '      <p class="module-meta">Step ' + stepInfo.step + ' of ' + stepInfo.total +
+        ' \u00b7 HVAC/R Technology program</p>\n' : '') +
+      '    </div>\n' +
+      '  </div>\n' +
+      '  <form method="POST" action="/courses/' + escAttr(c.slug) + '/enroll">\n' +
+      '    <button type="submit" class="btn btn-gold">Enroll now</button>\n' +
+      '  </form>\n' +
+      '</article>'
+    );
+  }).join('\n');
+  const catalogSection = catalogCards
+    ? '<section id="catalog" aria-label="More courses">\n' +
+      '  <div class="page-head">\n' +
+      '    <h2>Keep going \u2014 more courses</h2>\n' +
+      '    <p class="section-sub">Enroll in a course and it moves up into your list above. Program courses are listed in order \u2014 start with the lowest step you have not taken yet.</p>\n' +
+      '  </div>\n' +
+      '  <div class="course-list">\n' + catalogCards + '\n</div>\n' +
+      '</section>'
     : '';
 
   return layout({
@@ -85,7 +126,8 @@ function homePage(user, enrolled, opts) {
       emptyState +
       '<section id="courses" aria-label="My courses">\n' +
       '<div class="course-list">\n' + cards + '\n</div>\n' +
-      '</section>',
+      '</section>' +
+      catalogSection,
   });
 }
 
