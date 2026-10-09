@@ -59,7 +59,11 @@ router.get('/', (req, res, next) => {
       }
       return { ...c, grade, continueModule };
     });
-    res.send(views.home.homePage(nav.user, enrolled, { showOnboarding }));
+    const enrolledSlugs = new Set(nav.enrolled.map((c) => c.slug));
+    const catalog = courses.listCourses()
+      .filter((c) => c && c.slug && !enrolledSlugs.has(c.slug))
+      .map((c) => ({ slug: c.slug, title: c.title, description: c.description || '' }));
+    res.send(views.home.homePage(nav.user, enrolled, { showOnboarding, catalog }));
   } catch (err) {
     next(err);
   }
