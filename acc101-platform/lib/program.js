@@ -18,6 +18,7 @@
 const PROGRAMS = [
   {
     name: 'HVAC/R Technology program',
+    slug: 'hvac-r-technology',
     order: [
       'hvac101',
       'hvac102',
@@ -47,6 +48,7 @@ const PROGRAMS = [
   },
   {
     name: 'Plumbing & Pipefitting program',
+    slug: 'plumbing-pipefitting',
     order: [
       'plb101',
       'plb102',
@@ -79,6 +81,7 @@ const PROGRAMS = [
   },
   {
     name: 'General Business program',
+    slug: 'general-business',
     order: [
       'bus101',
       'acc101',
@@ -169,6 +172,46 @@ function prereqSlug(slug) {
   return found ? (found.program.prereqs[slug] || null) : null;
 }
 
+/**
+ * URL slug for a program page (/programs/<slug>). Every PROGRAMS entry
+ * should carry an explicit `slug` field; the fallback derives one from the
+ * name (lowercased, non-alphanumerics collapsed to '-', trailing '-program'
+ * stripped) so a future entry without a slug still gets a stable URL.
+ */
+function programSlug(p) {
+  if (p && typeof p.slug === 'string' && p.slug.length > 0) return p.slug;
+  const name = p && p.name ? String(p.name) : 'program';
+  let slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  slug = slug.replace(/-program$/, '');
+  return slug || 'program';
+}
+
+/**
+ * Find a program by its URL slug. Returns null when no program matches.
+ * Otherwise { program, programIndex }.
+ */
+function programBySlug(slug) {
+  if (typeof slug !== 'string' || !slug) return null;
+  for (let pi = 0; pi < PROGRAMS.length; pi += 1) {
+    if (programSlug(PROGRAMS[pi]) === slug) return { program: PROGRAMS[pi], programIndex: pi };
+  }
+  return null;
+}
+
+const DEFAULT_CAPSTONE_LINE =
+  'This is the final step of the program — the capstone. When the certification ' +
+  'tracker on this page shows READY, book the real exams through the approved ' +
+  'providers listed there.';
+
+/**
+ * The final-step line for a program: its own capstoneLine when it has one
+ * (the business capstone ends with a finished business plan, not a license),
+ * otherwise the default license-tracker line.
+ */
+function capstoneLineOf(prog) {
+  return (prog && prog.capstoneLine) || DEFAULT_CAPSTONE_LINE;
+}
+
 function esc(s) {
   return String(s == null ? '' : s)
     .replace(/&/g, '&amp;')
@@ -216,11 +259,7 @@ function programBannerHtml(course, grade, titleOf) {
     // Per-program final-step line: the business capstone ends with a
     // finished business plan + optional credential exams, not a license.
     // Programs without a capstoneLine keep the original text.
-    const capstoneLine = PROGRAMS[info.programIndex].capstoneLine ||
-      'This is the final step of the program — the capstone. When the certification ' +
-      'tracker on this page shows READY, book the real exams through the approved ' +
-      'providers listed there.';
-    lines.push('  <p>' + esc(capstoneLine) + '</p>');
+    lines.push('  <p>' + esc(capstoneLineOf(PROGRAMS[info.programIndex])) + '</p>');
   }
   return '<section class="card program-banner">\n' + lines.join('\n') + '\n</section>\n';
 }
@@ -241,5 +280,8 @@ module.exports = {
   stepOf,
   nextSlug,
   prereqSlug,
+  programSlug,
+  programBySlug,
+  capstoneLineOf,
   programBannerHtml,
 };

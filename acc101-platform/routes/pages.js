@@ -30,6 +30,33 @@ function moduleDoneMap(userId, courseId) {
   return map;
 }
 
+/**
+ * Attach .grade and .continueModule to each enrolled course, in 5 queries
+ * total via computeGrades (no N+1 across enrollments). Shared by the
+ * dashboard and the program pages.
+ */
+function attachProgress(userId, enrolledList) {
+  const ids = enrolledList.map((c) => c.id);
+  const grades = db.computeGrades(userId, ids);
+  return enrolledList.map((c) => {
+    const grade = grades[c.id];
+    // "Continue where you left off": first incomplete module (1..12).
+    let continueModule = null;
+    const content = courses.getCourse(c.slug);
+    if (content) {
+      for (let n = 1; n <= 12; n += 1) {
+        const pm = grade.perModule[n - 1];
+        if (!pm || !pm.done) {
+          const mod = content.modules.byNumber[n];
+          if (mod) continueModule = { num: mod.number, slug: mod.slug, title: mod.title };
+          break;
+        }
+      }
+    }
+    return { ...c, grade, continueModule };
+  });
+}
+
 /* ---------------- public landing / home ---------------- */
 
 router.get('/', (req, res, next) => {
@@ -38,32 +65,55 @@ router.get('/', (req, res, next) => {
     if (!nav.user) {
       return res.send(views.landing.landingPage(courses.listCourses()));
     }
-    // Per-course grades in 5 queries total (no N+1 across enrollments).
-    const ids = nav.enrolled.map((c) => c.id);
-    const grades = db.computeGrades(nav.user.id, ids);
     const showOnboarding = !db.hasAnyProgress(nav.user.id);
-    const enrolled = nav.enrolled.map((c) => {
-      const grade = grades[c.id];
-      // "Continue where you left off": first incomplete module (1..12).
-      let continueModule = null;
-      const content = courses.getCourse(c.slug);
-      if (content) {
-        for (let n = 1; n <= 12; n += 1) {
-          const pm = grade.perModule[n - 1];
-          if (!pm || !pm.done) {
-            const mod = content.modules.byNumber[n];
-            if (mod) continueModule = { num: mod.number, slug: mod.slug, title: mod.title };
-            break;
-          }
-        }
-      }
-      return { ...c, grade, continueModule };
-    });
-    const enrolledSlugs = new Set(nav.enrolled.map((c) => c.slug));
-    const catalog = courses.listCourses()
-      .filter((c) => c && c.slug && !enrolledSlugs.has(c.slug))
-      .map((c) => ({ slug: c.slug, title: c.title, description: c.description || '' }));
-    res.send(views.home.homePage(nav.user, enrolled, { showOnboarding, catalog }));
+    const enrolled = attachProgress(nav.user.id, nav.enrolled);
+    res.send(views.home.homePage(nav.user, enrolled, { showOnboarding }));
+  } catch (err) {
+    next(err);
+  }
+});
+
+/* ---------------- program page ---------------- */
+
+router.get('/programs/:slug', requireAuth, (req, res, next) => {
+  try {
+    const raw = String(req.params.slug || '').toLowerCase();
+    const found = /^[a-z0-9-]+$/.test(raw) ? program.programBySlug(raw) : null;
+    const nav = navFor(req);
+    if (!found) {
+      return res.status(404).send(notFoundPage(nav.user, nav));
+    }
+    const prog = found.program;
+    const enrolled = attachProgress(nav.user.id, nav.enrolled);
+    const enrolledBySlug = {};
+    for (const c of enrolled) enrolledBySlug[c.slug] = c;
+    const titleOf = (slug) => {
+      const c = courses.getCourse(slug);
+      return c ? c.title : slug;
+    };
+    // Step numbers come from the position in the program's order, so a
+    // course missing from the content still leaves the other steps numbered
+    // correctly. Missing courses are skipped (same as the landing page).
+    const rows = prog.order.map((slug, i) => {
+      const content = courses.getCourse(slug);
+      if (!content) return null;
+      const pre = (prog.prereqs && prog.prereqs[slug]) || null;
+      const ec = enrolledBySlug[slug] || null;
+      return {
+        slug,
+        title: content.title,
+        description: content.description || '',
+        step: i + 1,
+        total: prog.order.length,
+        prereqSlug: pre,
+        prereqTitle: pre ? titleOf(pre) : null,
+        enrolled: !!ec,
+        grade: ec ? ec.grade : null,
+        continueModule: ec ? ec.continueModule : null,
+        isCapstone: i === prog.order.length - 1,
+      };
+    }).filter(Boolean);
+    res.send(views.program.programPage(nav.user, nav.enrolled, prog, rows));
   } catch (err) {
     next(err);
   }

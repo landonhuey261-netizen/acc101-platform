@@ -1,13 +1,20 @@
 'use strict';
 
-const { escapeHtml, escAttr, layout, progressBar, progressRing } = require('./helpers');
+const { escapeHtml, escAttr, layout, progressBar, progressRing, courseComplete } = require('./helpers');
 const program = require('../lib/program');
 
 /**
- * Home dashboard (GET /): lists the user's ENROLLED courses. Even with a
- * single enrollment this list IS the home page (no auto-redirect).
- * Each entry: progress ring, grade, "Continue where you left off" button
- * pointing at the first incomplete module.
+ * Home dashboard (GET /): one card per PROGRAM, in PROGRAMS order.
+ * Each card shows the program's blurb, step count, the user's progress
+ * (X of N enrolled, Y completed), and a one-click Continue link to the
+ * first incomplete module among the user's enrolled courses in that
+ * program. "Open program" goes to /programs/<slug>, where the courses
+ * live and enrollment happens.
+ *
+ * Courses that belong to no program are listed separately below the
+ * program cards ("Standalone courses") with the same per-course card
+ * as the old dashboard. Today every course is in a program, so that
+ * section normally renders nothing.
  *
  * opts: { showOnboarding } — true for brand-new accounts with no progress
  * yet; renders the "How this works" card. Each enrolled course carries
@@ -28,22 +35,61 @@ function homePage(user, enrolled, opts) {
     '  </ol>\n' +
     '</section>\n';
 
-  // Program courses first, in program order; standalone courses keep their order.
-  const ordered = [...enrolled].sort((a, b) => {
-    const sa = program.stepOf(a.slug);
-    const sb = program.stepOf(b.slug);
-    if (sa && sb) {
-      if (sa.programIndex !== sb.programIndex) return sa.programIndex - sb.programIndex;
-      return sa.step - sb.step;
-    }
-    if (sa) return -1;
-    if (sb) return 1;
-    return 0;
-  });
+  const emptyState = enrolled.length === 0
+    ? '<div class="callout"><p>You are not enrolled in any courses yet. Open a program below and enroll in a course to get started.</p></div>\n'
+    : '';
 
-  const cards = ordered.map((c) => {
+  // One card per program, in PROGRAMS order. Iterating PROGRAMS (rather
+  // than hard-coding programs) means a new program appears automatically
+  // once its PROGRAMS entry lands.
+  const programCards = program.PROGRAMS.map((p, pi) => {
+    const inProgram = enrolled
+      .filter((c) => {
+        const s = program.stepOf(c.slug);
+        return s && s.programIndex === pi;
+      })
+      .sort((a, b) => program.stepOf(a.slug).step - program.stepOf(b.slug).step);
+    const total = p.order.length;
+    const enrolledCount = inProgram.length;
+    const completedCount = inProgram.filter((c) => courseComplete(c.grade)).length;
+    // Resume target: the lowest step with an incomplete module.
+    let resume = null;
+    for (const c of inProgram) {
+      if (c.continueModule) {
+        resume = { course: c, module: c.continueModule };
+        break;
+      }
+    }
+    const slug = program.programSlug(p);
+    const resumeBlock = resume
+      ? '<p class="continue-row"><a class="btn btn-primary" href="/c/' + escAttr(resume.course.slug) +
+        '/modules/' + escAttr(resume.module.slug) + '">Continue: ' + escapeHtml(resume.course.title) +
+        ' \u2014 Module ' + resume.module.num + ' \u2014 ' + escapeHtml(resume.module.title) + '</a></p>\n'
+      : (enrolledCount > 0 && completedCount === enrolledCount
+        ? '<p class="continue-row"><span class="continue-note">You\u2019ve finished every course you\u2019re enrolled in here \u2014 nice work.</span></p>\n'
+        : '');
+    return (
+      '<article class="card course-card">\n' +
+      '  <div class="course-card-top">\n' +
+      '    <div>\n' +
+      '      <h2><a href="/programs/' + escAttr(slug) + '">' + escapeHtml(p.name) + '</a></h2>\n' +
+      '      <p>' + escapeHtml(p.blurb) + '</p>\n' +
+      '      <p class="module-meta">' + total + ' courses</p>\n' +
+      '      <p class="grade-line"><strong>' + enrolledCount + ' of ' + total +
+        ' enrolled</strong> \u00b7 ' + completedCount + ' completed</p>\n' +
+      '    </div>\n' +
+      '  </div>\n' +
+      '  ' + progressBar(total > 0 ? (enrolledCount / total) * 100 : 0) + '\n' +
+      '  ' + resumeBlock +
+      '  <p><a class="btn btn-gold" href="/programs/' + escAttr(slug) + '">Open program</a></p>\n' +
+      '</article>'
+    );
+  }).join('\n');
+
+  // Standalone enrolled courses (no program) keep the old per-course card.
+  const standalone = enrolled.filter((c) => !program.stepOf(c.slug));
+  const standaloneCards = standalone.map((c) => {
     const grade = c.grade || { total: 0, letter: 'F' };
-    const stepInfo = program.stepOf(c.slug);
     const cm = c.continueModule;
     const continueBlock = cm
       ? '<p class="continue-row"><a class="btn btn-primary" href="/c/' + escAttr(c.slug) +
@@ -57,8 +103,6 @@ function homePage(user, enrolled, opts) {
       '    <div>\n' +
       '      <h2><a href="/c/' + escAttr(c.slug) + '/dashboard">' + escapeHtml(c.title) + '</a></h2>\n' +
       (c.description ? '      <p>' + escapeHtml(c.description) + '</p>\n' : '') +
-      (stepInfo ? '      <p class="module-meta">Step ' + stepInfo.step + ' of ' + stepInfo.total +
-        ' \u00b7 ' + escapeHtml(stepInfo.programName) + '</p>\n' : '') +
       '      <p class="grade-line"><span class="grade-badge grade-' + escapeHtml(grade.letter) + '">' +
       escapeHtml(grade.letter) + '</span> <strong>' + escapeHtml(String(grade.total)) + '%</strong> course grade</p>\n' +
       '    </div>\n' +
@@ -69,71 +113,32 @@ function homePage(user, enrolled, opts) {
       '</article>'
     );
   }).join('\n');
-
-  const emptyState = enrolled.length === 0
-    ? '<div class="callout"><p>You are not enrolled in any courses yet. Browse the courses below and enroll in one to get started.</p></div>\n'
-    : '';
-
-  // Catalog of courses the user is NOT enrolled in yet (program order
-  // first), each with a one-click enroll form. This is how a logged-in
-  // user discovers the program — the public catalog landing page only
-  // shows to logged-out visitors.
-  const catalog = (opts && Array.isArray(opts.catalog)) ? opts.catalog : [];
-  const orderedCatalog = [...catalog].sort((a, b) => {
-    const sa = program.stepOf(a.slug);
-    const sb = program.stepOf(b.slug);
-    if (sa && sb) {
-      if (sa.programIndex !== sb.programIndex) return sa.programIndex - sb.programIndex;
-      return sa.step - sb.step;
-    }
-    if (sa) return -1;
-    if (sb) return 1;
-    return 0;
-  });
-  const catalogCards = orderedCatalog.map((c) => {
-    const stepInfo = program.stepOf(c.slug);
-    return (
-      '<article class="card course-card">\n' +
-      '  <div class="course-card-top">\n' +
-      '    <div>\n' +
-      '      <h2>' + escapeHtml(c.title) + '</h2>\n' +
-      (c.description ? '      <p>' + escapeHtml(c.description) + '</p>\n' : '') +
-      (stepInfo ? '      <p class="module-meta">Step ' + stepInfo.step + ' of ' + stepInfo.total +
-        ' \u00b7 ' + escapeHtml(stepInfo.programName) + '</p>\n' : '') +
-      '    </div>\n' +
-      '  </div>\n' +
-      '  <form method="POST" action="/courses/' + escAttr(c.slug) + '/enroll">\n' +
-      '    <button type="submit" class="btn btn-gold">Enroll now</button>\n' +
-      '  </form>\n' +
-      '</article>'
-    );
-  }).join('\n');
-  const catalogSection = catalogCards
-    ? '<section id="catalog" aria-label="More courses">\n' +
+  const standaloneSection = standaloneCards
+    ? '<section aria-label="Standalone courses">\n' +
       '  <div class="page-head">\n' +
-      '    <h2>Keep going \u2014 more courses</h2>\n' +
-      '    <p class="section-sub">Enroll in a course and it moves up into your list above. Program courses are listed in order \u2014 start with the lowest step you have not taken yet.</p>\n' +
+      '    <h2>Standalone courses</h2>\n' +
+      '    <p class="section-sub">Courses that are not part of a program.</p>\n' +
       '  </div>\n' +
-      '  <div class="course-list">\n' + catalogCards + '\n</div>\n' +
+      '  <div class="course-list">\n' + standaloneCards + '\n</div>\n' +
       '</section>'
     : '';
 
   return layout({
-    title: 'My courses',
+    title: 'My programs',
     user,
     enrolled,
     navActive: 'dashboard',
     body:
       '<section class="page-head">\n' +
-      '  <h1>My courses</h1>\n' +
-      '  <p class="section-sub">Welcome back, ' + escapeHtml(user.username) + '. Pick a course to continue learning.</p>\n' +
+      '  <h1>My programs</h1>\n' +
+      '  <p class="section-sub">Welcome back, ' + escapeHtml(user.username) + '. Pick a program to continue learning.</p>\n' +
       '</section>\n' +
       (showOnboarding ? onboarding : '') +
       emptyState +
-      '<section id="courses" aria-label="My courses">\n' +
-      '<div class="course-list">\n' + cards + '\n</div>\n' +
+      '<section id="programs" aria-label="My programs">\n' +
+      '<div class="card-grid">\n' + programCards + '\n</div>\n' +
       '</section>' +
-      catalogSection,
+      standaloneSection,
   });
 }
 

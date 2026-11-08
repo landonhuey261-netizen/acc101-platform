@@ -89,6 +89,12 @@ function progressRing(pct) {
     '</svg>';
 }
 
+/** A course counts as completed when all 12 modules are marked done. */
+function courseComplete(grade) {
+  const perModule = (grade && grade.perModule) || [];
+  return perModule.length >= 12 && perModule.every((pm) => pm && pm.done);
+}
+
 function gradeBadge(letter) {
   return '<span class="grade-badge grade-' + escapeHtml(letter) + '">' +
     escapeHtml(letter) + '</span>';
@@ -251,7 +257,7 @@ function layout(opts) {
       : '/';
     navLinks =
       navItem('dashboard', '/', 'Dashboard') +
-      navItem('courses', '/#courses', 'My Courses') +
+      navItem('courses', '/#programs', 'My Programs') +
       navItem('gradebook', gradebookHref, 'Gradebook') +
       (tutorCourseSlug
         ? navItem('tutor', '/c/' + escAttr(tutorCourseSlug) + '/tutor', 'Tutor')
@@ -354,6 +360,7 @@ module.exports = {
   assignmentPrompt,
   progressBar,
   progressRing,
+  courseComplete,
   gradeBadge,
   courseSidebar,
   layout,

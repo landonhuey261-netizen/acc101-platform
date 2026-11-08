@@ -6,6 +6,7 @@ module.exports = {
   auth: require('./auth'),
   landing: require('./landing'),
   home: require('./home'),
+  program: require('./program'),
   dashboard: require('./dashboard'),
   module: require('./module'),
   exams: require('./exams'),
