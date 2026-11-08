@@ -110,7 +110,7 @@ router.get('/c/:course/dashboard', requireAuth, resolveCourse, (req, res, next) 
     };
     const programHtml = program.programBannerHtml(req.course, grade, titleOf);
     let certHtml = '';
-    if (req.course.slug === 'hvac-cert-prep') {
+    if (req.course.slug === 'hvac-cert-prep' || req.course.slug === 'plb-cert-prep') {
       const bestBy = {};
       for (const r of db.getExamScores(nav.user.id, req.courseId)) bestBy[r.exam] = r.best;
       const courseProgress = {};
@@ -127,7 +127,7 @@ router.get('/c/:course/dashboard', requireAuth, resolveCourse, (req, res, next) 
       const guideViews = new Set(
         db.getGuideViews(nav.user.id, req.courseId).map((r) => r.guide_id)
       );
-      certHtml = certs.renderCertPanel({ bestBy, courseProgress, guideViews });
+      certHtml = certs.renderCertPanel({ bestBy, courseProgress, guideViews }, req.course.slug);
     }
     res.send(views.dashboard.dashboardPage(
       nav.user, req.course, nav.enrolled, grade, req.course.modules.list,

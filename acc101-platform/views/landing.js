@@ -27,36 +27,35 @@ function courseCard(c, extra) {
 function landingPage(courses) {
   const bySlug = {};
   for (const c of courses) bySlug[c.slug] = c;
-  const programCourses = program.PROGRAM_ORDER.map((s) => bySlug[s]).filter(Boolean);
-  const inProgram = new Set(program.PROGRAM_ORDER);
-  const others = courses.filter((c) => !inProgram.has(c.slug));
+  const inAnyProgram = new Set(program.PROGRAMS.flatMap((p) => p.order));
+  const others = courses.filter((c) => !inAnyProgram.has(c.slug));
 
-  const programCards = programCourses.map((c, i) => {
-    const pre = program.prereqSlug(c.slug);
-    const preCourse = pre ? bySlug[pre] : null;
-    const preInfo = pre ? program.stepOf(pre) : null;
-    const note = preCourse
-      ? 'Prerequisite: ' + escapeHtml(preCourse.title) + ' (Step ' +
-        (preInfo ? preInfo.step : '') + ') \u2014 take it first.'
-      : '';
-    return courseCard(c, { eyebrow: 'Step ' + (i + 1) + ' of ' + programCourses.length, note });
+  const programSections = program.PROGRAMS.map((p) => {
+    const programCourses = p.order.map((s) => bySlug[s]).filter(Boolean);
+    if (!programCourses.length) return '';
+    const programCards = programCourses.map((c, i) => {
+      const pre = program.prereqSlug(c.slug);
+      const preCourse = pre ? bySlug[pre] : null;
+      const preInfo = pre ? program.stepOf(pre) : null;
+      const note = preCourse
+        ? 'Prerequisite: ' + escapeHtml(preCourse.title) + ' (Step ' +
+          (preInfo ? preInfo.step : '') + ') \u2014 take it first.'
+        : '';
+      return courseCard(c, { eyebrow: 'Step ' + (i + 1) + ' of ' + programCourses.length, note });
+    }).join('\n');
+    return '<section class="roadmap">\n' +
+      '  <h2>The ' + escapeHtml(p.name) + '</h2>\n' +
+      '  <p class="section-sub">' + escapeHtml(p.blurb) + '</p>\n' +
+      '  <div class="card-grid">\n' + programCards + '\n  </div>\n' +
+      '</section>\n';
   }).join('\n');
 
-  const programSection = programCourses.length
-    ? '<section class="roadmap">\n' +
-      '  <h2>The HVAC/R Technology program</h2>\n' +
-      '  <p class="section-sub">Eleven courses taken in order, sequenced after Ferris State ' +
-      'University\u2019s HVACR Technology (AAS) major courses \u2014 from refrigeration ' +
-      'fundamentals to a certification-prep capstone that readies you for the real EPA 608 ' +
-      'and NATE exams.</p>\n' +
-      '  <div class="card-grid">\n' + programCards + '\n  </div>\n' +
-      '</section>\n'
-    : '';
+  const hasPrograms = programSections.length > 0;
 
   const otherCards = others.map((c) => courseCard(c)).join('\n');
   const coursesSection =
     '<section class="roadmap">\n' +
-    '  <h2>' + (programCourses.length ? 'Standalone courses' : 'Available courses') + '</h2>\n' +
+    '  <h2>' + (hasPrograms ? 'Standalone courses' : 'Available courses') + '</h2>\n' +
     '  <p class="section-sub">Enroll in any course; your progress is tracked separately per course.</p>\n' +
     '  <div class="card-grid">\n' + (otherCards || '<p>New courses are on the way \u2014 check back soon.</p>') + '\n  </div>\n' +
     '</section>\n';
@@ -79,7 +78,7 @@ function landingPage(courses) {
       '  </div>\n' +
       '</section>\n' +
 
-      programSection +
+      programSections +
       coursesSection +
 
       '<section class="how-it-works">\n' +

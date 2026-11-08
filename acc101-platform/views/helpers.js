@@ -281,7 +281,7 @@ function layout(opts) {
     '<head>\n' +
     '<meta charset="utf-8">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-    '<meta name="description" content="College Without College — college-style courses, self-paced: lectures, assignments, auto-graded quizzes, labs, exams, and a gradebook. First course: ACC 101, Principles of Financial Accounting.">\n' +
+    '<meta name="description" content="College Without College — self-paced, college-style courses with lectures, auto-graded quizzes, hands-on labs, timed exams, and a gradebook. ACC 101 accounting, an 11-course HVAC/R program that preps you for EPA 608 and NATE certification, and a 12-step Plumbing & Pipefitting program that preps you for the Michigan journeyman license, NCCER, and ASSE certification.">\n' +
     '<meta name="theme-color" content="#14365e">\n' +
     '<title>' + escapeHtml(title) + ' | College Without College</title>\n' +
     '<link rel="stylesheet" href="/styles.css">\n' +
