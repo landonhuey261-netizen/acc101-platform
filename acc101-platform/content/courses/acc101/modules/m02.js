@@ -209,9 +209,9 @@ module.exports = {
     { term: "Slide error", def: "An error in which the decimal point is misplaced (e.g., $540 recorded as $54.00); the resulting difference is always divisible by 9." }
   ],
   video: {
-    title: "Fundamentals of Accounting — Lecture Series (42 lectures)",
-    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLerzWq9nGRYciMKaElwxUYsGx_UCWpgML",
-    note: "Start with Lectures 8–12, which map directly to this module: source documentation, the chart of accounts, journalizing entries, posting to the ledger, and preparing the trial balance. Watch with your debit/credit rules table beside you and pause to journalize each example before the lecturer reveals the entry."
+    title: "The TRIAL BALANCE Explained (Full Example!)",
+    embedUrl: "https://www.youtube.com/embed/3_PfoTzSCQE",
+    note: "Follow one example all the way from journal entry to trial balance: how to journalize a transaction, post each line to the ledger (T-accounts), and build the trial balance from the ledger balances — with six worked examples. Watch with your debit/credit rules table beside you and pause to journalize each example before the video reveals the entry."
   },
   assignment: [
     {

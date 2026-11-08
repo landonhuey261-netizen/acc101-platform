@@ -226,9 +226,9 @@ module.exports = {
     { term: "Operating expenses", def: "Expenses of running the business, divided into selling expenses (tied to making sales) and administrative expenses (general management)." }
   ],
   video: {
-    title: "Fundamentals of Accounting — Lectures 30\u201342: the merchandising business",
-    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLerzWq9nGRYciMKaElwxUYsGx_UCWpgML",
-    note: "Start the playlist at Lectures 30\u201342, which cover the merchandising business: recording purchases and sales, purchase and sales discounts, and returns. The earlier lectures are a good refresher if journal entries feel rusty."
+    title: "Question 3 - Merchandising Transactions (Purchase, Sales, Discounts, Returns and Allowances)",
+    embedUrl: "https://www.youtube.com/embed/MYCaoOnHPTo",
+    note: "This video works through one merchandising question end to end, journalizing purchases, sales, purchase and sales discounts, and returns and allowances as they happen. Follow along with the Bayview Traders problems in the assignment below and pause to write each entry yourself before the answer appears."
   },
   assignment: [
     {

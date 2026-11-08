@@ -28,16 +28,17 @@ const RESOURCES = [
     when: 'Module 3 (accrual vs. cash), Module 9 (depreciation), and Module 12 (cash flow basics).',
   },
   {
-    title: 'Fundamentals of Accounting',
-    byline: 'College-style lecture series \u00b7 playlist \u00b7 42 videos',
-    watchUrl: 'http://www.youtube.com/playlist?list=PLerzWq9nGRYciMKaElwxUYsGx_UCWpgML',
-    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLerzWq9nGRYciMKaElwxUYsGx_UCWpgML',
-    covers: 'Why accounting matters, the conceptual framework, debits and credits, the chart of ' +
-      'accounts, journal entries, posting, the trial balance, every adjusting-entry type, the ' +
-      'worksheet, financial statements, closing entries, merchandising, discounts, and returns.',
-    when: 'Module 2 (journalizing / trial balance lectures), Module 3 (adjusting entries lectures), ' +
-      'Module 4 (financial statements / closing lectures), Module 5 (merchandising lectures). ' +
-      'Each module\u2019s video block tells you which lecture numbers to watch.',
+    title: 'LEARN ACCOUNTING in Under 5 Hours!',
+    byline: 'Accounting Stuff · full basics course · one long video',
+    watchUrl: 'https://www.youtube.com/watch?v=gPBhGkBN30s',
+    embedUrl: 'https://www.youtube.com/embed/gPBhGkBN30s',
+    covers: 'The whole Accounting Basics course in one sitting: the accounting equation, debits and ' +
+      'credits, journal entries, the ledger, the trial balance, adjusting entries, financial ' +
+      'statements, and closing entries — the same ground as Modules 1–5, taught end to end.',
+    when: 'Use as a full-course refresher after you finish ACC 101, or dip into the timestamped ' +
+      'chapters alongside Modules 2, 3 and 5, which each have their own focused video. (The old ' +
+      '“Fundamentals of Accounting” playlist this card used to point to no longer allows embedding, ' +
+      'so it was replaced.)',
   },
   {
     title: 'Free Courses \u2014 full accounting course library',

@@ -184,9 +184,9 @@ module.exports = {
     { term: "Adjusted trial balance", def: "A trial balance prepared after all adjusting entries are posted; proves debits still equal credits and supplies the figures for the financial statements." }
   ],
   video: {
-    title: "Fundamentals of Accounting — Lecture Series (42 lectures)",
-    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLerzWq9nGRYciMKaElwxUYsGx_UCWpgML",
-    note: "Watch Lectures 13–20, which cover every adjusting entry type in this module: prepaid expenses, unearned revenues, accrued expenses, accrued revenues, and depreciation, plus the adjusted trial balance.",
+    title: "Prepayments and Accruals | Adjusting Entries",
+    embedUrl: "https://www.youtube.com/embed/H0N7tvXuJlU",
+    note: "This video walks through the four core adjusting-entry types — prepaid expenses, unearned (deferred) revenue, accrued expenses, and accrued revenue — and shows the journal entry for each. Depreciation and the adjusted trial balance are worked in the module sections below; depreciation comes back in full in Module 9.",
     more: [
       { title: "Khan Academy: Accounting and financial statements — accrual vs. cash accounting", url: "https://www.youtube.com/playlist?list=PLSQl0a2vh4HAHUM1CLDf4YnxpX-WmxKZi" }
     ]
