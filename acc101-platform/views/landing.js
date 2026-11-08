@@ -74,10 +74,11 @@ function landingPage(courses) {
       '  <div class="hero-inner">\n' +
       '    <img class="hero-logo" src="/logo-hero-fullbody.png" alt="College Without College">\n' +
       '    <p class="eyebrow">College Without College \u00b7 self-paced \u00b7 free to start</p>\n' +
-      '    <h1>Learn accounting the way college teaches it</h1>\n' +
-      '    <p class="lede">In-depth lecture notes with worked examples, hands-on assignments with ' +
-      'step-by-step solutions, auto-graded quizzes with instant explanations, spreadsheet-style labs, ' +
-      'timed exams, and a live gradebook \u2014 everything a real semester delivers, at your own pace.</p>\n' +
+      '    <h1>Real college courses, at your own pace</h1>\n' +
+      '    <p class="lede">Accounting, HVAC/R, plumbing, business, and economics \u2014 full programs ' +
+      'with in-depth lectures, worked examples, hands-on assignments with step-by-step solutions, ' +
+      'auto-graded quizzes with instant explanations, spreadsheet-style labs, timed exams, and a live ' +
+      'gradebook \u2014 everything a real semester delivers, free to start, on your schedule.</p>\n' +
       '    <div class="cta-row">\n' +
       '      <a class="btn btn-gold btn-lg" href="/signup">Start learning free</a>\n' +
       '      <a class="btn btn-outline btn-lg" href="/login">Log in</a>\n' +

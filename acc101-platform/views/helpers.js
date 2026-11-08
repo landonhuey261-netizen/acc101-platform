@@ -312,7 +312,8 @@ function layout(opts) {
     '<footer class="site-footer">\n' +
     '  <div class="container footer-inner">\n' +
     '    <p><strong>College Without College.</strong> ' +
-    'College-style courses at your own pace — starting with ACC 101: Principles of Financial Accounting. All content is original and written for these courses.</p>\n' +
+    'College-style courses at your own pace \u2014 accounting, HVAC/R, plumbing &amp; pipefitting, ' +
+    'business, and economics. All content is original and written for these courses.</p>\n' +
     '    <p class="footer-note">Study tip: attempt every assignment problem on your own before opening the solutions.</p>\n' +
     '  </div>\n' +
     '</footer>\n' +
