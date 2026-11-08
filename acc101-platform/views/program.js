@@ -58,6 +58,16 @@ function programPage(user, enrolled, prog, rows) {
         '</article>'
       );
     }
+    // Logged-out visitors can't enroll (POST /courses/<slug>/enroll needs a
+    // login), so they get signup/login buttons instead of the Enroll form.
+    // The class list itself is identical to the logged-in view.
+    const enrollBlock = user
+      ? '  <form method="POST" action="/courses/' + escAttr(r.slug) + '/enroll">\n' +
+        '    <button type="submit" class="btn btn-gold">Enroll now</button>\n' +
+        '  </form>\n'
+      : '  <p><a class="btn btn-gold" href="/signup">Start learning free</a> ' +
+        '<a class="btn btn-outline" href="/login">Log in</a></p>\n' +
+        '  <p class="module-meta">Sign up free to enroll in this course and track your progress.</p>\n';
     return (
       '<article class="card course-card">\n' +
       '  <div class="course-card-top">\n' +
@@ -68,27 +78,32 @@ function programPage(user, enrolled, prog, rows) {
       preNote +
       '    </div>\n' +
       '  </div>\n' +
-      '  <form method="POST" action="/courses/' + escAttr(r.slug) + '/enroll">\n' +
-      '    <button type="submit" class="btn btn-gold">Enroll now</button>\n' +
-      '  </form>\n' +
+      enrollBlock +
       capstoneNote +
       '</article>'
     );
   }).join('\n');
 
+  // Logged-out visitors see the course count and a signup nudge instead of
+  // enrollment progress (they have none yet).
+  const headStats = user
+    ? '  <p class="grade-line"><strong>' + enrolledCount + ' of ' + total +
+      ' enrolled</strong> \u00b7 ' + completedCount + ' completed</p>\n' +
+      '  ' + progressBar(total > 0 ? (enrolledCount / total) * 100 : 0) + '\n'
+    : '  <p class="grade-line"><strong>' + total + ' courses</strong> \u00b7 free to start \u2014 ' +
+      '<a href="/signup">sign up</a> to enroll and track your progress.</p>\n';
+
   return layout({
     title: prog.name,
     user,
     enrolled,
-    navActive: 'dashboard',
+    navActive: user ? 'dashboard' : null,
     body:
       '<section class="page-head">\n' +
-      '  <p><a href="/">&larr; My programs</a></p>\n' +
+      '  <p><a href="/">&larr; ' + (user ? 'My programs' : 'All programs') + '</a></p>\n' +
       '  <h1>' + escapeHtml(prog.name) + '</h1>\n' +
       '  <p class="section-sub">' + escapeHtml(prog.blurb) + '</p>\n' +
-      '  <p class="grade-line"><strong>' + enrolledCount + ' of ' + total +
-        ' enrolled</strong> \u00b7 ' + completedCount + ' completed</p>\n' +
-      '  ' + progressBar(total > 0 ? (enrolledCount / total) * 100 : 0) + '\n' +
+      headStats +
       '</section>\n' +
       '<section id="courses" aria-label="Courses in this program">\n' +
       '<div class="course-list">\n' + cards + '\n</div>\n' +

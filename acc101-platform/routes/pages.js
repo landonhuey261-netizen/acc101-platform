@@ -75,7 +75,11 @@ router.get('/', (req, res, next) => {
 
 /* ---------------- program page ---------------- */
 
-router.get('/programs/:slug', requireAuth, (req, res, next) => {
+// Public: visitors see a program's classes in step order before logging in,
+// exactly like the logged-in view — only enrollment (and grades/Continue)
+// need an account. Logged-out rows all render as not-enrolled, with
+// signup/login buttons instead of the Enroll form.
+router.get('/programs/:slug', (req, res, next) => {
   try {
     const raw = String(req.params.slug || '').toLowerCase();
     const found = /^[a-z0-9-]+$/.test(raw) ? program.programBySlug(raw) : null;
@@ -84,7 +88,7 @@ router.get('/programs/:slug', requireAuth, (req, res, next) => {
       return res.status(404).send(notFoundPage(nav.user, nav));
     }
     const prog = found.program;
-    const enrolled = attachProgress(nav.user.id, nav.enrolled);
+    const enrolled = nav.user ? attachProgress(nav.user.id, nav.enrolled) : [];
     const enrolledBySlug = {};
     for (const c of enrolled) enrolledBySlug[c.slug] = c;
     const titleOf = (slug) => {

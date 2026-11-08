@@ -30,27 +30,33 @@ function landingPage(courses) {
   const inAnyProgram = new Set(program.PROGRAMS.flatMap((p) => p.order));
   const others = courses.filter((c) => !inAnyProgram.has(c.slug));
 
-  const programSections = program.PROGRAMS.map((p) => {
+  // One card per program (same shape as the logged-in dashboard): name,
+  // blurb, course count, and a link to the program page, where the classes
+  // are listed in step order. Visitors see the programs before logging in;
+  // enrollment itself still happens after signup.
+  const programCards = program.PROGRAMS.map((p) => {
     const programCourses = p.order.map((s) => bySlug[s]).filter(Boolean);
     if (!programCourses.length) return '';
-    const programCards = programCourses.map((c, i) => {
-      const pre = program.prereqSlug(c.slug);
-      const preCourse = pre ? bySlug[pre] : null;
-      const preInfo = pre ? program.stepOf(pre) : null;
-      const note = preCourse
-        ? 'Prerequisite: ' + escapeHtml(preCourse.title) + ' (Step ' +
-          (preInfo ? preInfo.step : '') + ') \u2014 take it first.'
-        : '';
-      return courseCard(c, { eyebrow: 'Step ' + (i + 1) + ' of ' + programCourses.length, note });
-    }).join('\n');
-    return '<section class="roadmap">\n' +
-      '  <h2>The ' + escapeHtml(p.name) + '</h2>\n' +
-      '  <p class="section-sub">' + escapeHtml(p.blurb) + '</p>\n' +
-      '  <div class="card-grid">\n' + programCards + '\n  </div>\n' +
-      '</section>\n';
+    const slug = program.programSlug(p);
+    return (
+      '<article class="card course-card">\n' +
+      '  <h3><a href="/programs/' + slug + '">' + escapeHtml(p.name) + '</a></h3>\n' +
+      '  <p>' + escapeHtml(p.blurb) + '</p>\n' +
+      '  <p class="module-meta">' + programCourses.length + ' courses \u00b7 taken in order, step by step</p>\n' +
+      '  <p><a class="btn btn-gold" href="/programs/' + slug + '">See the classes</a></p>\n' +
+      '</article>'
+    );
   }).join('\n');
 
-  const hasPrograms = programSections.length > 0;
+  const hasPrograms = programCards.length > 0;
+
+  const programsSection = hasPrograms
+    ? '<section class="roadmap">\n' +
+      '  <h2>Programs</h2>\n' +
+      '  <p class="section-sub">Pick a program to see its classes in order. Sign up free to enroll and track your progress.</p>\n' +
+      '  <div class="card-grid">\n' + programCards + '\n  </div>\n' +
+      '</section>\n'
+    : '';
 
   const otherCards = others.map((c) => courseCard(c)).join('\n');
   const coursesSection =
@@ -79,7 +85,7 @@ function landingPage(courses) {
       '  </div>\n' +
       '</section>\n' +
 
-      programSections +
+      programsSection +
       coursesSection +
 
       '<section class="how-it-works">\n' +
