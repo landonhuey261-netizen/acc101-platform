@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /c/
+Disallow: /account
+Disallow: /logout
+
+Sitemap: https://collegewithoutthecollege-production.up.railway.app/sitemap.xml
