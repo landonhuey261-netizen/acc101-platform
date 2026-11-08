@@ -12,9 +12,12 @@ RUN apk add --no-cache python3 make g++
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-# Copy the app and generate PWA icons
+# Copy the app. NOTE: do NOT run scripts/make-icons.js here — it regenerates
+# the gold "CWC" icons and overwrites public/icons/*.png on every build,
+# which clobbered the photo icons Landon uploaded (2026-11-08). The icons
+# in the repo are the real ones; the build must leave them alone.
+# (scripts/make-icons.js is kept in the repo unused; delete it if wanted.)
 COPY . .
-RUN node scripts/make-icons.js
 
 EXPOSE 3000
 ENV PORT=3000
