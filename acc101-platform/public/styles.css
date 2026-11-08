@@ -68,6 +68,8 @@ a:hover { color: var(--gold-deep); }
 }
 .brand-text { font-family: var(--serif); font-weight: bold; font-size: 1.05rem; line-height: 1.2; }
 .brand-text em { display: block; font-style: normal; font-family: var(--sans); font-weight: normal; font-size: 0.72rem; color: #cdd9e8; }
+.brand-mark-img { width: 2.2rem; height: 2.2rem; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); flex: none; }
+.hero-logo { display: block; max-width: 620px; width: 100%; height: auto; margin: 0 0 1.2rem; }
 
 .nav-toggle { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: #fff; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 1.1rem; cursor: pointer; min-width: 44px; min-height: 44px; }
 .main-nav { display: none; width: 100%; flex-direction: column; gap: 0.1rem; }

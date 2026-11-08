@@ -301,7 +301,7 @@ function layout(opts) {
     '<header class="site-header">\n' +
     '  <div class="header-inner">\n' +
     '    <a class="brand" href="/">' +
-    '<span class="brand-mark" aria-hidden="true">CWC</span>' +
+    '<img class="brand-mark-img" src="/logo-header-mark.png" alt="" aria-hidden="true">' +
     '<span class="brand-text">College Without College <em>Self-paced college courses</em></span></a>\n' +
     '    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">\u2630</button>\n' +
     '    <nav class="main-nav" id="mainNav" aria-label="Primary">' + navLinks + '</nav>\n' +

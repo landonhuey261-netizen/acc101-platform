@@ -66,6 +66,7 @@ function landingPage(courses) {
     body:
       '<section class="hero">\n' +
       '  <div class="hero-inner">\n' +
+      '    <img class="hero-logo" src="/logo-hero-fullbody.png" alt="College Without College">\n' +
       '    <p class="eyebrow">College Without College \u00b7 self-paced \u00b7 free to start</p>\n' +
       '    <h1>Learn accounting the way college teaches it</h1>\n' +
       '    <p class="lede">In-depth lecture notes with worked examples, hands-on assignments with ' +
