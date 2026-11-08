@@ -1,7 +1,7 @@
 'use strict';
 
 // Certification tracker definitions + rendering for the program capstones
-// (hvac-cert-prep and plb-cert-prep). Each entry names its capstone; the
+// (hvac-cert-prep, plb-cert-prep, and bus-capstone). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -346,6 +346,81 @@ const CERTS = [
     guideLabel: 'OSHA 10/30 & the UA Apprenticeship Path study guide',
     where: OSHA_WHERE,
   },
+  {
+    id: 'quickbooks-user',
+    capstone: 'bus-capstone',
+    name: 'Intuit QuickBooks Online Certified User',
+    blurb:
+      'Industry-recognized credential validating skill in Intuit QuickBooks ' +
+      'Online; ~40 questions, 50 minutes, online proctored; ~150 hours of ' +
+      'instruction recommended; open to students, entrepreneurs, and job seekers.',
+    kind: 'single',
+    examKey: 'quickbooks-user',
+    examLabel: 'QuickBooks Online Certified User practice exam',
+    standard: 80,
+    benchmark: true,
+    mapped:
+      'Prepared by ACC 101, ACC 102, Financial Management, and ' +
+      'Entrepreneurship & Small Business Management. Practice exam: the ' +
+      'QuickBooks Online Certified User practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 80% — a practice ' +
+      'benchmark; Certiport publishes no pass mark for this exam.',
+    guideId: 'quickbooks-user',
+    guideLabel: 'QuickBooks Certified User study guide',
+    where:
+      'Certiport authorized testing centers or online-proctored exams — ' +
+      'start at ' +
+      '<a href="https://certiport.pearsonvue.com" target="_blank" rel="noopener">certiport.pearsonvue.com</a>.',
+  },
+  {
+    id: 'capm-practice',
+    capstone: 'bus-capstone',
+    name: 'CAPM (Certified Associate in Project Management)',
+    blurb:
+      'PMI\u2019s entry-level project management certification; 150 questions, ' +
+      '3 hours, via Pearson VUE. Eligibility: 23 hours of project management ' +
+      'education + high school diploma; must be at least 18; formal courses ' +
+      'only — self-study does not count. No experience required.',
+    kind: 'single',
+    examKey: 'capm-practice',
+    examLabel: 'CAPM practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Operations, Quality & Supply Chain Management project ' +
+      'management modules and the capstone. Practice exam: the CAPM practice ' +
+      'exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — a practice ' +
+      'benchmark; PMI publishes no passing score.',
+    guideId: 'capm-foundations',
+    guideLabel: 'CAPM Foundations study guide',
+    where:
+      'PMI via Pearson VUE — start at ' +
+      '<a href="https://www.pmi.org" target="_blank" rel="noopener">pmi.org</a>.',
+  },
+  {
+    id: 'google-digital-marketing',
+    capstone: 'bus-capstone',
+    name: 'Google Digital Marketing & E-commerce Certificate',
+    blurb:
+      '7-course Coursera certificate covering digital marketing and ' +
+      'e-commerce; completion-based, no scored exam.',
+    kind: 'completion',
+    mappedCourses: ['mkt101'],
+    mapped:
+      'Prepared by Principles of Marketing. There is no exam score for ' +
+      'this certificate — completion is the credential.',
+    readyRule:
+      'Completion-based — finish Principles of Marketing and review the ' +
+      'Business Core Comprehensive study guide; there is no exam score.',
+    guideId: 'business-core',
+    guideLabel: 'Business Core Comprehensive study guide',
+    where:
+      'Coursera — ' +
+      '<a href="https://www.coursera.org" target="_blank" rel="noopener">coursera.org</a>.',
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -405,7 +480,7 @@ function renderCert(cert, ctx) {
     rows =
       '    <li><strong>Mapped courses finished</strong> — ' + finished + ' of ' +
       cert.mappedCourses.length + ' · ' + statusBadge(finished === cert.mappedCourses.length) + '</li>\n' +
-      '    <li><strong>Employment Ready study guide reviewed</strong> — ' +
+      '    <li><strong>' + esc(cert.guideLabel) + ' reviewed</strong> — ' +
       (guideViewed ? 'yes' : 'not yet') + ' · ' + statusBadge(!!guideViewed) + '</li>';
   } else if (cert.kind === 'attestation') {
     // No exam exists for this credential, so there is no score to track.
@@ -452,7 +527,10 @@ function renderCertPanel(ctx, capstone) {
   const licensingNote = slug === 'plb-cert-prep'
     ? 'Michigan plumbing licensing is covered by the two Michigan entries below; ' +
       'other state and local licensing is separate and varies by state.'
-    : 'State and local licensing is separate from all of these and varies by state.';
+    : slug === 'bus-capstone'
+      ? 'There is no license for general business — the credentials above are ' +
+        'optional and are taken through the providers listed on each card.'
+      : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
     '  <h2>Certification tracker</h2>\n' +

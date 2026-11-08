@@ -5,7 +5,10 @@
 //    Technology (AAS) major courses.
 //  - Plumbing & Pipefitting: modeled on Thaddeus Stevens College of
 //    Technology's Plumbing Technology (AAS) + NCCER Plumbing Levels 1-4.
-// Courses outside these lists (e.g. ACC 101) are standalone and are never
+//  - General Business: modeled on Ferris State University's College of
+//    Business Business Administration B.S. (BUAD-BS) + College of Business
+//    minors; ACC 101 is reused as its Step 2 accounting foundation.
+// Courses outside these lists are standalone and are never
 // numbered into a program.
 //
 // PROGRAM_NAME / PROGRAM_ORDER / PREREQS keep their original meaning (the
@@ -74,6 +77,43 @@ const PROGRAMS = [
       'capstone that readies you for the Michigan journeyman license, NCCER, and ' +
       'ASSE certification.',
   },
+  {
+    name: 'General Business program',
+    order: [
+      'bus101',
+      'acc101',
+      'acc102',
+      'bus121',
+      'bus131',
+      'mgt101',
+      'mkt101',
+      'fin101',
+      'bus201',
+      'mgt201',
+      'bus211',
+      'bus221',
+      'bus-capstone',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as
+    // hvac-cert-prep and plb-cert-prep); the final-step banner covers it.
+    prereqs: {
+      acc102: 'acc101',
+      fin101: 'acc102',
+      bus201: 'bus121',
+      mgt201: 'bus121',
+      bus221: 'mgt101',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Ferris State University\u2019s ' +
+      'College of Business Business Administration B.S. (BUAD-BS) plus its minors ' +
+      '\u2014 from an introduction to business, with ACC 101 as the accounting ' +
+      'foundation, to a business-plan capstone.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When your business ' +
+      'plan is finished and the certification tracker on this page shows READY for the ' +
+      'credentials you want, book the real exams through the approved providers listed there.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;
@@ -83,6 +123,10 @@ const PREREQS = PROGRAMS[0].prereqs;
 const PLUMBING_PROGRAM_NAME = PROGRAMS[1].name;
 const PLUMBING_PROGRAM_ORDER = PROGRAMS[1].order;
 const PLUMBING_PREREQS = PROGRAMS[1].prereqs;
+
+const BUSINESS_PROGRAM_NAME = PROGRAMS[2].name;
+const BUSINESS_PROGRAM_ORDER = PROGRAMS[2].order;
+const BUSINESS_PROGRAM_PREREQS = PROGRAMS[2].prereqs;
 
 /**
  * Find the program a slug belongs to.
@@ -169,11 +213,14 @@ function programBannerHtml(course, grade, titleOf) {
       );
     }
   } else {
-    lines.push(
-      '  <p>This is the final step of the program — the capstone. When the certification ' +
+    // Per-program final-step line: the business capstone ends with a
+    // finished business plan + optional credential exams, not a license.
+    // Programs without a capstoneLine keep the original text.
+    const capstoneLine = PROGRAMS[info.programIndex].capstoneLine ||
+      'This is the final step of the program — the capstone. When the certification ' +
       'tracker on this page shows READY, book the real exams through the approved ' +
-      'providers listed there.</p>'
-    );
+      'providers listed there.';
+    lines.push('  <p>' + esc(capstoneLine) + '</p>');
   }
   return '<section class="card program-banner">\n' + lines.join('\n') + '\n</section>\n';
 }
@@ -186,6 +233,9 @@ module.exports = {
   PLUMBING_PROGRAM_NAME,
   PLUMBING_PROGRAM_ORDER,
   PLUMBING_PREREQS,
+  BUSINESS_PROGRAM_NAME,
+  BUSINESS_PROGRAM_ORDER,
+  BUSINESS_PROGRAM_PREREQS,
   programOf,
   programNameOf,
   stepOf,
