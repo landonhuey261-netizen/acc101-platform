@@ -96,13 +96,13 @@ module.exports = {
     }
   ],
   "video": {
-    "title": "How to Start Plumbing TODAY",
-    "embedUrl": "https://www.youtube.com/embed/mfxw1dQt26M",
-    "note": "Roger Wakefield walks through how to start a plumbing career: apprenticeship, licensing steps, and what the first years look like. Compare his state's ladder with Michigan's apprentice → journeyman → master path in this module.",
+    "title": "How to Become a Plumber (Step-by-Step)",
+    "embedUrl": "https://www.youtube.com/embed/gZ7dvD1cV1g",
+    "note": "Roger Wakefield walks through how to become a plumber step by step: the questions to answer first, getting a job, apprenticeship, and licensing steps. Compare his state's ladder with Michigan's apprentice → journeyman → master path in this module.",
     "more": [
       {
-        "title": "How to Become a Plumber (Step-by-Step)",
-        "url": "https://www.youtube.com/watch?v=gZ7dvD1cV1g"
+        "title": "How to Start Plumbing TODAY",
+        "url": "https://www.youtube.com/watch?v=mfxw1dQt26M"
       }
     ]
   },

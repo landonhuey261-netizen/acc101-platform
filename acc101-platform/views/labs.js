@@ -94,7 +94,7 @@ function labPage(user, course, enrolled, lab, best, modules, doneByNum) {
       '  <header class="page-head">\n' +
       '    <p class="eyebrow"><a href="' + base + '/labs">' + escapeHtml(course.labsTitle || 'Accounting labs') + '</a> \u00b7 ' + escapeHtml(course.title) + '</p>\n' +
       '    <h1>' + escapeHtml(lab.title) + '</h1>\n' +
-      '    <p class="section-sub">Best score so far: <strong>' + escapeHtml(String(best || 0)) + '%</strong> ' +
+      '    <p class="section-sub">Best score so far: <strong id="labBestScore">' + escapeHtml(String(best || 0)) + '%</strong> ' +
       '\u00b7 passing: ' + escapeHtml(String(lab.passing || 70)) + '%</p>\n' +
       '  </header>\n' +
       '  <div class="card"><div class="lab-intro">' + (lab.introHtml || '') + '</div></div>\n' +

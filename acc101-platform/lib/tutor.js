@@ -22,6 +22,12 @@ const ANTHROPIC_VERSION = '2023-06-01';
 const DEFAULT_MODEL = 'claude-haiku-4-5';
 const MAX_TOKENS = 1024;
 
+// Verified program facts the tutor must not contradict (plumbing only).
+// The tutor answers from its own model knowledge, not the course files, so
+// without grounding it can state wrong code values (it once told a student
+// a 3-inch drain needs 1/4 in/ft; IPC 2021 Table 704.1 says 1/8 in/ft).
+const { PLUMBING_TUTOR_FACTS } = require('./plumbing-tutor-facts');
+
 /** True when an API key is configured (the tutor can be used). */
 function tutorEnabled() {
   const key = process.env.ANTHROPIC_API_KEY;
@@ -63,6 +69,21 @@ function buildTutorSystemPrompt({ course, moduleNum, questionContext }) {
     '- Stay scoped to the student\'s enrolled course material (' + subject + ' topics). If asked about something unrelated, say briefly that you are ' + tutorRole + ' and steer back to coursework.\n' +
     '- Keep answers focused and readable: short paragraphs, occasional short lists. Avoid very long lectures.\n' +
     '- Encourage the student: notice what they got right before correcting what they got wrong.';
+
+  // Verified facts the tutor must not contradict. The tutor answers from its
+  // own knowledge, not the course files, so code numbers and standards are
+  // pinned here. Plumbing courses (slugs starting with "plb") get the
+  // program facts; any course may also carry its own tutorFacts array.
+  const facts = [];
+  if (course && typeof course.slug === 'string' && course.slug.indexOf('plb') === 0) {
+    facts.push.apply(facts, PLUMBING_TUTOR_FACTS);
+  }
+  if (course && Array.isArray(course.tutorFacts)) {
+    facts.push.apply(facts, course.tutorFacts.filter((f) => typeof f === 'string' && f.trim()));
+  }
+  if (facts.length > 0) {
+    prompt += '\n\nVerified facts from the course material — use these values whenever a question touches them; never substitute different values from general knowledge. If you are unsure about a code number or standard, say so rather than guessing.\n- ' + facts.join('\n- ');
+  }
 
   // Bounded module context.
   if (moduleNum && course && course.modules && course.modules.byNumber) {

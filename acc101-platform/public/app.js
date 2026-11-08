@@ -430,6 +430,12 @@
         });
         resultsBox.innerHTML = html;
         resultsBox.removeAttribute('hidden');
+        // Keep the page header's best score in sync: the header is rendered
+        // server-side with the pre-submit best, and the form submits via
+        // fetch without a reload, so without this it would still read 0%
+        // after a 100% check.
+        var bestEl = document.getElementById('labBestScore');
+        if (bestEl && data.best != null) bestEl.textContent = data.best + '%';
         resultsBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
         if (status) status.textContent = '';
       }).catch(function () {
