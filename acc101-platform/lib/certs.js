@@ -1,7 +1,7 @@
 'use strict';
 
 // Certification tracker definitions + rendering for the program capstones
-// (hvac-cert-prep, plb-cert-prep, and bus-capstone). Each entry names its capstone; the
+// (hvac-cert-prep, plb-cert-prep, bus-capstone, and eco-capstone). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -421,6 +421,32 @@ const CERTS = [
       'Coursera — ' +
       '<a href="https://www.coursera.org" target="_blank" rel="noopener">coursera.org</a>.',
   },
+  {
+    id: 'bloomberg-market-concepts',
+    capstone: 'eco-capstone',
+    name: 'Bloomberg Market Concepts (BMC)',
+    blurb:
+      'Self-paced e-learning course on financial markets; 4 core modules ' +
+      '(Economic Indicators, Currencies, Fixed Income, Equities); ~8 hours; ' +
+      'certificate of completion \u2014 no pass/fail mark exists.',
+    kind: 'completion',
+    mappedCourses: ['eco131'],
+    mapped:
+      'Prepared by Data Analytics for Economics (reading economic ' +
+      'indicators) and Money, Banking & Financial Markets. There is no exam ' +
+      'score for this credential \u2014 completion is the credential.',
+    readyRule:
+      'Completion-based \u2014 finish Data Analytics for Economics and review ' +
+      'the Personal Finance & Careers study guide; there is no exam score.',
+    guideId: 'personal-finance-careers',
+    guideLabel: 'Personal Finance & Careers study guide',
+    where:
+      'Bloomberg for Education or a Bloomberg terminal (BMC <GO>). Free at ' +
+      'a Bloomberg terminal or through a Bloomberg for Education subscription; ' +
+      'without one, a paid route exists but Bloomberg shows the price only at ' +
+      'the paywall \u2014 no fee is stated here. Start at ' +
+      '<a href="https://www.bloomberg.com/professional/product/market-concepts/" target="_blank" rel="noopener">bloomberg.com \u2014 Market Concepts</a>.',
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -530,7 +556,10 @@ function renderCertPanel(ctx, capstone) {
     : slug === 'bus-capstone'
       ? 'There is no license for general business — the credentials above are ' +
         'optional and are taken through the providers listed on each card.'
-      : 'State and local licensing is separate from all of these and varies by state.';
+      : slug === 'eco-capstone'
+        ? 'There is no license for economics — the credential above is optional ' +
+          'and is taken through the provider listed on its card.'
+        : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
     '  <h2>Certification tracker</h2>\n' +

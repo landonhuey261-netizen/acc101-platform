@@ -8,6 +8,9 @@
 //  - General Business: modeled on Ferris State University's College of
 //    Business Business Administration B.S. (BUAD-BS) + College of Business
 //    minors; ACC 101 is reused as its Step 2 accounting foundation.
+//  - Economics: modeled on Grand Valley State University's Economics
+//    B.A./B.S. (Seidman College of Business) with Ferris State University's
+//    B.S. Economics as a continuity layer.
 // Courses outside these lists are standalone and are never
 // numbered into a program.
 //
@@ -117,6 +120,49 @@ const PROGRAMS = [
       'plan is finished and the certification tracker on this page shows READY for the ' +
       'credentials you want, book the real exams through the approved providers listed there.',
   },
+  {
+    name: 'Economics program',
+    slug: 'economics',
+    order: [
+      'eco101',
+      'eco102',
+      'eco103',
+      'eco111',
+      'eco121',
+      'eco131',
+      'eco201',
+      'eco202',
+      'eco211',
+      'eco221',
+      'eco231',
+      'eco241',
+      'eco-capstone',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as
+    // hvac-cert-prep, plb-cert-prep, and bus-capstone); the final-step
+    // banner covers it.
+    prereqs: {
+      eco102: 'eco101',
+      eco103: 'eco101',
+      eco201: 'eco102',
+      eco202: 'eco103',
+      eco131: 'eco121',
+      eco221: 'eco121',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Grand Valley State ' +
+      'University\u2019s Economics B.A./B.S. (Seidman College of Business) with ' +
+      'Ferris State University\u2019s B.S. Economics as a continuity layer \u2014 ' +
+      'from an introduction to economics, with personal finance, microeconomics, ' +
+      'macroeconomics, statistics, data analytics, and econometrics, to a ' +
+      'research-project capstone.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When your research ' +
+      'paper is finished and the certification tracker on this page shows READY for ' +
+      'Bloomberg Market Concepts, you have completed the program. Economics has no ' +
+      'license to practice; the paper and your comprehensive exam scores are the takeaway.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;
@@ -130,6 +176,10 @@ const PLUMBING_PREREQS = PROGRAMS[1].prereqs;
 const BUSINESS_PROGRAM_NAME = PROGRAMS[2].name;
 const BUSINESS_PROGRAM_ORDER = PROGRAMS[2].order;
 const BUSINESS_PROGRAM_PREREQS = PROGRAMS[2].prereqs;
+
+const ECON_PROGRAM_NAME = PROGRAMS[3].name;
+const ECON_PROGRAM_ORDER = PROGRAMS[3].order;
+const ECON_PROGRAM_PREREQS = PROGRAMS[3].prereqs;
 
 /**
  * Find the program a slug belongs to.
@@ -275,6 +325,9 @@ module.exports = {
   BUSINESS_PROGRAM_NAME,
   BUSINESS_PROGRAM_ORDER,
   BUSINESS_PROGRAM_PREREQS,
+  ECON_PROGRAM_NAME,
+  ECON_PROGRAM_ORDER,
+  ECON_PROGRAM_PREREQS,
   programOf,
   programNameOf,
   stepOf,
