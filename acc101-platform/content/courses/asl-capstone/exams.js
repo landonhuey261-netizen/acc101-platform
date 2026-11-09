@@ -194,7 +194,7 @@ module.exports = {
           "Memorize a vocabulary list",
           "Watch it with the sound on"
         ],
-        "answer": 1,
+        "answer": 0,
         "explanation": "Correct: (a). The watch-twice drill builds receptive skill, and the gap between watches shows progress. (b) Giving up teaches nothing. (c) A list does not teach following. (d) Signed stories have no sound to turn on."
       },
       {

@@ -38,6 +38,23 @@ function dashboardPage(user, course, enrolled, grade, modules, extra) {
     '\u2014 best ' + escapeHtml(String(l.best)) + '%</li>'
   ).join('\n');
 
+  // Courses with no labs but with study guides (the ASL and Automotive
+  // capstones) get a Study guides card instead of the Labs card, so the
+  // dashboard never shows the old "Accounting labs" default heading.
+  const noLabs = !course.labs || !course.labs.length;
+  const hasGuides = course.guides && course.guides.length;
+  const labsOrGuidesCard = (noLabs && hasGuides)
+    ? '  <div class="card">\n' +
+      '    <h2>Study guides</h2>\n' +
+      '    <p>Guides for the practice exams and the readiness tracker.</p>\n' +
+      '    <p><a class="btn btn-primary" href="' + base + '/guides">Read the guides</a></p>\n' +
+      '  </div>\n'
+    : '  <div class="card">\n' +
+      '    <h2>' + escapeHtml(course.labsTitle || 'Accounting labs') + '</h2>\n' +
+      (labItems ? '    <ul class="lab-list">\n' + labItems + '\n    </ul>\n' : '    <p>Labs are being prepared.</p>\n') +
+      '    <p><a class="btn btn-primary" href="' + base + '/labs">Go to labs</a></p>\n' +
+      '  </div>\n';
+
   return layout({
     title: course.title,
     user,
@@ -76,7 +93,9 @@ function dashboardPage(user, course, enrolled, grade, modules, extra) {
       '  <p class="card-links">\n' +
       '    <a class="btn btn-small" href="' + base + '/gradebook">See my grades</a> ' +
       '    <a class="btn btn-small" href="' + base + '/exams">Go to exams</a> ' +
-      '    <a class="btn btn-small" href="' + base + '/labs">Go to labs</a> ' +
+      ((noLabs && hasGuides)
+        ? '    <a class="btn btn-small" href="' + base + '/guides">Study guides</a> '
+        : '    <a class="btn btn-small" href="' + base + '/labs">Go to labs</a> ') +
       '    <a class="btn btn-small" href="' + base + '/videos">Video library</a>\n' +
       '  </p>\n' +
       '</section>\n' +
@@ -94,11 +113,7 @@ function dashboardPage(user, course, enrolled, grade, modules, extra) {
       escapeHtml(String(grade.final)) + '%) \u2014 timed, auto-graded.</p>\n' +
       '    <p><a class="btn btn-primary" href="' + base + '/exams">Go to exams</a></p>\n' +
       '  </div>\n' +
-      '  <div class="card">\n' +
-      '    <h2>' + escapeHtml(course.labsTitle || 'Accounting labs') + '</h2>\n' +
-      (labItems ? '    <ul class="lab-list">\n' + labItems + '\n    </ul>\n' : '    <p>Labs are being prepared.</p>\n') +
-      '    <p><a class="btn btn-primary" href="' + base + '/labs">Go to labs</a></p>\n' +
-      '  </div>\n' +
+      labsOrGuidesCard +
       '</section>',
   });
 }
