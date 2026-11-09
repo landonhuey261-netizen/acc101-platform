@@ -11,6 +11,10 @@
 //  - Economics: modeled on Grand Valley State University's Economics
 //    B.A./B.S. (Seidman College of Business) with Ferris State University's
 //    B.S. Economics as a continuity layer.
+//  - Automotive Service Technology: modeled on Ferris State University's
+//    Automotive Service Technology (AAS) with the Sustainable
+//    Transportation Service (AAS) for hybrid and electric vehicles;
+//    prepares for the ASE A1-A9, L1, and L3 certification tests.
 // Courses outside these lists are standalone and are never
 // numbered into a program.
 //
@@ -163,6 +167,53 @@ const PROGRAMS = [
       'Bloomberg Market Concepts, you have completed the program. Economics has no ' +
       'license to practice; the paper and your comprehensive exam scores are the takeaway.',
   },
+  {
+    name: 'Automotive Service Technology program',
+    slug: 'automotive-service-technology',
+    order: [
+      'ase-a1',
+      'ase-a6',
+      'ase-a2',
+      'ase-a3',
+      'ase-a4',
+      'ase-a5',
+      'ase-a7',
+      'ase-a8',
+      'ase-a9',
+      'ase-l1',
+      'ase-l3',
+      'ase-cert-prep',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. A6 sits second because electrical diagnosis underpins
+    // almost everything after it, especially A8. L1 and L3 are ASE rules,
+    // not just guidance: L1 requires A8 passed to register, L3 requires A6
+    // and A8 passed to register (each maps to one slug here; the other
+    // prerequisite is stated in the course description). The capstone has
+    // no PREREQS entry (same as the other capstones); the final-step
+    // banner covers it.
+    prereqs: {
+      'ase-a6': 'ase-a1',
+      'ase-a2': 'ase-a1',
+      'ase-a3': 'ase-a1',
+      'ase-a8': 'ase-a6',
+      'ase-a9': 'ase-a8',
+      'ase-l1': 'ase-a8',
+      'ase-l3': 'ase-a8',
+    },
+    blurb:
+      'Twelve courses taken in order, modeled on Ferris State University\u2019s ' +
+      'Automotive Service Technology (AAS) with the Sustainable Transportation ' +
+      'Service (AAS) for hybrid and electric vehicles \u2014 from engine repair ' +
+      'and electrical systems to a certification-prep capstone that readies you ' +
+      'for the ASE A1\u2013A9, L1, and L3 tests.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When the ' +
+      'certification tracker on this page shows READY for the credentials you ' +
+      'want, book the real exams through ASE at a Prometric center. Passing ' +
+      'the tests is only half the credential \u2014 ASE also needs your ' +
+      'documented work experience.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;
@@ -180,6 +231,10 @@ const BUSINESS_PROGRAM_PREREQS = PROGRAMS[2].prereqs;
 const ECON_PROGRAM_NAME = PROGRAMS[3].name;
 const ECON_PROGRAM_ORDER = PROGRAMS[3].order;
 const ECON_PROGRAM_PREREQS = PROGRAMS[3].prereqs;
+
+const AUTO_PROGRAM_NAME = PROGRAMS[4].name;
+const AUTO_PROGRAM_ORDER = PROGRAMS[4].order;
+const AUTO_PROGRAM_PREREQS = PROGRAMS[4].prereqs;
 
 /**
  * Find the program a slug belongs to.
@@ -328,6 +383,9 @@ module.exports = {
   ECON_PROGRAM_NAME,
   ECON_PROGRAM_ORDER,
   ECON_PROGRAM_PREREQS,
+  AUTO_PROGRAM_NAME,
+  AUTO_PROGRAM_ORDER,
+  AUTO_PROGRAM_PREREQS,
   programOf,
   programNameOf,
   stepOf,

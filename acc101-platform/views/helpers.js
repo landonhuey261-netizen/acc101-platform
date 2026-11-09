@@ -287,7 +287,7 @@ function layout(opts) {
     '<head>\n' +
     '<meta charset="utf-8">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-    '<meta name="description" content="College Without College — self-paced, college-style courses with lectures, auto-graded quizzes, hands-on labs, timed exams, and a gradebook. ACC 101 accounting, an 11-course HVAC/R program that preps you for EPA 608 and NATE certification, a 12-step Plumbing & Pipefitting program that preps you for the Michigan journeyman license, NCCER, and ASSE certification, and a 13-step General Business program that ends in a business-plan capstone, and a 13-step Economics program that ends in a research-project capstone.">\n' +
+    '<meta name="description" content="College Without College — self-paced, college-style courses with lectures, auto-graded quizzes, hands-on labs, timed exams, and a gradebook. ACC 101 accounting, an 11-course HVAC/R program that preps you for EPA 608 and NATE certification, a 12-step Plumbing & Pipefitting program that preps you for the Michigan journeyman license, NCCER, and ASSE certification, and a 13-step General Business program that ends in a business-plan capstone, and a 13-step Economics program that ends in a research-project capstone, and a 12-step Automotive Service Technology program that preps you for ASE A1–A9, L1, and L3 certification.">\n' +
     '<meta name="theme-color" content="#14365e">\n' +
     '<title>' + escapeHtml(title) + ' | College Without College</title>\n' +
     '<link rel="stylesheet" href="/styles.css">\n' +
@@ -313,7 +313,7 @@ function layout(opts) {
     '  <div class="container footer-inner">\n' +
     '    <p><strong>College Without College.</strong> ' +
     'College-style courses at your own pace \u2014 accounting, HVAC/R, plumbing &amp; pipefitting, ' +
-    'business, and economics. All content is original and written for these courses.</p>\n' +
+    'business, economics, and automotive. All content is original and written for these courses.</p>\n' +
     '    <p class="footer-note">Study tip: attempt every assignment problem on your own before opening the solutions.</p>\n' +
     '  </div>\n' +
     '</footer>\n' +

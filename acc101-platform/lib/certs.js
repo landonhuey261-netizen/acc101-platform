@@ -1,7 +1,8 @@
 'use strict';
 
 // Certification tracker definitions + rendering for the program capstones
-// (hvac-cert-prep, plb-cert-prep, bus-capstone, and eco-capstone). Each entry names its capstone; the
+// (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone, and
+// ase-cert-prep). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -78,6 +79,12 @@ const OSHA_WHERE =
   '<a href="https://www.osha.gov/outreach-training-program" target="_blank" rel="noopener">osha.gov — Outreach Training Program</a>. ' +
   'OSHA 10 is the entry-level card for site work; OSHA 30 is for supervisors ' +
   'and workers with safety duties, and can be taken without OSHA 10.';
+
+const ASE_WHERE =
+  'ASE certification tests are taken at Prometric test centers, year-round by ' +
+  'appointment. Register and schedule through ASE: ' +
+  '<a href="https://www.ase.com" target="_blank" rel="noopener">ase.com</a>. ' +
+  'You register and test with ASE — not inside this app.';
 
 const CERTS = [
   {
@@ -422,6 +429,137 @@ const CERTS = [
       '<a href="https://www.coursera.org" target="_blank" rel="noopener">coursera.org</a>.',
   },
   {
+    id: 'ase-master-automobile',
+    capstone: 'ase-cert-prep',
+    name: 'ASE Master Automobile Technician',
+    blurb:
+      'The credential working mechanics are known by: pass all eight ' +
+      'Automobile tests, A1 through A8. A9 (Light Vehicle Diesel Engines) ' +
+      'is a separate specialty and does not count toward Master status. ' +
+      'Certification also needs 2 years of documented hands-on work ' +
+      'experience (1 year plus a 2-year automotive training program can ' +
+      'substitute) — passing the tests alone does not certify you.',
+    kind: 'sections',
+    standard: 70,
+    benchmark: true,
+    sections: [
+      { label: 'A1 — Engine Repair', examKey: 'midterm' },
+      { label: 'A2 — Automatic Transmission / Transaxle', examKey: 'ase-a2' },
+      { label: 'A3 — Manual Drive Train & Axles', examKey: 'ase-a3' },
+      { label: 'A4 — Suspension & Steering', examKey: 'ase-a4' },
+      { label: 'A5 — Brakes', examKey: 'ase-a5' },
+      { label: 'A6 — Electrical / Electronic Systems', examKey: 'ase-a6' },
+      { label: 'A7 — Heating & Air Conditioning', examKey: 'ase-a7' },
+      { label: 'A8 — Engine Performance', examKey: 'ase-a8' },
+    ],
+    mapped:
+      'Prepared across the Automotive Service Technology program: A1 in ' +
+      'Engine Repair, A2 in Automatic Transmission / Transaxle, A3 in Manual ' +
+      'Drive Train & Axles, A4 in Suspension & Steering, A5 in Brakes, A6 in ' +
+      'Electrical / Electronic Systems, A7 in Heating & Air Conditioning, ' +
+      'and A8 in Engine Performance. Practice exams: the eight A-series ' +
+      'practice exams in this course.',
+    readyRule:
+      'A section shows READY when your best practice score reaches 70% — a ' +
+      'practice benchmark. ASE publishes no raw percentage pass mark (it ' +
+      'scores on a 400–999 scaled scale), so treat 70% as a strong readiness ' +
+      'signal, not the official standard. The real credential also needs 2 ' +
+      'years of documented hands-on work experience.',
+    guideId: 'ase-a1',
+    guideLabel: 'A1 Engine Repair study guide',
+    where: ASE_WHERE,
+  },
+  {
+    id: 'ase-l1',
+    capstone: 'ase-cert-prep',
+    name: 'ASE L1 Advanced Engine Performance Specialist',
+    blurb:
+      'ASE\u2019s advanced engine-diagnostics credential: emission failures ' +
+      'and driveability problems on computer-controlled engine systems, ' +
+      'tested against the Composite Vehicle Type 4 reference booklet. ' +
+      'You cannot register for L1 until you have passed A8, and the ' +
+      'credential needs 3 years of documented hands-on work experience.',
+    kind: 'single',
+    examKey: 'ase-l1',
+    examLabel: 'L1 practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Engine Performance and the Advanced Engine Performance ' +
+      'Specialist course, plus the capstone\u2019s L1 review module. Practice ' +
+      'exam: the L1 practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — a practice ' +
+      'benchmark. ASE publishes no raw percentage pass mark, so treat 70% ' +
+      'as a strong readiness signal, not the official standard. The real ' +
+      'credential also needs A8 passed first and 3 years of documented ' +
+      'hands-on work experience.',
+    guideId: 'ase-l1',
+    guideLabel: 'L1 Advanced Engine Performance study guide',
+    where: ASE_WHERE,
+  },
+  {
+    id: 'ase-l3',
+    capstone: 'ase-cert-prep',
+    name: 'ASE L3 Light Duty Hybrid / Electric Vehicle Specialist',
+    blurb:
+      'ASE\u2019s hybrid and electric vehicle credential: diagnosis of ' +
+      'high-voltage battery systems, power electronics, drive systems, and ' +
+      'supporting systems on hybrids and EVs. You cannot register for L3 ' +
+      'until you have passed both A6 and A8, and the credential needs 3 ' +
+      'years of documented hands-on work experience.',
+    kind: 'single',
+    examKey: 'final',
+    examLabel: 'L3 practice exam (this course\u2019s final)',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Electrical / Electronic Systems, Engine Performance, and ' +
+      'the Light Duty Hybrid / Electric Vehicle Specialist course, plus the ' +
+      'capstone\u2019s L1 + L3 review module. Practice exam: the L3 practice ' +
+      'exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — a practice ' +
+      'benchmark. ASE publishes no raw percentage pass mark, so treat 70% ' +
+      'as a strong readiness signal, not the official standard. The real ' +
+      'credential also needs A6 and A8 passed first and 3 years of ' +
+      'documented hands-on work experience.',
+    guideId: 'ase-l3',
+    guideLabel: 'L3 Hybrid / Electric Vehicle study guide',
+    where: ASE_WHERE,
+  },
+  {
+    id: 'ase-work-experience',
+    capstone: 'ase-cert-prep',
+    name: 'ASE Work Experience — the credential behind the tests',
+    blurb:
+      'ASE certifies people, not test scores. A1–A9 need 2 years of ' +
+      'documented hands-on work experience (1 year plus a 2-year automotive ' +
+      'training program can substitute); L1 and L3 need 3 years. You can ' +
+      'take the tests before the experience is complete, but ASE does not ' +
+      'issue the credential until it has the proof.',
+    kind: 'attestation',
+    steps: [
+      'A1–A9: 2 years of documented hands-on work experience (1 year plus a 2-year automotive training program can substitute).',
+      'L1: A8 passed first, then 3 years of documented hands-on work experience.',
+      'L3: A6 and A8 passed first, then 3 years of documented hands-on work experience.',
+      'ASE certifications are valid 5 years; recertification tests are about half as long as the initial tests.',
+      'Fail a test and ASE makes you wait 30 days before you can buy it again.',
+    ],
+    mapped:
+      'Prepared by the whole Automotive Service Technology program and the ' +
+      'capstone\u2019s exam-day strategy module.',
+    readyRule:
+      'There is no exam score for work experience — no test measures it. ' +
+      'This card shows READY only once you have reviewed the study guide ' +
+      'below, and that means only that you reviewed the guide — the real ' +
+      'credential comes only from ASE once it has your documented hours. ' +
+      'It is informational.',
+    guideId: 'ase-work-experience',
+    guideLabel: 'Work Experience & the Road to Certification study guide',
+    where: ASE_WHERE,
+  },
+  {
     id: 'bloomberg-market-concepts',
     capstone: 'eco-capstone',
     name: 'Bloomberg Market Concepts (BMC)',
@@ -477,7 +615,7 @@ function renderCert(cert, ctx) {
 
   if (cert.kind === 'sections') {
     rows = cert.sections
-      .map((s) => examRow(s.label, bestBy[s.examKey], cert.standard, false))
+      .map((s) => examRow(s.label, bestBy[s.examKey], cert.standard, !!cert.benchmark))
       .join('\n');
     overallReady = cert.sections.every(
       (s) => typeof bestBy[s.examKey] === 'number' && bestBy[s.examKey] >= cert.standard
@@ -559,7 +697,11 @@ function renderCertPanel(ctx, capstone) {
       : slug === 'eco-capstone'
         ? 'There is no license for economics — the credential above is optional ' +
           'and is taken through the provider listed on its card.'
-        : 'State and local licensing is separate from all of these and varies by state.';
+        : slug === 'ase-cert-prep'
+          ? 'ASE certification is national, not state licensing — the credentials ' +
+            'above are taken through ASE at Prometric centers, and each one also ' +
+            'needs documented hands-on work experience before ASE issues it.'
+          : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
     '  <h2>Certification tracker</h2>\n' +
