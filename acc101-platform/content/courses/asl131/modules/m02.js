@@ -1,0 +1,77 @@
+// asl131 - Module 2: Receptive Speed: Keeping Up
+module.exports = {
+  "number": 2,
+  "slug": "receptive-speed-keeping-up",
+  "title": "Receptive Speed: Keeping Up",
+  "estTime": "3–4 hours",
+  "objectives": [
+    "Explain why natural signing feels fast even when the signer is not signing quickly.",
+    "Use chunking to follow groups of signs instead of single signs.",
+    "Name three speed drills that build the ability to follow real-time signing.",
+    "Describe how prediction — guessing what comes next — helps you keep up.",
+    "Practice following a fingerspelled word at speed without freezing."
+  ],
+  "sections": [
+    {
+      "heading": "Why Natural Signing Feels Fast",
+      "html": "<p>Natural signing feels fast for a simple reason: you are not just watching signs, you are watching signs, facial grammar, body shifts, and fingerspelling all at once. A beginner tries to process every channel at the same time and falls behind. A fluent watcher does not process more — they process less, because they recognize whole chunks of signing the way a fluent reader recognizes whole words instead of sounding out letters.</p>\n<p>The good news is that speed is mostly familiarity. The first time you see a sign, it takes a second to recognize. The fiftieth time, you recognize it instantly. Every sign you truly know makes every sentence containing it feel a little slower.</p>"
+    },
+    {
+      "heading": "Chunking: Follow Groups, Not Single Signs",
+      "html": "<p>Fluent watchers group signs into chunks. MY NAME JOHN SMITH is not four separate puzzles — it is one chunk, an introduction. TOMORROW MORNING ME GO STORE is one chunk, a plan. When you practice, practice recognizing chunks: greetings, introductions, questions about time, and offers of help all come in predictable shapes.</p>\n<p>Try it this way: watch a signed sentence and clap once for each chunk you understood, not each sign. A sentence with three chunks is easy to hold in your head; a sentence with twelve separate signs is not. Chunking is what makes speed survivable.</p>\n<div class=\"callout\"><strong>Key idea:</strong> You do not need to catch every sign. Catch every chunk, and the sentence holds together.</div>"
+    },
+    {
+      "heading": "Prediction: Guessing What Comes Next",
+      "html": "<p>Good watchers predict. If a signer signs TOMORROW and then points at the sky, you can guess WEATHER is coming. If someone signs ME GO and then names a place, you can guess the rest of the plan. Prediction is not cheating — it is how all language understanding works, in every language.</p>\n<p>Prediction works because conversation is predictable. People talk about the same things: plans, feelings, food, work, family, the weather. Learn the common sentence patterns for those topics and you will find yourself half a step ahead of the signer instead of two steps behind.</p>"
+    },
+    {
+      "heading": "Speed Drills That Actually Work",
+      "html": "<p>Three drills build speed. First, the slow-down drill: watch a video at reduced speed, then at normal speed, then at normal speed again — your eyes learn the shape of the signs at slow speed and recognize them faster at full speed. Second, the repeat drill: watch the same 30-second clip five times in a row; by the fifth time you will be following it easily, and that feeling of following is what you are training.</p>\n<p>Third, the fingerspelling drill: watch fingerspelled names and words at speed and write down only the first and last letters, then guess the word from context. Fingerspelling is where most learners freeze, because letters come one after another with no pause. Training yourself to keep moving past a missed letter — instead of stopping — is the single most useful speed skill there is.</p>"
+    },
+    {
+      "heading": "Module Recap and Common Mistakes",
+      "html": "<p><strong>Takeaways:</strong></p>\n<ul>\n<li>Signing feels fast because you are processing hands, face, and body all at once.</li>\n<li>Chunk signs into groups — greetings, introductions, plans — instead of chasing single signs.</li>\n<li>Predict what comes next from the topic and from common sentence patterns.</li>\n<li>Slow-down, repeat, and fingerspelling drills build speed step by step.</li>\n<li>Never freeze on a missed sign — keep watching and catch the next chunk.</li>\n</ul>\n<div class=\"callout\"><strong>Common mistake:</strong> Freezing on one missed fingerspelled letter and missing the whole rest of the sentence. Let the missed letter go and catch what follows.</div>\n<p><strong>Ready for more:</strong> Module 3 turns watching into voicing — you will watch a signer and say in English what they signed, which is the first step toward interpreting.</p>"
+    }
+  ],
+  "keyTerms": [
+    { "term": "Chunking", "def": "Grouping signs into meaningful units — a greeting, an introduction, a plan — instead of processing each sign separately." },
+    { "term": "Prediction", "def": "Guessing what a signer is likely to say next from the topic, the context, and common sentence patterns." },
+    { "term": "Receptive speed", "def": "How fast a signer can sign while you still follow the meaning, built up through practice with familiar signs and patterns." },
+    { "term": "Fingerspelling", "def": "Spelling a word letter by letter with the manual alphabet; fast fingerspelling is one of the hardest things to follow." },
+    { "term": "Lexicalized fingerspelling", "def": "A fingerspelled word that has become a sign of its own, like #BACK or #BUS, signed smoothly instead of letter by letter." },
+    { "term": "Signing rate", "def": "How quickly a person signs; native signers in conversation sign faster than classroom signing." },
+    { "term": "Backchanneling", "def": "Small nods and facial responses that show you are following, without interrupting the signer." },
+    { "term": "Visual processing", "def": "Taking in and making sense of what the eyes see — the core work of receptive ASL." },
+    { "term": "Cognitive load", "def": "How much mental work understanding takes at one moment; too much at once is why fast signing feels overwhelming." },
+    { "term": "Familiar sign", "def": "A sign you have seen many times and recognize instantly, which makes any sentence containing it feel slower." },
+    { "term": "Context clue", "def": "A piece of information from the topic or situation that helps you guess a sign or word you did not catch." },
+    { "term": "Freeze", "def": "Stopping to think about one missed sign and losing the rest of the sentence — the habit speed drills are designed to break." }
+  ],
+  "video": {
+    "title": "ASL: Fingerspelling: Receptive Practice (John) (advanced)(expansion u.7)",
+    "embedUrl": "https://www.youtube.com/embed/gs6LRZ24VhQ",
+    "note": "Dr. Bill gives John advanced fingerspelling practice at real speed. Watch it once without pausing and write down every word you catch — then watch again at a slower playback speed and compare. Notice how your eyes learn to keep moving past a missed letter instead of freezing.",
+    "more": [
+      { "title": "Fingerspelling (6-letter names) (Receptive Practice) (ASL) (Dr. Bill)", "url": "https://www.youtube.com/watch?v=xd9-7ZadrLs" }
+    ]
+  },
+  "assignment": [
+    { "prompt": "<p><strong>Problem 1.</strong> A signer signs MY NAME J-O-H-N at normal speed and you miss the fingerspelled name. What is the best thing to do in that moment?</p>", "solution": "<p><strong>Answer:</strong> Step 1: Keep watching — do not freeze on the missed name. Step 2: Catch the next chunk of the sentence, which will usually tell you what the conversation is about. Step 3: If the name matters, ask the signer to fingerspell it again slowly after they finish the sentence.</p>" },
+    { "prompt": "<p><strong>Problem 2.</strong> Explain chunking in your own words, using the sentence TOMORROW MORNING ME GO STORE as your example.</p>", "solution": "<p><strong>Answer:</strong> Step 1: Chunking means grouping signs into meaningful units instead of treating each sign separately. Step 2: TOMORROW MORNING is one chunk (when), ME GO STORE is one chunk (the plan). Step 3: Two chunks are easy to hold in your head; five separate signs are not.</p>" },
+    { "prompt": "<p><strong>Problem 3.</strong> A signer says WEATHER TOMORROW and points at the sky, then signs R-A-I-N. Before the fingerspelling finishes, what can you already predict, and why?</p>", "solution": "<p><strong>Answer:</strong> Step 1: The topic is tomorrow's weather, and the signer is pointing at the sky. Step 2: You can predict a weather word is coming — rain, snow, sun, or cloud. Step 3: Prediction works because conversation follows patterns, and weather talk after TOMORROW is one of them.</p>" },
+    { "prompt": "<p><strong>Problem 4.</strong> Describe the slow-down drill in three steps, and say what it trains.</p>", "solution": "<p><strong>Answer:</strong> Step 1: Watch a video at reduced playback speed and learn the shape of the signs. Step 2: Watch it at normal speed. Step 3: Watch it at normal speed again. It trains your eyes to recognize signs fast enough to follow at full speed.</p>" },
+    { "prompt": "<p><strong>Problem 5.</strong> You watch the same 30-second signed clip five times. What changes between the first watch and the fifth, and what does that tell you about speed?</p>", "solution": "<p><strong>Answer:</strong> Step 1: On the first watch you catch the gist and a few signs. Step 2: By the fifth watch you follow nearly all of it. Step 3: The video did not slow down — your familiarity grew. Speed is mostly familiarity, which is why repeated watching works.</p>" },
+    { "prompt": "<p><strong>Problem 6.</strong> A learner says fast signing is impossible to follow and wants to ask every signer to sign slowly forever. Give two reasons why that is not a good long-term plan, and one better plan.</p>", "solution": "<p><strong>Answer:</strong> Step 1: Native signers sign at natural speed in real life, so you cannot control their speed. Step 2: Always asking for slow signing also stops you from learning to follow real conversation. Step 3: Better plan: short daily speed drills — slow-down, repeat, and fingerspelling practice — so natural speed gradually becomes followable.</p>" }
+  ],
+  "quiz": [
+    { "q": "Why does natural signing feel fast to a learner?", "choices": ["Because native signers sign as fast as they possibly can", "Because the learner is processing hands, face, and body all at once with unfamiliar signs", "Because ASL has no pauses between sentences", "Because the signer is trying to confuse the learner"], "answer": 1, "explanation": "Correct: (b). Unfamiliar signs plus many channels at once overload the watcher. (a) Native signers sign at normal conversational speed, not maximum speed. (c) ASL sentences do have pauses and boundaries. (d) The signer is not trying to confuse anyone — the speed is natural." },
+    { "q": "What is chunking?", "choices": ["Breaking every sign into its five parameters", "Grouping signs into meaningful units like a greeting or a plan", "Signing with only one hand", "Watching a video in very short pieces"], "answer": 1, "explanation": "Correct: (b). Chunks are meaningful groups — an introduction, a plan — that are easy to hold in mind. (a) That is parameter analysis, not chunking. (c) One-handed signing is not chunking. (d) Short pieces help, but chunking is about meaning groups, not video length." },
+    { "q": "In the sentence TOMORROW MORNING ME GO STORE, how many chunks is it best to follow?", "choices": ["Five — one per sign", "Two — when, and the plan", "One — the whole sentence as a single sign", "None — just guess"], "answer": 1, "explanation": "Correct: (b). TOMORROW MORNING is the when-chunk and ME GO STORE is the plan-chunk. (a) Five separate signs overload your memory. (c) The sentence has two clear parts, not one. (d) Guessing without chunks is not a strategy." },
+    { "q": "How does prediction help you keep up?", "choices": ["It lets you stop watching the signer", "It puts you half a step ahead, so you recognize the next sign faster", "It replaces the need to know any signs", "It works only for fingerspelling"], "answer": 1, "explanation": "Correct: (b). Guessing what comes next from the topic makes recognition faster. (a) You still watch — prediction guides watching, it does not replace it. (c) Prediction only works if you know the signs and patterns. (d) Prediction helps with all signing, not only fingerspelling." },
+    { "q": "What is the slow-down drill?", "choices": ["Ask every signer to sign slowly forever", "Watch at reduced speed, then normal speed, then normal speed again", "Watch a video once a month", "Skip every fast video"], "answer": 1, "explanation": "Correct: (b). Slow speed teaches the shape of the signs, then normal speed tests recognition. (a) That is not a drill and it does not build skill. (c) Rare watching builds nothing. (d) Avoiding fast videos avoids the practice you need." },
+    { "q": "You miss one fingerspelled letter in a name. What should you do?", "choices": ["Freeze and think about the letter until you get it", "Keep watching and catch the next chunk", "Stop the conversation and leave", "Guess the whole sentence is about something else"], "answer": 1, "explanation": "Correct: (b). Letting the missed letter go keeps you with the sentence. (a) Freezing costs you the rest of the sentence. (c) Leaving ends the conversation for no reason. (d) One missed letter does not change the topic." },
+    { "q": "Why does the same video feel slower on the fifth watch than on the first?", "choices": ["Because the video actually slows down", "Because familiarity makes recognition instant", "Because your eyes get tired", "Because the signer signs more slowly each time"], "answer": 1, "explanation": "Correct: (b). Known signs are recognized instantly, so the sentence feels slower. (a) The video speed does not change. (c) Tired eyes make watching harder, not easier. (d) The recording is the same every time." },
+    { "q": "What is the best response when a signer is signing faster than you can follow?", "choices": ["Nod and pretend you understood", "Ask them to repeat or slow down once, then keep practicing speed drills", "Tell them ASL is too hard", "Only talk to signers who sign slowly"], "answer": 1, "explanation": "Correct: (b). Asking for a repeat is a normal repair strategy, and drills build your speed over time. (a) Pretending to understand leaves you lost and is disrespectful. (c) Speed is a skill to build, not a reason to quit. (d) Real conversation happens at natural speed." }
+  ],
+  "studyGuide": "\n<h3>Module 2 — Receptive Speed: Quick Reference</h3>\n<p><strong>Core idea:</strong> Speed is mostly familiarity — known signs are recognized instantly, so every sign you truly learn makes sentences feel slower.</p>\n<p><strong>Chunking:</strong> Follow meaning groups (greeting, introduction, plan), not single signs. TOMORROW MORNING + ME GO STORE = two chunks.</p>\n<p><strong>Prediction:</strong> Topic + common patterns let you guess what comes next — that is normal language understanding, not cheating.</p>\n<p><strong>Drills:</strong> Slow-down (slow, then normal, then normal again) · Repeat (same 30 seconds five times) · Fingerspelling (write first and last letters, guess from context).</p>\n<p><strong>Golden rule:</strong> Never freeze on a missed sign. Let it go and catch the next chunk.</p>\n"
+};
