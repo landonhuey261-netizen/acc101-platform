@@ -1,8 +1,8 @@
 'use strict';
 
 // Certification tracker definitions + rendering for the program capstones
-// (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone, and
-// ase-cert-prep). Each entry names its capstone; the
+// (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone,
+// ase-cert-prep, and asl-capstone). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -85,6 +85,14 @@ const ASE_WHERE =
   'appointment. Register and schedule through ASE: ' +
   '<a href="https://www.ase.com" target="_blank" rel="noopener">ase.com</a>. ' +
   'You register and test with ASE — not inside this app.';
+
+const ASLPI_WHERE =
+  'The ASLPI is given by Gallaudet University\u2019s ASL Diagnostic and ' +
+  'Evaluation Services — in person at Gallaudet in Washington, D.C., or by ' +
+  'videophone from other locations (a proctor is required for the distance ' +
+  'format). Book through Gallaudet: ' +
+  '<a href="https://gallaudet.edu/american-sign-language-proficiency-interview-aslpi/" target="_blank" rel="noopener">gallaudet.edu — American Sign Language Proficiency Interview (ASLPI)</a>. ' +
+  'You register and interview with Gallaudet — not inside this app.';
 
 const CERTS = [
   {
@@ -585,6 +593,86 @@ const CERTS = [
       'the paywall \u2014 no fee is stated here. Start at ' +
       '<a href="https://www.bloomberg.com/professional/product/market-concepts/" target="_blank" rel="noopener">bloomberg.com \u2014 Market Concepts</a>.',
   },
+  {
+    id: 'asl-receptive-comprehension',
+    capstone: 'asl-capstone',
+    name: 'Receptive Comprehension in ASL',
+    blurb:
+      'Understanding signed everyday conversation and signed narratives — ' +
+      'the core skill this program teaches. The ASLPI rates receptive and ' +
+      'expressive signing together in a live interview; there is no ' +
+      'separate written receptive exam.',
+    kind: 'single',
+    examKey: 'receptive-i',
+    examLabel: 'Receptive Comprehension I practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by American Sign Language I\u2013IV and Expressive & ' +
+      'Receptive ASL, plus the capstone\u2019s conversation and narratives ' +
+      'review modules. Practice exam: the Receptive Comprehension I ' +
+      'practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — a practice ' +
+      'benchmark. There is no written ASL exam with a published pass mark; ' +
+      'the real measure is Gallaudet\u2019s live ASLPI interview, rated 0–5.',
+    guideId: 'receptive-comprehension-i',
+    guideLabel: 'Receptive Comprehension I study guide',
+    where: ASLPI_WHERE,
+  },
+  {
+    id: 'asl-fingerspelling-numbers',
+    capstone: 'asl-capstone',
+    name: 'Fingerspelling & Numbers in ASL',
+    blurb:
+      'Reading fingerspelled words and signed numbers, time, and money at ' +
+      'conversational speed — the skill that unlocks names, places, and ' +
+      'anything without its own sign.',
+    kind: 'single',
+    examKey: 'fingerspelling-numbers',
+    examLabel: 'Fingerspelling & Numbers practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Fingerspelling & Numbers, plus the capstone\u2019s ' +
+      'fingerspelling and numbers review modules. Practice exam: the ' +
+      'Fingerspelling & Numbers practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — a practice ' +
+      'benchmark. There is no written ASL exam with a published pass mark; ' +
+      'the real measure is Gallaudet\u2019s live ASLPI interview, rated 0–5.',
+    guideId: 'fingerspelling-numbers',
+    guideLabel: 'Fingerspelling & Numbers study guide',
+    where: ASLPI_WHERE,
+  },
+  {
+    id: 'asl-aslpi-readiness',
+    capstone: 'asl-capstone',
+    name: 'ASLPI Readiness — your preparation is complete',
+    blurb:
+      'The American Sign Language Proficiency Interview (ASLPI) is a 20–25 ' +
+      'minute video-recorded conversation with a trained interviewer, rated ' +
+      'by a team of evaluators on a 0–5 scale. There is no pass/fail. This ' +
+      'card tracks whether you have done the preparation work in this ' +
+      'program — it is not a rating, and only Gallaudet\u2019s live interview ' +
+      'can rate you.',
+    kind: 'completion',
+    mappedCourses: ['asl-capstone'],
+    mapped:
+      'Prepared by the whole American Sign Language program and the ' +
+      'capstone\u2019s twelve review modules. There is no exam score for ' +
+      'readiness — completion of the capstone review work and the ASLPI ' +
+      'guide is the preparation.',
+    readyRule:
+      'Completion-based — finish all twelve capstone review modules and ' +
+      'review the ASLPI study guide. READY here means you have done the ' +
+      'preparation work, not that you hold a rating: only the live ASLPI ' +
+      'interview can rate your proficiency, and only certification (BEI in ' +
+      'Michigan) qualifies you to work as an interpreter.',
+    guideId: 'aslpi-guide',
+    guideLabel: 'The ASLPI Interview study guide',
+    where: ASLPI_WHERE,
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -701,7 +789,12 @@ function renderCertPanel(ctx, capstone) {
           ? 'ASE certification is national, not state licensing — the credentials ' +
             'above are taken through ASE at Prometric centers, and each one also ' +
             'needs documented hands-on work experience before ASE issues it.'
-          : 'State and local licensing is separate from all of these and varies by state.';
+          : slug === 'asl-capstone'
+            ? 'The ASLPI is a proficiency interview, not a license — the readiness ' +
+              'above is preparation for it, and only Gallaudet\u2019s live interview ' +
+              'can rate you. Working as a sign language interpreter in Michigan ' +
+              'needs BEI certification under Michigan Public Act 204 of 2007.'
+            : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
     '  <h2>Certification tracker</h2>\n' +

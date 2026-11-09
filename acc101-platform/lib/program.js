@@ -15,6 +15,9 @@
 //    Automotive Service Technology (AAS) with the Sustainable
 //    Transportation Service (AAS) for hybrid and electric vehicles;
 //    prepares for the ASE A1-A9, L1, and L3 certification tests.
+//  - American Sign Language: modeled on Lansing Community College's
+//    Sign Language Interpreter program with Gallaudet University as the
+//    continuity layer; prepares for the ASLPI proficiency interview.
 // Courses outside these lists are standalone and are never
 // numbered into a program.
 //
@@ -214,6 +217,53 @@ const PROGRAMS = [
       'the tests is only half the credential \u2014 ASE also needs your ' +
       'documented work experience.',
   },
+  {
+    name: 'American Sign Language program',
+    slug: 'american-sign-language',
+    order: [
+      'asl101',
+      'asl102',
+      'asl103',
+      'asl104',
+      'asl111',
+      'asl112',
+      'asl121',
+      'asl122',
+      'asl131',
+      'asl132',
+      'asl141',
+      'asl-capstone',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. asl141 also builds on asl131 (expressive and
+    // receptive fluency); the map holds one slug per course, so that
+    // second prerequisite is stated in the course description. The
+    // capstone has no PREREQS entry (same as the other capstones); the
+    // final-step banner covers it.
+    prereqs: {
+      asl102: 'asl101',
+      asl103: 'asl102',
+      asl104: 'asl103',
+      asl111: 'asl101',
+      asl121: 'asl102',
+      asl122: 'asl121',
+      asl131: 'asl104',
+      asl132: 'asl122',
+      asl141: 'asl104',
+    },
+    blurb:
+      'Twelve courses taken in order, modeled on Lansing Community ' +
+      'College\u2019s Sign Language Interpreter program with Gallaudet ' +
+      'University as the continuity layer \u2014 from your first signs, with ' +
+      'no prior knowledge assumed, to a fluency-review capstone that ' +
+      'readies you for the ASLPI proficiency interview.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When the ' +
+      'readiness tracker on this page shows READY, you have done the ' +
+      'preparation work for the ASLPI interview \u2014 but only Gallaudet\u2019s ' +
+      'live interview can rate your proficiency, and only certification ' +
+      '(BEI in Michigan) qualifies you to work as an interpreter.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;
@@ -235,6 +285,10 @@ const ECON_PROGRAM_PREREQS = PROGRAMS[3].prereqs;
 const AUTO_PROGRAM_NAME = PROGRAMS[4].name;
 const AUTO_PROGRAM_ORDER = PROGRAMS[4].order;
 const AUTO_PROGRAM_PREREQS = PROGRAMS[4].prereqs;
+
+const ASL_PROGRAM_NAME = PROGRAMS[5].name;
+const ASL_PROGRAM_ORDER = PROGRAMS[5].order;
+const ASL_PROGRAM_PREREQS = PROGRAMS[5].prereqs;
 
 /**
  * Find the program a slug belongs to.
@@ -386,6 +440,9 @@ module.exports = {
   AUTO_PROGRAM_NAME,
   AUTO_PROGRAM_ORDER,
   AUTO_PROGRAM_PREREQS,
+  ASL_PROGRAM_NAME,
+  ASL_PROGRAM_ORDER,
+  ASL_PROGRAM_PREREQS,
   programOf,
   programNameOf,
   stepOf,

@@ -22,13 +22,17 @@ const ANTHROPIC_VERSION = '2023-06-01';
 const DEFAULT_MODEL = 'claude-haiku-4-5';
 const MAX_TOKENS = 1024;
 
-// Verified program facts the tutor must not contradict (plumbing and
-// automotive). The tutor answers from its own model knowledge, not the
-// course files, so without grounding it can state wrong code values (it
-// once told a student a 3-inch drain needs 1/4 in/ft — IPC 2021 Table
-// 704.1 says 1/8 in/ft).
+// Verified program facts the tutor must not contradict (plumbing,
+// automotive, and American Sign Language). The tutor answers from its
+// own knowledge, not the course files, so code numbers and standards are
+// pinned here. Plumbing courses (slugs starting with "plb") get the
+// plumbing program facts; automotive courses (slugs starting with "ase")
+// get the ASE program facts; American Sign Language courses (slugs
+// starting with "asl") get the ASL program facts; any course may also
+// carry its own tutorFacts array.
 const { PLUMBING_TUTOR_FACTS } = require('./plumbing-tutor-facts');
 const { ASE_TUTOR_FACTS } = require('./ase-tutor-facts');
+const { ASL_TUTOR_FACTS } = require('./asl-tutor-facts');
 
 /** True when an API key is configured (the tutor can be used). */
 function tutorEnabled() {
@@ -76,14 +80,18 @@ function buildTutorSystemPrompt({ course, moduleNum, questionContext }) {
   // own knowledge, not the course files, so code numbers and standards are
   // pinned here. Plumbing courses (slugs starting with "plb") get the
   // plumbing program facts; automotive courses (slugs starting with "ase")
-  // get the ASE program facts; any course may also carry its own
-  // tutorFacts array.
+  // get the ASE program facts; American Sign Language courses (slugs
+  // starting with "asl") get the ASL program facts; any course may also
+  // carry its own tutorFacts array.
   const facts = [];
   if (course && typeof course.slug === 'string' && course.slug.indexOf('plb') === 0) {
     facts.push.apply(facts, PLUMBING_TUTOR_FACTS);
   }
   if (course && typeof course.slug === 'string' && course.slug.indexOf('ase') === 0) {
     facts.push.apply(facts, ASE_TUTOR_FACTS);
+  }
+  if (course && typeof course.slug === 'string' && course.slug.indexOf('asl') === 0) {
+    facts.push.apply(facts, ASL_TUTOR_FACTS);
   }
   if (course && Array.isArray(course.tutorFacts)) {
     facts.push.apply(facts, course.tutorFacts.filter((f) => typeof f === 'string' && f.trim()));
