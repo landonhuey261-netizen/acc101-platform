@@ -72,7 +72,7 @@ function landingPage(courses) {
     body:
       '<section class="hero">\n' +
       '  <div class="hero-inner">\n' +
-      '    <img class="hero-logo" src="/logo-hero-fullbody.png" alt="College Without College">\n' +
+      '    <img class="hero-logo hero-logo-badge" src="/logo-hero-badge.png" alt="College Without College">\n' +
       '    <p class="eyebrow">College Without College \u00b7 self-paced \u00b7 free to start</p>\n' +
       '    <h1>Real college courses, at your own pace</h1>\n' +
       '    <p class="lede">Accounting, HVAC/R, plumbing, business, and economics \u2014 full programs ' +
