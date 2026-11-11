@@ -314,7 +314,8 @@ function layout(opts) {
     '    <p><strong>College Without College.</strong> ' +
     'College-style courses at your own pace \u2014 accounting, HVAC/R, plumbing &amp; pipefitting, ' +
     'business, economics, automotive, and American Sign Language. All content is original and written for these courses.</p>\n' +
-    '    <p class="footer-note">Study tip: attempt every assignment problem on your own before opening the solutions.</p>\n' +
+    '    <p class="footer-note">Study tip: attempt every assignment problem on your own before opening the solutions. ' +
+    '<a href="/about">About College Without College</a> \u00b7 <a href="/help">Help</a></p>\n' +
     '  </div>\n' +
     '</footer>\n' +
     '<div id="toast" class="toast" role="status" aria-live="polite"></div>\n' +

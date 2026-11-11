@@ -15,11 +15,23 @@ const program = require('../lib/program');
  * (POST /courses/<slug>/enroll). Prerequisite notes are guidance only, as
  * on the course dashboards — enrollment stays allowed.
  */
-function programPage(user, enrolled, prog, rows) {
+function programPage(user, enrolled, prog, rows, opts) {
   const total = rows.length;
   const enrolledCount = rows.filter((r) => r.enrolled).length;
   const completedCount = rows.filter((r) => r.enrolled && courseComplete(r.grade)).length;
   const slug = program.programSlug(prog);
+  const o = opts || {};
+  const owned = !!o.owned;
+
+  // Price line: owned (or grandfathered) accounts see "Owned"; everyone
+  // else sees the plain price, logged in or not.
+  const priceLine = owned
+    ? '  <p class="grade-line"><strong>Owned</strong> \u00b7 every course in this program is open to you.</p>\n'
+    : '  <p class="grade-line"><strong>$50 per program \u00b7 first class free</strong> \u2014 ' +
+      (user
+        ? 'your first course is free, then $50 unlocks the whole program. <a href="/buy/' + slug + '">Buy this program</a>'
+        : 'your first course is free once you sign up, then $50 unlocks the whole program.') +
+      '</p>\n';
 
   const cards = rows.map((r) => {
     const stepLine = 'Step ' + r.step + ' of ' + r.total + ' \u00b7 ' + escapeHtml(prog.name);
@@ -103,6 +115,7 @@ function programPage(user, enrolled, prog, rows) {
       '  <p><a href="/">&larr; ' + (user ? 'My programs' : 'All programs') + '</a></p>\n' +
       '  <h1>' + escapeHtml(prog.name) + '</h1>\n' +
       '  <p class="section-sub">' + escapeHtml(prog.blurb) + '</p>\n' +
+      priceLine +
       headStats +
       '</section>\n' +
       '<section id="courses" aria-label="Courses in this program">\n' +

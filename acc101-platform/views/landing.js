@@ -90,6 +90,15 @@ function landingPage(courses) {
       coursesSection +
 
       '<section class="how-it-works">\n' +
+      '  <h2>Pricing \u2014 simple and plain</h2>\n' +
+      '  <p>Each program is <strong>$50</strong>, and your first class is free \u2014 pick any ' +
+      'one course, on the house, then unlock the whole program when you are ready for the ' +
+      'rest of it. One payment per program unlocks every course in it, with the quizzes, ' +
+      'labs, exams, and gradebook for each. <a href="/about">More about College Without College</a>. ' +
+      'Need help? <a href="/help">See the help page</a>.</p>\n' +
+      '</section>\n' +
+
+      '<section class="how-it-works">\n' +
       '  <h2>How it works</h2>\n' +
       '  <div class="steps">\n' +
       '    <div class="step"><span class="step-num">1</span><h3>Study at your pace</h3>' +

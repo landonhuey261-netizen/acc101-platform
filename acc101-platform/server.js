@@ -8,6 +8,17 @@ const db = require('./db');
 const { router: authRouter } = require('./routes/auth');
 const pagesRouter = require('./routes/pages');
 const apiRouter = require('./routes/api');
+const { webhookHandler } = require('./routes/stripe');
+const adminRouter = require('./routes/admin');
+
+// Paywall first-boot cutoff: stamp the moment the paywall went live, so
+// accounts created before this deploy keep full access, free, forever.
+// INSERT OR IGNORE inside ensurePaywallLiveAt makes concurrent boots safe.
+db.ensurePaywallLiveAt();
+
+// Admin bootstrap: stamp is_admin on any user named in ADMIN_USERNAME
+// (comma-separated). No username is hardcoded anywhere.
+db.bootstrapAdmins();
 const { notFoundPage, errorPage } = require('./views/auth');
 const { loginPage } = require('./views/auth');
 
@@ -19,6 +30,10 @@ const app = express();
 app.set('trust proxy', 1);
 
 /* ---------------- request parsing + static assets ---------------- */
+
+// Stripe webhook needs the RAW body for signature verification, so it is
+// registered before express.json() consumes the stream.
+app.post('/api/stripe/webhook', express.raw({ type: 'application/json' }), webhookHandler);
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -85,6 +100,7 @@ app.use(loginRateLimiter);
 /* ---------------- routers ---------------- */
 
 app.use(authRouter);          // /signup, /login, /logout (+ requireAuth helper)
+app.use(adminRouter);         // /admin panel (admin-only, enforced in the router)
 app.use('/api', apiRouter);   // JSON API, all requireAuth
 app.use(pagesRouter);         // /, /dashboard, /modules/*, /exams, /labs, /gradebook, /videos
 

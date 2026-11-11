@@ -22,6 +22,40 @@ const program = require('../lib/program');
  */
 function homePage(user, enrolled, opts) {
   const showOnboarding = !!(opts && opts.showOnboarding);
+  const paywall = (opts && opts.paywall) || null;
+
+  // Free-class + ownership status. Grandfathered accounts (created before
+  // the paywall went live) get a plain "Full access" note and no free-class
+  // prompts; everyone else sees whether their one free class is still open.
+  let paywallBanner = '';
+  if (paywall) {
+    if (paywall.isAdmin) {
+      paywallBanner =
+        '<div class="callout"><p><strong>Admin account.</strong> You have full access to ' +
+        'everything. <a href="/admin">Open the admin panel</a> to give free programs or ' +
+        'courses to other accounts.</p></div>\n';
+    } else if (paywall.grandfathered) {
+      paywallBanner =
+        '<div class="callout"><p><strong>Full access.</strong> Your account was created ' +
+        'before paid programs began, so every program is open to you.</p></div>\n';
+    } else {
+      const ownedNames = [...(paywall.owned || []), ...(paywall.grantedPrograms || [])]
+        .filter((s, i, a) => a.indexOf(s) === i)
+        .map((s) => {
+          const found = program.programBySlug(s);
+          return found ? found.program.name : s;
+        });
+      const ownedLine = ownedNames.length > 0
+        ? '<p><strong>Programs you own:</strong> ' + escapeHtml(ownedNames.join(', ')) + '.</p>'
+        : '<p>You don\u2019t own a program yet \u2014 each one is $50, and it unlocks every course in it.</p>';
+      const freeLine = paywall.freeClass
+        ? '<p><strong>Your free class: ' + escapeHtml(paywall.freeClassTitle || paywall.freeClass.course_slug) +
+          '.</strong> Your one free class is used \u2014 the next course in a program you don\u2019t own costs $50 for the whole program.</p>'
+        : '<p><strong>Your free class is still available \u2014 pick any one course, free.</strong> ' +
+          'After that, each program is $50 to unlock in full.</p>';
+      paywallBanner = '<div class="callout">' + freeLine + ownedLine + '</div>\n';
+    }
+  }
 
   const onboarding =
     '<section class="card onboard" aria-labelledby="howItWorks">\n' +
@@ -133,6 +167,7 @@ function homePage(user, enrolled, opts) {
       '  <h1>My programs</h1>\n' +
       '  <p class="section-sub">Welcome back, ' + escapeHtml(user.username) + '. Pick a program to continue learning.</p>\n' +
       '</section>\n' +
+      paywallBanner +
       (showOnboarding ? onboarding : '') +
       emptyState +
       '<section id="programs" aria-label="My programs">\n' +

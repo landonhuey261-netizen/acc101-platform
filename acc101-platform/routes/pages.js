@@ -10,6 +10,7 @@ const { notFoundPage } = require('../views/auth');
 const { tutorEnabled } = require('../lib/tutor');
 const program = require('../lib/program');
 const certs = require('../lib/certs');
+const stripe = require('../lib/stripe');
 
 const router = express.Router();
 
@@ -19,6 +20,46 @@ function navFor(req) {
     user,
     enrolled: user ? db.getEnrolledCourses(user.id) : [],
   };
+}
+
+/**
+ * Paywall status for a user, for the dashboard / program / buy pages:
+ * { grandfathered, owned: [program slugs], freeClass, freeClassTitle }.
+ * Grandfathered accounts predate the paywall and never see free-class
+ * prompts; everyone else gets one free class, total, on their pick.
+ */
+function paywallFor(userId) {
+  if (!userId) return null;
+  const grandfathered = db.isGrandfathered(userId);
+  const owned = db.getOwnedPrograms(userId);
+  const freeClass = db.getFreeClass(userId);
+  let freeClassTitle = null;
+  if (freeClass) {
+    const row = db.getCourseRow(freeClass.course_slug);
+    freeClassTitle = row ? row.title : freeClass.course_slug;
+  }
+  return { grandfathered, owned, freeClass, freeClassTitle, isAdmin: db.isAdmin(userId),
+    grantedPrograms: db.getGrantedPrograms(userId) };
+}
+
+/** Look up a program by URL slug, or send the 404 page. Returns the program or null. */
+function programOr404(req, res) {
+  const raw = String(req.params.slug || '').toLowerCase();
+  const found = /^[a-z0-9-]+$/.test(raw) ? program.programBySlug(raw) : null;
+  if (!found) {
+    const nav = navFor(req);
+    res.status(404).send(notFoundPage(nav.user, nav));
+    return null;
+  }
+  return found.program;
+}
+
+/** [{ slug, title }] for a program's courses, in program order. */
+function programCourseList(prog) {
+  return prog.order.map((s) => {
+    const c = courses.getCourse(s);
+    return c ? { slug: s, title: c.title } : null;
+  }).filter(Boolean);
 }
 
 /** { [moduleNumber]: true } for modules the user marked complete. One query. */
@@ -67,7 +108,32 @@ router.get('/', (req, res, next) => {
     }
     const showOnboarding = !db.hasAnyProgress(nav.user.id);
     const enrolled = attachProgress(nav.user.id, nav.enrolled);
-    res.send(views.home.homePage(nav.user, enrolled, { showOnboarding }));
+    res.send(views.home.homePage(nav.user, enrolled, {
+      showOnboarding,
+      paywall: paywallFor(nav.user.id),
+    }));
+  } catch (err) {
+    next(err);
+  }
+});
+
+/* ---------------- about page (public) ---------------- */
+
+router.get('/about', (req, res, next) => {
+  try {
+    const nav = navFor(req);
+    res.send(views.about.aboutPage(nav.user, nav.enrolled));
+  } catch (err) {
+    next(err);
+  }
+});
+
+/* ---------------- help page (public) ---------------- */
+
+router.get('/help', (req, res, next) => {
+  try {
+    const nav = navFor(req);
+    res.send(views.help.helpPage(nav.user, nav.enrolled));
   } catch (err) {
     next(err);
   }
@@ -117,7 +183,13 @@ router.get('/programs/:slug', (req, res, next) => {
         isCapstone: i === prog.order.length - 1,
       };
     }).filter(Boolean);
-    res.send(views.program.programPage(nav.user, nav.enrolled, prog, rows));
+    const pw = nav.user ? paywallFor(nav.user.id) : null;
+    const ownedHere = pw
+      ? (pw.isAdmin || pw.grandfathered || pw.owned.indexOf(program.programSlug(prog)) !== -1 ||
+        db.hasProgramGrant(nav.user.id, program.programSlug(prog)))
+      : false;
+    res.send(views.program.programPage(nav.user, nav.enrolled, prog, rows,
+      { paywall: pw, owned: ownedHere }));
   } catch (err) {
     next(err);
   }
@@ -134,8 +206,16 @@ router.get('/account', requireAuth, (req, res, next) => {
   }
 });
 
-/* ---------------- enrollment (for future courses) ---------------- */
+/* ---------------- enrollment (paywall-gated) ---------------- */
 
+// Paywall, enforced server-side at enroll time (once enrolled, the existing
+// course-access logic works unchanged), in this order:
+//   (1) admin → enroll freely;
+//   (2) grandfathered (created before the paywall went live) → freely;
+//   (3) program already owned via purchase → freely;
+//   (4) grant covers the course (program grant, or course grant) → freely;
+//   (5) free class still unused: consume it on this course, then enroll;
+//   (6) otherwise: block and send the user to the program's buy page.
 router.post('/courses/:slug/enroll', requireAuth, (req, res, next) => {
   try {
     const slug = courses.sanitizeSlug(req.params.slug);
@@ -145,8 +225,143 @@ router.post('/courses/:slug/enroll', requireAuth, (req, res, next) => {
       const nav = navFor(req);
       return res.status(404).send(notFoundPage(nav.user, nav));
     }
-    db.enrollUser(req.session.userId, course.slug);
+    const userId = req.session.userId;
+    if (!db.isEnrolled(userId, courseId)) {
+      const found = program.programOf(course.slug);
+      const progSlug = found ? program.programSlug(found.program) : null;
+      // Standalone courses (no program) have nothing to buy, so they enroll freely.
+      if (progSlug && !db.isAdmin(userId) && !db.isGrandfathered(userId) &&
+          !db.hasPurchased(userId, progSlug) && !db.grantCoversCourse(userId, course.slug)) {
+        if (!db.getFreeClass(userId)) {
+          db.grantFreeClass(userId, course.slug);
+        } else {
+          return res.redirect('/buy/' + progSlug + '?blocked=1');
+        }
+      }
+    }
+    db.enrollUser(userId, course.slug);
     res.redirect('/c/' + course.slug + '/dashboard');
+  } catch (err) {
+    next(err);
+  }
+});
+
+/* ---------------- buying a program ($50, Stripe Checkout) ---------------- */
+
+const BUY_ERRORS = {
+  'payments-not-connected':
+    'Payments aren\u2019t connected yet, so buying isn\u2019t available right now. ' +
+    'Your free class still works \u2014 pick any one course and enroll free.',
+  unverified:
+    'We couldn\u2019t confirm that payment yet. If money left your account, ' +
+    'give it a moment and check the program page \u2014 otherwise try again.',
+};
+
+function renderBuyPage(req, res, prog, extra) {
+  const nav = navFor(req);
+  const userId = req.session.userId;
+  const grandfathered = db.isGrandfathered(userId);
+  const slug = program.programSlug(prog);
+  res.send(views.buy.buyPage(nav.user, nav.enrolled, prog, {
+    owned: db.isAdmin(userId) || grandfathered || db.hasPurchased(userId, slug) ||
+      db.hasProgramGrant(userId, slug),
+    grandfathered,
+    freeClass: db.getFreeClass(userId),
+    blocked: req.query.blocked === '1',
+    error: (extra && extra.error) || BUY_ERRORS[req.query.error] || null,
+    courses: programCourseList(prog),
+  }));
+}
+
+router.get('/buy/:slug', requireAuth, (req, res, next) => {
+  try {
+    const prog = programOr404(req, res);
+    if (!prog) return;
+    renderBuyPage(req, res, prog, null);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post('/buy/:slug/checkout', requireAuth, async (req, res, next) => {
+  try {
+    const prog = programOr404(req, res);
+    if (!prog) return;
+    const slug = program.programSlug(prog);
+    const userId = req.session.userId;
+    if (db.isAdmin(userId) || db.isGrandfathered(userId) || db.hasPurchased(userId, slug) ||
+        db.hasProgramGrant(userId, slug)) {
+      return res.redirect('/programs/' + slug);
+    }
+    if (!stripe.stripeConfigured()) {
+      return res.redirect('/buy/' + slug + '?error=payments-not-connected');
+    }
+    const base = req.protocol + '://' + req.get('host');
+    let session;
+    try {
+      session = await stripe.createCheckoutSession({
+        userId,
+        programSlug: slug,
+        programName: prog.name,
+        successUrl: base + '/buy/' + slug + '/success?session_id={CHECKOUT_SESSION_ID}',
+        cancelUrl: base + '/buy/' + slug + '/cancel',
+      });
+    } catch (err) {
+      console.error('[acc101] Stripe checkout failed:', err.message || err);
+      return renderBuyPage(req, res, prog, {
+        error: 'Checkout couldn\u2019t start right now. Please try again in a moment.',
+      });
+    }
+    if (!session || !session.url) {
+      return renderBuyPage(req, res, prog, {
+        error: 'Checkout couldn\u2019t start right now. Please try again in a moment.',
+      });
+    }
+    res.redirect(303, session.url);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Success-page verification: retrieve the Checkout Session from Stripe and
+// confirm payment_status === 'paid' with metadata matching this user and
+// program before recording the purchase. Never trust the redirect alone.
+router.get('/buy/:slug/success', requireAuth, async (req, res, next) => {
+  try {
+    const prog = programOr404(req, res);
+    if (!prog) return;
+    const slug = program.programSlug(prog);
+    const sessionId = typeof req.query.session_id === 'string' ? req.query.session_id : '';
+    if (!sessionId || !stripe.stripeConfigured()) {
+      return renderBuyPage(req, res, prog, { error: BUY_ERRORS.unverified });
+    }
+    let session;
+    try {
+      session = await stripe.retrieveCheckoutSession(sessionId);
+    } catch (err) {
+      console.error('[acc101] Stripe session lookup failed:', err.message || err);
+      return renderBuyPage(req, res, prog, { error: BUY_ERRORS.unverified });
+    }
+    const meta = (session && session.metadata) || {};
+    const paid = session && session.payment_status === 'paid';
+    const mine = Number(meta.user_id) === req.session.userId;
+    const rightProgram = meta.program_slug === slug;
+    if (paid && mine && rightProgram) {
+      const amount = Number.isInteger(session.amount_total) ? session.amount_total : 5000;
+      db.recordPurchase(req.session.userId, slug, session.id, amount);
+      return res.redirect('/programs/' + slug);
+    }
+    return renderBuyPage(req, res, prog, { error: BUY_ERRORS.unverified });
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get('/buy/:slug/cancel', requireAuth, (req, res, next) => {
+  try {
+    const prog = programOr404(req, res);
+    if (!prog) return;
+    res.redirect('/buy/' + program.programSlug(prog));
   } catch (err) {
     next(err);
   }
