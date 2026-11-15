@@ -656,19 +656,26 @@ const CERTS = [
       'card tracks whether you have done the preparation work in this ' +
       'program — it is not a rating, and only Gallaudet\u2019s live interview ' +
       'can rate you.',
-    kind: 'completion',
-    mappedCourses: ['asl-capstone'],
+    kind: 'sections',
+    standard: 70,
+    benchmark: true,
+    sections: [
+      { label: 'Receptive Comprehension I — Everyday Conversation', examKey: 'receptive-i' },
+      { label: 'Receptive Comprehension II — Narratives', examKey: 'receptive-ii' },
+      { label: 'Grammar & Linguistics', examKey: 'grammar-linguistics' },
+      { label: 'Fingerspelling & Numbers', examKey: 'fingerspelling-numbers' },
+    ],
     mapped:
       'Prepared by the whole American Sign Language program and the ' +
-      'capstone\u2019s twelve review modules. There is no exam score for ' +
-      'readiness — completion of the capstone review work and the ASLPI ' +
-      'guide is the preparation.',
+      'capstone\u2019s twelve review modules. Practice exams: the four ' +
+      'capstone practice exams in this course, one per skill above.',
     readyRule:
-      'Completion-based — finish all twelve capstone review modules and ' +
-      'review the ASLPI study guide. READY here means you have done the ' +
-      'preparation work, not that you hold a rating: only the live ASLPI ' +
-      'interview can rate your proficiency, and only certification (BEI in ' +
-      'Michigan) qualifies you to work as an interpreter.',
+      'READY when your best practice score reaches 70% on all four ' +
+      'capstone practice exams — a practice benchmark. READY here means ' +
+      'you have done the preparation work, not that you hold a rating: ' +
+      'only the live ASLPI interview can rate your proficiency, and only ' +
+      'certification (BEI in Michigan) qualifies you to work as an ' +
+      'interpreter.',
     guideId: 'aslpi-guide',
     guideLabel: 'The ASLPI Interview study guide',
     where: ASLPI_WHERE,
