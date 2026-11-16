@@ -16,6 +16,14 @@
  * success page retrieving the Checkout Session from Stripe and confirming
  * payment_status === 'paid' with matching metadata. The client is never
  * trusted to unlock anything.
+ *
+ * Managed Payments (2026-11-15): Stripe enables Managed Payments by
+ * default on new accounts, and it requires a product tax code on every
+ * line item. This app sells a flat $50 digital program with no tax
+ * handling, so createCheckoutSession disables Managed Payments for the
+ * session (managed_payments[enabled]=false — Stripe's own suggested
+ * escape hatch) and the price stays exactly $50. The alternative —
+ * setting a tax code — would let Stripe add tax on top of the $50.
  */
 
 const crypto = require('node:crypto');
@@ -57,6 +65,11 @@ async function createCheckoutSession({ userId, programSlug, programName, success
   body.set('metadata[program_slug]', programSlug);
   body.set('success_url', successUrl);
   body.set('cancel_url', cancelUrl);
+  // Managed Payments is ON by default for new Stripe accounts and requires
+  // a product tax code on every line item. This app sells a flat $50 digital
+  // program with no tax handling, so disable it for the session (Stripe's
+  // own suggested escape hatch) — the price stays exactly $50.
+  body.set('managed_payments[enabled]', 'false');
 
   const res = await fetch(STRIPE_API + '/checkout/sessions', {
     method: 'POST',
