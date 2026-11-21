@@ -547,6 +547,68 @@ const PROGRAMS = [
       'inside the real Adobe software, and the portfolio project is ' +
       'self-shipped work the app cannot grade.',
   },
+  {
+    name: 'Engineering program',
+    slug: 'engineering',
+    order: [
+      'egr101',
+      'egr102',
+      'egr103',
+      'egr104',
+      'egr105',
+      'egr106',
+      'egr107',
+      'egr108',
+      'egr109',
+      'egr110',
+      'egr111',
+      'egr112',
+      'egr290',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as the
+    // other capstones); the final-step banner covers it.
+    prereqs: {
+      egr102: 'egr101',
+      egr103: 'egr102',
+      egr104: 'egr103',
+      egr105: 'egr104',
+      egr106: 'egr105',
+      egr107: 'egr106',
+      egr108: 'egr107',
+      egr109: 'egr108',
+      egr110: 'egr109',
+      egr111: 'egr110',
+      egr112: 'egr111',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Springfield Technical ' +
+      'Community College\u2019s Mechanical Engineering Technology A.S. with ' +
+      'Greenville Technical College\u2019s Mechatronics Technology A.A.S. as ' +
+      'the continuity layer and Ferris State University\u2019s Mechanical ' +
+      'Engineering Technology B.S. and Electrical Engineering and Automation ' +
+      'Technology B.S. for the degree-path depth — from engineering ' +
+      'foundations, statics, dynamics, and mechanics of materials through ' +
+      'thermodynamics, fluids, electrical fundamentals, digital systems and ' +
+      'PLCs, engineering economics, CAD, machine design, and ' +
+      'instrumentation and control to a capstone that preps you for the FE ' +
+      'exam (Mechanical or Electrical & Computer), the Certified SOLIDWORKS ' +
+      'Associate (CSWA) exam, and PMMI mechatronics practice, plus a ' +
+      'self-built design project. This program teaches knowledge only and ' +
+      'certifies no one: the app cannot grade live CAD modeling, PLC ' +
+      'programs, circuits, or physical builds, and this program is not a ' +
+      'degree and does not lead to licensure.',
+    capstoneLine:
+      'This is the final step of the program — the capstone. When the ' +
+      'certification tracker on this page shows READY for the credentials ' +
+      'you want, book the real exams through the approved providers ' +
+      'listed there. The practice exams here do not grant credentials or ' +
+      'licenses — the real FE exam has 110 questions (100 scored and 10 ' +
+      'unscored), costs $225, and NCEES publishes no passing score, the ' +
+      'real CSWA exam passes at 165 out of 240 points with live modeling ' +
+      'in SOLIDWORKS, and the design project is self-built work the app ' +
+      'cannot grade.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;
@@ -580,6 +642,10 @@ const CONSTRUCTION_PROGRAM_PREREQS = PROGRAMS[6].prereqs;
 const ELECTRICAL_PROGRAM_NAME = PROGRAMS[7].name;
 const ELECTRICAL_PROGRAM_ORDER = PROGRAMS[7].order;
 const ELECTRICAL_PROGRAM_PREREQS = PROGRAMS[7].prereqs;
+
+const ENGINEERING_PROGRAM_NAME = PROGRAMS[11].name;
+const ENGINEERING_PROGRAM_ORDER = PROGRAMS[11].order;
+const ENGINEERING_PROGRAM_PREREQS = PROGRAMS[11].prereqs;
 
 /**
  * Find the program a slug belongs to.
@@ -740,6 +806,9 @@ module.exports = {
   ELECTRICAL_PROGRAM_NAME,
   ELECTRICAL_PROGRAM_ORDER,
   ELECTRICAL_PROGRAM_PREREQS,
+  ENGINEERING_PROGRAM_NAME,
+  ENGINEERING_PROGRAM_ORDER,
+  ENGINEERING_PROGRAM_PREREQS,
   programOf,
   programNameOf,
   stepOf,

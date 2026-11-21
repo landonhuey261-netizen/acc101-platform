@@ -2,7 +2,7 @@
 
 // Certification tracker definitions + rendering for the program capstones
 // (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone,
-// ase-cert-prep, asl-capstone, con301, ele290, eng495, med201, and cmp199). Each entry names its capstone; the
+// ase-cert-prep, asl-capstone, con301, ele290, eng495, med201, cmp199, and egr290). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -175,6 +175,38 @@ const CMP_PORTFOLIO_WHERE =
   'There is no outside exam for the portfolio \u2014 it is the student\u2019s own ' +
   'shipped work: a working app, an edited photo, and a 60-second video, ' +
   'presented on the portfolio website built in this program.';
+
+const FE_WHERE =
+  'The real FE exam is taken at a Pearson VUE testing center, after you ' +
+  'register through NCEES. Start at NCEES: ' +
+  '<a href="https://ncees.org" target="_blank" rel="noopener">ncees.org</a>. ' +
+  'You register and test with them \u2014 not inside this app. The exam fee is ' +
+  '$225. NCEES publishes no passing score \u2014 results are pass/fail only. ' +
+  'Michigan FE/PE application steps and fees are not stated here; check them ' +
+  'with the Michigan licensing board (LARA) directly when you are ready.';
+
+const CSWA_WHERE =
+  'The real CSWA exam is taken live in SOLIDWORKS through the TesterPRO ' +
+  'application. A voucher typically costs $99. Start at Dassault Syst\u00e8mes ' +
+  'SOLIDWORKS certification: ' +
+  '<a href="https://www.solidworks.com/sw/support/cad-certification.htm" target="_blank" rel="noopener">solidworks.com — CAD Certification</a>. ' +
+  'The CSWA\u2013Academic version needs a qualified institution and proctoring; ' +
+  'the commercial version is available on demand. You register and test with ' +
+  'them \u2014 not inside this app.';
+
+const PMMI_WHERE =
+  'Real PMMI assessments are taken through PMMI and its approved providers. ' +
+  'Start at PMMI: ' +
+  '<a href="https://www.pmmi.org" target="_blank" rel="noopener">pmmi.org</a>. ' +
+  'You register and test with them \u2014 not inside this app. This course ' +
+  'states no PMMI item counts, pass marks, or fees, because those are ' +
+  'unverified.';
+
+const EGR_PROJECT_WHERE =
+  'There is no outside exam for the design project \u2014 it is the student\u2019s own ' +
+  'built work: a requirements document, a design with calculations and a ' +
+  'parts list, a test plan with results, and a project report, checked ' +
+  'against the rubric in the design project guide.';
 
 const CERTS = [
   {
@@ -1603,6 +1635,163 @@ const CERTS = [
     guideLabel: 'Portfolio Project study guide',
     where: CMP_PORTFOLIO_WHERE,
   },
+  {
+    id: 'fe-mechanical',
+    capstone: 'egr290',
+    name: 'FE Mechanical Exam (NCEES)',
+    blurb:
+      'The Fundamentals of Engineering exam for mechanical engineers: 110 ' +
+      'questions (100 scored and 10 unscored) in a 6-hour appointment with ' +
+      '5 hours 20 minutes of testing. The exam fee is $225. NCEES publishes ' +
+      'no passing score \u2014 results are pass/fail only. The 2024 first-time ' +
+      'pass rate was 68%. The 70% used here is a practice benchmark only, ' +
+      'never the real pass mark.',
+    kind: 'single',
+    examKey: 'fe-mechanical',
+    examLabel: 'FE Mechanical practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared across the Engineering program, especially egr101 ' +
+      '(foundations), egr102\u2013egr103 (statics, dynamics, mechanics of ' +
+      'materials), egr104\u2013egr105 (thermodynamics, fluids, heat transfer), ' +
+      'egr109 (machine design), and the capstone\u2019s FE Mechanical review ' +
+      'modules. Practice exam: the FE Mechanical practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark only. The real FE exam has 110 questions (100 scored and ' +
+      '10 unscored), costs $225, and NCEES publishes no passing score; ' +
+      'results are pass/fail only. Real FE licensure also needs an ' +
+      'ABET-accredited engineering degree and typically 4 years of ' +
+      'experience, plus the PE exam.',
+    guideId: 'fe-mechanical',
+    guideLabel: 'FE Mechanical study guide',
+    where: FE_WHERE,
+  },
+  {
+    id: 'fe-electrical-computer',
+    capstone: 'egr290',
+    name: 'FE Electrical & Computer Exam (NCEES)',
+    blurb:
+      'The Fundamentals of Engineering exam for electrical and computer ' +
+      'engineers: 110 questions (100 scored and 10 unscored) in a 6-hour ' +
+      'appointment with 5 hours 20 minutes of testing. The exam fee is ' +
+      '$225. NCEES publishes no passing score \u2014 results are pass/fail ' +
+      'only. The 2024 first-time pass rate was 62%. The 70% used here is a ' +
+      'practice benchmark only, never the real pass mark.',
+    kind: 'single',
+    examKey: 'fe-electrical-computer',
+    examLabel: 'FE Electrical & Computer practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared across the Engineering program, especially egr106 ' +
+      '(electrical fundamentals), egr107 (digital systems and PLCs), ' +
+      'egr111 (instrumentation and control), and the capstone\u2019s FE ' +
+      'Electrical & Computer review modules. Practice exam: the FE ' +
+      'Electrical & Computer practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark only. The real FE exam has 110 questions (100 scored and ' +
+      '10 unscored), costs $225, and NCEES publishes no passing score; ' +
+      'results are pass/fail only. Real FE licensure also needs an ' +
+      'ABET-accredited engineering degree and typically 4 years of ' +
+      'experience, plus the PE exam.',
+    guideId: 'fe-electrical-computer',
+    guideLabel: 'FE Electrical & Computer study guide',
+    where: FE_WHERE,
+  },
+  {
+    id: 'cswa-readiness',
+    capstone: 'egr290',
+    name: 'Certified SOLIDWORKS Associate (CSWA)',
+    blurb:
+      'Dassault Syst\u00e8mes\u2019 entry-level SOLIDWORKS credential: a 3-hour ' +
+      'exam with 14 live modeling tasks, scored out of 240 points and ' +
+      'passing at 165 (68.75%). A voucher typically costs $99, and the ' +
+      'retake wait is 14 days. The real exam grades live modeling in ' +
+      'SOLIDWORKS through TesterPRO \u2014 this text-only practice exam tests ' +
+      'knowledge only and cannot grade live modeling. The 70% used here is ' +
+      'a practice benchmark only, never the real pass mark.',
+    kind: 'single',
+    examKey: 'cswa-prep',
+    examLabel: 'CSWA knowledge practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by egr108 (CAD) and the capstone\u2019s CSWA review modules. ' +
+      'Practice exam: the CSWA knowledge practice exam in this course. ' +
+      'Hands-on modeling practice in real SOLIDWORKS is also needed, ' +
+      'because the real exam grades the live model.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark only, and a knowledge check only. The real CSWA exam ' +
+      'passes at 165 out of 240 points with live modeling in SOLIDWORKS ' +
+      'through TesterPRO, so readiness here means your knowledge is ready, ' +
+      'not that your hands are.',
+    guideId: 'cswa-prep',
+    guideLabel: 'CSWA study guide',
+    where: CSWA_WHERE,
+  },
+  {
+    id: 'pmmi-mechatronics',
+    capstone: 'egr290',
+    name: 'PMMI Mechatronics (Industrial Electricity 1 + PLCs 1)',
+    blurb:
+      'PMMI mechatronics practice: industrial electricity and PLC ' +
+      'programming for automated machines. This course states no PMMI item ' +
+      'counts, pass marks, or fees, because those are unverified \u2014 the ' +
+      'practice exams here are the app\u2019s own size and benchmark. The 70% ' +
+      'used here is a practice benchmark only.',
+    kind: 'sections',
+    standard: 70,
+    benchmark: true,
+    sections: [
+      { label: 'PMMI Industrial Electricity 1 practice exam', examKey: 'pmmi-industrial-electricity-1' },
+      { label: 'PMMI PLCs 1 practice exam', examKey: 'pmmi-plcs-1' },
+    ],
+    mapped:
+      'Prepared by egr106\u2013egr107 (electrical fundamentals, digital ' +
+      'systems and PLCs) and egr111\u2013egr112 (instrumentation, control, ' +
+      'and mechatronics), with the capstone\u2019s PMMI review modules. ' +
+      'Practice exams: the two PMMI practice exams in this course.',
+    readyRule:
+      'READY here means your best practice score reached 70% on BOTH ' +
+      'exams \u2014 a practice benchmark only. This course states no real ' +
+      'PMMI item counts, pass marks, or fees, because those are unverified.',
+    guideId: 'pmmi-industrial-electricity-1',
+    guideLabel: 'PMMI Industrial Electricity 1 study guide',
+    where: PMMI_WHERE,
+  },
+  {
+    id: 'egr-design-project',
+    capstone: 'egr290',
+    name: 'Capstone Design Project',
+    blurb:
+      'A self-built mechatronic device \u2014 for example, an automated parts ' +
+      'sorter, a temperature-controlled chamber, or a conveyor with a ' +
+      'counting station \u2014 from requirements to a documented design: a ' +
+      'requirements document, a design with calculations and a parts list, ' +
+      'a test plan with results, and a project report. The app cannot grade ' +
+      'a physical build, a CAD model, a PLC program, or a circuit; the ' +
+      'project is self-checked against the rubric in the design project guide.',
+    kind: 'completion',
+    mappedCourses: ['egr112'],
+    mapped:
+      'Built across the program and finished in the capstone: the design ' +
+      'process from egr101, CAD from egr108, controls from egr106\u2013egr107 ' +
+      'and egr111, and the project plan from the capstone\u2019s design ' +
+      'project modules.',
+    readyRule:
+      'READY here means the source course is finished and the design ' +
+      'project guide is reviewed \u2014 preparation only. The project ' +
+      'itself is complete when all four deliverables pass the rubric in ' +
+      'the guide; the app cannot verify the build, so this is the app\u2019s ' +
+      'own completion standard, not an external credential.',
+    guideId: 'design-project',
+    guideLabel: 'Capstone Design Project study guide',
+    where: EGR_PROJECT_WHERE,
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -1749,6 +1938,17 @@ function renderCertPanel(ctx, capstone) {
               'practice benchmarks: the real A+ exams pass at 675 (Core 1) and 700 ' +
               '(Core 2) on a 100\u2013900 scaled scale, and the real ACP exams pass at ' +
               '700/1000 and include live in-app tasks.'
+            : slug === 'egr290'
+            ? 'The FE exam is the first step toward PE licensure, not a license ' +
+              'itself \u2014 licensure also needs an ABET-accredited engineering degree, ' +
+              'typically 4 years of experience, and the PE exam, plus a state license ' +
+              'application (Michigan steps and fees are not stated here). The real FE ' +
+              'exam has 110 questions (100 scored and 10 unscored), costs $225, and ' +
+              'NCEES publishes no passing score \u2014 results are pass/fail only. The ' +
+              'real CSWA exam passes at 165 out of 240 points with live modeling in ' +
+              'SOLIDWORKS. The 70% figures here are practice benchmarks only, and the ' +
+              'design project is the student\u2019s own built work. This program teaches ' +
+              'knowledge only and certifies no one.'
             : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
