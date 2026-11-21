@@ -28,6 +28,11 @@
 //    Industrial Automation Engineering Technology (AAS) as the continuity
 //    layer; prepares for the Michigan journeyman and master electrician
 //    exams, NCCER Electrical Levels 1-4, and the NABCEP PV Associate exam.
+//  - English: modeled on Grand Valley State University's English B.A.
+//    (Language & Literature emphasis) with Lansing Community College's
+//    Literature A.A. as the continuity layer; ends in a writing portfolio
+//    and research-paper capstone with two comprehensive exams, plus an
+//    optional CLEP College Composition tracker.
 // Courses outside these lists are standalone and are never
 // numbered into a program.
 //
@@ -368,6 +373,58 @@ const PROGRAMS = [
       'Michigan exams are scheduled through PSI, NCCER tests are taken at ' +
       'accredited sponsors, and the NABCEP PV Associate exam passes at a ' +
       'scaled score of 65, not a percentage.',
+  },
+  {
+    name: 'English program',
+    slug: 'english',
+    order: [
+      'eng101',
+      'eng102',
+      'eng103',
+      'eng104',
+      'eng105',
+      'eng106',
+      'eng107',
+      'eng108',
+      'eng109',
+      'eng110',
+      'eng111',
+      'eng112',
+      'eng495',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as the
+    // other capstones); the final-step banner covers it.
+    prereqs: {
+      eng102: 'eng101',
+      eng103: 'eng102',
+      eng105: 'eng104',
+      eng106: 'eng105',
+      eng107: 'eng106',
+      eng108: 'eng107',
+      eng109: 'eng108',
+      eng110: 'eng106',
+      eng111: 'eng110',
+      eng112: 'eng103',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Grand Valley State ' +
+      'University\u2019s English B.A. (Language & Literature emphasis) with ' +
+      'Lansing Community College\u2019s Literature A.A. as the continuity ' +
+      'layer \u2014 from reading and writing foundations through composition, ' +
+      'grammar, rhetoric, and literature to creative and technical writing, ' +
+      'ending in a capstone built on a writing portfolio, a research paper, ' +
+      'and two comprehensive exams. The app\u2019s course numbers are its own, ' +
+      'not the colleges\u2019, and the program has no foreign-language ' +
+      'requirement: it teaches English reading and writing, not a full B.A.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When the ' +
+      'tracker on this page shows READY for the pieces you want, the ' +
+      'portfolio and paper are yours to keep and show: the comprehensive ' +
+      'exams here are the app\u2019s own benchmarks, not an external pass ' +
+      'mark, and completing this program grants no college credit, degree, ' +
+      'or license. CLEP College Composition credit, if pursued, is granted ' +
+      'by your target college, not by this app.',
   },
 ];
 

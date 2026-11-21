@@ -2,7 +2,7 @@
 
 // Certification tracker definitions + rendering for the program capstones
 // (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone,
-// ase-cert-prep, asl-capstone, con301, and ele290). Each entry names its capstone; the
+// ase-cert-prep, asl-capstone, con301, ele290, and eng495). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -119,6 +119,20 @@ const NABCEP_WHERE =
   'The NABCEP PV Associate exam is scheduled through NABCEP. Start at NABCEP: ' +
   '<a href="https://www.nabcep.org" target="_blank" rel="noopener">nabcep.org</a>. ' +
   'You register and test with NABCEP \u2014 not inside this app.';
+
+const ENG_CAPSTONE_WHERE =
+  'There is no real test for this — it is the app\u2019s own capstone work, ' +
+  'completed inside this course. The portfolio and research paper are yours ' +
+  'to keep and show; no outside body issues a credential for them.';
+
+const CLEP_WHERE =
+  'CLEP College Composition is taken at a CLEP test center — register ' +
+  'through the College Board: ' +
+  '<a href="https://clep.collegeboard.org" target="_blank" rel="noopener">clep.collegeboard.org</a>. ' +
+  'The exam is 50 multiple-choice questions plus 2 timed essays; the ' +
+  'ACE-recommended credit-granting score is 50. Whether your target college ' +
+  'awards credit, and how much, is that college\u2019s decision — no fee is ' +
+  'stated here because it was not verified against College Board.';
 
 const CERTS = [
   {
@@ -1197,6 +1211,116 @@ const CERTS = [
     guideLabel: 'OSHA 10 Topic Guide study guide',
     where: OSHA_WHERE,
   },
+  {
+    id: 'eng-comprehensive',
+    capstone: 'eng495',
+    name: 'Capstone Comprehensive Exams',
+    blurb:
+      'The capstone\u2019s two comprehensive exams: Reading, Grammar & Rhetoric, ' +
+      'and Literature & Writing — 50 questions each. These are the app\u2019s own ' +
+      'benchmarks, not an external pass mark: English has no single licensing ' +
+      'exam, so 70% here is a readiness signal the program sets for itself.',
+    kind: 'sections',
+    standard: 70,
+    benchmark: true,
+    sections: [
+      { label: 'Comprehensive Exam I — Reading, Grammar & Rhetoric', examKey: 'midterm' },
+      { label: 'Comprehensive Exam II — Literature & Writing', examKey: 'final' },
+    ],
+    mapped:
+      'Prepared by the whole program: eng101–eng105 for reading, grammar, and ' +
+      'rhetoric; eng106–eng109 for literature; eng110–eng112 for poetry, ' +
+      'creative, and technical writing. Practice exams: the two comprehensive ' +
+      'exams in this course.',
+    readyRule:
+      'READY here means your best practice score reached 70% on both exams — ' +
+      'a practice benchmark the app sets for itself. No outside body publishes ' +
+      'a pass mark for these exams, because they are the app\u2019s own.',
+    guideId: 'comprehensive-exams',
+    guideLabel: 'Comprehensive Exams study guide',
+    where: ENG_CAPSTONE_WHERE,
+  },
+  {
+    id: 'eng-portfolio',
+    capstone: 'eng495',
+    name: 'Writing Portfolio',
+    blurb:
+      'Five finished pieces, one per genre: a revised argumentative essay, a ' +
+      'literary analysis essay, an original creative piece, the capstone ' +
+      'research paper, and a professional document. Each piece is self-checked ' +
+      'against the rubric in the portfolio guide — there is no human grader.',
+    kind: 'completion',
+    mappedCourses: ['eng103', 'eng106', 'eng110', 'eng111', 'eng112'],
+    mapped:
+      'Built across the program: the argumentative essay from eng103, the ' +
+      'literary analysis from eng106–eng109, the creative piece from eng110–eng111, ' +
+      'the research paper from the capstone, and the professional document from eng112.',
+    readyRule:
+      'READY here means the five source courses are finished and the portfolio ' +
+      'guide is reviewed — preparation only. The portfolio itself is complete ' +
+      'when all 5 pieces are written and checked against the rubric in the guide; ' +
+      'the app cannot verify the pieces, so this is the app\u2019s own completion ' +
+      'standard, not an external credential.',
+    guideId: 'writing-portfolio',
+    guideLabel: 'Writing Portfolio study guide',
+    where: ENG_CAPSTONE_WHERE,
+  },
+  {
+    id: 'eng-research-paper',
+    capstone: 'eng495',
+    name: 'Capstone Research Paper',
+    blurb:
+      'A 2,000–2,500-word research paper in MLA 9th-edition format, with a ' +
+      'minimum of 5 sources, built in stages: thesis, outline, draft, and ' +
+      'final. Graded against the printed rubric in the guide — self-checked, ' +
+      'since there is no human grader.',
+    kind: 'attestation',
+    steps: [
+      'Thesis: a clear, arguable claim, checked against the guide\u2019s checklist.',
+      'Outline: a full outline with a source noted for each main point.',
+      'Draft: a complete draft of 2,000–2,500 words, MLA 9th-edition format.',
+      'Final: revised draft with a Works Cited page of at least 5 sources.',
+    ],
+    mapped:
+      'Prepared by eng103 (argument and research writing, MLA 9th) and the ' +
+      'capstone\u2019s research-paper guide.',
+    readyRule:
+      'READY here means the research-paper guide is reviewed — informational ' +
+      'only. The paper itself is done when the final stage is finished and ' +
+      'checked against the rubric in the guide.',
+    guideId: 'research-paper',
+    guideLabel: 'Research Paper study guide',
+    where: ENG_CAPSTONE_WHERE,
+  },
+  {
+    id: 'clep-composition',
+    capstone: 'eng495',
+    name: 'CLEP College Composition (optional)',
+    blurb:
+      'The College Board\u2019s college-credit exam for composition: 50 ' +
+      'multiple-choice questions plus 2 timed essays, about 125 minutes, ' +
+      'scored 20–80, with an ACE-recommended credit-granting score of 50. ' +
+      'It tests composition only, not literature, and it is optional — the ' +
+      'capstone does not depend on it.',
+    kind: 'attestation',
+    steps: [
+      'Pass both capstone comprehensive exams at 70% — the app\u2019s proxy for CLEP readiness.',
+      'Register for CLEP College Composition through the College Board.',
+      'Take the exam at a CLEP test center (50 multiple-choice questions + 2 timed essays).',
+      'Enter your score: the ACE-recommended credit-granting score is 50; your target college decides whether and how much credit to award.',
+    ],
+    mapped:
+      'Prepared by eng102–eng105 (composition, argument, grammar, rhetoric). ' +
+      'The app\u2019s proxy for readiness is passing both comprehensive exams.',
+    readyRule:
+      'READY here means the CLEP guide is reviewed — informational only. Real ' +
+      'CLEP readiness is passing both comprehensive exams at 70%, and the ' +
+      'credit itself comes from your target college, not from this app. No ' +
+      'fee is stated here: it was not verified against College Board.',
+    guideId: 'clep-composition',
+    guideLabel: 'CLEP College Composition study guide',
+    where: CLEP_WHERE,
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -1327,6 +1451,8 @@ function renderCertPanel(ctx, capstone) {
               'pass mark — OSHA requires no test for the card.'
             : slug === 'ele290'
             ? 'Michigan journeyman and master electrician exams are scheduled through PSI and also need supervised apprenticeship hours (8,000 for journeyman); Detroit issues its own licenses. NCCER tests are taken at accredited sponsors with hands-on performance profiles. The NABCEP PV Associate exam passes at a scaled score of 65, not a percentage \u2014 the 70% here is a practice benchmark. The OSHA DOL card comes only from an authorized trainer after the required hours \u2014 OSHA requires no test for the card.'
+            : slug === 'eng495'
+            ? 'There is no license for English — the comprehensive exams are the app\u2019s own benchmarks, the portfolio and paper are the app\u2019s own capstone work, and CLEP credit, if pursued, is granted by your target college, not by this app.'
             : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +

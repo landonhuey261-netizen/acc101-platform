@@ -379,7 +379,7 @@ router.get('/c/:course/dashboard', requireAuth, resolveCourse, (req, res, next) 
     };
     const programHtml = program.programBannerHtml(req.course, grade, titleOf);
     let certHtml = '';
-    if (req.course.slug === 'hvac-cert-prep' || req.course.slug === 'plb-cert-prep' || req.course.slug === 'bus-capstone' || req.course.slug === 'eco-capstone' || req.course.slug === 'ase-cert-prep' || req.course.slug === 'asl-capstone' || req.course.slug === 'con301' || req.course.slug === 'ele290') {
+    if (req.course.slug === 'hvac-cert-prep' || req.course.slug === 'plb-cert-prep' || req.course.slug === 'bus-capstone' || req.course.slug === 'eco-capstone' || req.course.slug === 'ase-cert-prep' || req.course.slug === 'asl-capstone' || req.course.slug === 'con301' || req.course.slug === 'ele290' || req.course.slug === 'eng495') {
       const bestBy = {};
       for (const r of db.getExamScores(nav.user.id, req.courseId)) bestBy[r.exam] = r.best;
       const courseProgress = {};
