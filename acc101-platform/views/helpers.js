@@ -313,7 +313,7 @@ function layout(opts) {
     '  <div class="container footer-inner">\n' +
     '    <p><strong>College Without College.</strong> ' +
     'College-style courses at your own pace \u2014 accounting, HVAC/R, plumbing &amp; pipefitting, ' +
-    'business, economics, automotive, American Sign Language, general construction, electrical, English, general medical, and computer. All content is original and written for these courses.</p>\n' +
+    'business, economics, automotive, American Sign Language, general construction, electrical, English, general medical, computer, and engineering. All content is original and written for these courses.</p>\n' +
     '    <p class="footer-note">Study tip: attempt every assignment problem on your own before opening the solutions. ' +
     '<a href="/about">About College Without College</a> \u00b7 <a href="/help">Help</a></p>\n' +
     '  </div>\n' +
