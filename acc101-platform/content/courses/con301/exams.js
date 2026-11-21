@@ -5796,6 +5796,1214 @@ module.exports = {
       }
     ]
   },
+  "nccer-ironworking": {
+    "title": "NCCER Ironworking Level 1 — Practice Exam",
+    "minutes": 120,
+    "passPercent": 70,
+    "coverage": "Practice exam — original questions in the real exam's style and format. NCCER does not publish the Ironworking Level 1 item count, so the 100 questions here are a practice-exam choice, not the real exam's count. Module tests pass at 70%. NCCER Core is the prerequisite before the Level 1 credential.",
+    "questions": [
+      {
+        "module": 5,
+        "q": "What does snug-tight mean when bolting a steel connection?",
+        "choices": [
+          "Tightened until all the plies are in firm contact, using the full effort of a worker with a spud wrench",
+          "Finger-tight only",
+          "Tightened until the bolt breaks",
+          "Left loose so the steel can move freely"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Snug-tight means the plates are pulled into firm, full contact by the full effort of the worker — the starting point before any further tensioning method. (b) is wrong: \"Finger-tight only\" — finger-tight leaves gaps between the plates. (c) is wrong: \"Tightened until the bolt breaks\" — breaking a bolt destroys the connection. (d) is wrong: \"Left loose so the steel can move freely\" — a loose connection cannot carry its loads."
+      },
+      {
+        "module": 4,
+        "q": "How many inches are in 8 feet 6 inches?",
+        "choices": [
+          "86 inches",
+          "102 inches",
+          "96 inches",
+          "14 inches"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). 8 feet is 8 × 12 = 96 inches, plus 6 inches = 102 inches. (a) is wrong: \"86 inches\" — that adds 8 and 6 instead of converting feet to inches. (c) is wrong: \"96 inches\" — that is 8 feet alone, forgetting the extra 6 inches. (d) is wrong: \"14 inches\" — that adds 8 and 6 as if both were inches."
+      },
+      {
+        "module": 10,
+        "q": "Why must rebar be clean before concrete is placed?",
+        "choices": [
+          "So it looks shiny in photographs",
+          "So it is easier to count",
+          "Mud, oil, and loose rust keep the concrete from bonding to the steel",
+          "So the concrete dries faster"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Bond between steel and concrete is what makes reinforced concrete work, and dirt, oil, or loose rust breaks that bond. (a) is wrong: \"So it looks shiny in photographs\" — appearance is not the reason; bond is. (b) is wrong: \"So it is easier to count\" — counting is done from the drawings, not by cleaning bars. (d) is wrong: \"So the concrete dries faster\" — clean rebar does not change curing time."
+      },
+      {
+        "module": 9,
+        "q": "What are shear studs on a composite floor deck for?",
+        "choices": [
+          "To hold the deck to the crane",
+          "To measure the thickness of the slab",
+          "To keep rain off the deck",
+          "Welded through the deck to the beam below, they tie the concrete slab to the beam so steel and concrete act together"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Shear studs lock the slab to the beam so the two act as one composite member, which is stronger than either alone. (a) is wrong: \"To hold the deck to the crane\" — studs are never attached to a crane. (b) is wrong: \"To measure the thickness of the slab\" — slab thickness is measured with a gauge, not a stud. (c) is wrong: \"To keep rain off the deck\" — studs are connectors, not weather protection."
+      },
+      {
+        "module": 8,
+        "q": "How is a steel column plumbed — made truly vertical — during erection?",
+        "choices": [
+          "By eye, from the ground",
+          "By pushing it with a forklift",
+          "By measuring from the nearest wall",
+          "With a transit or plumb bob to check it, and guy wires with turnbuckles to pull and hold it plumb"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A transit or plumb bob shows whether the column is vertical, and guy wires tightened with turnbuckles pull it plumb and hold it there. (a) is wrong: \"By eye, from the ground\" — the eye cannot judge plumb on a tall column. (b) is wrong: \"By pushing it with a forklift\" — a forklift is not a plumbing tool and can damage the column. (c) is wrong: \"By measuring from the nearest wall\" — the wall may itself be out of plumb; the check must be against true vertical."
+      },
+      {
+        "module": 9,
+        "q": "What are the parts of an open-web steel bar joist?",
+        "choices": [
+          "A solid web and two flanges only",
+          "A top chord, a bottom chord, and web members joining them",
+          "A column and a base plate",
+          "A deck and a slab only"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A bar joist is a lightweight truss: the top and bottom chords carry the bending forces and the web members join them. (a) is wrong: \"A solid web and two flanges only\" — that describes a rolled beam, not an open-web joist. (c) is wrong: \"A column and a base plate\" — those are column parts, not joist parts. (d) is wrong: \"A deck and a slab only\" — deck and slab sit on top of joists; they are not the joist itself."
+      },
+      {
+        "module": 4,
+        "q": "What information does a drawing's title block give you?",
+        "choices": [
+          "The project name, drawing number, scale, and date",
+          "The price of the steel",
+          "The names of every worker on the crew",
+          "The weather forecast for the job"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The title block identifies the drawing — project, drawing number, scale, revision, and date — so you know you are reading the right, current sheet. (b) is wrong: \"The price of the steel\" — prices are not on erection drawings. (c) is wrong: \"The names of every worker on the crew\" — crew names are not on drawings. (d) is wrong: \"The weather forecast for the job\" — weather is not on a drawing."
+      },
+      {
+        "module": 5,
+        "q": "A high-strength bolt has been fully tensioned and then removed. Can it be reused in another connection?",
+        "choices": [
+          "Yes, it is as good as new",
+          "No — once fully tensioned it has been stretched and should not be reused",
+          "Yes, but only if it is painted first",
+          "Yes, but only in a non-structural connection"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A fully tensioned bolt has been stretched to its working tension, so it cannot be trusted to reach the same tension again. (a) is wrong: \"Yes, it is as good as new\" — stretching changes the bolt, so it is not as good as new. (c) is wrong: \"Yes, but only if it is painted first\" — paint does not restore a stretched bolt. (d) is wrong: \"Yes, but only in a non-structural connection\" — a stretched bolt should not be reused for structural work at all."
+      },
+      {
+        "module": 6,
+        "q": "What is a tag line used for during a lift?",
+        "choices": [
+          "To measure how high the load is",
+          "To tie the load to the crane permanently",
+          "A rope attached to the load so workers can guide and control it while keeping their hands clear",
+          "To signal the crane operator to stop"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Tag lines let workers steer a hanging load and stop it spinning, without putting hands on the load itself. (a) is wrong: \"To measure how high the load is\" — height is judged by the operator and signal person, not a tag line. (b) is wrong: \"To tie the load to the crane permanently\" — a tag line is a guide rope, not a permanent attachment. (d) is wrong: \"To signal the crane operator to stop\" — the stop signal is a hand signal, not a tag line."
+      },
+      {
+        "module": 12,
+        "q": "What comes first in weld inspection, and what does the inspector look for?",
+        "choices": [
+          "X-ray testing first, looking for the welder's name",
+          "A bend test first, looking for the weld's color",
+          "Cutting the weld apart first, looking for the electrode type",
+          "Visual inspection first — weld profile, fusion, undercut, porosity, and cracks — before any other test"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Visual inspection always comes first, because many defects — undercut, porosity, cracks, bad profile — can be seen on the surface before any other test is run. (a) is wrong: \"X-ray testing first, looking for the welder's name\" — X-ray is a later test for internal defects, and the welder's name is not an inspection item. (b) is wrong: \"A bend test first, looking for the weld's color\" — a bend test is a later destructive test, and color is not the acceptance check. (c) is wrong: \"Cutting the weld apart first, looking for the electrode type\" — cutting a weld apart destroys it, and electrode type is checked before welding, not by cutting."
+      },
+      {
+        "module": 3,
+        "q": "What is a drift pin (bull pin) used for?",
+        "choices": [
+          "A tapered steel pin driven through two bolt holes to pull them into alignment",
+          "A pin that holds a crane hook closed",
+          "A pin used to lock a ladder in place",
+          "A pin that measures the depth of a weld"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The tapered pin is driven through misaligned holes so the holes line up and a bolt can be inserted. (b) is wrong: \"A pin that holds a crane hook closed\" — that is the hook's safety latch, not a drift pin. (c) is wrong: \"A pin used to lock a ladder in place\" — ladders are not locked with drift pins. (d) is wrong: \"A pin that measures the depth of a weld\" — weld depth is checked with gauges, not a drift pin."
+      },
+      {
+        "module": 10,
+        "q": "What does tie wire do in a rebar cage?",
+        "choices": [
+          "It carries the structural load of the concrete",
+          "It holds the bars in position during the pour; the ties themselves carry no structural load",
+          "It replaces the concrete cover",
+          "It lifts the rebar into place"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Tie wire keeps bars from shifting when concrete is placed; the bars and concrete carry the loads, not the wire. (a) is wrong: \"It carries the structural load of the concrete\" — tie wire is thin and carries no structural load. (c) is wrong: \"It replaces the concrete cover\" — cover is concrete over the steel, not wire. (d) is wrong: \"It lifts the rebar into place\" — rebar is lifted with rigging, not tie wire."
+      },
+      {
+        "module": 4,
+        "q": "On an erection drawing, what is a piece mark?",
+        "choices": [
+          "A scratch made on the steel during shipping",
+          "A mark showing where the steel was painted",
+          "A mark showing where a weld goes",
+          "A label that identifies one specific steel piece so the crew can find it and place it"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Each piece mark matches a piece on the drawing to the same mark stamped or painted on the steel, so the right piece goes in the right place. (a) is wrong: \"A scratch made on the steel during shipping\" — shipping damage is not a piece mark. (b) is wrong: \"A mark showing where the steel was painted\" — paint marks are different from piece marks. (c) is wrong: \"A mark showing where a weld goes\" — weld locations are shown with welding symbols, not piece marks."
+      },
+      {
+        "module": 6,
+        "q": "What is the lowest sling angle allowed from the horizontal when rigging a load?",
+        "choices": [
+          "10 degrees",
+          "15 degrees",
+          "45 degrees",
+          "Never below 30 degrees from horizontal"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Rigging is never used below 30 degrees from horizontal, because the tension in the legs becomes dangerously high. (a) is wrong: \"10 degrees\" — that is far below the safe minimum. (b) is wrong: \"15 degrees\" — that is also below the 30-degree minimum. (c) is wrong: \"45 degrees\" — 45 degrees is safe, but it is not the minimum; the rule is never below 30 degrees."
+      },
+      {
+        "module": 7,
+        "q": "According to a crane's load chart, what happens to lifting capacity as the radius grows?",
+        "choices": [
+          "Capacity stays the same at every radius",
+          "Capacity increases as radius grows",
+          "Capacity falls as radius grows",
+          "Capacity depends only on the weather"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The farther the load is from the crane's center, the more leverage it has, so the chart allows less weight. (a) is wrong: \"Capacity stays the same at every radius\" — capacity changes with radius; that is what the chart shows. (b) is wrong: \"Capacity increases as radius grows\" — it is the opposite: a longer reach means less capacity. (d) is wrong: \"Capacity depends only on the weather\" — weather matters for safe operation, but the chart's capacity is set by radius, boom length, and boom angle."
+      },
+      {
+        "module": 10,
+        "q": "What are rebar chairs and bolsters used for?",
+        "choices": [
+          "To cut rebar to length",
+          "To bend rebar into shape",
+          "To hold the rebar at the correct height so it ends up with the right concrete cover",
+          "To tie the rebar to the crane"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Chairs and bolsters support the bars at the designed height so the concrete cover over them is correct. (a) is wrong: \"To cut rebar to length\" — rebar is cut with a cutter or torch. (b) is wrong: \"To bend rebar into shape\" — bars are bent on a bender, not on chairs. (d) is wrong: \"To tie the rebar to the crane\" — rebar is never tied to a crane."
+      },
+      {
+        "module": 6,
+        "q": "What is the purpose of the safety latch on a crane hook?",
+        "choices": [
+          "It keeps the sling from slipping off the hook",
+          "It measures the weight of the load",
+          "It tells the operator the hook is new",
+          "It locks the crane boom in place"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The latch closes the mouth of the hook so a sling or shackle cannot slip off when the load goes slack. (b) is wrong: \"It measures the weight of the load\" — the latch measures nothing. (c) is wrong: \"It tells the operator the hook is new\" — a latch says nothing about the hook's age. (d) is wrong: \"It locks the crane boom in place\" — the boom is locked by the crane's own controls, not the hook latch."
+      },
+      {
+        "module": 9,
+        "q": "How is metal decking attached to its supports?",
+        "choices": [
+          "With glue only",
+          "With puddle welds or screws through the deck into the supports",
+          "With rope ties",
+          "It is not attached at all"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Decking is fastened with puddle welds — small welds burned through the deck — or with screws, so it cannot lift or slide. (a) is wrong: \"With glue only\" — glue cannot hold decking against wind uplift. (c) is wrong: \"With rope ties\" — rope is not a structural fastener for decking. (d) is wrong: \"It is not attached at all\" — unattached decking would blow off or slide."
+      },
+      {
+        "module": 6,
+        "q": "When must rigging equipment be inspected?",
+        "choices": [
+          "Before every lift",
+          "Once a year only",
+          "Only when it looks dirty",
+          "Only after an accident"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Rigging is inspected before every lift for cuts, kinks, broken wires, crushed fittings, and missing tags. (b) is wrong: \"Once a year only\" — damage can happen on any single lift, so a yearly check is not enough. (c) is wrong: \"Only when it looks dirty\" — dirt is not the hazard; hidden damage is, so inspection happens every time. (d) is wrong: \"Only after an accident\" — inspecting after an accident is too late to prevent it."
+      },
+      {
+        "module": 8,
+        "q": "When erecting a steel frame, where does the crew usually start?",
+        "choices": [
+          "At the top floor and work down",
+          "At the farthest corner from the crane",
+          "At a braced bay or the core, then work outward so the frame is stable from the start",
+          "Anywhere — order does not matter"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Starting at a braced bay or core gives the frame a stable anchor; later pieces tie into something already braced. (a) is wrong: \"At the top floor and work down\" — steel is erected from the bottom up. (b) is wrong: \"At the farthest corner from the crane\" — the crane's reach, not distance, sets the sequence, and the braced bay comes first. (d) is wrong: \"Anywhere — order does not matter\" — order matters: an unbraced frame can collapse."
+      },
+      {
+        "module": 8,
+        "q": "What is the difference between a column, a beam, and a girder?",
+        "choices": [
+          "A column is horizontal, a beam is vertical, and a girder is diagonal",
+          "They are three names for the same piece",
+          "A column carries loads vertically, a beam spans horizontally, and a girder is a large beam that supports other beams",
+          "A column is made of wood, a beam of steel, and a girder of concrete"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Columns stand vertical and carry loads down; beams span horizontally between supports; girders are the big beams that other beams frame into. (a) is wrong: \"A column is horizontal, a beam is vertical, and a girder is diagonal\" — the directions are reversed. (b) is wrong: \"They are three names for the same piece\" — each has a different job in the frame. (d) is wrong: \"A column is made of wood, a beam of steel, and a girder of concrete\" — all three can be structural steel."
+      },
+      {
+        "module": 6,
+        "q": "Why must a load never be lifted over workers?",
+        "choices": [
+          "Because it slows the lift down",
+          "Because a dropped or swinging load can kill anyone underneath it",
+          "Because the crane uses more fuel",
+          "Because the load might get scratched"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Anything overhead can fall or swing, and no one may be in the path of a suspended load. (a) is wrong: \"Because it slows the lift down\" — speed is not the reason; safety is. (c) is wrong: \"Because the crane uses more fuel\" — fuel has nothing to do with the rule. (d) is wrong: \"Because the load might get scratched\" — protecting the load is minor compared with protecting people."
+      },
+      {
+        "module": 2,
+        "q": "What is a controlled decking zone (CDZ)?",
+        "choices": [
+          "The area where cranes are parked",
+          "The lunch area on the deck",
+          "An area where metal decking is being installed, entered only by the trained decking crew",
+          "Any area with a guardrail"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). A CDZ is the decking work area, limited to trained workers who know the decking hazards and the fall-protection rules for that zone. (a) is wrong: \"The area where cranes are parked\" — crane parking is not a decking zone. (b) is wrong: \"The lunch area on the deck\" — a CDZ is a work zone, not a break area. (d) is wrong: \"Any area with a guardrail\" — a guardrail alone does not make a CDZ."
+      },
+      {
+        "module": 6,
+        "q": "What happens to the tension in sling legs as the sling angle gets flatter (closer to horizontal)?",
+        "choices": [
+          "The tension in each leg rises sharply",
+          "The tension in each leg falls to zero",
+          "The tension stays exactly the same",
+          "The load gets lighter"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). As the angle flattens, each leg must pull harder to support the same load — at a low angle the tension can be several times the load's weight. (b) is wrong: \"The tension in each leg falls to zero\" — tension rises, not falls, as the angle flattens. (c) is wrong: \"The tension stays exactly the same\" — tension depends on the angle, so it changes. (d) is wrong: \"The load gets lighter\" — the load's weight never changes; only the force in the slings changes."
+      },
+      {
+        "module": 4,
+        "q": "A diagonal brace runs 12 feet horizontally and rises 9 feet vertically. How long is the brace?",
+        "choices": [
+          "15 feet",
+          "21 feet",
+          "10 feet",
+          "18 feet"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). By the Pythagorean theorem, the length is the square root of (12² + 9²) = the square root of (144 + 81) = the square root of 225 = 15 feet. (b) is wrong: \"21 feet\" — that adds 12 and 9 instead of using the theorem. (c) is wrong: \"10 feet\" — that is shorter than the horizontal run alone, which is impossible. (d) is wrong: \"18 feet\" — that is the average of nothing in the problem; the theorem gives 15 feet."
+      },
+      {
+        "module": 10,
+        "q": "What is a lap splice in reinforcing steel?",
+        "choices": [
+          "A cut in a bar to make it shorter",
+          "A weld that joins two bars end to end",
+          "A bend that turns a bar 90 degrees",
+          "Two bars overlapped side by side so force transfers from one bar to the next"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). In a lap splice the bars overlap for a set length, and the surrounding concrete transfers the force between them. (a) is wrong: \"A cut in a bar to make it shorter\" — a splice joins bars, it does not cut them. (b) is wrong: \"A weld that joins two bars end to end\" — that is a welded splice, not a lap splice. (c) is wrong: \"A bend that turns a bar 90 degrees\" — that is a hook or bend, not a splice."
+      },
+      {
+        "module": 8,
+        "q": "What is the job of bracing in a steel frame?",
+        "choices": [
+          "To hold the paint on the steel",
+          "To make the frame heavier",
+          "To connect the building to the crane",
+          "To resist sideways forces from wind and earthquakes so the frame does not rack"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Bracing — diagonal members or braced bays — gives the frame its sideways stiffness against wind and seismic loads. (a) is wrong: \"To hold the paint on the steel\" — paint is a coating, not a structural job. (b) is wrong: \"To make the frame heavier\" — weight is not the purpose; stiffness is. (c) is wrong: \"To connect the building to the crane\" — the crane is temporary equipment, not part of the frame."
+      },
+      {
+        "module": 8,
+        "q": "When can temporary bracing and guy wires be removed from a steel frame?",
+        "choices": [
+          "As soon as the permanent bracing and connections are complete and the frame is stable",
+          "As soon as the first column is set",
+          "At the end of the first day, no matter what",
+          "When the crane leaves the site"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Temporary bracing holds the frame until the permanent bracing is in place; removing it early leaves an unstable frame. (b) is wrong: \"As soon as the first column is set\" — one column is not a stable frame. (c) is wrong: \"At the end of the first day, no matter what\" — the clock does not make a frame stable; completed permanent bracing does. (d) is wrong: \"When the crane leaves the site\" — the crane leaving says nothing about whether the frame is braced."
+      },
+      {
+        "module": 2,
+        "q": "What does 100% tie-off mean for an ironworker?",
+        "choices": [
+          "Tying off only when the foreman is watching",
+          "Tying off only on the first day of the job",
+          "Tying off only while standing still",
+          "Being tied off to an anchorage at all times when exposed to a fall"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). 100% tie-off means there is never a moment of exposure without a connection — one lanyard is clipped before the other is unclipped when moving. (a) is wrong: \"Tying off only when the foreman is watching\" — fall protection is for the worker's safety, not for show. (b) is wrong: \"Tying off only on the first day of the job\" — the hazard exists every day. (c) is wrong: \"Tying off only while standing still\" — moving between points is when falls often happen, so tie-off must be continuous."
+      },
+      {
+        "module": 9,
+        "q": "Why is metal decking installed in sequence, starting from one end of a bay?",
+        "choices": [
+          "So each sheet is supported and the crew always works from installed deck, not over open joists",
+          "So the crane can leave early",
+          "So the deck is installed as slowly as possible",
+          "So the sheets do not need fastening"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Working in sequence means every sheet lands on supported deck and the crew never has to stand over open joists. (b) is wrong: \"So the crane can leave early\" — the crane's schedule does not set the decking sequence. (c) is wrong: \"So the deck is installed as slowly as possible\" — sequence is about safety and support, not speed. (d) is wrong: \"So the sheets do not need fastening\" — every sheet still needs puddle welds or screws."
+      },
+      {
+        "module": 8,
+        "q": "What is a column splice?",
+        "choices": [
+          "A cut made in a column to shorten it",
+          "A joint that connects one column section to the column section above it",
+          "A weld that joins a beam to a column",
+          "A brace that supports a column from the side"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Tall columns arrive in sections, and a splice — bolted or welded — joins one section to the next so the column continues upward. (a) is wrong: \"A cut made in a column to shorten it\" — a splice joins sections, it does not shorten them. (c) is wrong: \"A weld that joins a beam to a column\" — that is a beam-to-column connection, not a splice. (d) is wrong: \"A brace that supports a column from the side\" — that is bracing, not a splice."
+      },
+      {
+        "module": 9,
+        "q": "How does a bar joist bear on its support?",
+        "choices": [
+          "It hangs from a rope",
+          "It sits on a joist seat at its ends, bearing on the beam or girder below",
+          "It is nailed to the wall",
+          "It floats above the support"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The joist's end seat rests on the top of the supporting beam or girder, and is then welded or bolted in place. (a) is wrong: \"It hangs from a rope\" — joists are supported by steel, not rope. (c) is wrong: \"It is nailed to the wall\" — steel joists are welded or bolted, not nailed. (d) is wrong: \"It floats above the support\" — a joist must bear on its support to carry its loads."
+      },
+      {
+        "module": 5,
+        "q": "What is the difference between an A325 bolt and an A490 bolt?",
+        "choices": [
+          "A325 is used only indoors and A490 only outdoors",
+          "A325 is a larger diameter than A490",
+          "A490 is a stronger high-strength structural bolt than A325",
+          "A325 is stronger than A490"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Both are high-strength structural bolts, but A490 is made from a stronger alloy and carries higher loads than A325. (a) is wrong: \"A325 is used only indoors and A490 only outdoors\" — the difference is strength, not indoor versus outdoor use. (b) is wrong: \"A325 is a larger diameter than A490\" — both grades come in many diameters; the grade names strength, not size. (d) is wrong: \"A325 is stronger than A490\" — it is the other way around."
+      },
+      {
+        "module": 3,
+        "q": "What is a spud wrench used for?",
+        "choices": [
+          "Cutting steel beams to length",
+          "Measuring the thickness of a steel plate",
+          "Aligning bolt holes and tightening or loosening nuts on structural steel",
+          "Welding two pieces of steel together"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). A spud wrench has a tapered handle end for lining up bolt holes and a wrench end for nuts — it is the ironworker's everyday tool. (a) is wrong: \"Cutting steel beams to length\" — cutting is done with a torch or saw, not a spud wrench. (b) is wrong: \"Measuring the thickness of a steel plate\" — that is a gauge or caliper's job. (d) is wrong: \"Welding two pieces of steel together\" — a spud wrench cannot weld."
+      },
+      {
+        "module": 4,
+        "q": "On a drawing at a scale of 1/4 inch = 1 foot, a beam measures 3 inches long on the paper. How long is the real beam?",
+        "choices": [
+          "3 feet",
+          "4 feet",
+          "12 feet",
+          "36 feet"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). At 1/4 inch = 1 foot, each inch on paper is 4 feet, so 3 inches × 4 feet per inch = 12 feet. (a) is wrong: \"3 feet\" — that reads the paper measurement as feet. (b) is wrong: \"4 feet\" — that is the length of 1 inch on the paper, not 3 inches. (d) is wrong: \"36 feet\" — that multiplies 3 by 12 as if the scale were 1 inch = 12 feet."
+      },
+      {
+        "module": 6,
+        "q": "When must a synthetic web sling be removed from service?",
+        "choices": [
+          "When it gets wet",
+          "When it has cuts, burns, chemical damage, or a missing identification tag",
+          "When it is used outdoors",
+          "When it is a new sling"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Cuts, burns, and chemical damage weaken the webbing, and a missing tag means the working load limit is unknown — any of these takes the sling out of service. (a) is wrong: \"When it gets wet\" — water alone does not damage a synthetic sling. (c) is wrong: \"When it is used outdoors\" — synthetic slings are made for outdoor use. (d) is wrong: \"When it is a new sling\" — a new, undamaged sling with its tag is ready to use."
+      },
+      {
+        "module": 11,
+        "q": "How must an acetylene cylinder be stored and used?",
+        "choices": [
+          "Lying on its side to save space",
+          "Upside down so the gas flows faster",
+          "On its back in a truck bed",
+          "Upright and secured so it cannot fall, and never used lying on its side"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Acetylene cylinders stand upright and are chained or secured; lying on its side lets liquid acetone reach the valve. (a) is wrong: \"Lying on its side to save space\" — a cylinder on its side is unsafe and can feed liquid into the regulator. (b) is wrong: \"Upside down so the gas flows faster\" — a cylinder must never be upside down. (c) is wrong: \"On its back in a truck bed\" — cylinders must be upright and secured during transport and use."
+      },
+      {
+        "module": 9,
+        "q": "What is bridging between bar joists for?",
+        "choices": [
+          "To carry workers across the roof",
+          "To hold the paint on the joists",
+          "To keep joists from twisting and to share loads between them",
+          "To make the joists longer"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Bridging ties joists together so they stay upright, resist twisting, and share concentrated loads. (a) is wrong: \"To carry workers across the roof\" — bridging is not a walkway. (b) is wrong: \"To hold the paint on the joists\" — paint is a coating, not bridging's job. (d) is wrong: \"To make the joists longer\" — bridging does not change a joist's length."
+      },
+      {
+        "module": 3,
+        "q": "What is a beam clamp used for?",
+        "choices": [
+          "Cutting a beam in half",
+          "Clamping onto a beam flange to provide a hanging point for a hoist or rigging",
+          "Welding a beam to a column",
+          "Measuring how level a beam is"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A beam clamp grips the flange of a beam so a chain fall, come-along, or rigging point can hang from it. (a) is wrong: \"Cutting a beam in half\" — a beam clamp holds, it does not cut. (c) is wrong: \"Welding a beam to a column\" — welding joins steel with an arc, not a clamp. (d) is wrong: \"Measuring how level a beam is\" — a level measures level, not a beam clamp."
+      },
+      {
+        "module": 6,
+        "q": "What is a spreader bar used for in rigging?",
+        "choices": [
+          "To weigh the load",
+          "To cut the sling to length",
+          "To connect the crane to the ground",
+          "To keep the sling legs near vertical and stop the load from being squeezed or crushed"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A spreader bar holds the sling legs apart so they pull straight up instead of squeezing inward on the load. (a) is wrong: \"To weigh the load\" — a spreader bar is not a scale. (b) is wrong: \"To cut the sling to length\" — slings are never cut on the job. (c) is wrong: \"To connect the crane to the ground\" — the crane stands on its own outriggers and mats."
+      },
+      {
+        "module": 3,
+        "q": "What is a come-along or chain fall used for?",
+        "choices": [
+          "Cutting a steel beam to length",
+          "Measuring the weight of a load",
+          "A hand-operated hoist that pulls, lifts, or holds a load in place with a chain",
+          "Welding two steel plates together"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). A come-along or chain fall lets one worker pull a heavy load slowly and hold it exactly where it needs to be. (a) is wrong: \"Cutting a steel beam to length\" — cutting is done with a torch or saw. (b) is wrong: \"Measuring the weight of a load\" — weight is found from drawings, shipping weights, or a scale, not a chain fall. (d) is wrong: \"Welding two steel plates together\" — a chain fall moves loads, it does not weld."
+      },
+      {
+        "module": 7,
+        "q": "What is a crane's radius?",
+        "choices": [
+          "The horizontal distance from the crane's center of rotation to the center of the load",
+          "The length of the crane's boom",
+          "The height of the crane's cab",
+          "The weight of the counterweight"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Radius is measured horizontally from the center of the crane's rotation out to the load — it is the key number on the load chart. (b) is wrong: \"The length of the crane's boom\" — boom length is a different measurement. (c) is wrong: \"The height of the crane's cab\" — cab height has nothing to do with radius. (d) is wrong: \"The weight of the counterweight\" — counterweight is ballast, not a distance."
+      },
+      {
+        "module": 6,
+        "q": "A wire rope sling has broken wires, a kink, and a crushed fitting. What do you do with it?",
+        "choices": [
+          "Use it for lighter loads only",
+          "Wrap tape around the damage and use it",
+          "Straighten the kink and keep using it",
+          "Remove it from service — damaged wire rope is never used"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Broken wires, kinks, and crushed fittings weaken wire rope in ways you cannot judge by eye, so the sling is removed from service. (a) is wrong: \"Use it for lighter loads only\" — a damaged sling has no safe load rating. (b) is wrong: \"Wrap tape around the damage and use it\" — tape hides damage and restores no strength. (c) is wrong: \"Straighten the kink and keep using it\" — straightening a kink does not restore the rope's strength."
+      },
+      {
+        "module": 2,
+        "q": "What is the best way to protect workers below from dropped objects during steel erection?",
+        "choices": [
+          "Work faster so nothing has time to fall",
+          "Only warn workers after something falls",
+          "Hope the wind blows falling objects away from people",
+          "Toe boards, tool tethers, and a barricaded drop zone below the work"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Toe boards stop tools at the edge, tethers keep tools attached to the worker, and a barricaded zone keeps people out of the drop area. (a) is wrong: \"Work faster so nothing has time to fall\" — speed does not prevent drops and makes them more likely. (b) is wrong: \"Only warn workers after something falls\" — a warning after the drop is too late. (c) is wrong: \"Hope the wind blows falling objects away from people\" — wind is unpredictable and cannot be relied on for safety."
+      },
+      {
+        "module": 4,
+        "q": "What is the difference between a plan view and an elevation view on a drawing?",
+        "choices": [
+          "A plan view is a photograph and an elevation view is a sketch",
+          "A plan view looks down from above; an elevation view looks at the structure from the side",
+          "A plan view shows the future and an elevation view shows the past",
+          "There is no difference"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A plan is the view from above, like a map; an elevation is the view from the side, showing heights. (a) is wrong: \"A plan view is a photograph and an elevation view is a sketch\" — both are drawings, not photographs. (c) is wrong: \"A plan view shows the future and an elevation view shows the past\" — both show the same structure from different directions. (d) is wrong: \"There is no difference\" — the viewing direction is the whole difference."
+      },
+      {
+        "module": 2,
+        "q": "What is the correct way to use a ladder to reach a steel deck?",
+        "choices": [
+          "Set it straight up against the steel and climb with both hands full",
+          "Set it at a 4-to-1 angle, extend it 3 feet above the landing, and climb with three points of contact",
+          "Lean it at any angle as long as it reaches",
+          "Climb carrying tools in both hands so you only make one trip"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The 4-to-1 rule sets a safe angle, the 3-foot extension gives a handhold at the top, and three points of contact keep the climber stable. (a) is wrong: \"Set it straight up against the steel and climb with both hands full\" — a near-vertical ladder can tip backward, and full hands leave nothing to grip with. (c) is wrong: \"Lean it at any angle as long as it reaches\" — too shallow an angle makes the ladder slide out at the base. (d) is wrong: \"Climb carrying tools in both hands so you only make one trip\" — tools are hoisted with a rope so the climber keeps both hands free."
+      },
+      {
+        "module": 6,
+        "q": "Where must the lifting point be in relation to the load's center of gravity?",
+        "choices": [
+          "Below the center of gravity",
+          "Directly above the center of gravity, so the load hangs level",
+          "Off to one side so the load tilts",
+          "It does not matter where the lifting point is"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). When the hook is over the center of gravity, the load lifts level and does not swing or tip. (a) is wrong: \"Below the center of gravity\" — a lift point below the center of gravity makes the load flip over. (c) is wrong: \"Off to one side so the load tilts\" — a tilted load can slide out of its rigging. (d) is wrong: \"It does not matter where the lifting point is\" — the lifting point is what keeps the load stable."
+      },
+      {
+        "module": 9,
+        "q": "What are the main types of steel metal decking?",
+        "choices": [
+          "Roof deck, composite floor deck, and form deck",
+          "Wood deck, plastic deck, and glass deck",
+          "Roof deck only",
+          "Wall deck and ceiling deck only"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Roof deck covers the roof, composite floor deck works with a concrete slab to carry floor loads, and form deck is a stay-in-place form for the slab. (b) is wrong: \"Wood deck, plastic deck, and glass deck\" — those are not steel decking types. (c) is wrong: \"Roof deck only\" — floor and form deck are also standard types. (d) is wrong: \"Wall deck and ceiling deck only\" — the main types are roof, composite floor, and form deck."
+      },
+      {
+        "module": 11,
+        "q": "Why must oil or grease never be allowed on oxygen fittings, regulators, or valves?",
+        "choices": [
+          "Because oil makes the fittings slippery",
+          "Because oil makes the fittings rust",
+          "Oil or grease in contact with oxygen under pressure can ignite or explode",
+          "Because oil changes the color of the oxygen"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Oxygen under pressure reacts violently with oil and grease — even a small amount can ignite or explode. (a) is wrong: \"Because oil makes the fittings slippery\" — slipperiness is minor; the fire and explosion risk is the reason. (b) is wrong: \"Because oil makes the fittings rust\" — oil prevents rust; the danger is ignition. (d) is wrong: \"Because oil changes the color of the oxygen\" — oxygen is colorless and oil does not change that."
+      },
+      {
+        "module": 9,
+        "q": "Bundles of metal decking arrive on the job. Where should they be placed?",
+        "choices": [
+          "Anywhere on the deck, piled in one spot",
+          "On the ground only, never on the structure",
+          "Spread out and placed over supports, never overloading one area of the deck",
+          "On the thinnest part of the deck"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Deck bundles are heavy, so they are spread out and set over beams or joists that can carry them. (a) is wrong: \"Anywhere on the deck, piled in one spot\" — piling bundles in one spot can overload and collapse the deck. (b) is wrong: \"On the ground only, never on the structure\" — bundles are routinely landed on the structure, over supports. (d) is wrong: \"On the thinnest part of the deck\" — the thinnest area is the weakest place to load."
+      },
+      {
+        "module": 12,
+        "q": "On a welding symbol, what does a right triangle below the reference line mean?",
+        "choices": [
+          "A fillet weld on the arrow side of the joint",
+          "A groove weld on the other side",
+          "A field weld",
+          "A weld all around the joint"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The right triangle is the fillet weld symbol, and a symbol below the reference line is on the arrow side. (b) is wrong: \"A groove weld on the other side\" — a groove weld is shown with a V, and the other side is above the line. (c) is wrong: \"A field weld\" — a field weld is shown with a flag at the arrow-line junction. (d) is wrong: \"A weld all around the joint\" — weld-all-around is shown with a circle at the arrow-line junction."
+      },
+      {
+        "module": 11,
+        "q": "What is the correct cutting sequence with an oxyfuel torch?",
+        "choices": [
+          "Preheat the steel to a cherry-red spot, press the cutting oxygen lever, then move steadily along the cut line",
+          "Press the oxygen lever first, then light the torch",
+          "Cut without preheating at all",
+          "Move the torch as fast as possible and skip the preheat"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The steel must be hot enough to ignite before the oxygen jet starts the cut, and a steady travel speed keeps the cut clean. (b) is wrong: \"Press the oxygen lever first, then light the torch\" — the torch is lit and the steel preheated before the cutting oxygen is used. (c) is wrong: \"Cut without preheating at all\" — cold steel will not ignite, so the oxygen jet cannot cut it. (d) is wrong: \"Move the torch as fast as possible and skip the preheat\" — rushing without preheat gives no cut at all."
+      },
+      {
+        "module": 7,
+        "q": "Why must a crane never drag a load sideways or side-load its boom?",
+        "choices": [
+          "Because it wastes fuel",
+          "Because dragging a load sideways can overload and collapse the boom",
+          "Because it makes the load dirty",
+          "Because the operator cannot see sideways"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Booms are built for vertical loads; a sideways pull bends the boom in a direction it is not designed for and can collapse it. (a) is wrong: \"Because it wastes fuel\" — fuel is not the issue; boom failure is. (c) is wrong: \"Because it makes the load dirty\" — dirt is minor compared with a collapsing boom. (d) is wrong: \"Because the operator cannot see sideways\" — visibility is not the reason; the boom's strength is."
+      },
+      {
+        "module": 8,
+        "q": "Why must a frame be checked for plumb before the decking goes on?",
+        "choices": [
+          "Because small errors at the bottom grow larger with height, and decking locks the frame in place",
+          "Because the decking is too heavy to move later",
+          "Because the crane cannot reach the deck",
+          "Because the paint dries faster on a plumb frame"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A column slightly out of plumb at the base is far out at the top, and once decking is attached the frame is hard to correct. (b) is wrong: \"Because the decking is too heavy to move later\" — decking weight is not the reason; the growing error is. (c) is wrong: \"Because the crane cannot reach the deck\" — the crane's reach has nothing to do with plumbing checks. (d) is wrong: \"Because the paint dries faster on a plumb frame\" — paint drying is unrelated to plumb."
+      },
+      {
+        "module": 11,
+        "q": "What is the right order for field fabrication of a steel piece?",
+        "choices": [
+          "Weld first, then measure",
+          "Cut first, then check the drawing",
+          "Guess the size and cut it",
+          "Measure from the drawing, cut, then fit and check the piece before welding it"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Field fabrication is measure, cut, fit, check, then weld — checking the fit before welding avoids cutting apart a bad weld. (a) is wrong: \"Weld first, then measure\" — welding before measuring locks in any error. (b) is wrong: \"Cut first, then check the drawing\" — the drawing sets the size, so it is checked before cutting. (c) is wrong: \"Guess the size and cut it\" — steel is cut to the drawing's dimensions, never guessed."
+      },
+      {
+        "module": 4,
+        "q": "How does a 3-4-5 triangle help an ironworker?",
+        "choices": [
+          "It measures the weight of a steel beam",
+          "It tells how many bolts a connection needs",
+          "It proves a corner is square: mark 3 feet one way and 4 feet the other, and the diagonal must be 5 feet",
+          "It sets the temperature for cutting steel"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). In a 3-4-5 triangle the diagonal is exactly 5, so if the diagonal measures 5 feet the corner is a true right angle. (a) is wrong: \"It measures the weight of a steel beam\" — weight comes from steel tables and dimensions, not a triangle. (b) is wrong: \"It tells how many bolts a connection needs\" — bolt counts come from the drawings. (d) is wrong: \"It sets the temperature for cutting steel\" — cutting temperature is set by the torch, not a triangle."
+      },
+      {
+        "module": 2,
+        "q": "What are the three parts of a personal fall arrest system?",
+        "choices": [
+          "Hard hat, safety glasses, and gloves",
+          "Anchorage, body harness, and connecting device such as a lanyard",
+          "Guardrail, toe board, and safety net",
+          "Ladder, scaffold, and lift"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A personal fall arrest system is an anchorage point, a full-body harness, and a lanyard or other connecting device joining them. (a) is wrong: \"Hard hat, safety glasses, and gloves\" — that is basic PPE, not a fall arrest system. (c) is wrong: \"Guardrail, toe board, and safety net\" — those are passive fall-protection systems, not the personal system worn by the worker. (d) is wrong: \"Ladder, scaffold, and lift\" — those are access equipment, not fall arrest parts."
+      },
+      {
+        "module": 5,
+        "q": "Two bolt holes in a connection are slightly out of line. How do you line them up?",
+        "choices": [
+          "Push your fingers through the holes to feel the alignment",
+          "Use a drift pin through the holes to pull them into line, then insert the bolt",
+          "Hit the beam with a sledgehammer until the holes move",
+          "Enlarge the holes with a torch"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A drift pin safely pulls the holes into alignment so the bolt can go in. (a) is wrong: \"Push your fingers through the holes to feel the alignment\" — never put fingers in bolt holes; shifting steel can crush them. (c) is wrong: \"Hit the beam with a sledgehammer until the holes move\" — hammering the beam damages the steel and the connection. (d) is wrong: \"Enlarge the holes with a torch\" — burning holes bigger weakens the connection and is not allowed without approval."
+      },
+      {
+        "module": 12,
+        "q": "What is undercut in a weld, and what causes it?",
+        "choices": [
+          "A groove melted into the base metal beside the weld, caused by too much current, too long an arc, or too fast travel",
+          "A weld that is too wide",
+          "A weld made underwater",
+          "A weld with too little current"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Undercut is a groove along the toe of the weld where base metal was melted away and not refilled — too much heat or too fast travel causes it. (b) is wrong: \"A weld that is too wide\" — width alone is not undercut; the groove beside the weld is. (c) is wrong: \"A weld made underwater\" — underwater welding is a specialty process, not a defect. (d) is wrong: \"A weld with too little current\" — too little current causes lack of fusion, not undercut."
+      },
+      {
+        "module": 11,
+        "q": "Why must steel be cleaned before it is welded?",
+        "choices": [
+          "So the weld looks shiny",
+          "Rust, paint, oil, and mill scale must be removed so the weld metal fuses to clean base metal",
+          "So the steel is lighter",
+          "So the welder can see their reflection"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Contamination in the joint causes porosity, lack of fusion, and weak welds — clean steel is what a sound weld fuses to. (a) is wrong: \"So the weld looks shiny\" — appearance is not the reason; fusion is. (c) is wrong: \"So the steel is lighter\" — cleaning removes almost no weight. (d) is wrong: \"So the welder can see their reflection\" — the welder needs a clean joint, not a mirror."
+      },
+      {
+        "module": 4,
+        "q": "Steel weighs about 490 pounds per cubic foot. About how much does a steel plate 1 foot square and 1 inch thick weigh?",
+        "choices": [
+          "About 490 pounds",
+          "About 41 pounds",
+          "About 12 pounds",
+          "About 1,000 pounds"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The plate's volume is 1 foot × 1 foot × 1/12 foot = 1/12 cubic foot, and 490 / 12 is about 41 pounds. (a) is wrong: \"About 490 pounds\" — that is the weight of a full cubic foot, not a 1-inch plate. (c) is wrong: \"About 12 pounds\" — that divides nothing correctly; 490 / 12 is about 41, not 12. (d) is wrong: \"About 1,000 pounds\" — that is more than twice a full cubic foot of steel."
+      },
+      {
+        "module": 7,
+        "q": "What is two-blocking on a crane?",
+        "choices": [
+          "The hook block being pulled up until it contacts the boom tip, which can break the line or tip the boom",
+          "Using two cranes to lift one load",
+          "Blocking the crane's wheels with two chocks",
+          "Lifting two loads at once"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Two-blocking happens when the hook block is hoisted into the boom tip — it can snap the hoist line or damage the boom, so operators stop well before it. (b) is wrong: \"Using two cranes to lift one load\" — that is a tandem lift, not two-blocking. (c) is wrong: \"Blocking the crane's wheels with two chocks\" — chocks hold wheels; they have nothing to do with the hook block. (d) is wrong: \"Lifting two loads at once\" — a crane lifts one load at a time on its hook."
+      },
+      {
+        "module": 3,
+        "q": "What is a torque wrench used for?",
+        "choices": [
+          "Tightening a bolt to a measured amount of turning force",
+          "Cutting bolts to length",
+          "Lifting a steel beam",
+          "Checking whether steel is level"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A torque wrench shows or limits the turning force applied, so a bolt is tightened to the specified amount — not too loose and not over-tightened. (b) is wrong: \"Cutting bolts to length\" — bolts are cut with a saw or torch. (c) is wrong: \"Lifting a steel beam\" — lifting is done with a crane and rigging. (d) is wrong: \"Checking whether steel is level\" — a level checks level, not a torque wrench."
+      },
+      {
+        "module": 12,
+        "q": "What is an E7018 electrode, and how must it be stored?",
+        "choices": [
+          "A cellulosic rod for root passes, stored in water",
+          "A bare wire with no coating",
+          "A low-hydrogen structural rod that must be kept dry in a rod oven, because moisture in the flux adds hydrogen and cracks the weld",
+          "A cutting electrode, stored outdoors"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). E7018 is the low-hydrogen rod used for structural welds, and damp flux puts hydrogen into the weld, which causes cracking — so rods stay dry in a rod oven. (a) is wrong: \"A cellulosic rod for root passes, stored in water\" — that describes E6010, and no electrode is stored in water. (b) is wrong: \"A bare wire with no coating\" — E7018 has a flux coating; bare wire is used in GMAW, not SMAW. (d) is wrong: \"A cutting electrode, stored outdoors\" — E7018 is a welding electrode, and outdoor storage lets moisture in."
+      },
+      {
+        "module": 10,
+        "q": "What is concrete cover over rebar, and why does it matter?",
+        "choices": [
+          "The layer of concrete between the rebar and the surface, which protects the steel from corrosion and fire",
+          "A tarp placed over the pour",
+          "A coat of paint on the rebar",
+          "The wooden form around the concrete"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Cover is the concrete thickness over the steel; too little cover lets water and air reach the steel and rust it. (b) is wrong: \"A tarp placed over the pour\" — a tarp is curing protection, not cover. (c) is wrong: \"A coat of paint on the rebar\" — paint is not concrete cover. (d) is wrong: \"The wooden form around the concrete\" — formwork shapes the concrete; cover is the concrete over the steel."
+      },
+      {
+        "module": 5,
+        "q": "What is a tension-control (TC) bolt, and how do you know it is tensioned correctly?",
+        "choices": [
+          "A bolt that is tightened until it snaps in half",
+          "A bolt with a built-in thermometer",
+          "A bolt that changes color when tight",
+          "A bolt with a spline on the end that twists off when the bolt reaches its proper tension"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A TC bolt has a splined tip that the wrench holds while the nut is turned; when the required tension is reached, the spline shears off — that is the visual proof. (a) is wrong: \"A bolt that is tightened until it snaps in half\" — the bolt itself must never snap; only the small spline tip breaks off. (b) is wrong: \"A bolt with a built-in thermometer\" — TC bolts have no thermometer. (c) is wrong: \"A bolt that changes color when tight\" — TC bolts do not change color."
+      },
+      {
+        "module": 5,
+        "q": "What do the markings on the head of a high-strength bolt tell you?",
+        "choices": [
+          "The name of the worker who installed it",
+          "The date the building will be finished",
+          "They identify the bolt's grade and strength, so you can tell an A325 from an A490",
+          "The color the bolt should be painted"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Head markings are the bolt's identification — grade, manufacturer, and strength class — so the right bolt is used in each connection. (a) is wrong: \"The name of the worker who installed it\" — bolts are not marked with installer names. (b) is wrong: \"The date the building will be finished\" — head marks say nothing about the schedule. (d) is wrong: \"The color the bolt should be painted\" — paint color is not stamped on a bolt head."
+      },
+      {
+        "module": 1,
+        "q": "What is an ironworker apprenticeship?",
+        "choices": [
+          "A one-day safety class",
+          "Paid on-the-job training combined with classroom instruction, leading to journeyman status",
+          "A college degree in engineering",
+          "A license bought from the state"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Apprentices learn on real jobs under journeymen while also taking classes, and finish as journeymen. (a) is wrong: \"A one-day safety class\" — an apprenticeship lasts years, not a day. (c) is wrong: \"A college degree in engineering\" — apprenticeship is trade training, not an engineering degree. (d) is wrong: \"A license bought from the state\" — journeyman status is earned by completing training, not bought."
+      },
+      {
+        "module": 2,
+        "q": "What is the maximum arresting force allowed on a worker's body in a fall?",
+        "choices": [
+          "1,800 pounds",
+          "5,000 pounds",
+          "500 pounds",
+          "10,000 pounds"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The fall arrest system must limit the force on the body to 1,800 pounds or less, which is why shock-absorbing lanyards are used. (b) is wrong: \"5,000 pounds\" — that is the anchorage strength requirement, not the force limit on the body. (c) is wrong: \"500 pounds\" — that is below the actual limit, not the limit itself. (d) is wrong: \"10,000 pounds\" — a force that large would seriously injure the worker."
+      },
+      {
+        "module": 4,
+        "q": "A beam rises 2 feet over a horizontal run of 100 feet. What is the slope in percent?",
+        "choices": [
+          "50%",
+          "20%",
+          "0.2%",
+          "2%"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Slope percent is rise divided by run times 100: 2 / 100 × 100 = 2%. (a) is wrong: \"50%\" — that would be a rise of 50 feet over 100 feet. (b) is wrong: \"20%\" — that would be a rise of 20 feet over 100 feet. (c) is wrong: \"0.2%\" — that divides 2 by 1,000 instead of by 100."
+      },
+      {
+        "module": 7,
+        "q": "How far must a crane stay from overhead power lines up to 50 kV?",
+        "choices": [
+          "5 feet",
+          "At least 20 feet",
+          "2 feet",
+          "50 feet"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Cranes must stay at least 20 feet from power lines up to 50 kV, because electricity can arc across a gap. (a) is wrong: \"5 feet\" — 5 feet is far too close to a live line. (c) is wrong: \"2 feet\" — 2 feet is nearly touching the line. (d) is wrong: \"50 feet\" — 50 feet is safe but is not the required minimum; the rule is 20 feet."
+      },
+      {
+        "module": 10,
+        "q": "Why is reinforcing steel (rebar) placed in concrete?",
+        "choices": [
+          "To make the concrete heavier",
+          "To make the concrete dry faster",
+          "To give the concrete its color",
+          "Concrete is strong in compression but weak in tension, and rebar carries the tension"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Concrete cracks under pulling forces, so steel bars are placed where tension occurs to carry those forces. (a) is wrong: \"To make the concrete heavier\" — weight is not the purpose of rebar. (b) is wrong: \"To make the concrete dry faster\" — rebar does not change curing time. (c) is wrong: \"To give the concrete its color\" — rebar is buried inside and does not color concrete."
+      },
+      {
+        "module": 1,
+        "q": "How is ironwork different from welding alone?",
+        "choices": [
+          "Ironworkers never weld at all",
+          "Ironwork is only done indoors",
+          "Welding is the only skill an ironworker needs",
+          "Welding is one skill ironworkers use; they also rig, bolt, plumb, align, and erect steel"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). An ironworker erects the whole frame — rigging loads, plumbing columns, bolting connections, placing decking and rebar — and welding is one of those skills. (a) is wrong: \"Ironworkers never weld at all\" — field welding is part of ironwork. (b) is wrong: \"Ironwork is only done indoors\" — most ironwork is outdoors, at height. (c) is wrong: \"Welding is the only skill an ironworker needs\" — rigging, bolting, reading drawings, and working at height matter just as much."
+      },
+      {
+        "module": 7,
+        "q": "What is a blind lift, and how is it handled?",
+        "choices": [
+          "A lift done at night with no lights",
+          "A lift where the operator cannot see the load, directed by a signal person with clear, continuous communication",
+          "A lift done without a load chart",
+          "A lift where the operator closes their eyes"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). In a blind lift the operator relies entirely on the signal person, so signals and radio contact must be agreed and continuous. (a) is wrong: \"A lift done at night with no lights\" — lifts without lights are not done at all. (c) is wrong: \"A lift done without a load chart\" — every lift is checked against the load chart. (d) is wrong: \"A lift where the operator closes their eyes\" — the operator's eyes are open; it is the load that is out of sight."
+      },
+      {
+        "module": 11,
+        "q": "How does oxyfuel cutting cut through steel?",
+        "choices": [
+          "The torch preheats the steel, then a jet of oxygen burns through the heated steel",
+          "The torch melts the steel with electricity alone",
+          "The torch freezes the steel until it cracks",
+          "The torch sprays acid on the steel"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Oxyfuel cutting heats the steel to its ignition temperature with the preheat flames, then the pure oxygen jet oxidizes — burns — the steel away along the cut. (b) is wrong: \"The torch melts the steel with electricity alone\" — oxyfuel uses gas flames and oxygen, not electricity. (c) is wrong: \"The torch freezes the steel until it cracks\" — cutting heats steel, it does not freeze it. (d) is wrong: \"The torch sprays acid on the steel\" — no acid is used in oxyfuel cutting."
+      },
+      {
+        "module": 12,
+        "q": "What is porosity in a weld, and what causes it?",
+        "choices": [
+          "Cracks from cooling too fast",
+          "Gas holes in the weld metal, caused by contamination such as rust, oil, paint, or moisture, or by lost shielding gas",
+          "Slag trapped between passes",
+          "A weld that is too thick"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Porosity is gas trapped in the solidified weld — contamination and lost shielding let gas into the molten pool. (a) is wrong: \"Cracks from cooling too fast\" — that describes cracking, not porosity. (c) is wrong: \"Slag trapped between passes\" — that is slag inclusion, a different defect. (d) is wrong: \"A weld that is too thick\" — excess thickness is overbuild, not porosity."
+      },
+      {
+        "module": 12,
+        "q": "On a welding symbol, what does a V shape mean?",
+        "choices": [
+          "A fillet weld",
+          "A V-groove weld",
+          "A plug weld",
+          "A spot weld"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The V is the symbol for a V-groove weld — a joint with beveled edges that the weld fills. (a) is wrong: \"A fillet weld\" — a fillet weld is shown with a right triangle. (c) is wrong: \"A plug weld\" — a plug weld is shown with a rectangle. (d) is wrong: \"A spot weld\" — a spot weld is shown with a circle."
+      },
+      {
+        "module": 10,
+        "q": "What diameter is a #4 reinforcing bar?",
+        "choices": [
+          "4 inches",
+          "1/2 inch — the bar number is the diameter in eighths of an inch",
+          "1/4 inch",
+          "4/16 inch"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A bar's number is its diameter in eighths of an inch, so a #4 bar is 4/8 inch, or 1/2 inch. (a) is wrong: \"4 inches\" — a 4-inch bar would be enormous; the number is eighths of an inch. (c) is wrong: \"1/4 inch\" — that is a #2 bar. (d) is wrong: \"4/16 inch\" — 4/16 inch is 1/4 inch, and bar numbers are counted in eighths, not sixteenths."
+      },
+      {
+        "module": 6,
+        "q": "What is a sling's working load limit (WLL)?",
+        "choices": [
+          "The weight of the sling itself",
+          "The maximum weight the crane can lift",
+          "The maximum load the sling may lift in the configuration being used",
+          "The weight of the load plus the crane"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The WLL is the most a sling may safely lift in that hitch and angle — change the configuration and the limit changes. (a) is wrong: \"The weight of the sling itself\" — the sling's own weight is not its limit. (b) is wrong: \"The maximum weight the crane can lift\" — that is the crane's capacity, not the sling's limit. (d) is wrong: \"The weight of the load plus the crane\" — the crane's weight has nothing to do with a sling's limit."
+      },
+      {
+        "module": 8,
+        "q": "What is a moment connection?",
+        "choices": [
+          "A connection that is made in a moment, very quickly",
+          "A rigid connection that resists bending as well as shear, so the joint holds its angle under load",
+          "A connection that allows the beam to swing freely",
+          "A connection made with rope"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A moment connection is stiff — it transfers bending forces between beam and column so the frame resists sideways loads. (a) is wrong: \"A connection that is made in a moment, very quickly\" — moment here means bending force, not time. (c) is wrong: \"A connection that allows the beam to swing freely\" — that describes a loose or pinned joint, the opposite of a moment connection. (d) is wrong: \"A connection made with rope\" — moment connections are bolted or welded steel."
+      },
+      {
+        "module": 12,
+        "q": "What is slag inclusion, and how is it prevented?",
+        "choices": [
+          "Gas holes from lost shielding, prevented by more gas",
+          "A crack from hydrogen, prevented by preheat",
+          "Slag trapped inside the weld, prevented by cleaning each pass thoroughly before welding the next one",
+          "A groove beside the weld, prevented by less current"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Slag left on a pass gets trapped under the next pass, so every pass is chipped and brushed clean before the next is laid. (a) is wrong: \"Gas holes from lost shielding, prevented by more gas\" — that is porosity, not slag inclusion. (b) is wrong: \"A crack from hydrogen, prevented by preheat\" — that is hydrogen cracking, not slag inclusion. (d) is wrong: \"A groove beside the weld, prevented by less current\" — that is undercut, not slag inclusion."
+      },
+      {
+        "module": 3,
+        "q": "You pick up a grinder and find the guard is missing and the cord is cut. What do you do?",
+        "choices": [
+          "Use it carefully with both hands",
+          "Borrow a guard from another tool and use it",
+          "Use it only for one quick cut",
+          "Tag it out of service and report it — never use a tool with a missing guard or damaged cord"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A missing guard or damaged cord makes a tool dangerous; it is tagged out and removed from service until repaired. (a) is wrong: \"Use it carefully with both hands\" — care does not replace a guard. (b) is wrong: \"Borrow a guard from another tool and use it\" — a guard from another tool may not fit or protect properly. (c) is wrong: \"Use it only for one quick cut\" — there is no safe one-cut exception for a damaged tool."
+      },
+      {
+        "module": 6,
+        "q": "What is the correct way to use a shackle in a lift?",
+        "choices": [
+          "Leave the pin halfway in so it is easy to remove",
+          "Tighten the pin finger-tight only",
+          "Screw the pin in fully until it is seated, and load the shackle on its bow",
+          "Remove the pin and use the shackle body alone"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The pin must be fully seated so it cannot work loose, and the load bears on the curved bow, which is the shackle's strong part. (a) is wrong: \"Leave the pin halfway in so it is easy to remove\" — a half-seated pin can fall out under load. (b) is wrong: \"Tighten the pin finger-tight only\" — finger-tight is not seated and can loosen. (d) is wrong: \"Remove the pin and use the shackle body alone\" — without the pin the shackle cannot hold anything."
+      },
+      {
+        "module": 1,
+        "q": "What is structural steel?",
+        "choices": [
+          "Steel columns, beams, girders, and other shapes that carry the loads of a building or bridge",
+          "Steel nails and screws used in wood framing",
+          "Steel wire used to tie rebar together",
+          "Steel paint used to protect metal from rust"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Structural steel is the load-carrying skeleton of a structure — columns, beams, girders, braces, and joists. (b) is wrong: \"Steel nails and screws used in wood framing\" — those are fasteners, not structural members. (c) is wrong: \"Steel wire used to tie rebar together\" — that is tie wire, a small accessory. (d) is wrong: \"Steel paint used to protect metal from rust\" — paint is a coating, not a structural member."
+      },
+      {
+        "module": 8,
+        "q": "What is a shear connection between a beam and a column?",
+        "choices": [
+          "A connection that cuts the beam in half",
+          "A connection that resists bending like a moment connection",
+          "A connection that transfers the beam's vertical load to the column while allowing a small amount of rotation",
+          "A connection made with rope"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). A shear connection — often a single plate or angle — carries the beam's vertical load into the column and lets the beam end rotate slightly as it deflects. (a) is wrong: \"A connection that cuts the beam in half\" — shear here means vertical force, not cutting. (b) is wrong: \"A connection that resists bending like a moment connection\" — that describes a moment connection, not a shear connection. (d) is wrong: \"A connection made with rope\" — shear connections are bolted or welded steel."
+      },
+      {
+        "module": 5,
+        "q": "What is the turn-of-nut method for tensioning a high-strength bolt?",
+        "choices": [
+          "Turning the nut until it falls off",
+          "Turning the nut with a hammer only",
+          "Tightening the nut by hand and then painting it",
+          "Bringing the joint to snug-tight, then rotating the nut a specified amount to stretch the bolt to its required tension"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Turn-of-nut starts from snug-tight and turns the nut a set amount, which stretches the bolt a known distance and produces the required tension. (a) is wrong: \"Turning the nut until it falls off\" — a nut that falls off holds nothing. (b) is wrong: \"Turning the nut with a hammer only\" — hammers are not used to tension bolts. (c) is wrong: \"Tightening the nut by hand and then painting it\" — hand-tight is not snug-tight, and paint does not tension a bolt."
+      },
+      {
+        "module": 2,
+        "q": "You find a cut in your harness webbing and a bent hook on your lanyard. What do you do?",
+        "choices": [
+          "Use it anyway for light work",
+          "Remove it from service, tag it, and report it so it is replaced",
+          "Tape over the damage and keep using it",
+          "Lend it to another worker"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Damaged fall protection is taken out of service at once — a cut strap or bent hook can fail in a fall. (a) is wrong: \"Use it anyway for light work\" — there is no light-duty exception for fall protection. (c) is wrong: \"Tape over the damage and keep using it\" — tape does not restore strength. (d) is wrong: \"Lend it to another worker\" — that passes a dangerous piece of equipment to someone else."
+      },
+      {
+        "module": 1,
+        "q": "Why must an ironworker be able to read erection drawings?",
+        "choices": [
+          "Drawings are only for the office and never used in the field",
+          "To know the color the steel should be painted",
+          "Erection drawings show the piece marks, sizes, locations, sequence, and connections for every steel member",
+          "To calculate the payroll for the crew"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The erection drawings tell the crew which piece goes where, in what order, and how it connects. (a) is wrong: \"Drawings are only for the office and never used in the field\" — ironworkers work from drawings every day on the job. (b) is wrong: \"To know the color the steel should be painted\" — paint color is a minor note, not the drawings' purpose. (d) is wrong: \"To calculate the payroll for the crew\" — payroll has nothing to do with erection drawings."
+      },
+      {
+        "module": 2,
+        "q": "Under OSHA's steel erection standard (Subpart R), at what height does fall protection become required for ironworkers, and how does that compare with the general construction trigger?",
+        "choices": [
+          "15 feet for steel erection, compared with the general construction trigger of 6 feet",
+          "6 feet for steel erection, compared with the general trigger of 15 feet",
+          "25 feet for steel erection, compared with the general trigger of 10 feet",
+          "10 feet for both steel erection and general construction"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Subpart R sets the steel-erection fall-protection trigger at 15 feet, while the general construction trigger is 6 feet. (b) is wrong: \"6 feet for steel erection, compared with the general trigger of 15 feet\" — the two numbers are reversed. (c) is wrong: \"25 feet for steel erection, compared with the general trigger of 10 feet\" — neither number is the trigger. (d) is wrong: \"10 feet for both steel erection and general construction\" — the triggers are 15 feet for steel erection and 6 feet for general construction, not 10 feet for both."
+      },
+      {
+        "module": 5,
+        "q": "What is a slip-critical connection?",
+        "choices": [
+          "A connection that relies on friction between the plates so the joint does not slip under load",
+          "A connection that is allowed to slip freely",
+          "A connection made with ordinary machine bolts",
+          "A connection that uses no bolts at all"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). In a slip-critical joint the bolt tension clamps the plates so tightly that friction, not the bolt shank, resists the load — and the plates must be clean so friction holds. (b) is wrong: \"A connection that is allowed to slip freely\" — slip-critical means slip is NOT allowed. (c) is wrong: \"A connection made with ordinary machine bolts\" — slip-critical joints use high-strength bolts tensioned to a specified level. (d) is wrong: \"A connection that uses no bolts at all\" — a slip-critical connection is a bolted connection."
+      },
+      {
+        "module": 7,
+        "q": "How must a mobile crane be set up before lifting?",
+        "choices": [
+          "On a slope with the outriggers half out",
+          "With the tires carrying the load and the outriggers up",
+          "On soft ground with no support under the outriggers",
+          "Level, with outriggers fully extended on firm ground, using mats where the ground is soft"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A crane lifts safely only when it is level and its outriggers sit on firm, stable support — mats spread the load on soft ground. (a) is wrong: \"On a slope with the outriggers half out\" — a slope and half-extended outriggers make the crane unstable. (b) is wrong: \"With the tires carrying the load and the outriggers up\" — tires are not a lifting base; the outriggers carry the crane. (c) is wrong: \"On soft ground with no support under the outriggers\" — outriggers can sink into soft ground and tip the crane."
+      },
+      {
+        "module": 2,
+        "q": "High winds, ice on the steel, and lightning are forecast during steel erection. What is the right call?",
+        "choices": [
+          "Stop steel erection work until conditions are safe",
+          "Work faster to finish before the weather arrives",
+          "Keep working but skip the safety meeting",
+          "Work only on the side of the building away from the wind"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Wind can swing loads and blow workers off balance, ice makes steel slippery, and lightning is deadly on a steel frame — work stops until it is safe. (b) is wrong: \"Work faster to finish before the weather arrives\" — rushing at height in bad weather increases the danger. (c) is wrong: \"Keep working but skip the safety meeting\" — skipping the meeting does nothing about the weather hazard. (d) is wrong: \"Work only on the side of the building away from the wind\" — wind, ice, and lightning threaten the whole frame, not one side."
+      },
+      {
+        "module": 7,
+        "q": "Why does soft or uneven ground under a crane matter?",
+        "choices": [
+          "It makes the crane harder to wash",
+          "It slows the crane down",
+          "An outrigger can sink or the crane can tip over",
+          "It makes the load chart unreadable"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A crane's stability depends on its base; if an outrigger sinks, the crane leans, the radius grows, and the crane can tip. (a) is wrong: \"It makes the crane harder to wash\" — washing is irrelevant to crane safety. (b) is wrong: \"It slows the crane down\" — the danger is tipping, not speed. (c) is wrong: \"It makes the load chart unreadable\" — the chart is in the cab and is unaffected by the ground."
+      },
+      {
+        "module": 8,
+        "q": "What does a column base plate do, and how is it held to the foundation?",
+        "choices": [
+          "It spreads the column load onto the foundation, is anchored with anchor bolts, and is grouted underneath",
+          "It keeps rain off the column",
+          "It connects the column to the roof",
+          "It replaces the foundation entirely"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The base plate spreads the column's load over the concrete, anchor bolts hold it down, and grout fills the gap so the plate bears fully. (b) is wrong: \"It keeps rain off the column\" — a base plate is at the foot of the column, not a roof. (c) is wrong: \"It connects the column to the roof\" — the base plate is at the bottom, not the top. (d) is wrong: \"It replaces the foundation entirely\" — the plate sits on the foundation; it does not replace it."
+      },
+      {
+        "module": 2,
+        "q": "Which of the following is NOT an acceptable fall-protection anchor point?",
+        "choices": [
+          "A rated anchorage point designed for fall arrest",
+          "A structural steel member approved by a competent person as an anchor",
+          "An engineered horizontal lifeline anchor",
+          "A loose pipe or conduit that was never designed to hold a falling worker"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A pipe or conduit not designed as an anchor can break or pull free in a fall. (a) is wrong: \"A rated anchorage point designed for fall arrest\" — that is exactly what an anchor should be. (b) is wrong: \"A structural steel member approved by a competent person as an anchor\" — approved structural steel is a proper anchor. (c) is wrong: \"An engineered horizontal lifeline anchor\" — an engineered lifeline anchor is a proper anchor."
+      },
+      {
+        "module": 3,
+        "q": "What is a sleever bar?",
+        "choices": [
+          "A bar that measures the length of a steel beam",
+          "A bar used to spread concrete",
+          "A bar that cuts rebar to length",
+          "A long steel prying bar used to shift and align heavy steel members into place"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A sleever bar gives the leverage to nudge a heavy beam or column into its final position. (a) is wrong: \"A bar that measures the length of a steel beam\" — a tape measure measures length, not a sleever bar. (b) is wrong: \"A bar used to spread concrete\" — that is a screed or rake. (c) is wrong: \"A bar that cuts rebar to length\" — rebar is cut with a cutter or torch."
+      },
+      {
+        "module": 1,
+        "q": "What does an ironworker mainly do on a construction job?",
+        "choices": [
+          "Pour and finish concrete slabs",
+          "Wire buildings for electricity",
+          "Erect and connect the structural steel frame of a building or bridge",
+          "Install drywall and interior finishes"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Ironworkers raise, align, bolt, and weld the steel columns, beams, joists, and decking that form a structure's frame. (a) is wrong: \"Pour and finish concrete slabs\" — that is concrete work, not ironwork. (b) is wrong: \"Wire buildings for electricity\" — that is an electrician's work. (d) is wrong: \"Install drywall and interior finishes\" — that is finish carpentry and drywall work."
+      },
+      {
+        "module": 12,
+        "q": "What causes weld cracks, and how does preheat help?",
+        "choices": [
+          "Hydrogen in the weld, high restraint, and rapid cooling cause cracks; preheat slows cooling and lets hydrogen escape",
+          "Too little current causes cracks; preheat adds current",
+          "Clean steel causes cracks; preheat dirties the steel",
+          "Slow travel causes cracks; preheat speeds travel"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Hydrogen, a rigid joint that cannot move, and fast cooling together cause cracks — preheating slows the cooling rate and gives hydrogen time to escape. (b) is wrong: \"Too little current causes cracks; preheat adds current\" — preheat heats the steel, it does not add welding current. (c) is wrong: \"Clean steel causes cracks; preheat dirties the steel\" — clean steel prevents defects; dirt causes them. (d) is wrong: \"Slow travel causes cracks; preheat speeds travel\" — slow travel causes a wide, overbuilt bead, not cracking."
+      },
+      {
+        "module": 2,
+        "q": "How strong must a fall arrest anchorage be for each worker attached to it?",
+        "choices": [
+          "500 pounds",
+          "1,000 pounds",
+          "5,000 pounds per worker",
+          "200 pounds"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). An anchorage for a personal fall arrest system must support 5,000 pounds per worker attached. (a) is wrong: \"500 pounds\" — far too weak to stop a falling worker safely. (b) is wrong: \"1,000 pounds\" — still far below the required strength. (d) is wrong: \"200 pounds\" — that is about one person's weight, not the anchorage strength required."
+      },
+      {
+        "module": 11,
+        "q": "What does a flashback arrestor do on a cutting torch?",
+        "choices": [
+          "It makes the flame hotter",
+          "It stops a flame from traveling back through the hose into the cylinder",
+          "It measures how much gas is left",
+          "It lights the torch automatically"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A flashback arrestor stops a flame that flashes back down the hose before it can reach the regulator or cylinder. (a) is wrong: \"It makes the flame hotter\" — the arrestor is a safety device, not a flame control. (c) is wrong: \"It measures how much gas is left\" — gas level is read from the cylinder pressure gauge. (d) is wrong: \"It lights the torch automatically\" — the torch is lit with a striker."
+      }
+    ]
+  },
   "final": {
     "title": "ACI Concrete Flatwork Finisher (Written) — Practice Exam",
     "minutes": 120,

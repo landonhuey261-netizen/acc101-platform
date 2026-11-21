@@ -932,6 +932,33 @@ const CERTS = [
     where: NCCER_WHERE,
   },
   {
+    id: 'nccer-ironworking',
+    capstone: 'con301',
+    name: 'NCCER Ironworking Level 1',
+    blurb:
+      'The first level of the NCCER ironworking apprenticeship credential: ' +
+      'trade safety at height, tools, fastening and bolting, rigging, ' +
+      'cranes, structural erection, bar joists and decking, reinforcing ' +
+      'steel, and oxyfuel cutting. NCCER does not publish the Ironworking ' +
+      'Level 1 item count; every module test passes at 70%. NCCER Core is ' +
+      'the prerequisite before the Level 1 credential.',
+    kind: 'single',
+    examKey: 'nccer-ironworking',
+    examLabel: 'NCCER Ironworking Level 1 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Construction 113 (Ironworking). Practice exam: the NCCER ' +
+      'Ironworking Level 1 practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance profiles signed off by a certified NCCER ' +
+      'instructor.',
+    guideId: 'nccer-ironworking',
+    guideLabel: 'NCCER Ironworking Level 1 study guide',
+    where: NCCER_WHERE,
+  },
+  {
     id: 'nccer-heo',
     capstone: 'con301',
     name: 'NCCER Heavy Equipment Operations Level 1',
