@@ -23,6 +23,11 @@
 //    University's Construction Management (B.S.) as the continuity layer;
 //    prepares for NCCER Core, Carpentry/Welding/HEO Level 1, OSHA 10/30,
 //    and ACI Concrete Flatwork Finisher.
+//  - Electrical: modeled on Thaddeus Stevens College of Technology's
+//    Electrical Technology (AAS) with Ferris State University's
+//    Industrial Automation Engineering Technology (AAS) as the continuity
+//    layer; prepares for the Michigan journeyman and master electrician
+//    exams, NCCER Electrical Levels 1-4, and the NABCEP PV Associate exam.
 // Courses outside these lists are standalone and are never
 // numbered into a program.
 //
@@ -315,6 +320,55 @@ const PROGRAMS = [
       'authorized trainer, and the AWS Certified Welder test is a hands-on ' +
       'weld at an Accredited Test Facility.',
   },
+  {
+    name: 'Electrical program',
+    slug: 'electrical',
+    order: [
+      'ele101',
+      'ele102',
+      'ele103',
+      'ele104',
+      'ele105',
+      'ele106',
+      'ele107',
+      'ele108',
+      'ele109',
+      'ele110',
+      'ele111',
+      'ele112',
+      'ele290',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as the
+    // other capstones); the final-step banner covers it.
+    prereqs: {
+      ele102: 'ele101',
+      ele103: 'ele102',
+      ele105: 'ele104',
+      ele106: 'ele105',
+      ele108: 'ele107',
+      ele109: 'ele108',
+      ele111: 'ele103',
+      ele112: 'ele105',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Thaddeus Stevens College ' +
+      'of Technology\u2019s Electrical Technology (AAS) with Ferris State ' +
+      'University\u2019s Industrial Automation Engineering Technology (AAS) as ' +
+      'the continuity layer \u2014 from DC and AC theory through the NEC, ' +
+      'residential and commercial wiring, motors, controls, PLCs, and solar ' +
+      'to a certification-prep capstone that readies you for the Michigan ' +
+      'journeyman and master electrician exams, NCCER Electrical Levels 1\u20134, ' +
+      'and the NABCEP PV Associate exam.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When the ' +
+      'certification tracker on this page shows READY for the credentials you ' +
+      'want, book the real exams through the approved providers listed there. ' +
+      'The practice exams here do not grant credentials or licenses \u2014 ' +
+      'Michigan exams are scheduled through PSI, NCCER tests are taken at ' +
+      'accredited sponsors, and the NABCEP PV Associate exam passes at a ' +
+      'scaled score of 65, not a percentage.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;
@@ -344,6 +398,10 @@ const ASL_PROGRAM_PREREQS = PROGRAMS[5].prereqs;
 const CONSTRUCTION_PROGRAM_NAME = PROGRAMS[6].name;
 const CONSTRUCTION_PROGRAM_ORDER = PROGRAMS[6].order;
 const CONSTRUCTION_PROGRAM_PREREQS = PROGRAMS[6].prereqs;
+
+const ELECTRICAL_PROGRAM_NAME = PROGRAMS[7].name;
+const ELECTRICAL_PROGRAM_ORDER = PROGRAMS[7].order;
+const ELECTRICAL_PROGRAM_PREREQS = PROGRAMS[7].prereqs;
 
 /**
  * Find the program a slug belongs to.
@@ -501,6 +559,9 @@ module.exports = {
   CONSTRUCTION_PROGRAM_NAME,
   CONSTRUCTION_PROGRAM_ORDER,
   CONSTRUCTION_PROGRAM_PREREQS,
+  ELECTRICAL_PROGRAM_NAME,
+  ELECTRICAL_PROGRAM_ORDER,
+  ELECTRICAL_PROGRAM_PREREQS,
   programOf,
   programNameOf,
   stepOf,

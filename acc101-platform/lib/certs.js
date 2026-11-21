@@ -2,7 +2,7 @@
 
 // Certification tracker definitions + rendering for the program capstones
 // (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone,
-// ase-cert-prep, asl-capstone, and con301). Each entry names its capstone; the
+// ase-cert-prep, asl-capstone, con301, and ele290). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -108,6 +108,17 @@ const AWS_WHERE =
   'criteria. Find a facility through the American Welding Society: ' +
   '<a href="https://www.aws.org" target="_blank" rel="noopener">aws.org</a>. ' +
   'You register and test with them — not inside this app.';
+
+const MI_ELEC_WHERE =
+  'The Michigan journeyman and master electrician exams are administered through PSI. Schedule through PSI: ' +
+  '<a href="https://psiexams.com" target="_blank" rel="noopener">psiexams.com</a> ' +
+  '(855-579-4635). Detroit issues its own electrical licenses \u2014 check Detroit\u2019s own requirements separately. ' +
+  'You register and test with PSI \u2014 not inside this app.';
+
+const NABCEP_WHERE =
+  'The NABCEP PV Associate exam is scheduled through NABCEP. Start at NABCEP: ' +
+  '<a href="https://www.nabcep.org" target="_blank" rel="noopener">nabcep.org</a>. ' +
+  'You register and test with NABCEP \u2014 not inside this app.';
 
 const CERTS = [
   {
@@ -918,6 +929,274 @@ const CERTS = [
     guideLabel: 'AWS Certified Welder study guide',
     where: AWS_WHERE,
   },
+  {
+    id: 'mi-journeyman-elec',
+    capstone: 'ele290',
+    name: 'Michigan Journeyman Electrician',
+    blurb:
+      'The Michigan journeyman electrician license: 80 questions in 150 minutes, ' +
+      'open-book on the 2023 NEC plus Michigan Part 8 amendments, passing at 75%. ' +
+      'Eligibility needs age 20+, 8,000 hours over at least 4 years as a registered ' +
+      'apprentice under a licensed journeyman or master, plus related technical ' +
+      'instruction. Exams are scheduled through PSI.',
+    kind: 'single',
+    examKey: 'midterm',
+    examLabel: 'Michigan Journeyman Electrician practice exam',
+    standard: 75,
+    mapped:
+      'Prepared by the whole Electrical program, especially Electrical 102\u2013105 ' +
+      '(theory, NEC, residential wiring) and the capstone\u2019s journeyman review ' +
+      'modules. Practice exam: the Michigan Journeyman Electrician practice exam ' +
+      'in this course.',
+    readyRule:
+      'READY when your best practice score reaches 75% \u2014 the real exam\u2019s passing ' +
+      'score. The license also needs the 8,000 supervised apprentice hours \u2014 see ' +
+      'the Michigan Licensing Hours tracker below.',
+    guideId: 'michigan-licensing',
+    guideLabel: 'Michigan Licensing Step-by-Step study guide',
+    where: MI_ELEC_WHERE,
+  },
+  {
+    id: 'mi-master-elec',
+    capstone: 'ele290',
+    name: 'Michigan Master Electrician',
+    blurb:
+      'The Michigan master electrician license: 76 questions in 180 minutes, ' +
+      'open-book on the 2023 NEC plus Michigan Part 8 amendments, passing at 75%. ' +
+      'Eligibility needs age 22+, a Michigan journeyman license held for at least ' +
+      '2 years, and 12,000 hours over at least 6 years including 4,000 hours as a ' +
+      'journeyman. Exams are scheduled through PSI.',
+    kind: 'single',
+    examKey: 'final',
+    examLabel: 'Michigan Master Electrician practice exam',
+    standard: 75,
+    mapped:
+      'Prepared by the whole Electrical program, especially Electrical 106\u2013112 ' +
+      '(commercial wiring, motors, controls, PLCs, solar, estimating) and the ' +
+      'capstone\u2019s master review module. Practice exam: the Michigan Master ' +
+      'Electrician practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 75% \u2014 the real exam\u2019s passing ' +
+      'score. The license also needs the journeyman years and hours \u2014 see the ' +
+      'Michigan Licensing Hours tracker below.',
+    guideId: 'michigan-licensing',
+    guideLabel: 'Michigan Licensing Step-by-Step study guide',
+    where: MI_ELEC_WHERE,
+  },
+  {
+    id: 'nccer-elec-l1',
+    capstone: 'ele290',
+    name: 'NCCER Electrical Level 1',
+    blurb:
+      'The first level of the NCCER electrical apprenticeship credential: ' +
+      'electrical safety, circuits, theory, NEC, device boxes, hand bending, ' +
+      'raceways, conductors, and drawings. Real Level 1 is 12 module tests, ' +
+      '121 items total; every module test passes at 70%.',
+    kind: 'single',
+    examKey: 'nccer-l1',
+    examLabel: 'NCCER Electrical Level 1 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Electrical 101\u2013104 and the capstone\u2019s Level 1 review ' +
+      'module. Practice exam: the NCCER Electrical Level 1 practice exam in ' +
+      'this course \u2014 one consolidated 50-question exam, not the real test format.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance profiles signed off by a certified NCCER instructor.',
+    guideId: 'nec-navigation',
+    guideLabel: 'NEC Navigation & Open-Book Exam Strategy study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'nccer-elec-l2',
+    capstone: 'ele290',
+    name: 'NCCER Electrical Level 2',
+    blurb:
+      'The second level of the NCCER electrical apprenticeship credential: ' +
+      'alternating current, motors, electric lighting, conduit bending, pull ' +
+      'and junction boxes, conductor installations, cable tray, terminations, ' +
+      'grounding and bonding, and control systems. Real Level 2 per-level item ' +
+      'counts are not published in the sources used \u2014 the app\u2019s 50-question ' +
+      'practice exam is a consolidated practice format; every module test ' +
+      'passes at 70%.',
+    kind: 'single',
+    examKey: 'nccer-l2',
+    examLabel: 'NCCER Electrical Level 2 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Electrical 103 and 107\u2013108 and the capstone\u2019s Level 2 ' +
+      'review module. Practice exam: the NCCER Electrical Level 2 practice ' +
+      'exam in this course \u2014 one consolidated 50-question exam, not the ' +
+      'real test format.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance profiles signed off by a certified NCCER instructor.',
+    guideId: 'nec-navigation',
+    guideLabel: 'NEC Navigation & Open-Book Exam Strategy study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'nccer-elec-l3',
+    capstone: 'ele290',
+    name: 'NCCER Electrical Level 3',
+    blurb:
+      'The third level of the NCCER electrical apprenticeship credential: ' +
+      'load calculations, conductor selection, lighting, hazardous locations, ' +
+      'overcurrent protection, distribution equipment, transformers, commercial ' +
+      'services, and motor calculations. Real Level 3 per-level item counts are ' +
+      'not published in the sources used \u2014 the app\u2019s 50-question practice ' +
+      'exam is a consolidated practice format; every module test passes at 70%.',
+    kind: 'single',
+    examKey: 'nccer-l3',
+    examLabel: 'NCCER Electrical Level 3 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Electrical 105\u2013107 and the capstone\u2019s Level 3 review ' +
+      'module. Practice exam: the NCCER Electrical Level 3 practice exam in ' +
+      'this course \u2014 one consolidated 50-question exam, not the real test format.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance profiles signed off by a certified NCCER instructor.',
+    guideId: 'nec-navigation',
+    guideLabel: 'NEC Navigation & Open-Book Exam Strategy study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'nccer-elec-l4',
+    capstone: 'ele290',
+    name: 'NCCER Electrical Level 4',
+    blurb:
+      'The fourth level of the NCCER electrical apprenticeship credential: ' +
+      'load calculations for feeders and services, health care facilities, ' +
+      'standby and emergency systems, basic electronics, fire alarm systems, ' +
+      'specialty transformers, advanced controls, HVAC controls, and heat ' +
+      'tracing. Real Level 4 per-level item counts are not published in the ' +
+      'sources used \u2014 the app\u2019s 50-question practice exam is a ' +
+      'consolidated practice format; every module test passes at 70%.',
+    kind: 'single',
+    examKey: 'nccer-l4',
+    examLabel: 'NCCER Electrical Level 4 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Electrical 106, 109 and 110 and the capstone\u2019s Level 4 ' +
+      'review module. Practice exam: the NCCER Electrical Level 4 practice ' +
+      'exam in this course \u2014 one consolidated 50-question exam, not the ' +
+      'real test format.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance profiles signed off by a certified NCCER instructor.',
+    guideId: 'nec-navigation',
+    guideLabel: 'NEC Navigation & Open-Book Exam Strategy study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'nabcep-pv-associate',
+    capstone: 'ele290',
+    name: 'NABCEP PV Associate',
+    blurb:
+      'The entry-level solar credential from the North American Board of Certified ' +
+      'Energy Practitioners: PV system design, NEC Article 690, inverters, and ' +
+      'batteries. The real exam is 70 multiple-choice questions (60 scored + 10 ' +
+      'pilot) in 2 hours and passes at a SCALED score of 65 on a 0\u201399 scale ' +
+      '\u2014 not 65%. The 70% on this course\u2019s practice exam is a practice ' +
+      'benchmark only.',
+    kind: 'single',
+    examKey: 'nabcep',
+    examLabel: 'NABCEP PV Associate practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Electrical 111 (Solar PV, Renewables & Energy Storage) and the ' +
+      'capstone\u2019s PV review module. Practice exam: the NABCEP PV Associate ' +
+      'practice exam in this course.',
+    readyRule:
+      'READY here means your best practice score reached 70% \u2014 a practice ' +
+      'benchmark, not the real pass rule. The real exam passes at a scaled score ' +
+      'of 65 on a 0\u201399 scale.',
+    guideId: 'nabcep-guide',
+    guideLabel: 'NABCEP PV Associate Domain Guide study guide',
+    where: NABCEP_WHERE,
+  },
+  {
+    id: 'mi-fire-alarm',
+    capstone: 'ele290',
+    name: 'Michigan Fire Alarm Specialty Technician',
+    blurb:
+      'The Michigan fire alarm specialty technician exam, scheduled through PSI: ' +
+      '36 questions in 90 minutes, passing at 75%. The practice exam here is ' +
+      'rounded to 40 questions.',
+    kind: 'single',
+    examKey: 'fire-alarm',
+    examLabel: 'Michigan Fire Alarm Specialty Technician practice exam',
+    standard: 75,
+    mapped:
+      'Prepared by Electrical 110 (Low Voltage, Fire Alarm & Data Systems) and ' +
+      'the capstone\u2019s fire alarm review module. Practice exam: the Michigan ' +
+      'Fire Alarm Specialty Technician practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 75% \u2014 the real exam\u2019s passing ' +
+      'score.',
+    guideId: 'michigan-licensing',
+    guideLabel: 'Michigan Licensing Step-by-Step study guide',
+    where: MI_ELEC_WHERE,
+  },
+  {
+    id: 'mi-licensing-hours',
+    capstone: 'ele290',
+    name: 'Michigan Licensing Hours Tracker',
+    blurb:
+      'The supervised-hours side of the Michigan journeyman license: 8,000 hours ' +
+      'over at least 4 years as a registered apprentice under a licensed ' +
+      'journeyman or master (12,000 hours over at least 6 years for master). ' +
+      'Hours are logged with your employer and LARA, not in this app \u2014 this card ' +
+      'is a planning tool, not a license.',
+    kind: 'completion',
+    mappedCourses: [
+      'ele101', 'ele102', 'ele103', 'ele104', 'ele105', 'ele106',
+      'ele107', 'ele108', 'ele109', 'ele110', 'ele111', 'ele112',
+    ],
+    mapped:
+      'Complete the twelve Electrical program courses and review the Michigan ' +
+      'licensing guide, then log your supervised apprentice hours with your ' +
+      'employer. The app cannot supply or verify work hours.',
+    readyRule:
+      'READY here means the twelve program courses are finished and the Michigan ' +
+      'licensing guide is reviewed \u2014 it does NOT mean the hours are done. Log ' +
+      'your 8,000 apprentice hours with your employer and LARA; only then can ' +
+      'you sit the journeyman exam.',
+    guideId: 'michigan-licensing',
+    guideLabel: 'Michigan Licensing Step-by-Step study guide',
+    where: MI_ELEC_WHERE,
+  },
+  {
+    id: 'osha-10-elec',
+    capstone: 'ele290',
+    name: 'OSHA 10-Hour Construction',
+    blurb:
+      'The U.S. Department of Labor Outreach Training Program completion card ' +
+      'for construction site work \u2014 a DOL wallet card, not a license or ' +
+      'certification. OSHA requires no test for the card; the card comes from ' +
+      'completing the required 10 contact hours with an authorized trainer. ' +
+      'Most authorized providers add quizzes and a final exam at 70% \u2014 that 70% ' +
+      'is provider-standard, not an OSHA pass mark.',
+    kind: 'completion',
+    mappedCourses: ['ele101'],
+    mapped:
+      'Prepared by Electrical 101 (jobsite safety & OSHA basics) and the ' +
+      'capstone\u2019s OSHA 10 topic guide.',
+    readyRule:
+      'READY here means Electrical 101 is finished and the OSHA 10 topic guide ' +
+      'is reviewed \u2014 preparation only. OSHA publishes no pass mark: the real ' +
+      'DOL card comes only from completing an authorized OSHA Outreach Training ' +
+      'Program course.',
+    guideId: 'osha-10-guide',
+    guideLabel: 'OSHA 10 Topic Guide study guide',
+    where: OSHA_WHERE,
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -1046,6 +1325,8 @@ function renderCertPanel(ctx, capstone) {
               'Welder test is a hands-on weld at an Accredited Test Facility. ' +
               'The OSHA 70% figures here are practice benchmarks, not an OSHA ' +
               'pass mark — OSHA requires no test for the card.'
+            : slug === 'ele290'
+            ? 'Michigan journeyman and master electrician exams are scheduled through PSI and also need supervised apprenticeship hours (8,000 for journeyman); Detroit issues its own licenses. NCCER tests are taken at accredited sponsors with hands-on performance profiles. The NABCEP PV Associate exam passes at a scaled score of 65, not a percentage \u2014 the 70% here is a practice benchmark. The OSHA DOL card comes only from an authorized trainer after the required hours \u2014 OSHA requires no test for the card.'
             : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
