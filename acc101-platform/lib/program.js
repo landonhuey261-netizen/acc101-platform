@@ -296,6 +296,7 @@ const PROGRAMS = [
       'con111',
       'con112',
       'con113',
+      'con114',
       'con301',
     ],
     // Prerequisite guidance: each course builds directly on the listed
@@ -310,13 +311,14 @@ const PROGRAMS = [
       con110: 'con104',
       con112: 'con105',
       con113: 'con110',
+      con114: 'con105',
     },
     blurb:
-      'Fourteen courses taken in order, modeled on Iowa Lakes Community ' +
+      'Fifteen courses taken in order, modeled on Iowa Lakes Community ' +
       'College\u2019s Construction Technology Management (AAS) with Ferris State ' +
       'University\u2019s Construction Management (B.S.) as the continuity layer ' +
       '\u2014 from the trade, tools, and safety through framing, concrete, ' +
-      'finishing, equipment, welding, and ironworking to a certification-prep capstone ' +
+      'finishing, equipment, welding, ironworking, and landscape and hardscape to a certification-prep capstone ' +
       'that readies you for NCCER, OSHA 10/30, and ACI Flatwork Finisher.',
     capstoneLine:
       'This is the final step of the program \u2014 the capstone. When the ' +

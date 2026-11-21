@@ -50,6 +50,13 @@ const NCCER_WHERE =
   '<a href="https://www.nccer.org" target="_blank" rel="noopener">nccer.org</a>. ' +
   'You register and test with them — not inside this app.';
 
+const NALP_WHERE =
+  'The real exam is taken online through NALP\u2019s remote proctoring. ' +
+  'Register and enroll through the National Association of Landscape ' +
+  'Professionals: ' +
+  '<a href="https://www.landscapeprofessionals.org" target="_blank" rel="noopener">landscapeprofessionals.org</a>. ' +
+  'You have 12 months from enrollment to complete it. You test with them — not inside this app.';
+
 const MI_JOURNEY_WHERE =
   'The written exam is scheduled through PSI: ' +
   '<a href="https://psiexams.com" target="_blank" rel="noopener">psiexams.com</a> ' +
@@ -957,6 +964,32 @@ const CERTS = [
     guideId: 'nccer-ironworking',
     guideLabel: 'NCCER Ironworking Level 1 study guide',
     where: NCCER_WHERE,
+  },
+  {
+    id: 'nalp-hardscape',
+    capstone: 'con301',
+    name: 'NALP Landscape Industry Certified Technician — Hardscape Installation',
+    blurb:
+      'The National Association of Landscape Professionals credential for hardscape installers: ' +
+      'a Common Core exam plus the Hardscape Installation specialty — site prep, grading and drainage, ' +
+      'paver patios and walkways, retaining walls, and steps. NALP publishes no question count, time limit, ' +
+      'or pass mark for this exam, so the 100 questions here at 70% are the app\u2019s practice-exam choice and ' +
+      'benchmark, not the real exam\u2019s. Recertification is every 2 years with 24 CEUs.',
+    kind: 'single',
+    examKey: 'nalp-hardscape',
+    examLabel: 'NALP Hardscape Installation practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Construction 114 (Landscape, Hardscape & Site Preparation). Practice exam: the NALP ' +
+      'Hardscape Installation practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — the app\u2019s practice benchmark, since NALP ' +
+      'publishes no pass mark. The real exam is online through NALP, and the credential is knowledge only: ' +
+      'the app cannot grade hands-on installs.',
+    guideId: 'nalp-hardscape',
+    guideLabel: 'NALP Hardscape Installation study guide',
+    where: NALP_WHERE,
   },
   {
     id: 'nccer-heo',

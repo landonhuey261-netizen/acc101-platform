@@ -7004,6 +7004,1214 @@ module.exports = {
       }
     ]
   },
+  "nalp-hardscape": {
+    "title": "NALP Landscape Industry Certified Technician — Hardscape Installation — Practice Exam",
+    "minutes": 120,
+    "passPercent": 70,
+    "coverage": "Practice exam — original questions in the real exam's style and format. The real NALP exam is a Common Core section plus the Hardscape Installation specialty. NALP publishes no question count, time limit, or pass mark, so the 100 questions here at 70% are the app's practice-exam choice and benchmark, not the real exam's. Recertification is every 2 years with 24 CEUs.",
+    "questions": [
+      {
+        "module": 1,
+        "q": "A homeowner asks who draws the patio layout, the plant list, and the grades before anyone digs. Which crew member is that?",
+        "choices": [
+          "The designer",
+          "The landscaper",
+          "The excavator operator",
+          "The hardscape installer"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The designer draws the plan before anyone digs — the layout of patios and beds, the plant list, and the grades. (c) is wrong: \"The excavator operator\" — the operator runs the machine that clears and grades the ground, following the designer's plan. (d) is wrong: \"The hardscape installer\" — the installer builds the patios and walls on ground the excavator has already shaped. (b) is wrong: \"The landscaper\" — the landscaper handles the living work, planting around the finished hardscape."
+      },
+      {
+        "module": 1,
+        "q": "Which of these jobs is hardscaping, not landscaping?",
+        "choices": [
+          "Planting a row of shrubs",
+          "Building stone steps up a slope",
+          "Laying sod on a new lawn",
+          "Spreading mulch in a flower bed"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Hardscaping is the built part of an outdoor job — patios, walkways, retaining walls, and steps made of pavers, stone, block, or concrete. (d) is wrong: \"Spreading mulch in a flower bed\" — mulch is part of the living landscape. (a) is wrong: \"Planting a row of shrubs\" — planting is landscaping. (c) is wrong: \"Laying sod on a new lawn\" — turf is landscaping, the living part."
+      },
+      {
+        "module": 1,
+        "q": "Why must the plan be drawn before the excavator starts digging?",
+        "choices": [
+          "Because the designer charges by the hour and needs the work",
+          "Because the excavator operator cannot read",
+          "Because the plan shows where water goes, what stays, and what gets built — digging first is how a septic field gets crushed or a patio gets built where water pools",
+          "Because the plan is needed to order lunch for the crew"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The plan tells the crew what to build and where, where the water is supposed to go, and what must not be disturbed — digging before reading it risks crushing a septic field or building where water pools. (b) is wrong: \"Because the excavator operator cannot read\" — operators read plans; the point is that the plan must exist before the work starts. (d) is wrong: \"Because the plan is needed to order lunch\" — plans carry no lunch orders. (a) is wrong: \"Because the designer charges by the hour\" — the designer's billing has nothing to do with why the plan comes first."
+      },
+      {
+        "module": 1,
+        "q": "A crew member needs the plant list — each plant's name, size, and how many of each. Which drawing carries it?",
+        "choices": [
+          "The floor plan of the house",
+          "The grading permit",
+          "The site plan",
+          "The landscape plan"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). The landscape plan adds the living and built layers to the site plan, including the patio, walkway, walls, planting beds, and the plant list. (c) is wrong: \"The site plan\" — the site plan shows the property, house, property lines, setbacks, trees, and grades, but not the plant list. (a) is wrong: \"The floor plan of the house\" — a floor plan shows the inside of the house, not the yard. (b) is wrong: \"The grading permit\" — a permit is an approval document, not a drawing with a plant list."
+      },
+      {
+        "module": 1,
+        "q": "You are handed a landscape plan for the first time. What should you find first?",
+        "choices": [
+          "The north arrow and the scale, so you can orient the drawing and know real sizes",
+          "The crew's lunch schedule",
+          "The price of the pavers",
+          "The phone number of the nursery"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The north arrow and scale come first so you know which way is up and how big things really are; then you find the house and property lines as your anchors. (b) is wrong: \"The crew's lunch schedule\" — plans never carry a lunch schedule. (c) is wrong: \"The price of the pavers\" — prices are in the proposal, not on the plan. (d) is wrong: \"The phone number of the nursery\" — supplier contacts are not on a landscape plan."
+      },
+      {
+        "module": 1,
+        "q": "Which of these is NOT one of the five NALP Landscape Industry Certified Technician specialties?",
+        "choices": [
+          "Turf Maintenance",
+          "Concrete Flatwork Finishing",
+          "Softscape Installation",
+          "Hardscape Installation"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The five NALP specialties are Softscape Installation, Hardscape Installation, Turf Maintenance, Ornamental Maintenance, and Irrigation — concrete flatwork is not one of them. (c) is wrong: \"Softscape Installation\" — that is a real NALP specialty. (d) is wrong: \"Hardscape Installation\" — that is the specialty this course prepares you for. (a) is wrong: \"Turf Maintenance\" — that is a real NALP specialty."
+      },
+      {
+        "module": 1,
+        "q": "This course builds on three earlier construction courses. Which one taught you to read plans?",
+        "choices": [
+          "con104 Site Layout & Earthwork",
+          "con105 Concrete & Masonry",
+          "con103 Blueprint Reading",
+          "con110 Heavy Equipment Operation"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). con103 Blueprint Reading taught you to read plans; here you read site and landscape plans instead of floor plans. (a) is wrong: \"con104 Site Layout & Earthwork\" — con104 taught grading and moving dirt. (b) is wrong: \"con105 Concrete & Masonry\" — con105 taught how concrete and block behave. (d) is wrong: \"con110 Heavy Equipment Operation\" — that course taught machine operation, not plan reading."
+      },
+      {
+        "module": 1,
+        "q": "What is the foreman's job on an outdoor job?",
+        "choices": [
+          "To plant every tree personally",
+          "To approve the client's mortgage",
+          "To drive the delivery truck only",
+          "To run the day, read the plan, assign the work, and talk to the client — and to catch mistakes before they are buried under a patio"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). The foreman or crew leader runs the day, reads the plan, assigns work, and talks to the client, and is the one who catches a mistake before it is buried. (c) is wrong: \"To drive the delivery truck only\" — driving deliveries is not the foreman's role. (a) is wrong: \"To plant every tree personally\" — planting is the landscaper's work, and the foreman supervises the whole crew. (b) is wrong: \"To approve the client's mortgage\" — financing has nothing to do with the foreman."
+      },
+      {
+        "module": 2,
+        "q": "A soil sample feels gritty between your fingers, drains very fast, and will not hold together in a ribbon at all. What is it?",
+        "choices": [
+          "Sandy soil",
+          "Silt",
+          "Peat",
+          "Clay"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Sand has the biggest particles — you can see and feel the grit — drains fast, holds little water, and does not stick together, so it cannot form a ribbon. (d) is wrong: \"Clay\" — clay is smooth and sticky and holds a long ribbon. (b) is wrong: \"Silt\" — silt feels smooth and floury, not gritty, and holds water better than sand. (c) is wrong: \"Peat\" — peat is mostly decayed organic matter, not gritty mineral sand."
+      },
+      {
+        "module": 2,
+        "q": "A jar test settles into 3 inches of sand, 2 inches of silt, and 1 inch of clay — 6 inches of soil in total. What percentage of the sample is sand?",
+        "choices": [
+          "33 percent",
+          "50 percent",
+          "17 percent",
+          "25 percent"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The sand layer is 3 inches out of 6 inches total: 3 ÷ 6 = 0.50, or 50 percent. (d) is wrong: \"25 percent\" — 25 percent would be 1.5 inches of sand, not 3. (a) is wrong: \"33 percent\" — 33 percent is the silt share (2 ÷ 6). (c) is wrong: \"17 percent\" — 17 percent is the clay share (1 ÷ 6)."
+      },
+      {
+        "module": 2,
+        "q": "You roll a ribbon test and the ribbon breaks after about one inch. What does that tell you about the soil?",
+        "choices": [
+          "It is rich in clay, because clay holds the longest ribbons",
+          "It is sandy, because sand cannot form a ribbon at all",
+          "It is a loam — a short ribbon that breaks quickly means a balanced soil, not a clay-rich one",
+          "It is mostly gravel"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). A short ribbon that breaks quickly means a loam; only a clay-rich soil holds a long ribbon of two inches or more. (a) is wrong: \"It is rich in clay\" — a clay-rich soil would hold a ribbon two inches or longer before breaking. (b) is wrong: \"It is sandy\" — sandy soil crumbles and will not form a ribbon at all, not even a one-inch one. (d) is wrong: \"It is mostly gravel\" — gravel is too coarse to roll into a ball or ribbon."
+      },
+      {
+        "module": 2,
+        "q": "A crew dumps a full foot of fill in one layer and compacts only the top. Why will the patio sink anyway?",
+        "choices": [
+          "Because fill always sinks no matter how it is placed",
+          "Because the pavers are too heavy for any fill",
+          "Because the compactor is too heavy for the fill",
+          "Because a machine can only compact a thin layer properly — the bottom of a thick layer stays full of air pockets and settles later under weight"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Compaction works in thin lifts a few inches at a time; a thick layer only hardens on top while the bottom stays loose, and the air squeezes out later under the patio's weight. (c) is wrong: \"Because the compactor is too heavy\" — the compactor's weight is not the problem; the layer thickness is. (a) is wrong: \"Because fill always sinks\" — fill placed and compacted in thin lifts is a sound base; it is the single thick layer that fails. (b) is wrong: \"Because the pavers are too heavy\" — pavers are light compared with what a properly compacted base can carry."
+      },
+      {
+        "module": 2,
+        "q": "A soil carries a patio fine when dry but turns soft and sinks after a week of rain. What does this show about bearing capacity?",
+        "choices": [
+          "Moisture is the wild card: a soil that bears weight when dry can turn soft when soaked, which is why drainage and compaction go together",
+          "Rain makes soil stronger",
+          "Bearing capacity only matters for driveways, not patios",
+          "Bearing capacity never changes, so the patio must have been built wrong in another way"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Bearing capacity depends on moisture — a well-compacted base that stays dry stays solid, and a base that gets soaked can fail even if it was compacted well. (d) is wrong: \"Bearing capacity never changes\" — it changes with moisture, which is exactly why the patio failed after rain. (b) is wrong: \"Rain makes soil stronger\" — soaking makes most soils softer and weaker, not stronger. (c) is wrong: \"Bearing capacity only matters for driveways\" — every structure, patio included, needs the soil beneath it to carry its weight."
+      },
+      {
+        "module": 2,
+        "q": "A site has a foot of dark, soft topsoil where the patio will go. What is the correct sequence?",
+        "choices": [
+          "Build the paver base directly on the topsoil to save time",
+          "Strip the topsoil and stockpile it, build the compacted base on the subsoil underneath, and spread the topsoil back over the beds and lawn at the end",
+          "Mix the topsoil into the base stone so nothing is wasted",
+          "Haul the topsoil away and buy new topsoil for the lawn"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Topsoil is full of organic matter that rots and settles, so a patio built on it will dip; strip it, stockpile it, build on the subsoil, and spread it back on the planting beds and lawn at the end. (a) is wrong: \"Build directly on the topsoil\" — the organic matter breaks down over a few years and the patio settles with it. (c) is wrong: \"Mix the topsoil into the base stone\" — organic matter in a base rots and leaves voids, weakening the base. (d) is wrong: \"Haul the topsoil away\" — good topsoil is valuable for the beds and lawn; stockpiling it costs nothing and saves buying it back."
+      },
+      {
+        "module": 2,
+        "q": "A planting bed in heavy clay drains poorly. The crew works compost into the top few inches of the whole bed. What is this called?",
+        "choices": [
+          "Filling",
+          "Compacting",
+          "Amending the soil",
+          "Stripping the topsoil"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Amending means improving the soil you have — compost loosens heavy clay and feeds the plants. (a) is wrong: \"Filling\" — fill means bringing in new material to raise an area or replace bad soil, not improving the soil in place. (b) is wrong: \"Compacting\" — compacting squeezes air out of soil to make it bear weight, the opposite of loosening a planting bed. (d) is wrong: \"Stripping the topsoil\" — stripping removes the top layer; here the crew is improving the bed in place."
+      },
+      {
+        "module": 2,
+        "q": "A percolation test hole drops 4 inches in one hour. What does that tell you about the soil?",
+        "choices": [
+          "It is perfect loam, because loam drains the fastest",
+          "The test failed, because water should never drop that fast",
+          "It is heavy clay that holds water",
+          "It is fast-draining, sandy soil — water moves through it quickly"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A drop of 4 inches in an hour is fast drainage, the signature of sandy, free-draining soil. (c) is wrong: \"It is heavy clay\" — clay drains very slowly, a fraction of an inch per hour, not 4 inches. (a) is wrong: \"It is perfect loam\" — loam drains at a moderate rate, slower than sand. (b) is wrong: \"The test failed\" — a fast result is a real result; it means the soil drains quickly."
+      },
+      {
+        "module": 3,
+        "q": "The rule of thumb is that the ground should drop at least 6 inches in the first 10 feet away from the foundation. What slope is that, as a percentage?",
+        "choices": [
+          "About 5 percent",
+          "About 10 percent",
+          "About 60 percent",
+          "About 1 percent"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Slope is fall over run: 6 inches is 0.5 feet, and 0.5 ÷ 10 = 0.05, or about 5 percent. (d) is wrong: \"About 1 percent\" — 1 percent over 10 feet would be only about 1.2 inches of fall. (b) is wrong: \"About 10 percent\" — 10 percent over 10 feet would be a full foot of fall. (c) is wrong: \"About 60 percent\" — 60 percent would be a 6-foot drop over 10 feet, a cliff, not a yard."
+      },
+      {
+        "module": 3,
+        "q": "A yard drops 3 feet over a run of 60 feet. What is the slope?",
+        "choices": [
+          "3 percent",
+          "5 percent",
+          "20 percent",
+          "2 percent"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Slope is fall over run times 100: 3 ÷ 60 = 0.05, or 5 percent. (d) is wrong: \"2 percent\" — 2 percent over 60 feet would be a fall of only 1.2 feet. (a) is wrong: \"3 percent\" — 3 percent of 60 feet is 1.8 feet, not 3 feet. (c) is wrong: \"20 percent\" — 20 percent over 60 feet would be a 12-foot drop."
+      },
+      {
+        "module": 3,
+        "q": "A French drain pipe is laid at about a 1 percent slope. Over a 40-foot run, about how much fall is that?",
+        "choices": [
+          "About 4 feet",
+          "About 1 inch",
+          "About 5 inches",
+          "About 1 foot"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). One percent of 40 feet is 0.4 feet, which is 4.8 inches — about 5 inches of fall over the run. (b) is wrong: \"About 1 inch\" — 1 inch over 40 feet is only about 0.2 percent, too flat to keep water moving. (d) is wrong: \"About 1 foot\" — 1 foot over 40 feet is 2.5 percent, steeper than the usual 1 percent for a French drain. (a) is wrong: \"About 4 feet\" — 4 feet over 40 feet is a 10 percent slope, far too steep."
+      },
+      {
+        "module": 3,
+        "q": "A crew installs a French drain with the perforated pipe's holes facing up. What is the most likely result?",
+        "choices": [
+          "The pipe floats out of the trench",
+          "Nothing changes — hole direction does not matter",
+          "The drain works better, because water falls into the holes from above",
+          "Silt washes in from above and clogs the pipe, because the holes must face down so water enters from below"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). The holes face down so groundwater seeps up into the pipe from below while the gravel and fabric above keep silt out; holes up let silt in from above and choke the drain. (c) is wrong: \"The drain works better\" — holes up invite silt, which is the most common French drain mistake. (a) is wrong: \"The pipe floats out of the trench\" — the pipe is buried in gravel and does not float. (b) is wrong: \"Hole direction does not matter\" — it matters a great deal; holes down is the detail beginners get wrong."
+      },
+      {
+        "module": 3,
+        "q": "A shallow grassy swale holds standing water for days after every rain. What is wrong with it?",
+        "choices": [
+          "It is too flat, so the water has no slope to keep it moving to the outlet",
+          "It has too much grass in it",
+          "It is too wide to carry water",
+          "It is too steep, so the water runs off too fast"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A swale that is too flat holds water instead of carrying it; a swale needs a gentle, steady slope toward its outlet. (d) is wrong: \"It is too steep\" — a swale that is too steep erodes, it does not hold water. (b) is wrong: \"It has too much grass in it\" — grass is what a swale is made of; the grass is not the problem. (c) is wrong: \"It is too wide\" — width does not make a swale hold water; a flat grade does."
+      },
+      {
+        "module": 3,
+        "q": "A low spot beside a driveway collects surface water every time it rains. Which drainage tool is the right fix?",
+        "choices": [
+          "A rain garden in the middle of the driveway",
+          "A catch basin with a grate, sending the water into a solid pipe to an outlet",
+          "A dry well under the driveway",
+          "A silt fence across the driveway"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A catch basin is a buried box with a grate that catches surface water from a low spot or driveway and sends it into a solid pipe to an outlet. (c) is wrong: \"A dry well under the driveway\" — a dry well soaks water into the ground and is the outlet of last resort, not a collector for a driveway low spot. (d) is wrong: \"A silt fence\" — a silt fence is erosion control during construction, not a drain for standing water. (a) is wrong: \"A rain garden in the middle of the driveway\" — a rain garden is a planted basin in a yard, not something built in a driveway."
+      },
+      {
+        "module": 3,
+        "q": "A yard has nowhere downhill for collected water to go — no street gutter, no swale, no easement. Which outlet is the last resort?",
+        "choices": [
+          "The storm drain, without asking anyone",
+          "The neighbor's yard",
+          "A dry well that holds the water and lets it soak slowly into the ground",
+          "A pipe that ends under the patio"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). A dry well is a buried pit of gravel or a chamber that holds water and lets it soak slowly into the ground, used where there is nowhere downhill for the water to go. (b) is wrong: \"The neighbor's yard\" — sending water onto a neighbor's property can violate local rules. (d) is wrong: \"A pipe that ends under the patio\" — a drain with nowhere to go is a buried bathtub, and water under a patio washes out its base. (a) is wrong: \"The storm drain, without asking anyone\" — sending water into a public storm system without permission can violate local rules."
+      },
+      {
+        "module": 3,
+        "q": "When should the silt fence come down at the end of a job?",
+        "choices": [
+          "The day the patio pavers arrive",
+          "Never — it stays up forever",
+          "As soon as the digging starts, so it is out of the way",
+          "Only after the lawn and plantings are established enough to hold the soil themselves"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Erosion controls come out only after the lawn and plantings are established enough to hold the soil themselves; removing them early leaves bare soil to wash away. (c) is wrong: \"As soon as the digging starts\" — the fence must go in before digging starts, not come down when it does. (a) is wrong: \"The day the pavers arrive\" — the pavers arriving has nothing to do with whether the soil is held in place. (b) is wrong: \"Never\" — the fence is temporary construction control, removed once the site is stable."
+      },
+      {
+        "module": 3,
+        "q": "A homeowner wants a shallow planted basin that holds stormwater for about a day and lets it soak in. What is that called?",
+        "choices": [
+          "A rain garden",
+          "A catch basin",
+          "A dry well",
+          "A French drain"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A rain garden is a shallow planted basin that holds stormwater for a day and lets it soak into the ground. (d) is wrong: \"A French drain\" — a French drain is a gravel trench with a perforated pipe that carries groundwater away, not a planted basin. (b) is wrong: \"A catch basin\" — a catch basin is a buried box with a grate that sends surface water into a pipe. (c) is wrong: \"A dry well\" — a dry well is a buried pit of gravel or a chamber, not a planted surface basin."
+      },
+      {
+        "module": 4,
+        "q": "A benchmark has an elevation of 100.00 feet. You set up the laser level and the grade rod reads 4.50 feet at the benchmark. You move the rod to a new spot and it reads 5.25 feet. What is the new spot's elevation?",
+        "choices": [
+          "104.50 feet",
+          "99.25 feet",
+          "100.75 feet",
+          "105.25 feet"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The height of instrument is 100.00 + 4.50 = 104.50 feet. A larger rod reading means lower ground, so the new elevation is 104.50 − 5.25 = 99.25 feet. (d) is wrong: \"105.25 feet\" — that adds the reading instead of subtracting it from the height of instrument. (a) is wrong: \"104.50 feet\" — that is the height of instrument, not the ground elevation at the new spot. (c) is wrong: \"100.75 feet\" — that adds 5.25 to the benchmark the wrong way round; a higher rod reading means lower ground."
+      },
+      {
+        "module": 4,
+        "q": "A crew squares a large patio corner with the 3-4-5 method, doubled. They measure 6 feet along one edge and 8 feet along the other. What must the diagonal between those two marks be?",
+        "choices": [
+          "14 feet",
+          "9 feet",
+          "10 feet",
+          "12 feet"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The 3-4-5 triangle works at any scale, and doubled it is 6-8-10: the diagonal must be exactly 10 feet for the corner to be square. (b) is wrong: \"9 feet\" — 9 feet would be the diagonal of a different triangle, not 6-8-10. (d) is wrong: \"12 feet\" — 12 feet is the diagonal of a 9-12-15 triangle, three times the 3-4-5. (a) is wrong: \"14 feet\" — 14 feet is 6 + 8, the sum of the two sides, not the diagonal."
+      },
+      {
+        "module": 4,
+        "q": "A grade stake reads \"Fill 4 inches.\" What does the crew do at that spot?",
+        "choices": [
+          "Drive the stake 4 inches deeper",
+          "Fill the stake hole with concrete",
+          "Dig the ground down 4 inches",
+          "Add 4 inches of soil to bring the ground up to finish grade"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). \"Fill\" means the ground is too low — add soil by the stated amount to reach finish grade. (c) is wrong: \"Dig the ground down 4 inches\" — that is what \"Cut 4 inches\" means, the opposite instruction. (a) is wrong: \"Drive the stake 4 inches deeper\" — the number is about the ground, not the stake. (b) is wrong: \"Fill the stake hole with concrete\" — grade stakes carry cut and fill instructions, not concrete work."
+      },
+      {
+        "module": 4,
+        "q": "Why are batter boards set a few feet outside the corners of the work, instead of at the corners themselves?",
+        "choices": [
+          "Because a stake in the middle of the work gets knocked over or dug out, while batter boards outside the hole survive and their strings keep marking the exact edge",
+          "Because the building code bans stakes at corners",
+          "Because the string lines look better from a distance",
+          "Because the boards are too big to fit at the corners"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Batter boards sit safely outside the hole, so they survive the digging, and the string stretched between them keeps marking the exact edge of the patio or wall while the crew works. (d) is wrong: \"Because the boards are too big\" — size is not the reason; survival during digging is. (b) is wrong: \"Because the code bans stakes at corners\" — no code bans corner stakes; the point is that stakes in the work area get destroyed. (c) is wrong: \"Because the strings look better\" — appearance has nothing to do with it; the strings are the layout."
+      },
+      {
+        "module": 4,
+        "q": "You need to check whether a single paver is level. You need to measure heights across a whole yard. Which tool for which job?",
+        "choices": [
+          "A tape measure for both",
+          "A spirit level for the paver, a laser level with a grade rod and receiver for the yard",
+          "A laser level for the paver, a spirit level for the yard",
+          "A transit for the paver, a line level for the yard"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A spirit level checks one short thing, like a paver or a board; a laser level spinning a level plane across the site, read with a grade rod and receiver, measures the whole yard. (c) is wrong: \"A laser level for the paver, a spirit level for the yard\" — that is backwards; a spirit level cannot measure a whole yard and a laser is overkill for one paver. (d) is wrong: \"A transit for the paver, a line level for the yard\" — a transit measures angles for survey work, and a line level only checks a short run between two stakes. (a) is wrong: \"A tape measure for both\" — a tape measures distance, not level."
+      },
+      {
+        "module": 4,
+        "q": "A patio's finished height is set. The pavers are 2⅜ inches thick, the bedding sand is 1 inch, and the compacted base is 6 inches. How far below the finished height is the subgrade — how deep do you dig?",
+        "choices": [
+          "7⅜ inches",
+          "8⅜ inches",
+          "9⅜ inches",
+          "6 inches"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Excavation depth is simple addition: 6 inches of base + 1 inch of sand + 2⅜ inches of paver = 9⅜ inches below the finished height. (d) is wrong: \"6 inches\" — that is the base alone, forgetting the sand and the paver. (a) is wrong: \"7⅜ inches\" — that is the sand plus the paver plus only 4 inches of base. (b) is wrong: \"8⅜ inches\" — that is the total with a 5-inch base, not a 6-inch base."
+      },
+      {
+        "module": 4,
+        "q": "A property line must be laid out exactly, with precise angles. Which instrument does the surveyor bring for that work?",
+        "choices": [
+          "A measuring wheel",
+          "A spirit level",
+          "A line level on a string",
+          "A transit (theodolite), which measures both level and angles"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A transit is the surveyor's instrument: a telescope on a tripod that measures both level and angles, which is how property corners and building lines are laid out exactly. (b) is wrong: \"A spirit level\" — a spirit level only checks whether one short thing is level. (c) is wrong: \"A line level on a string\" — a line level checks a short run between two stakes, not angles. (a) is wrong: \"A measuring wheel\" — a wheel measures distance, and less accurately than a tape for layout."
+      },
+      {
+        "module": 4,
+        "q": "A crew measures a long run with a tape that sags in the middle. What is wrong with the measurement?",
+        "choices": [
+          "A sagging tape measures long, because the tape follows a curve instead of a straight line",
+          "A sagging tape measures short, because the ends pull together",
+          "The tape will snap and hurt someone",
+          "Nothing — a sagging tape is more accurate"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A tape must be pulled tight and level; a sagging tape follows a longer curved path, so it reads long. (d) is wrong: \"Nothing\" — sag is a real error; the tape must be tight and level. (b) is wrong: \"A sagging tape measures short\" — sag adds length to the tape's path, so the reading comes out long, not short. (c) is wrong: \"The tape will snap\" — a sagging tape is a measuring error, not a safety hazard."
+      },
+      {
+        "module": 5,
+        "q": "A supplier says a paver meets ASTM C936. What does that standard tell you about the paver?",
+        "choices": [
+          "That it is the cheapest paver on the market",
+          "That it meets minimum strength and water absorption for interlocking concrete pavers",
+          "That it will never fade in the sun",
+          "That it was made in Michigan"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). ASTM C936 sets minimum strength and water absorption for interlocking concrete pavers; pavers that meet it are dense, absorb little water, and resist freeze-thaw damage. (a) is wrong: \"That it is the cheapest\" — the standard is about strength and absorption, not price. (c) is wrong: \"That it will never fade\" — colors can still fade slowly in strong sun; the standard does not promise colorfastness. (d) is wrong: \"That it was made in Michigan\" — ASTM C936 says nothing about where a paver was made."
+      },
+      {
+        "module": 5,
+        "q": "A year-old paver patio shows a white haze across some of the pavers. What is it, and does it weaken the patio?",
+        "choices": [
+          "A sign the base has failed and the patio will collapse",
+          "Paint left over from the factory that will stain permanently",
+          "Efflorescence — salts working their way out of the concrete; it is cosmetic, not structural",
+          "Mold that is eating the pavers and must be torn out"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Efflorescence is a white haze caused by salts working their way out of the concrete; it is cosmetic, and sealing can reduce it. (d) is wrong: \"Mold that is eating the pavers\" — efflorescence is mineral salts, not mold, and it does not eat concrete. (a) is wrong: \"A sign the base has failed\" — a surface haze says nothing about the base; a failed base shows as sinking, not as a white haze. (b) is wrong: \"Paint left over from the factory\" — efflorescence comes from salts inside the concrete, not from paint."
+      },
+      {
+        "module": 5,
+        "q": "A client wants stone for a pool deck that stays safe to walk on when wet. Why is bluestone a better pick than most flagstone?",
+        "choices": [
+          "Bluestone never varies in color",
+          "Bluestone is the only stone that can be cut",
+          "Bluestone is cheaper than any flagstone",
+          "Bluestone is dense, hard, uniform, and naturally slip-resistant even when wet"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Bluestone is a dense, fine-grained sandstone that is harder and more uniform than most flagstone, can be cut into clean rectangles, and has a naturally slip-resistant surface even when wet. (c) is wrong: \"Bluestone is cheaper\" — bluestone costs more than concrete pavers, not less. (a) is wrong: \"Bluestone never varies in color\" — the color varies from quarry to quarry, so you order from one batch. (b) is wrong: \"Bluestone is the only stone that can be cut\" — other stones can be cut too; bluestone's advantage is its density and slip resistance."
+      },
+      {
+        "module": 5,
+        "q": "What is geotextile fabric for under a patio, and what is it NOT?",
+        "choices": [
+          "It separates the gravel base from the soil so the gravel does not sink into soft ground — it is not a weed barrier and not the thin black plastic sold for garden beds",
+          "It is a vapor barrier that keeps all water out of the base",
+          "It replaces the aggregate base entirely",
+          "It is a weed barrier, and it also stops water from draining"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Geotextile is separation: it keeps the gravel base from sinking into soft soil and soil from pumping up into the gravel, while letting water pass through. (d) is wrong: \"It is a weed barrier\" — geotextile is not a weed barrier, and it is made to let water pass, not stop it. (b) is wrong: \"It is a vapor barrier\" — it is permeable by design; a vapor barrier would trap water in the base. (c) is wrong: \"It replaces the base\" — the fabric protects the base, it does not replace the crushed stone."
+      },
+      {
+        "module": 5,
+        "q": "A poured concrete patio has shallow grooves cut into the slab. What are they for?",
+        "choices": [
+          "Decoration only — they do nothing",
+          "Control joints: they give cracks a planned place to happen, though they do not stop cracking",
+          "Drainage channels that carry water off the slab",
+          "Expansion gaps that let the slab grow in summer"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Control joints are shallow grooves that give cracks a planned place to form as the slab moves; they do not stop cracks from happening. (a) is wrong: \"Decoration only\" — the grooves have a real job, guiding where the slab cracks. (c) is wrong: \"Drainage channels\" — control joints are too shallow to carry water off a slab. (d) is wrong: \"Expansion gaps\" — control joints are not expansion joints; they are weakened planes that control cracking."
+      },
+      {
+        "module": 5,
+        "q": "A homeowner wants a cheap, easy walking surface for a flat garden path. The supplier offers rounded pea gravel and angular crushed gravel. Which is the better walking surface, and why?",
+        "choices": [
+          "Crushed gravel, because it is always more expensive",
+          "Pea gravel, because rounded pieces roll smoothly underfoot",
+          "Crushed gravel, because the angular pieces lock together and stay put underfoot, while rounded pea gravel rolls and shifts",
+          "Pea gravel, because it drains worse and stays damp"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Crushed gravel with angular pieces locks together and stays put underfoot; rounded pea gravel rolls and shifts, so it is a poor walking surface. (b) is wrong: \"Pea gravel, because rounded pieces roll smoothly\" — rolling underfoot is exactly the problem; a path surface must stay put. (d) is wrong: \"Pea gravel, because it drains worse\" — draining worse is not an advantage, and both gravels drain well. (a) is wrong: \"Crushed gravel, because it is more expensive\" — price is not the reason; the angular pieces locking together is."
+      },
+      {
+        "module": 5,
+        "q": "Water gets into a tiny pore in a stone, freezes, and thaws — over and over all winter. About how much does water expand when it freezes, and what does that do?",
+        "choices": [
+          "About 50 percent — the stone shatters on the first freeze",
+          "It shrinks, pulling the stone tighter together",
+          "About 1 percent — too little to matter",
+          "About 9 percent — it pushes the material apart, a little more with each freeze-thaw cycle"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Water expands by about nine percent when it freezes, pushing the material apart, and the cycle repeats dozens of times a winter — the main cause of cold-climate hardscape damage. (c) is wrong: \"About 1 percent\" — one percent would be too small to damage stone; nine percent is enough to split it over repeated cycles. (a) is wrong: \"About 50 percent\" — water expands about nine percent, not fifty, and the damage builds over many cycles. (b) is wrong: \"It shrinks\" — water is unusual: it expands when it freezes, which is why it breaks stone apart."
+      },
+      {
+        "module": 5,
+        "q": "A patio and a driveway both use concrete pavers. How do their paver thicknesses compare?",
+        "choices": [
+          "Patios and walkways use about 2⅜-inch pavers, and driveways use thicker units because cars are far heavier than people",
+          "Driveways use thinner pavers so cars can drive over them smoothly",
+          "Patios use the thickest pavers because people walk on them all day",
+          "They are the same — all pavers are one thickness"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Concrete pavers come in thicknesses matched to the job: about 2⅜ inches for patios and walkways, and thicker units for driveways that carry cars. (d) is wrong: \"They are the same\" — paver thickness is matched to the load, so driveways need thicker units. (b) is wrong: \"Driveways use thinner pavers\" — thinner pavers under cars would crack; driveways need thicker ones. (c) is wrong: \"Patios use the thickest pavers\" — patios carry only foot traffic, so they use the standard 2⅜-inch paver."
+      },
+      {
+        "module": 6,
+        "q": "A patio needs a 6-inch compacted base, 1 inch of bedding sand, and 2⅜-inch pavers. How deep do you excavate?",
+        "choices": [
+          "8⅜ inches",
+          "9⅜ inches",
+          "10⅜ inches",
+          "7⅜ inches"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Excavation depth is base + sand + paver: 6 + 1 + 2⅜ = 9⅜ inches. (d) is wrong: \"7⅜ inches\" — that is the sand plus the paver plus only 4 inches of base. (a) is wrong: \"8⅜ inches\" — that is the total with a 5-inch base, not a 6-inch base. (c) is wrong: \"10⅜ inches\" — that adds an extra inch that is not in the layers."
+      },
+      {
+        "module": 6,
+        "q": "The crew marks the patio outline with stakes and string, then digs 6 to 12 inches past the paver edge. Why dig past the edge?",
+        "choices": [
+          "To leave room for extra pavers that might be added later",
+          "To make the patio look bigger than it is",
+          "So the base supports the edge restraint too, not just the pavers",
+          "To give the crew somewhere to stand while they work"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The excavation extends 6 to 12 inches past the paver edge so the compacted base supports the edge restraint as well as the pavers. (b) is wrong: \"To make the patio look bigger\" — the extra digging is under the ground, invisible; it is structural, not visual. (d) is wrong: \"To give the crew somewhere to stand\" — the crew stands on the subgrade and the base, not in an extra-wide hole. (a) is wrong: \"To leave room for extra pavers\" — the patio size is fixed by the plan; the extra width is for the base under the edge restraint."
+      },
+      {
+        "module": 6,
+        "q": "A patio must fall away from the house at about a quarter inch per foot. How much total drop is that over a 12-foot run?",
+        "choices": [
+          "6 inches",
+          "1 inch",
+          "2 inches",
+          "3 inches"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A quarter inch per foot times 12 feet is 12 × 0.25 = 3 inches of drop. (b) is wrong: \"1 inch\" — 1 inch over 12 feet is less than a tenth of an inch per foot, too flat to shed water. (c) is wrong: \"2 inches\" — 2 inches over 12 feet is only a sixth of an inch per foot. (a) is wrong: \"6 inches\" — 6 inches over 12 feet is a half inch per foot, twice the intended slope."
+      },
+      {
+        "module": 6,
+        "q": "A standard patio on good soil and a permeable paver system on wet ground need different bases. Which base goes where?",
+        "choices": [
+          "Dense-graded (crusher run) for the standard patio, because its fines lock together tightly; open-graded clean stone for the permeable system, because water drains straight through it",
+          "Open-graded for the standard patio and dense-graded for the permeable system",
+          "No base at all for the permeable system, since the water drains away",
+          "Dense-graded base for both — there is only one kind of base"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Dense-graded base is crushed stone mixed with fines that lock together tightly — the standard choice for patios and driveways. Open-graded base is clean stone with no fines, so water drains straight through — the choice for permeable systems and very wet ground. (d) is wrong: \"Dense-graded for both\" — dense-graded base does not drain freely, so it cannot serve a permeable system. (b) is wrong: \"Open-graded for the standard patio\" — that is backwards; open-graded is the specialist choice for drainage, dense-graded is the standard. (c) is wrong: \"No base at all\" — a permeable system still needs a base; it needs a thicker open-graded one, not none."
+      },
+      {
+        "module": 6,
+        "q": "A helper screeds the bedding sand flat, then walks across it to reach the far side. What has gone wrong?",
+        "choices": [
+          "Nothing — screeded sand is meant to be walked on",
+          "Walking on screeded sand leaves footprints and low spots, and sand thicker than about 1½ inches will shift under load and dip later — the sand bed is ruined and must be re-screeded",
+          "The sand will compact itself back to flat overnight",
+          "The pavers will bridge over the footprints, so it does not matter"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Never walk on screeded sand: footprints disturb the flat bed, and bedding sand must stay about 1 inch thick — thicker than about 1½ inches it shifts under load and leaves a future dip. (a) is wrong: \"Nothing\" — walking on screeded sand is explicitly forbidden in the method. (c) is wrong: \"The sand will compact itself back to flat\" — sand does not level itself; the bed must be re-screeded. (d) is wrong: \"The pavers will bridge over the footprints\" — pavers follow the sand bed, so a footprint becomes a dip in the finished patio."
+      },
+      {
+        "module": 6,
+        "q": "A driveway turns at the garage, and cars will steer across the pavers every day. Which laying pattern is the best choice, and why?",
+        "choices": [
+          "A random pattern, because patterns do not matter for strength",
+          "Running bond, because it is the fastest pattern to lay",
+          "Herringbone, because the units interlock in every direction and it is the strongest pattern — the best choice for driveways and turning traffic",
+          "Basketweave, because it looks the most decorative"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Herringbone lays pavers at 90 degrees to each other in a zigzag, interlocking in every direction, so it is the strongest pattern and the best choice for driveways and surfaces that turn or carry vehicles. (b) is wrong: \"Running bond, because it is fastest\" — running bond is fast and clean on walkways, but it does not interlock in every direction the way herringbone does. (d) is wrong: \"Basketweave, because it looks decorative\" — basketweave is a classic decorative patio pattern, not the strongest choice for a driveway. (a) is wrong: \"Patterns do not matter\" — the pattern decides how the units lock together under load, so it matters a great deal."
+      },
+      {
+        "module": 6,
+        "q": "After the pavers are laid, the crew compacts them with a plate compactor. Why must the compactor have a protective pad on it?",
+        "choices": [
+          "To keep the pavers from getting wet",
+          "To make the compactor quieter for the neighbors",
+          "To make the compactor heavier so it compacts better",
+          "To keep the compactor from scratching or chipping the paver faces"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). The protective pad stops the steel plate from scratching or chipping the paver faces during the two compaction passes. (c) is wrong: \"To make the compactor heavier\" — the pad adds almost no weight; its job is protection. (a) is wrong: \"To keep the pavers from getting wet\" — the pad has nothing to do with water. (b) is wrong: \"To make the compactor quieter\" — noise is not the reason for the pad."
+      },
+      {
+        "module": 6,
+        "q": "The crew sweeps polymeric sand into the joints, compacts, and then mists the sand with water. A helper grabs a hose and floods the joints instead. What goes wrong?",
+        "choices": [
+          "Too much water washes the binder out of the joints, so the sand never locks the pavers together properly",
+          "The pavers will float up out of the sand",
+          "The sand turns into concrete and can never be repaired",
+          "Nothing — more water sets polymeric sand faster"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Polymeric sand must be misted lightly to activate the binder; flooding washes the binder out of the joints, so the sand does not harden and lock the pavers. (d) is wrong: \"More water sets it faster\" — the opposite is true; too much water removes the binder that does the setting. (b) is wrong: \"The pavers will float\" — pavers do not float; the problem is the binder washing out. (c) is wrong: \"The sand turns into concrete\" — polymeric sand hardens in the joints, but it does not become concrete."
+      },
+      {
+        "module": 6,
+        "q": "Before any digging for a patio, the crew calls 811. What does that call do?",
+        "choices": [
+          "It orders the pavers from the supplier",
+          "It reaches the national utility-locate service, which marks buried gas, electric, water, and cable lines a few business days ahead so the crew does not hit them",
+          "It books the building inspector for the final walkthrough",
+          "It reserves the plate compactor at the rental yard"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Calling 811 a few business days ahead brings the utility-locate service out to mark buried gas, electric, water, and cable lines before any digging. (a) is wrong: \"It orders the pavers\" — materials are ordered from the supplier, not through 811. (c) is wrong: \"It books the inspector\" — inspections are scheduled with the local building department. (d) is wrong: \"It reserves the compactor\" — equipment rental is a separate call to the rental yard."
+      },
+      {
+        "module": 6,
+        "q": "Which statement about the CMHA Concrete Paver Installer credential is true?",
+        "choices": [
+          "It is a Michigan state license for paver installers",
+          "It is the same credential as the NALP Hardscape Installation specialty",
+          "It needs a course, a 75% or higher exam score, and 5 documented projects or 10,000 square feet of installed pavers, and it renews every 2 years with 8 CE credits",
+          "It needs only a written exam, with no course and no documented work"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The CMHA Concrete Paver Installer needs a course, a 75%+ exam score, and 5 documented projects or 10,000 square feet, renewing every 2 years with 8 CE credits. (d) is wrong: \"Only a written exam\" — the credential also requires the course and the documented projects or square footage. (a) is wrong: \"A Michigan state license\" — Michigan has no state landscape contractor license, and CMHA is a national industry body, not the state. (b) is wrong: \"The same credential as NALP Hardscape\" — NALP and CMHA are different bodies with different credentials."
+      },
+      {
+        "module": 7,
+        "q": "A retaining wall holds back 4 feet of soil, and the homeowner parks a car on the ground above it. Why does the wall have to resist more push than a wall with nothing on top?",
+        "choices": [
+          "Because cars vibrate the wall loose",
+          "Because the wall has to be painted to match the car",
+          "Because the car makes the wall taller",
+          "Because the sideways push — lateral earth pressure — grows with the height of the soil and with the weight of anything sitting on top of it, called a surcharge"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Lateral earth pressure grows with the height of the soil behind the wall and with any surcharge load on top, such as a driveway, a patio, or a slope rising above the wall. (c) is wrong: \"Because the car makes the wall taller\" — the wall's height does not change; the load on the soil behind it does. (a) is wrong: \"Because cars vibrate the wall loose\" — vibration is not the force at work; the soil's sideways push is. (b) is wrong: \"Because the wall has to be painted\" — paint has nothing to do with the forces on a wall."
+      },
+      {
+        "module": 7,
+        "q": "A crew digs the trench for a segmental wall. How deep should the leveling pad be, and how much of the first course must sit below finished ground at the front?",
+        "choices": [
+          "About a 6-inch compacted aggregate leveling pad, with at least one full buried block course — usually 6 inches or more — below finished ground",
+          "A 12-inch concrete footing with the first course set on top of it",
+          "No pad at all — the blocks sit straight on the dirt",
+          "A 2-inch pad with no buried course — the first course can sit on the surface"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The leveling pad is about 6 inches of compacted, well-graded aggregate, and at least one full block course — usually 6 inches or more — must sit below finished ground at the front so soil and frost cannot undermine the base. (d) is wrong: \"A 2-inch pad with no buried course\" — a 2-inch pad is too thin to level on, and an unburied first course can be undermined. (b) is wrong: \"A 12-inch concrete footing\" — a segmental wall uses a compacted aggregate leveling pad, not a concrete footing. (c) is wrong: \"No pad at all\" — blocks set straight on dirt settle unevenly, and the whole wall depends on the first course being dead level."
+      },
+      {
+        "module": 7,
+        "q": "Behind a new segmental wall, how deep must the drainage aggregate be, and what size must the drain pipe be at minimum?",
+        "choices": [
+          "24 inches of aggregate and a 6-inch pipe, on every wall",
+          "At least 12 inches of drainage aggregate behind the wall face, with a perforated drain pipe at least 3 inches in diameter at the bottom",
+          "2 inches of aggregate and a 1-inch pipe",
+          "No aggregate — the soil itself drains well enough"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The space behind the blocks is filled with at least 12 inches of clean drainage aggregate, and a perforated pipe at least 3 inches in diameter runs the length of the wall at the bottom, holes facing down, to an outlet. (c) is wrong: \"2 inches of aggregate and a 1-inch pipe\" — 2 inches of stone cannot carry the water, and a 1-inch pipe is far too small. (d) is wrong: \"No aggregate\" — soil holds water against the wall; the drainage stone is what lets water reach the pipe. (a) is wrong: \"24 inches and a 6-inch pipe on every wall\" — those numbers are not the standard; the standard is at least 12 inches of stone and at least a 3-inch pipe."
+      },
+      {
+        "module": 7,
+        "q": "A wall is 6 feet tall. The block maker's chart calls for geogrid. The rule of thumb says grid layers often run back at least 60 percent of the wall's height, and never less than 4 feet. How far back should the grid run?",
+        "choices": [
+          "2 feet — half the wall height is plenty",
+          "3.6 feet, exactly 60 percent, and no more",
+          "At least 4 feet — 60 percent of 6 feet is 3.6 feet, but the minimum is 4 feet, and the maker's chart is the authority",
+          "12 feet, no matter what the chart says"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Sixty percent of 6 feet is 3.6 feet, but the rule of thumb also sets a 4-foot minimum, so the grid must run back at least 4 feet — and the block maker's design chart, not the rule of thumb, is the authority. (a) is wrong: \"2 feet\" — 2 feet is far short of both 60 percent of the height and the 4-foot minimum. (b) is wrong: \"3.6 feet, exactly\" — 3.6 feet is below the 4-foot minimum. (d) is wrong: \"12 feet, no matter what\" — grid length is decided by the chart or the engineer for the block, soil, and wall height, not by a fixed number."
+      },
+      {
+        "module": 7,
+        "q": "A crew lays geogrid between the block courses. Which way must the grid's strong direction run, and what must happen before backfill goes on top?",
+        "choices": [
+          "Diagonally across the wall, with no staking needed",
+          "Straight down behind the wall, like a curtain",
+          "Along the face of the wall, loosely laid — backfill will pull it tight",
+          "From the wall face straight back into the hill, pulled taut and staked before backfill goes on top"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Geogrid must be laid with its strong direction running from the wall face straight back into the hill, pulled taut and staked before backfill goes on top, so the mesh grips the compacted soil and ties wall and hill into one mass. (c) is wrong: \"Along the face, loosely laid\" — grid along the face does not tie the wall to the hill, and loose grid cannot grip the soil. (a) is wrong: \"Diagonally, no staking\" — diagonal grid does not run straight back into the hill, and unstaked grid shifts under backfill. (b) is wrong: \"Straight down like a curtain\" — grid hanging down behind the wall reinforces nothing; it must run flat back into the soil."
+      },
+      {
+        "module": 7,
+        "q": "A homeowner wants a 5-foot-tall retaining wall built from segmental block, with no engineer involved. What is the correct advice?",
+        "choices": [
+          "A wall over 4 feet high, measured from the bottom of the footing or leveling pad to the top, should be engineered by a licensed engineer — and many places also require a permit for walls over 4 feet",
+          "Build it as two 2½-foot walls stacked directly on top of each other with no terrace",
+          "Skip the drainage, since a tall wall holds more water safely",
+          "Build it — a 5-foot wall is no different from a 2-foot wall"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The 4-foot rule: a wall over 4 feet high should be engineered — a licensed engineer designs the block, geogrid, drainage, and foundation — and local rules often require a permit too. (d) is wrong: \"Build it — no different from a 2-foot wall\" — a 5-foot wall carries far more lateral pressure and is a different structure with different rules. (b) is wrong: \"Stack two walls with no terrace\" — tiered walls need a flat terrace between them, at least twice the lower wall's height wide; stacking them directly is one tall wall. (c) is wrong: \"Skip the drainage\" — drainage matters more, not less, on a tall wall; trapped water is what makes walls fail."
+      },
+      {
+        "module": 7,
+        "q": "A slope needs 7 feet of holding. The crew builds two walls instead of one: a 3-foot lower wall and a 4-foot upper wall. How wide should the flat terrace between them be, at minimum?",
+        "choices": [
+          "3 feet",
+          "At least 6 feet — as a guide, at least twice the height of the lower wall",
+          "14 feet — twice the total height of both walls",
+          "1 foot"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The terrace between tiered walls should be at least twice the height of the lower wall, so the upper wall does not load the lower one — twice 3 feet is 6 feet. (d) is wrong: \"1 foot\" — a 1-foot terrace is barely a step; the upper wall would load the lower wall directly. (a) is wrong: \"3 feet\" — 3 feet is only once the lower wall's height, not twice. (c) is wrong: \"14 feet\" — the guide is twice the lower wall's height, not twice the total height."
+      },
+      {
+        "module": 7,
+        "q": "What is the last step in finishing a segmental retaining wall, and why is it done?",
+        "choices": [
+          "Filling the drainage aggregate with topsoil so grass can grow on the wall",
+          "Painting the blocks so they match the house",
+          "Gluing cap blocks down with construction adhesive made for masonry — the cap sheds water off the top of the wall and gives it a finished look",
+          "Removing the leveling pad so the wall sits on the dirt"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Cap blocks are glued down with construction adhesive made for masonry; the cap sheds water off the top of the wall and finishes its look. (b) is wrong: \"Painting the blocks\" — paint is not part of finishing a segmental wall. (d) is wrong: \"Removing the leveling pad\" — the pad is the wall's foundation and stays in place. (a) is wrong: \"Filling the drainage aggregate with topsoil\" — topsoil in the drainage zone would clog it and trap water behind the wall."
+      },
+      {
+        "module": 7,
+        "q": "A retaining wall settles and tips forward a year after it was built. The drainage and the geogrid both check out fine. What is the most likely cause?",
+        "choices": [
+          "The wall was built with too much setback",
+          "The plants behind the wall grew too fast",
+          "The cap blocks were the wrong color",
+          "A poor leveling pad, or no buried first course — the base of the wall was never solid"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A wall that settles or tips forward usually had a poor leveling pad or no buried first course, so the base was never solid and the soil and frost undermined it. (c) is wrong: \"The cap blocks were the wrong color\" — cap color has nothing to do with a wall settling. (a) is wrong: \"Too much setback\" — setback leans the wall into the hill and helps it resist the soil's push; it does not cause settling. (b) is wrong: \"The plants grew too fast\" — plant growth does not tip a wall forward."
+      },
+      {
+        "module": 7,
+        "q": "Which statement about the CMHA Segmental Retaining Wall Installer Level I credential is true?",
+        "choices": [
+          "It needs a course and a written exam, and it renews every 2 years with 8 CE credits",
+          "It needs 5 documented projects or 10,000 square feet of walls",
+          "It needs a 75% or higher exam score plus a college degree",
+          "It is the same credential as the NALP Hardscape Installation specialty"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The CMHA Segmental Retaining Wall Installer Level I needs a course plus a written exam, and it renews every 2 years with 8 CE credits. (b) is wrong: \"5 documented projects or 10,000 square feet\" — that is the CMHA Concrete Paver Installer requirement, not the SRW Level I requirement. (c) is wrong: \"A 75% score plus a college degree\" — the 75% figure belongs to the Paver Installer exam, and no degree is required for either CMHA credential. (d) is wrong: \"The same credential as NALP Hardscape\" — NALP and CMHA are different bodies with different credentials."
+      },
+      {
+        "module": 8,
+        "q": "A patio sits 42 inches above the lawn. The crew plans risers of 6 inches. How many risers are needed, and how much total run do the treads take at 12 inches deep each?",
+        "choices": [
+          "6 risers and 60 inches of run",
+          "7 risers and 84 inches of run",
+          "8 risers and 96 inches of run",
+          "5 risers and 48 inches of run"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Total rise divided by riser height gives the riser count: 42 ÷ 6 = 7 risers, each exactly 6 inches. Total run is treads times tread depth: 7 × 12 = 84 inches, or 7 feet. (a) is wrong: \"6 risers and 60 inches\" — 6 risers of 6 inches only climb 36 inches, not 42. (c) is wrong: \"8 risers and 96 inches\" — 8 risers of 6 inches would climb 48 inches, overshooting the 42-inch rise. (d) is wrong: \"5 risers and 48 inches\" — 5 risers would each have to be 8.4 inches, over the comfortable 6-to-7-inch range and uneven with the plan."
+      },
+      {
+        "module": 8,
+        "q": "A patio sits 35 inches above the lawn. How many 7-inch risers do you need, and how tall is each one?",
+        "choices": [
+          "7 risers of 5 inches each",
+          "4 risers of 8¾ inches each",
+          "5 risers, each exactly 7 inches",
+          "6 risers of 6 inches each"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Total rise divided by riser height: 35 ÷ 7 = 5 risers, each exactly 7 inches — and every riser in a flight must be the same height. (b) is wrong: \"4 risers of 8¾ inches\" — 8¾ inches is far over the comfortable 6-to-7-inch outdoor riser and over the 7¾-inch code maximum for house stairs. (d) is wrong: \"6 risers of 6 inches\" — 6 risers of 6 inches climb only 36 inches, not 35, so the risers would not be 6 inches each. (a) is wrong: \"7 risers of 5 inches\" — 7 risers of 5 inches climb 35 inches, but 5-inch risers are too shallow for outdoor steps and would make the flight longer than needed."
+      },
+      {
+        "module": 8,
+        "q": "Each tread on a new set of landscape steps is dead level. Why is that a problem?",
+        "choices": [
+          "Level treads make the steps too steep to climb",
+          "Level treads are against the building code",
+          "It is not a problem — level treads are perfect",
+          "Steps need a slight forward slope, about ⅛ inch per foot, so rain runs off the tread instead of pooling on it"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Each tread needs a slight forward slope — about ⅛ inch per foot — so rain runs off instead of pooling on the tread, where it becomes ice in winter. (c) is wrong: \"It is not a problem\" — a level tread holds water, which is exactly what the forward slope prevents. (a) is wrong: \"Level treads make the steps too steep\" — the tread slope has nothing to do with how steep the flight is; the riser height sets that. (b) is wrong: \"Level treads are against the code\" — the point is drainage and safety, not a code ban on level treads."
+      },
+      {
+        "module": 8,
+        "q": "A crew is building block steps up a slope. Which order do they build in?",
+        "choices": [
+          "The lowest step first, working backward and upward, one step at a time, so each higher step sits on compacted fill",
+          "All the steps at once, from a single pour of concrete",
+          "The middle step first, then outward in both directions",
+          "The highest step first, working down, so gravity helps"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Block steps are built like a small retaining wall laid flat: the lowest step first, filled behind with compacted aggregate, working backward and upward so each higher step sits on compacted fill, not loose soil. (d) is wrong: \"The highest step first\" — building top-down leaves the upper steps sitting on loose soil with nothing under them. (b) is wrong: \"All at once from a single pour\" — block steps are stacked block by block, not poured. (c) is wrong: \"The middle step first\" — there is no reason to start in the middle; the base step anchors the whole flight."
+      },
+      {
+        "module": 8,
+        "q": "A crew is setting natural stone steps. Each slab is heavy — often 100 pounds or more — and each slab forms one tread. What must be true about the base under each slab?",
+        "choices": [
+          "The slabs can sit on loose soil, because their weight holds them down",
+          "Each slab sits on a compacted aggregate base or a bed of coarse sand, leveled with a slight forward slope, so the slabs do not settle unevenly and the risers stop matching",
+          "The slabs need no base at all — stone on grass is fine",
+          "The base only matters under the bottom slab"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Each heavy slab sits on a compacted aggregate base or coarse sand, leveled front-to-back with a slight forward slope for drainage; without a compacted base the slabs settle unevenly and the risers stop matching — the most dangerous kind of step. (a) is wrong: \"Loose soil is fine\" — loose soil settles under weight, and a settled step is an uneven step. (c) is wrong: \"No base at all\" — stone on grass sinks and tilts with the first rain. (d) is wrong: \"The base only matters under the bottom slab\" — every slab needs its own compacted base, or the upper slabs settle too."
+      },
+      {
+        "module": 8,
+        "q": "A pergola in Michigan needs concrete pier footings. How deep must they go, and why?",
+        "choices": [
+          "As deep as the patio base, about 8 inches",
+          "6 inches deep — just enough to hold the post base",
+          "Below the frost line, commonly about 42 inches in Michigan (check the local code) — a footing that stops above the frost line will be lifted by freezing ground",
+          "2 feet deep, because that is the depth of the topsoil"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). In Michigan the frost line is commonly about 42 inches deep, and footings must go below it; a footing above the frost line is lifted by freezing ground, tilting and racking the structure. (b) is wrong: \"6 inches deep\" — a 6-inch footing is above the frost line and will heave in the first winter. (d) is wrong: \"2 feet deep, the depth of the topsoil\" — topsoil depth has nothing to do with the frost line. (a) is wrong: \"As deep as the patio base\" — a patio base is about 8 inches deep, far above the frost line, and a pergola on it would heave."
+      },
+      {
+        "module": 8,
+        "q": "A low garden wall has soil at the same level on both sides and holds up nothing but itself. Which kind of wall is it, and what does it NOT need?",
+        "choices": [
+          "A load-bearing wall — it needs a concrete footing below the frost line",
+          "A tiered wall — it needs a terrace twice its height wide",
+          "A retaining wall — it needs drainage aggregate, a drain pipe, and geogrid",
+          "A freestanding wall — it needs a compacted base and a level first course, but no drainage aggregate, drain pipe, or geogrid, because no soil is held back"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). A freestanding wall holds up only itself, with ground at the same level on both sides, so there is no sideways push from held-back soil and no water trapped behind it — it needs a compacted base and a level first course, but no drainage system or geogrid. (c) is wrong: \"A retaining wall\" — a retaining wall holds back soil at a higher level on one side; this wall does not. (a) is wrong: \"A load-bearing wall\" — a garden wall carries no building load. (b) is wrong: \"A tiered wall\" — tiered walls are two or more retaining walls on a slope, not a single low garden wall."
+      },
+      {
+        "module": 9,
+        "q": "A shrub tag says it needs full sun. The only open spot is on the shady north side of the house, getting under 3 hours of direct sun a day. What will happen if it is planted there?",
+        "choices": [
+          "It will stretch, bloom poorly, and stay weak — full sun means 6 or more hours of direct sun a day, and a sun lover in shade cannot get what it needs",
+          "It will change into a shade plant within a year",
+          "Nothing — sun needs on a tag are only suggestions",
+          "It will grow faster in the shade"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Full sun means six or more hours of direct sun a day; a sun-loving shrub on the shady north side will stretch toward the light, bloom poorly, and stay weak. (d) is wrong: \"It will grow faster in the shade\" — shade slows a sun lover, it does not speed it up. (b) is wrong: \"It will change into a shade plant\" — a plant cannot change its sun needs. (c) is wrong: \"Sun needs are only suggestions\" — the tag states what the plant needs to thrive; ignoring it is how plants fail."
+      },
+      {
+        "module": 9,
+        "q": "A nursery tag says a shrub is hardy to zone 7. The job is in Michigan's Lower Peninsula, mostly zones 5 and 6. What is the right call?",
+        "choices": [
+          "Plant it — zone 7 plants survive anywhere in Michigan",
+          "Do not plant it — a zone 7 plant will not reliably survive a Michigan winter, and it is money thrown away",
+          "Plant it deeper so the cold cannot reach it",
+          "Plant it only if it is also planted in full sun"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The USDA hardiness zone is set by the coldest winter temperature a place usually sees; most of Michigan's Lower Peninsula is zones 5 and 6, so a plant tagged zone 7 will not reliably survive the winter. (a) is wrong: \"Zone 7 plants survive anywhere\" — a higher zone number means the plant tolerates less cold, not more. (c) is wrong: \"Plant it deeper\" — planting depth does not change a plant's cold tolerance, and planting too deep buries the root flare and kills the plant. (d) is wrong: \"Plant it only in full sun\" — sun does not protect a plant from winter cold beyond its zone."
+      },
+      {
+        "module": 9,
+        "q": "A two-foot shrub is planted three feet from the house. The tag says its mature spread is ten feet wide. What is the problem?",
+        "choices": [
+          "The shrub will grow ten feet tall in its first year",
+          "There is no problem — shrubs stop growing once they touch a house",
+          "The crew planned for the plant in the pot, not the grown plant — in ten years it will crowd the house and become a removal job",
+          "The shrub will die from being too close to the house"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Always check the tag for mature height and spread and give the plant room to reach it; a shrub that grows ten feet wide planted three feet from a house becomes a removal job in ten years. (b) is wrong: \"Shrubs stop growing once they touch a house\" — plants keep growing into whatever is in their way. (d) is wrong: \"The shrub will die\" — it will not die; it will grow too big for the spot, which is a different problem. (a) is wrong: \"It will grow ten feet tall in a year\" — mature size is reached over years, not in one season."
+      },
+      {
+        "module": 9,
+        "q": "A tree's root ball is 18 inches wide and 12 inches deep from the root flare to the bottom. How wide and how deep should the planting hole be?",
+        "choices": [
+          "12 inches wide and 12 inches deep, so the hole fits the ball exactly",
+          "54 inches wide and 36 inches deep, as big as possible in every direction",
+          "18 inches wide and 24 inches deep, so the roots have room below",
+          "36 to 54 inches wide — two to three times the root ball's width — and only about 12 inches deep, as deep as the root ball"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Dig the hole two to three times wider than the root ball — 36 to 54 inches for an 18-inch ball — but only as deep as the root ball, about 12 inches, because a hole dug too deep settles and the tree sinks. (c) is wrong: \"18 inches wide and 24 inches deep\" — the hole is too narrow and twice too deep; a deep hole lets the tree sink. (a) is wrong: \"12 inches wide and deep\" — a hole smaller than the ball cannot even hold the tree. (b) is wrong: \"54 inches wide and 36 inches deep\" — the width is right, but 36 inches deep is three times too deep and the tree will sink."
+      },
+      {
+        "module": 9,
+        "q": "A newly planted tree is doing badly a year later. The trunk goes straight into the ground with no widening visible at the base. What is the most likely cause?",
+        "choices": [
+          "The tree was planted too deep and the root flare is buried — the number one killer of new plantings",
+          "The tree was watered too much on the day it was planted",
+          "The mulch ring was too wide",
+          "The tree was planted on a cloudy day"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). The root flare is where the trunk widens into the roots, and it must end up at or slightly above the surrounding ground, never buried — planting too deep and burying the flare is the number one killer of new plantings. (b) is wrong: \"Watered too much on planting day\" — a deep soak at planting, called watering-in, is required, not harmful. (c) is wrong: \"The mulch ring was too wide\" — a wide mulch ring is good; the problem is mulch piled against the trunk, not a wide ring. (d) is wrong: \"Planted on a cloudy day\" — the weather on planting day does not kill a tree a year later."
+      },
+      {
+        "module": 9,
+        "q": "A crew backfills a planting hole with pure compost instead of the native soil they dug out. What will the roots do?",
+        "choices": [
+          "Grow outward into the real soil faster, because compost is richer",
+          "Stay in the soft, rich hole and never spread into the real soil — backfill with native soil so the roots grow outward",
+          "Die immediately, because compost is toxic to roots",
+          "Grow straight down and never sideways"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Fill the hole back in with the soil you dug out; pure compost or potting mix makes a soft pocket the roots stay inside instead of spreading into the real soil. (a) is wrong: \"Grow outward faster\" — the opposite happens; roots stay where the soil is easiest and never venture out. (c) is wrong: \"Die immediately\" — compost is not toxic; the problem is that the roots never establish beyond the hole. (d) is wrong: \"Grow straight down\" — roots in a compost pocket circle inside the hole rather than growing down or out."
+      },
+      {
+        "module": 9,
+        "q": "A client needs a lawn on a slope where seed would wash away, and the yard must look finished for a party next weekend. Which is the right choice, and what is the catch?",
+        "choices": [
+          "Sod — it needs no water in its first weeks",
+          "Seed — it is instant and cheap",
+          "Sod — it gives an instant lawn, but it costs more per square foot and must be laid the same day it is delivered",
+          "Seed — it needs no water at all"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Sod is the right choice for a slope where seed would wash away and for a client who wants a finished look now — but it costs more per square foot than seed, needs a lot of water in its first two to three weeks, and must be laid the same day it is delivered, since rolls left stacked in the sun heat up and die fast. (b) is wrong: \"Seed — it is instant\" — seed takes weeks to fill in and would wash off the slope. (d) is wrong: \"Seed needs no water\" — seed needs steady light watering to germinate. (a) is wrong: \"Sod needs no water\" — sod needs daily watering until its roots knit into the soil below."
+      },
+      {
+        "module": 9,
+        "q": "A new sod lawn is two weeks old. The grass is about a third taller than the mowing height. How should the first mow be done?",
+        "choices": [
+          "Mow it wet so the mower slides over the sod easily",
+          "Wait another two months before the first mow",
+          "Cut it down to the soil so it grows back thicker",
+          "Cut no more than one third of the blade at a time, with sharp blades, and never mow wet, newly laid sod until it has rooted"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Wait until the grass is about a third taller than the mowing height, then cut no more than one third of the blade at a time with sharp blades — a dull blade tears grass and leaves brown tips — and never mow wet, newly laid sod until it has rooted, or the mower will pull the pieces up. (c) is wrong: \"Cut it down to the soil\" — scalping a new lawn kills it; never cut more than a third at a time. (a) is wrong: \"Mow it wet\" — mowing wet sod pulls the pieces up before they have rooted. (b) is wrong: \"Wait another two months\" — the first mow usually comes two to three weeks after laying sod, not two months later."
+      },
+      {
+        "module": 9,
+        "q": "A tree has a cone of mulch piled high against its trunk, touching the bark all the way around. What is this called, and what does it do?",
+        "choices": [
+          "A mulch volcano — it holds moisture against the bark and rots it; mulch should be 2 to 3 inches deep in a wide ring, kept a few inches away from the trunk",
+          "A mulch moat — it protects the trunk from insects",
+          "Proper mulching — the more mulch against the trunk, the better",
+          "A root collar — it helps the tree grow faster"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A mulch volcano is mulch piled high against a trunk; it holds moisture against the bark and rots it. Mulch goes 2 to 3 inches deep in a wide ring, kept a few inches away from the trunk. (b) is wrong: \"A mulch moat\" — there is no such practice, and mulch against the bark harms the tree rather than protecting it. (c) is wrong: \"Proper mulching\" — proper mulching keeps mulch off the trunk; piling it against the bark is one of the things that kills new plantings. (d) is wrong: \"A root collar\" — the root collar is the flare at the base of the trunk, not a pile of mulch."
+      },
+      {
+        "module": 10,
+        "q": "Trace the water through a sprinkler system in the correct order, from the house to the grass.",
+        "choices": [
+          "Water source → zone valves → backflow preventer → main line → lateral lines → heads",
+          "Water source → backflow preventer → main line → zone valves → lateral lines → heads",
+          "Water source → lateral lines → main line → heads → zone valves → backflow preventer",
+          "Water source → heads → lateral lines → zone valves → main line → backflow preventer"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The order is: water source, then the backflow preventer, then the main line to the zone valves, then the lateral lines out to the heads. (a) is wrong: \"Valves before the backflow preventer\" — the backflow preventer comes right after the connection, before the main line and valves, so irrigation water can never flow back into the drinking water. (c) is wrong: \"Lateral lines before the main line\" — laterals run from the zone valves out to the heads; the main line feeds the valves. (d) is wrong: \"Heads first\" — that is the whole order backwards; the heads are the last part water reaches."
+      },
+      {
+        "module": 10,
+        "q": "Before designing a sprinkler system, the crew measures the water pressure and the flow in gallons per minute at the source. Why do those two numbers matter?",
+        "choices": [
+          "They are only needed for the warranty paperwork",
+          "They decide the color of the sprinkler heads",
+          "They decide how many heads each zone can run — a zone that asks for more water than the supply can give will water weakly and unevenly",
+          "They decide how deep the trenches must be"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Pressure and flow decide how many heads each zone can run; one zone runs at a time, and a zone that asks for more water than the supply can deliver waters weakly and unevenly. (b) is wrong: \"They decide the head color\" — head color is cosmetic and has nothing to do with pressure or flow. (d) is wrong: \"They decide trench depth\" — trench depth is set by frost and practical cover, not by pressure and flow. (a) is wrong: \"Only for warranty paperwork\" — the numbers are design inputs, not paperwork."
+      },
+      {
+        "module": 10,
+        "q": "A lawn has green circles with brown gaps between them. The heads are spaced too far apart. What layout rule was broken?",
+        "choices": [
+          "Cycle and soak — the zone runs too long at once",
+          "The backflow rule — the preventer was installed after the valves",
+          "Hydrozoning — the lawn and the beds are on the same zone",
+          "Head-to-head coverage — each head must throw water far enough to reach the next head, so every spot is watered by at least two heads"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Head-to-head coverage means each head throws water far enough to reach the next head, so every spot gets water from at least two heads; heads spaced too far apart leave dry rings between them. (c) is wrong: \"Hydrozoning\" — hydrozoning is grouping plants with similar water needs on the same zone; it has nothing to do with head spacing. (a) is wrong: \"Cycle and soak\" — cycle and soak splits a run into shorter cycles on slopes and clay; it does not fix spacing. (b) is wrong: \"The backflow rule\" — backflow preventer placement protects the drinking water, not the coverage pattern."
+      },
+      {
+        "module": 10,
+        "q": "A client wants the flower beds and the lawn watered from the same zone to save money. Why is that a bad idea?",
+        "choices": [
+          "Because of hydrozoning: lawn heads and drip lines for shrubs need very different amounts of water and run times, so one zone cannot do both — one of them always gets the wrong amount",
+          "Because beds and lawns can never be in the same yard",
+          "Because the controller cannot run two kinds of heads at all",
+          "Because it is against the law in Michigan"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Hydrozoning groups areas with the same watering needs together; lawn heads and drip lines need very different amounts of water and run times, so sharing a zone over- or under-waters one of them. (d) is wrong: \"Because it is against the law\" — no law bans sharing a zone; it is bad design, not illegal. (b) is wrong: \"Beds and lawns can never be in the same yard\" — they are in the same yard all the time, on separate zones. (c) is wrong: \"The controller cannot run two kinds of heads\" — the controller can run any zone; the problem is that one schedule cannot suit both."
+      },
+      {
+        "module": 10,
+        "q": "A drip zone keeps clogging at the emitters, and the fittings keep popping off. What two parts are missing or wrong?",
+        "choices": [
+          "A valve box and a spray head",
+          "A filter to keep dirt out of the tiny emitters, and a pressure reducer to bring house pressure down to the low pressure drip parts are built for",
+          "A rain sensor and a transformer",
+          "A backflow preventer and a rotor head"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A drip zone needs a filter, because without it emitters clog, and a pressure reducer, because without it the house pressure pops fittings off. (c) is wrong: \"A rain sensor and a transformer\" — a rain sensor skips watering after rain and a transformer powers low-voltage lighting; neither fixes clogging or popping fittings. (d) is wrong: \"A backflow preventer and a rotor head\" — the backflow preventer protects the drinking water and a rotor head belongs on a lawn, not in a drip zone. (a) is wrong: \"A valve box and a spray head\" — a valve box holds valves and a spray head is a sprinkler head; neither is a drip-zone part."
+      },
+      {
+        "module": 10,
+        "q": "A homeowner waters the lawn every day at noon for 5 minutes. The grass stays shallow-rooted and the water evaporates fast. What should change?",
+        "choices": [
+          "Stop watering entirely and let the lawn go dormant",
+          "Water even more often, for even shorter times",
+          "Water early in the morning, between about 4 a.m. and 9 a.m., deeply and less often — a long soak a few times a week grows deeper roots than a daily sprinkle",
+          "Water at midnight instead, for the same 5 minutes"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Water early in the morning so the grass dries during the day and less water is lost to evaporation than at midday, and water deeply and less often so the roots grow down. (b) is wrong: \"Water even more often, for shorter times\" — more frequent shallow watering is exactly what keeps roots shallow. (d) is wrong: \"Water at midnight for 5 minutes\" — midnight watering leaves blades wet overnight and invites disease, and 5 minutes is still too shallow. (a) is wrong: \"Stop watering entirely\" — the lawn still needs water; it needs the right schedule, not no water."
+      },
+      {
+        "module": 10,
+        "q": "It is October in Michigan and the first hard freeze is coming. What must happen to the irrigation system, and in what order?",
+        "choices": [
+          "Turn the controller up to its longest run times so the pipes stay warm",
+          "Drain the system in spring, after the first freeze has already happened",
+          "Leave it running — the water in the pipes keeps them from freezing",
+          "Shut off the water to the system, open the drain valves, and blow out the lines with compressed air, zone by zone, at low pressure, until only air comes out of the heads"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Winterization is mandatory in Michigan: shut off the water, open the drains, and blow out the lines with compressed air zone by zone at low pressure until only air comes out — water left in pipes, valves, and heads freezes, expands, and cracks them. (c) is wrong: \"Leave it running\" — running water in the lines is exactly what freezes and cracks them. (a) is wrong: \"Turn the controller up\" — longer run times put more water in the lines to freeze. (b) is wrong: \"Drain it in spring\" — by spring the freeze has already cracked the pipes; winterization happens before the first hard freeze in fall."
+      },
+      {
+        "module": 10,
+        "q": "A landscape lighting system plugs a transformer into an outdoor outlet, and the lights run on the cable from the transformer. What does the transformer do?",
+        "choices": [
+          "It steps the 120-volt house current down to 12 volts, so the lighting is low-voltage and safe to install and work around",
+          "It steps 12 volts up to 120 volts so the lights are brighter",
+          "It stores electricity in a battery for cloudy days",
+          "It turns the lights on and off by sensing soil moisture"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Landscape lighting runs on 12 volts, not house voltage; the transformer plugs into an outdoor outlet and steps the 120-volt house current down to 12 volts. (b) is wrong: \"It steps 12 volts up to 120\" — that is backwards; the transformer steps down, not up. (c) is wrong: \"It stores electricity in a battery\" — a transformer converts voltage; it does not store power. (d) is wrong: \"It senses soil moisture\" — moisture sensing has nothing to do with lighting; a timer or photocell turns the lights on at dusk."
+      },
+      {
+        "module": 11,
+        "q": "A patio is 150 square feet and needs 6 inches of base stone. How many cubic yards is that, and how much should the crew order?",
+        "choices": [
+          "9 cubic yards — area times depth with no conversion",
+          "2.8 cubic yards — order 3 yards to be safe",
+          "1.5 cubic yards — order exactly that, with no extra",
+          "6 cubic yards — one yard for every inch of depth"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). Cubic yards = (area in square feet × depth in inches) ÷ 324: (150 × 6) ÷ 324 = 900 ÷ 324 = 2.78, about 2.8 cubic yards — and the crew rounds up and adds a waste factor, so ordering 3 yards is right. (c) is wrong: \"1.5 cubic yards, no extra\" — 1.5 is far short of 2.8, and ordering with no waste factor guarantees running out. (d) is wrong: \"6 cubic yards\" — that confuses the depth in inches with the volume. (a) is wrong: \"9 cubic yards\" — 150 × 6 = 900, and 900 must be divided by 324 to convert to cubic yards, not used raw."
+      },
+      {
+        "module": 11,
+        "q": "A patio is 240 square feet, laid with standard 4-by-8-inch pavers — about 4.5 pavers per square foot. How many pavers does the crew need, allowing 10 percent for cuts and breakage?",
+        "choices": [
+          "1,080 pavers — no waste factor needed",
+          "240 pavers — one per square foot",
+          "1,188 pavers — 240 × 4.5 = 1,080, plus 10 percent waste = 1,188",
+          "2,400 pavers — ten per square foot"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The base count is 240 × 4.5 = 1,080 pavers, and a 10 percent waste factor adds 108, for 1,188 total. (a) is wrong: \"1,080 pavers, no waste\" — 1,080 is the count before waste; cuts and breakage always need extra. (b) is wrong: \"240 pavers\" — that is one paver per square foot, but a 4-by-8-inch paver covers only about one 4.5th of a square foot. (d) is wrong: \"2,400 pavers\" — ten per square foot would mean pavers far smaller than 4 by 8 inches."
+      },
+      {
+        "module": 11,
+        "q": "A round planting bed has a radius of 7 feet. About how many square feet is it?",
+        "choices": [
+          "308 square feet",
+          "22 square feet",
+          "44 square feet",
+          "About 154 square feet — 3.14 × 7 × 7 = 153.86"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). The area of a circle is 3.14 times the radius times the radius: 3.14 × 7 × 7 = 3.14 × 49 = 153.86, about 154 square feet. (b) is wrong: \"22 square feet\" — 22 is about the circumference (2 × 3.14 × 7 = 43.96, and even that is 44), not the area. (c) is wrong: \"44 square feet\" — 44 is the circumference, not the area. (a) is wrong: \"308 square feet\" — that is double the real area, as if the radius had been used as the diameter."
+      },
+      {
+        "module": 11,
+        "q": "Your costs on a job are $8,000. You add a 20 percent markup and charge $9,600. What is your profit margin, and what price would give you a true 20 percent margin?",
+        "choices": [
+          "About 17 percent margin — $1,600 ÷ $9,600 — and a true 20 percent margin needs $8,000 ÷ 0.80 = $10,000",
+          "25 percent margin, and $10,000 would give a 25 percent margin",
+          "10 percent margin, and $8,800 would give a true 20 percent margin",
+          "20 percent margin, and $9,600 already gives a true 20 percent margin"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A 20 percent markup on $8,000 gives a $9,600 price and $1,600 of profit, but margin is profit divided by price: $1,600 ÷ $9,600 = about 17 percent. For a true 20 percent margin, divide cost by 0.80: $8,000 ÷ 0.80 = $10,000. (d) is wrong: \"20 percent margin\" — a 20 percent markup is not a 20 percent margin; the margin is always smaller than the markup. (b) is wrong: \"25 percent margin\" — $1,600 on a $9,600 price is about 17 percent, not 25. (c) is wrong: \"10 percent margin\" — the margin is about 17 percent, and $8,800 would give only about a 9 percent margin."
+      },
+      {
+        "module": 11,
+        "q": "A crew member is paid $24 an hour. The module's example says a $20 wage loads to about $26 to $28 an hour once payroll taxes, workers' compensation, and benefits are added. About what is this worker's loaded labor rate?",
+        "choices": [
+          "Exactly $24 an hour — the wage is the whole cost",
+          "About $31 to $34 an hour — the same 30 to 40 percent uplift the module's example shows",
+          "About $48 an hour — double the wage",
+          "About $25 an hour — a dollar over the wage covers everything"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The loaded rate is the wage plus payroll taxes, workers' compensation, and benefits; the module's example loads $20 to $26–$28, a 30 to 40 percent uplift, so $24 loads to about $31 to $34 an hour (24 × 1.3 = 31.2, 24 × 1.4 = 33.6). (a) is wrong: \"Exactly $24\" — the wage is not the whole cost; taxes, insurance, and benefits add real money. (c) is wrong: \"About $48\" — double the wage is far above the 30 to 40 percent uplift the module teaches. (d) is wrong: \"About $25\" — a single dollar cannot cover payroll taxes, workers' compensation, and benefits."
+      },
+      {
+        "module": 11,
+        "q": "A small crew adds overhead as a percentage of labor and materials, landing around 10 to 20 percent. What happens if overhead is left out of the price entirely?",
+        "choices": [
+          "The client pays the overhead separately at the end of the job",
+          "Nothing — overhead is not a real cost",
+          "The company slowly goes broke even on jobs that look profitable, because rent, insurance, advertising, phone, accounting, and vehicles still have to be paid",
+          "The profit margin doubles"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Overhead is the cost of running the business that no single job pays for directly — office rent, insurance, advertising, phone, accounting, vehicle payments, tools — and leaving it out means the company slowly goes broke even on jobs that look profitable. (b) is wrong: \"Overhead is not a real cost\" — rent, insurance, and vehicles are very real costs. (d) is wrong: \"The profit margin doubles\" — leaving out a cost makes the job look profitable on paper while the business loses money overall. (a) is wrong: \"The client pays it separately\" — overhead is built into the price; no client pays it as a separate line at the end."
+      },
+      {
+        "module": 11,
+        "q": "A client is ready to go ahead. What must happen before the crew starts work?",
+        "choices": [
+          "The crew starts, and the client pays everything at the end",
+          "A verbal agreement on the phone is enough",
+          "The crew starts right away and sends the proposal later",
+          "The client signs the proposal and pays a deposit — often about half — because the deposit covers materials ordered for the job, which cannot be returned once delivered"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). Never start a job without a signed proposal and a deposit; the deposit, often about half the price, covers the materials ordered for the job, which cannot be returned once delivered, and the signature turns a conversation into a contract. (c) is wrong: \"Start now, proposal later\" — starting without a signed scope is how \"I thought that was included\" arguments start. (a) is wrong: \"The client pays everything at the end\" — the crew would have to front all the material costs with no commitment from the client. (b) is wrong: \"A verbal agreement is enough\" — a handshake is not a contract, and the proposal exists precisely so both sides know what was agreed."
+      },
+      {
+        "module": 11,
+        "q": "Halfway through a patio job, the client asks for the patio to be six feet bigger. What is the correct way to handle it?",
+        "choices": [
+          "Treat it as a change order: write the change down, price it, and get the client's signature before the extra work starts — without that signature, the extra work is free",
+          "Refuse outright — a signed proposal can never change",
+          "Build it for free to keep the client happy",
+          "Build it now and bill for it later — the client will remember agreeing to the price"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). Every change is a change order naming the change, the added or removed work, the price change, and the effect on the schedule, signed by the client before the work starts; without that signature the extra work is free. (d) is wrong: \"Build it now and bill later\" — the client remembers the handshake differently every time, and the argument happens after the job when nobody is happy. (b) is wrong: \"Refuse outright\" — proposals can change; the point is that changes go through a signed change order, not that they are forbidden. (c) is wrong: \"Build it for free\" — small freebies add up to a lost margin by the end of a job."
+      },
+      {
+        "module": 12,
+        "q": "A full landscape job is sequenced: rough grade, hardscape, planting, turf, irrigation and lighting, final grade. Why does turf come after planting, not before?",
+        "choices": [
+          "Because grass grows better in the shade of new trees",
+          "Because laying turf before the planting crew finishes would mean the planters walk all over the new lawn — heavy work first, delicate work last",
+          "Because sod cannot be laid until the irrigation controller is programmed",
+          "Because the lawn is the least important part of the job"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). The rule running through the whole sequence is heavy work first, delicate work last: machines before plants, plants before turf, so the planting crew does not walk over and damage the new lawn. (a) is wrong: \"Because grass grows better in the shade of trees\" — shade slows grass; the order is about protecting finished work, not shade. (c) is wrong: \"Because sod cannot be laid until the controller is programmed\" — the controller is programmed and tested after the turf and planting are in place, not before the turf goes down. (d) is wrong: \"Because the lawn is least important\" — the lawn is not least important; it is the most delicate surface, so it goes in late."
+      },
+      {
+        "module": 12,
+        "q": "Why is the hardscape built before the planting on a full job?",
+        "choices": [
+          "Because plants cannot be planted until the patio is sealed",
+          "Because plants grow faster next to fresh pavers",
+          "Because heavy equipment rolling across a finished lawn or new planting would tear it up, and hardscape sets the fixed levels the grading and planting around it must match",
+          "Because the hardscape crew charges less than the planting crew"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). Hardscape comes second, right after rough grade, while the machines still have open access — heavy equipment would tear up a finished lawn or new planting — and the patio height and wall tops set the fixed levels everything around them must match. (b) is wrong: \"Because plants grow faster next to pavers\" — pavers do not make plants grow faster. (d) is wrong: \"Because the hardscape crew charges less\" — crew rates do not set the build order. (a) is wrong: \"Because plants cannot be planted until the patio is sealed\" — sealing is optional and has nothing to do with when planting happens."
+      },
+      {
+        "module": 12,
+        "q": "At final grade, the lawn is spread and shaped to meet the patio. Where should the finished lawn level sit relative to the top of the patio edge?",
+        "choices": [
+          "A foot below the patio, so there is a step down everywhere",
+          "It does not matter — the lawn and the patio never meet",
+          "Above the top of the patio, so the grass covers the edge",
+          "Just below the top of the patio, walkway, and driveway edges, so the lawn meets the hardscape cleanly and water runs off the pavement onto the grass"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). At final grade the finished level sits just below the top of the patio, walkway, and driveway edges, so the lawn meets the hardscape cleanly and water runs off the pavement onto the grass, not the other way around. (c) is wrong: \"Above the top of the patio\" — grass above the patio edge would wash soil onto the pavers and hold water against them. (a) is wrong: \"A foot below the patio\" — a foot of drop at every edge would be a trip hazard, not a finished grade. (b) is wrong: \"It does not matter\" — the meeting point of lawn and hardscape is exactly what final grade is for."
+      },
+      {
+        "module": 12,
+        "q": "At the client walkthrough, the client points out a paver that rocks, a head that sprays the walkway, and a thin spot of mulch. What should happen with these items?",
+        "choices": [
+          "Write every item down on a punch list where the client can see it, agree when it will be fixed, fix it promptly, and do not ask for final payment until the punch list is finished",
+          "Fix them secretly after the client has paid in full, so the walkthrough looks perfect",
+          "Tell the client the items are their problem now that the job is done",
+          "Ignore them — every job has small flaws and the client will forget"
+        ],
+        "answer": 0,
+        "explanation": "Correct: (a). A punch list is the written list of small items to fix before the job is truly done; write every item down, agree on when it will be fixed, fix it promptly, and do not ask for final payment until it is finished. (d) is wrong: \"Ignore them\" — ignoring items the client pointed out is how callbacks and complaints start. (b) is wrong: \"Fix them secretly after full payment\" — the punch list is fixed before final payment, not hidden until after it. (c) is wrong: \"Tell the client the items are their problem\" — the items are the crew's work to finish, not the client's problem."
+      },
+      {
+        "module": 12,
+        "q": "At the walkthrough, the contractor explains the warranty. What is the typical arrangement the course teaches?",
+        "choices": [
+          "Everything is covered forever, including plants that were never watered",
+          "The contractor stands behind the workmanship — the patio, the walls, the installation — while plants carry their own warranty, often replaced once within a set period if they were watered as instructed",
+          "There is no warranty on landscape work at all",
+          "The warranty covers only the plants, not the hardscape"
+        ],
+        "answer": 1,
+        "explanation": "Correct: (b). A typical arrangement is that the contractor stands behind the workmanship — the patio, the walls, the installation — while plants carry their own warranty, often replaced once within a set period if they were watered as instructed. (a) is wrong: \"Everything covered forever\" — no contractor can promise that, and a warranty that depends on the client watering the plants is void if they do not. (c) is wrong: \"No warranty at all\" — the warranty is a written promise to stand behind the work, explained at the walkthrough and stated in the proposal. (d) is wrong: \"The warranty covers only the plants\" — that is backwards; the contractor's workmanship is the main thing warranted."
+      },
+      {
+        "module": 12,
+        "q": "What should the maintenance handoff give the client at the end of the job?",
+        "choices": [
+          "The crew's tools, so the client can do their own repairs",
+          "A verbal promise that the yard will look after itself",
+          "A written care sheet: how much and how often to water the new plants and lawn through the first summer, when to mow and how high, when the irrigation system gets blown out in the fall, and who to call if a head breaks",
+          "A bill for the next year's maintenance, due immediately"
+        ],
+        "answer": 2,
+        "explanation": "Correct: (c). The maintenance handoff is a written sheet, not just a conversation: watering through the first summer, mowing height, the fall blow-out, and who to call — plus showing the controller again and offering the maintenance plan. (b) is wrong: \"A verbal promise the yard will look after itself\" — a new yard needs a first summer of watering, and a verbal promise is not a care sheet. (d) is wrong: \"A bill for next year's maintenance\" — the handoff offers the maintenance plan; it does not bill for it unasked. (a) is wrong: \"The crew's tools\" — the crew keeps its tools; the client gets instructions, not equipment."
+      },
+      {
+        "module": 12,
+        "q": "Which statement about the real NALP Landscape Industry Certified Technician — Hardscape Installation exam is true?",
+        "choices": [
+          "It is taken in person at an NCCER training sponsor and requires five documented projects",
+          "It is a Michigan state license exam with a fee set by the state",
+          "It is a single exam with a published pass mark of 70 percent and 100 questions",
+          "It is a Common Core section plus the Hardscape Installation specialty, taken online through NALP remote proctoring, with 12 months from enrollment to complete, and NALP publishes no question count, time limit, or pass mark — so the 100 questions here at 70% are the app's practice-exam choice and benchmark, and recertification is every 2 years with 24 CEUs"
+        ],
+        "answer": 3,
+        "explanation": "Correct: (d). The real NALP exam is a Common Core section plus the Hardscape Installation specialty, taken online through NALP remote proctoring, with 12 months from enrollment to complete; NALP publishes no question count, time limit, or pass mark, so 100 questions at 70% is the app's practice choice and benchmark, and recertification is every 2 years with 24 CEUs. (c) is wrong: \"A single exam with a published 70 percent pass mark and 100 questions\" — there are two sections, and NALP publishes no pass mark or question count. (a) is wrong: \"Taken in person at an NCCER sponsor\" — the exam is online through NALP, not at an NCCER sponsor, and the five documented projects belong to the CMHA Paver Installer credential. (b) is wrong: \"A Michigan state license exam\" — Michigan has no state landscape contractor license, and no exam fees are stated anywhere in this program."
+      }
+    ]
+  },
   "final": {
     "title": "ACI Concrete Flatwork Finisher (Written) — Practice Exam",
     "minutes": 120,
