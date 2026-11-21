@@ -487,6 +487,66 @@ const PROGRAMS = [
       'license, and the AHA BLS Provider eCard needs an in-person ' +
       'hands-on skills session.',
   },
+  {
+    name: 'Computer program',
+    slug: 'computer',
+    order: [
+      'cmp101',
+      'cmp102',
+      'cmp103',
+      'cmp104',
+      'cmp105',
+      'cmp106',
+      'cmp107',
+      'cmp108',
+      'cmp109',
+      'cmp110',
+      'cmp111',
+      'cmp112',
+      'cmp199',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as the
+    // other capstones); the final-step banner covers it.
+    prereqs: {
+      cmp102: 'cmp101',
+      cmp103: 'cmp102',
+      cmp104: 'cmp103',
+      cmp105: 'cmp103',
+      cmp106: 'cmp101',
+      cmp107: 'cmp106',
+      cmp108: 'cmp101',
+      cmp109: 'cmp108',
+      cmp110: 'cmp108',
+      cmp111: 'cmp101',
+      cmp112: 'cmp110',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Ferris State ' +
+      'University’s Computer Information Systems A.A.S. with the ' +
+      'Computer Information Technology A.A.S. for the hardware, operating ' +
+      'system, and networking half, and Kendall College of Art and Design’s ' +
+      'Graphic Design B.F.A. plus the Software Engineering B.S. for the ' +
+      'design and app depth — from computer basics and Python ' +
+      'programming through web and app development, databases, hardware ' +
+      'and troubleshooting, operating systems and networking, photo and ' +
+      'video editing, graphic design, and cybersecurity to a portfolio ' +
+      'studio and a capstone that preps you for CompTIA A+ (220-1201 / ' +
+      '220-1202) and Adobe Certified Professional Photoshop and Premiere ' +
+      'Pro. This program teaches knowledge only and certifies no one: the ' +
+      'app cannot run or grade code or creative work, and the real exams ' +
+      'are taken at Pearson VUE and through Certiport.',
+    capstoneLine:
+      'This is the final step of the program — the capstone. When the ' +
+      'certification tracker on this page shows READY for the credentials ' +
+      'you want, book the real exams through the approved providers ' +
+      'listed there. The practice exams here do not grant credentials or ' +
+      'licenses — the real A+ exams pass at 675 (Core 1) and 700 ' +
+      '(Core 2) on a 100–900 scaled scale, the real Adobe Certified ' +
+      'Professional exams pass at 700/1000 scaled and include live tasks ' +
+      'inside the real Adobe software, and the portfolio project is ' +
+      'self-shipped work the app cannot grade.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;

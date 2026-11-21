@@ -2,7 +2,7 @@
 
 // Certification tracker definitions + rendering for the program capstones
 // (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone,
-// ase-cert-prep, asl-capstone, con301, ele290, eng495, and med201). Each entry names its capstone; the
+// ase-cert-prep, asl-capstone, con301, ele290, eng495, med201, and cmp199). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -155,6 +155,26 @@ const BLS_WHERE =
   'session. Find a course through the American Heart Association: ' +
   '<a href="https://cpr.heart.org" target="_blank" rel="noopener">cpr.heart.org</a>. ' +
   'An online-only course with no skills demonstration does not earn the eCard.';
+
+const APLUS_WHERE =
+  'The real A+ exams are taken at a Pearson VUE testing center. Start at ' +
+  'CompTIA: ' +
+  '<a href="https://www.comptia.org" target="_blank" rel="noopener">comptia.org</a>. ' +
+  'You register and test with them \u2014 not inside this app. No exam fee is ' +
+  'stated here: fees are set by CompTIA and change.';
+
+const ACP_WHERE =
+  'The real Adobe Certified Professional exams are delivered through ' +
+  'Certiport, at testing centers or by OnVUE remote proctoring. Start at ' +
+  'Adobe: ' +
+  '<a href="https://certifiedprofessional.adobe.com" target="_blank" rel="noopener">certifiedprofessional.adobe.com</a>. ' +
+  'You register and test with them \u2014 not inside this app. No exam fee is ' +
+  'stated here: fees are set by Adobe/Certiport and change.';
+
+const CMP_PORTFOLIO_WHERE =
+  'There is no outside exam for the portfolio \u2014 it is the student\u2019s own ' +
+  'shipped work: a working app, an edited photo, and a 60-second video, ' +
+  'presented on the portfolio website built in this program.';
 
 const CERTS = [
   {
@@ -1464,6 +1484,125 @@ const CERTS = [
       'the app\u2019s own knowledge check, completed inside this course. ' +
       'No outside body issues a credential for it.',
   },
+  {
+    id: 'aplus-certification',
+    capstone: 'cmp199',
+    name: 'CompTIA A+ Certification (220-1201 / 220-1202)',
+    blurb:
+      'The entry-level IT certification: Core 1 (220-1201) and Core 2 ' +
+      '(220-1202), up to 90 questions in 90 minutes each, including ' +
+      'multiple-choice, drag-and-drop, and performance-based questions ' +
+      '(simulations). The real exams pass at 675 (Core 1) and 700 (Core 2) ' +
+      'on a 100\u2013900 scaled scale \u2014 NOT percentages. The 70% used here is a ' +
+      'practice benchmark only, never the real pass mark. Both exams must ' +
+      'come from the same version.',
+    kind: 'sections',
+    standard: 70,
+    benchmark: true,
+    sections: [
+      { label: 'A+ Core 1 Practice Exam (220-1201)', examKey: 'midterm' },
+      { label: 'A+ Core 2 Practice Exam (220-1202)', examKey: 'aplus-core-2' },
+    ],
+    mapped:
+      'Prepared by cmp106 (hardware and troubleshooting) and cmp107 ' +
+      '(operating systems and networking), with the capstone\u2019s A+ review ' +
+      'modules. Practice exams: the two A+ practice exams in this course.',
+    readyRule:
+      'READY here means your best practice score reached 70% on BOTH exams ' +
+      '\u2014 a practice benchmark only. The real A+ exams pass at 675 (Core 1) ' +
+      'and 700 (Core 2) on a 100\u2013900 scaled scale, and real certification ' +
+      'also needs both exams from the same version, taken at a Pearson VUE ' +
+      'testing center. Both A+ study guides (Core 1 and Core 2) are in this ' +
+      'capstone\u2019s guides.',
+    guideId: 'aplus-core-1',
+    guideLabel: 'A+ Core 1 study guide',
+    where: APLUS_WHERE,
+  },
+  {
+    id: 'acp-photoshop',
+    capstone: 'cmp199',
+    name: 'Adobe Certified Professional in Visual Design Using Adobe Photoshop',
+    blurb:
+      'Adobe\u2019s certification for Photoshop: a 50-minute proctored exam ' +
+      'with a questions section followed by live tasks inside real Photoshop, ' +
+      'delivered through Certiport. The real exam passes at 700 out of 1,000 ' +
+      '(scaled \u2014 not a percentage). The 70% used here is a practice ' +
+      'benchmark only, and this text-only practice exam cannot replicate the ' +
+      'live in-app tasks. Adobe expects about 150 hours of hands-on ' +
+      'experience per app before sitting the exam.',
+    kind: 'single',
+    examKey: 'acp-photoshop',
+    examLabel: 'Adobe Certified Professional Photoshop practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by cmp108 (photo editing with Photoshop) and the capstone\u2019s ' +
+      'Photoshop review modules. Practice exam: the Adobe Certified ' +
+      'Professional Photoshop practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark only. The real exam passes at 700/1000 scaled and includes ' +
+      'live tasks inside real Photoshop.',
+    guideId: 'acp-photoshop',
+    guideLabel: 'Adobe Certified Professional Photoshop study guide',
+    where: ACP_WHERE,
+  },
+  {
+    id: 'acp-premiere',
+    capstone: 'cmp199',
+    name: 'Adobe Certified Professional in Digital Video Using Adobe Premiere Pro',
+    blurb:
+      'Adobe\u2019s certification for Premiere Pro: a 50-minute proctored exam ' +
+      'with a questions section followed by live tasks inside real Premiere ' +
+      'Pro, delivered through Certiport. The real exam passes at 700 out of ' +
+      '1,000 (scaled \u2014 not a percentage). The 70% used here is a practice ' +
+      'benchmark only, and this text-only practice exam cannot replicate the ' +
+      'live in-app tasks. Adobe expects about 150 hours of hands-on ' +
+      'experience per app before sitting the exam. Passing Premiere Pro plus ' +
+      'Photoshop also earns the Adobe Certified Professional in Video Design ' +
+      'specialty credential.',
+    kind: 'single',
+    examKey: 'acp-premiere',
+    examLabel: 'Adobe Certified Professional Premiere Pro practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by cmp109 (video editing with Premiere Pro) and the capstone\u2019s ' +
+      'Premiere Pro review modules. Practice exam: the Adobe Certified ' +
+      'Professional Premiere Pro practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark only. The real exam passes at 700/1000 scaled and includes ' +
+      'live tasks inside real Premiere Pro.',
+    guideId: 'acp-premiere',
+    guideLabel: 'Adobe Certified Professional Premiere Pro study guide',
+    where: ACP_WHERE,
+  },
+  {
+    id: 'cmp-portfolio',
+    capstone: 'cmp199',
+    name: 'Portfolio Project',
+    blurb:
+      'Three shipped pieces: a working app, an edited photo, and an edited ' +
+      'video of about 60 seconds, each to a short brief. Each piece is ' +
+      'self-checked against the rubric in the portfolio guide \u2014 there is ' +
+      'no human grader, and the app cannot grade creative work.',
+    kind: 'completion',
+    mappedCourses: ['cmp104', 'cmp108', 'cmp109', 'cmp112'],
+    mapped:
+      'Built across the program: the working app from cmp104, the edited ' +
+      'photo from cmp108, the edited video from cmp109, and the portfolio ' +
+      'website from cmp112.',
+    readyRule:
+      'READY here means the four source courses are finished and the ' +
+      'portfolio guide is reviewed \u2014 preparation only. The portfolio ' +
+      'itself is complete when all 3 pieces are shipped and checked against ' +
+      'the rubric in the guide; the app cannot verify the pieces, so this is ' +
+      'the app\u2019s own completion standard, not an external credential.',
+    guideId: 'portfolio-project',
+    guideLabel: 'Portfolio Project study guide',
+    where: CMP_PORTFOLIO_WHERE,
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -1603,7 +1742,14 @@ function renderCertPanel(ctx, capstone) {
               'plus a state license. The AHA BLS Provider eCard needs an in-person ' +
               'hands-on skills session. This program teaches knowledge only and ' +
               'certifies no one.'
-                        : 'State and local licensing is separate from all of these and varies by state.';
+                        : slug === 'cmp199'
+            ? 'There is no license for computing \u2014 the A+ and Adobe Certified ' +
+              'Professional exams are taken through Pearson VUE and Certiport, and the ' +
+              'portfolio is the student\u2019s own shipped work. The 70% figures here are ' +
+              'practice benchmarks: the real A+ exams pass at 675 (Core 1) and 700 ' +
+              '(Core 2) on a 100\u2013900 scaled scale, and the real ACP exams pass at ' +
+              '700/1000 and include live in-app tasks.'
+            : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
     '  <h2>Certification tracker</h2>\n' +
