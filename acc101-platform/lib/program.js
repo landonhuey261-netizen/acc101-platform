@@ -18,6 +18,11 @@
 //  - American Sign Language: modeled on Lansing Community College's
 //    Sign Language Interpreter program with Gallaudet University as the
 //    continuity layer; prepares for the ASLPI proficiency interview.
+//  - General Construction: modeled on Iowa Lakes Community College's
+//    Construction Technology Management (AAS) with Ferris State
+//    University's Construction Management (B.S.) as the continuity layer;
+//    prepares for NCCER Core, Carpentry/Welding/HEO Level 1, OSHA 10/30,
+//    and ACI Concrete Flatwork Finisher.
 // Courses outside these lists are standalone and are never
 // numbered into a program.
 //
@@ -264,6 +269,52 @@ const PROGRAMS = [
       'live interview can rate your proficiency, and only certification ' +
       '(BEI in Michigan) qualifies you to work as an interpreter.',
   },
+  {
+    name: 'General Construction program',
+    slug: 'general-construction',
+    order: [
+      'con101',
+      'con102',
+      'con103',
+      'con104',
+      'con105',
+      'con106',
+      'con107',
+      'con108',
+      'con109',
+      'con110',
+      'con111',
+      'con112',
+      'con301',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as the
+    // other capstones); the final-step banner covers it.
+    prereqs: {
+      con102: 'con101',
+      con103: 'con102',
+      con106: 'con103',
+      con107: 'con106',
+      con108: 'con107',
+      con110: 'con104',
+      con112: 'con105',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Iowa Lakes Community ' +
+      'College\u2019s Construction Technology Management (AAS) with Ferris State ' +
+      'University\u2019s Construction Management (B.S.) as the continuity layer ' +
+      '\u2014 from the trade, tools, and safety through framing, concrete, ' +
+      'finishing, equipment, and welding to a certification-prep capstone ' +
+      'that readies you for NCCER, OSHA 10/30, and ACI Flatwork Finisher.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When the ' +
+      'certification tracker on this page shows READY for the credentials you ' +
+      'want, book the real exams through the approved providers listed there. ' +
+      'The practice exams here do not grant credentials \u2014 NCCER tests are ' +
+      'taken at accredited sponsors, the OSHA DOL card comes only from an ' +
+      'authorized trainer, and the AWS Certified Welder test is a hands-on ' +
+      'weld at an Accredited Test Facility.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;
@@ -289,6 +340,10 @@ const AUTO_PROGRAM_PREREQS = PROGRAMS[4].prereqs;
 const ASL_PROGRAM_NAME = PROGRAMS[5].name;
 const ASL_PROGRAM_ORDER = PROGRAMS[5].order;
 const ASL_PROGRAM_PREREQS = PROGRAMS[5].prereqs;
+
+const CONSTRUCTION_PROGRAM_NAME = PROGRAMS[6].name;
+const CONSTRUCTION_PROGRAM_ORDER = PROGRAMS[6].order;
+const CONSTRUCTION_PROGRAM_PREREQS = PROGRAMS[6].prereqs;
 
 /**
  * Find the program a slug belongs to.
@@ -443,6 +498,9 @@ module.exports = {
   ASL_PROGRAM_NAME,
   ASL_PROGRAM_ORDER,
   ASL_PROGRAM_PREREQS,
+  CONSTRUCTION_PROGRAM_NAME,
+  CONSTRUCTION_PROGRAM_ORDER,
+  CONSTRUCTION_PROGRAM_PREREQS,
   programOf,
   programNameOf,
   stepOf,

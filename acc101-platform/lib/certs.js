@@ -2,7 +2,7 @@
 
 // Certification tracker definitions + rendering for the program capstones
 // (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone,
-// ase-cert-prep, and asl-capstone). Each entry names its capstone; the
+// ase-cert-prep, asl-capstone, and con301). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -93,6 +93,21 @@ const ASLPI_WHERE =
   'format). Book through Gallaudet: ' +
   '<a href="https://gallaudet.edu/american-sign-language-proficiency-interview-aslpi/" target="_blank" rel="noopener">gallaudet.edu — American Sign Language Proficiency Interview (ASLPI)</a>. ' +
   'You register and interview with Gallaudet — not inside this app.';
+
+const ACI_WHERE =
+  'The written exam and the hands-on performance exam are given through ' +
+  'ACI chapters and approved examiners. Find one through the American ' +
+  'Concrete Institute: ' +
+  '<a href="https://www.concrete.org" target="_blank" rel="noopener">concrete.org</a>. ' +
+  'You register and test with them — not inside this app.';
+
+const AWS_WHERE =
+  'The Certified Welder test is given only at AWS Accredited Test ' +
+  'Facilities, where you weld a test coupon to a written welding procedure ' +
+  'specification (WPS) and the weld is inspected to the code\u2019s acceptance ' +
+  'criteria. Find a facility through the American Welding Society: ' +
+  '<a href="https://www.aws.org" target="_blank" rel="noopener">aws.org</a>. ' +
+  'You register and test with them — not inside this app.';
 
 const CERTS = [
   {
@@ -680,6 +695,229 @@ const CERTS = [
     guideLabel: 'The ASLPI Interview study guide',
     where: ASLPI_WHERE,
   },
+  {
+    id: 'nccer-core',
+    capstone: 'con301',
+    name: 'NCCER Core — Introduction to Basic Construction Skills',
+    blurb:
+      'The foundation credential for every NCCER trade: safety, tools, ' +
+      'construction math, drawings, materials handling, and employability. ' +
+      'NCCER Core is the prerequisite before any NCCER Level 1 credential, ' +
+      'and the Core Level Test is 89 questions at a 70% minimum passing score.',
+    kind: 'single',
+    examKey: 'midterm',
+    examLabel: 'NCCER Core practice exam',
+    standard: 70,
+    mapped:
+      'Prepared across the General Construction program, especially ' +
+      'Construction 101\u2013103, and the capstone\u2019s Core review modules. ' +
+      'Practice exam: the NCCER Core practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — NCCER\u2019s minimum ' +
+      'passing score for the Core Level Test.',
+    guideId: 'nccer-core',
+    guideLabel: 'NCCER Core study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'osha-10-con',
+    capstone: 'con301',
+    name: 'OSHA 10-Hour Construction',
+    blurb:
+      'The U.S. Department of Labor Outreach Training Program completion card ' +
+      'for construction site work — a DOL wallet card, not a license or ' +
+      'certification. OSHA requires no test for the card; the card comes ' +
+      'from completing the required 10 contact hours with an authorized ' +
+      'trainer. Most authorized providers add quizzes and a final exam at ' +
+      '70% — that 70% is provider-standard, not an OSHA pass mark.',
+    kind: 'single',
+    examKey: 'osha-10',
+    examLabel: 'OSHA 10-Hour practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Construction 101 (jobsite safety & OSHA basics) and the ' +
+      'capstone\u2019s OSHA review module. Practice exam: the OSHA 10-Hour ' +
+      'practice exam in this course.',
+    readyRule:
+      'READY here means your best practice score reached 70% — a practice ' +
+      'benchmark, not an OSHA requirement. OSHA publishes no pass mark: ' +
+      'the real DOL card comes only from completing an authorized OSHA ' +
+      'Outreach Training Program course.',
+    guideId: 'osha-10-30',
+    guideLabel: 'OSHA 10/30 & the DOL Card study guide',
+    where: OSHA_WHERE,
+  },
+  {
+    id: 'osha-30-con',
+    capstone: 'con301',
+    name: 'OSHA 30-Hour Construction',
+    blurb:
+      'The U.S. Department of Labor Outreach Training Program completion card ' +
+      'for supervisors and workers with safety duties — a DOL wallet card, ' +
+      'not a license or certification. OSHA requires no test for the card; ' +
+      'the card comes from completing the required 30 contact hours with an ' +
+      'authorized trainer. Most authorized providers add quizzes and a final ' +
+      'exam at 70% — that 70% is provider-standard, not an OSHA pass mark.',
+    kind: 'single',
+    examKey: 'osha-30',
+    examLabel: 'OSHA 30-Hour practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by Construction 101 (jobsite safety & OSHA basics) and the ' +
+      'capstone\u2019s OSHA review module. Practice exam: the OSHA 30-Hour ' +
+      'practice exam in this course.',
+    readyRule:
+      'READY here means your best practice score reached 70% — a practice ' +
+      'benchmark, not an OSHA requirement. OSHA publishes no pass mark: ' +
+      'the real DOL card comes only from completing an authorized OSHA ' +
+      'Outreach Training Program course.',
+    guideId: 'osha-10-30',
+    guideLabel: 'OSHA 10/30 & the DOL Card study guide',
+    where: OSHA_WHERE,
+  },
+  {
+    id: 'nccer-carpentry',
+    capstone: 'con301',
+    name: 'NCCER Carpentry Level 1',
+    blurb:
+      'The first level of the NCCER carpentry apprenticeship credential: ' +
+      'building materials, hand and power tools, construction drawings, ' +
+      'floor, wall, and roof systems. Real Level 1 is 140 items across 9 ' +
+      'module tests; every module test passes at 70%. NCCER Core is the ' +
+      'prerequisite before the Level 1 credential.',
+    kind: 'single',
+    examKey: 'nccer-carpentry',
+    examLabel: 'NCCER Carpentry Level 1 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Construction 106 (Framing I), Construction 107 (Framing ' +
+      'II), and Construction 108 (Finishing Trades), plus the capstone\u2019s ' +
+      'carpentry review modules. Practice exam: the NCCER Carpentry Level 1 ' +
+      'practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance profiles signed off by a certified NCCER ' +
+      'instructor.',
+    guideId: 'nccer-carpentry',
+    guideLabel: 'NCCER Carpentry Level 1 study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'nccer-welding',
+    capstone: 'con301',
+    name: 'NCCER Welding Level 1',
+    blurb:
+      'The first level of the NCCER welding apprenticeship credential: ' +
+      'oxyfuel cutting, SMAW (stick), GMAW (MIG), FCAW, weld symbols, and ' +
+      'weld safety. Real Level 1 is 170 items across 12 module tests; every ' +
+      'module test passes at 70%. NCCER Core is the prerequisite before the ' +
+      'Level 1 credential.',
+    kind: 'single',
+    examKey: 'nccer-welding',
+    examLabel: 'NCCER Welding Level 1 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Construction 111 (Welding for Construction) and the ' +
+      'capstone\u2019s welding review module. Practice exam: the NCCER Welding ' +
+      'Level 1 practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance profiles signed off by a certified NCCER ' +
+      'instructor.',
+    guideId: 'nccer-welding',
+    guideLabel: 'NCCER Welding Level 1 study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'nccer-heo',
+    capstone: 'con301',
+    name: 'NCCER Heavy Equipment Operations Level 1',
+    blurb:
+      'The first level of the NCCER heavy equipment operations ' +
+      'apprenticeship credential: dozers, excavators, loaders, backhoes, and ' +
+      'forklifts — pre-op inspection, controls, grades, and safe operation. ' +
+      'Real Level 1 is 155 items across 7 required + 1 elective module ' +
+      'tests; every module test passes at 70%.',
+    kind: 'single',
+    examKey: 'nccer-heo',
+    examLabel: 'NCCER Heavy Equipment Operations Level 1 practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Construction 110 (Heavy Equipment Operation) and the ' +
+      'capstone\u2019s HEO review module. Practice exam: the NCCER Heavy ' +
+      'Equipment Operations Level 1 practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — NCCER\u2019s minimum ' +
+      'passing score for its module tests. The real credential also requires ' +
+      'hands-on performance verification on real equipment.',
+    guideId: 'nccer-heo',
+    guideLabel: 'NCCER Heavy Equipment Operations Level 1 study guide',
+    where: NCCER_WHERE,
+  },
+  {
+    id: 'aci-flatwork',
+    capstone: 'con301',
+    name: 'ACI Concrete Flatwork Finisher',
+    blurb:
+      'The American Concrete Institute credential for concrete flatwork: ' +
+      'properties, placing, finishing, and curing. The written exam is about ' +
+      '50 multiple-choice questions in a 2-hour closed-book sitting, passing ' +
+      'grade 70%. The full Finisher certification also requires a separate ' +
+      'hands-on performance exam.',
+    kind: 'single',
+    examKey: 'final',
+    examLabel: 'ACI Concrete Flatwork Finisher practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by Construction 105 (Concrete & Masonry) and the capstone\u2019s ' +
+      'flatwork review module. Practice exam: the ACI Concrete Flatwork ' +
+      'Finisher practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% — ACI\u2019s passing ' +
+      'grade for the written exam. The real certification also requires ' +
+      'passing the hands-on performance exam.',
+    guideId: 'aci-flatwork',
+    guideLabel: 'ACI Concrete Flatwork Finisher study guide',
+    where: ACI_WHERE,
+  },
+  {
+    id: 'aws-welder',
+    capstone: 'con301',
+    name: 'AWS Certified Welder',
+    blurb:
+      'The American Welding Society performance credential: there is NO ' +
+      'written exam and NO numeric pass score. Candidates weld a test coupon ' +
+      'to a written welding procedure specification (WPS) at an AWS ' +
+      'Accredited Test Facility, and the weld either meets the code\u2019s ' +
+      'acceptance criteria or it doesn\u2019t. This card tracks the knowledge ' +
+      'side only — it can never show a test score.',
+    kind: 'attestation',
+    steps: [
+      'Learn the welding processes, symbols, and safety in Construction 111 and the capstone\u2019s welding review module.',
+      'Practice welding to a written welding procedure specification (WPS) under a qualified welder — the app cannot grade a weld.',
+      'Book a test at an AWS Accredited Test Facility and weld the test coupon to the WPS.',
+      'The weld is inspected to the code\u2019s acceptance criteria — pass or fail is decided on the weld, not on a written test.',
+    ],
+    mapped:
+      'Prepared by Construction 111 (Welding for Construction) and the ' +
+      'capstone\u2019s welding review module. There is no written exam to ' +
+      'practice — the AWS test is a hands-on weld at an Accredited Test ' +
+      'Facility.',
+    readyRule:
+      'There is no exam score for AWS Certified Welder — no written exam ' +
+      'exists. This card shows READY only once you have reviewed the study ' +
+      'guide below, and that means only that you reviewed the guide and know ' +
+      'what the performance test requires. It is informational: the real ' +
+      'credential comes only from passing the hands-on weld at an AWS ' +
+      'Accredited Test Facility.',
+    guideId: 'aws-welder',
+    guideLabel: 'AWS Certified Welder study guide',
+    where: AWS_WHERE,
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -801,6 +1039,13 @@ function renderCertPanel(ctx, capstone) {
               'above is preparation for it, and only Gallaudet\u2019s live interview ' +
               'can rate you. Working as a sign language interpreter in Michigan ' +
               'needs BEI certification under Michigan Public Act 204 of 2007.'
+            : slug === 'con301'
+            ? 'NCCER tests are taken at accredited sponsors with hands-on ' +
+              'performance profiles; the OSHA DOL card comes only from an ' +
+              'authorized trainer after the required hours; the AWS Certified ' +
+              'Welder test is a hands-on weld at an Accredited Test Facility. ' +
+              'The OSHA 70% figures here are practice benchmarks, not an OSHA ' +
+              'pass mark — OSHA requires no test for the card.'
             : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
