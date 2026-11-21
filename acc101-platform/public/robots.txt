@@ -5,4 +5,4 @@ Disallow: /c/
 Disallow: /account
 Disallow: /logout
 
-Sitemap: https://collegewithoutthecollege-production.up.railway.app/sitemap.xml
+Sitemap: https://collegewithoutcollege.com/sitemap.xml
