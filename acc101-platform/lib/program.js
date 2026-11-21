@@ -446,6 +446,7 @@ const PROGRAMS = [
       'med110',
       'med111',
       'med112',
+      'med113',
       'med201',
     ],
     // Prerequisite guidance: each course builds directly on the listed
@@ -463,9 +464,10 @@ const PROGRAMS = [
       med110: 'med104',
       med111: 'med101',
       med112: 'med111',
+      med113: 'med103',
     },
     blurb:
-      'Thirteen courses taken in order, modeled on Lansing Community ' +
+      'Fourteen courses taken in order, modeled on Lansing Community ' +
       'College\u2019s Emergency Medical Services A.A.S. and Basic EMT ' +
       'Certificate with Sacramento City College\u2019s Pre-Health ' +
       'Occupations A.S. and North Hennepin Community College\u2019s ' +
@@ -473,8 +475,11 @@ const PROGRAMS = [
       'foundations, anatomy and physiology, and medical terminology ' +
       'through first aid and CPR, EMT airway, trauma, medical, and ' +
       'special-populations care, pharmacology basics, and two nutrition ' +
-      'courses to a capstone that readies you for the NREMT EMT cognitive ' +
-      'exam and the NASM Certified Nutrition Coach exam. This program ' +
+      'courses and a sports science course to a capstone that readies you ' +
+      'for the NREMT EMT cognitive exam, the NASM Certified Nutrition ' +
+      'Coach exam, and the ACSM Certified Exercise Physiologist, NSCA ' +
+      'Certified Strength and Conditioning Specialist, and NASM Corrective ' +
+      'Exercise Specialist exams. This program ' +
       'teaches knowledge only and certifies no one: it is not a ' +
       'state-approved EMT course, it provides no clinical hours or ' +
       'skills verification, and completing it does not make anyone an ' +

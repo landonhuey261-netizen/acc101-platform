@@ -156,6 +156,22 @@ const NASM_WHERE =
   'You register and test with NASM \u2014 not inside this app. No fee is stated ' +
   'here because it was not verified against NASM.';
 
+const ACSM_WHERE =
+  'The real ACSM Certified Exercise Physiologist exam is taken at a Pearson ' +
+  'VUE testing centre or online. Start at the American College of Sports ' +
+  'Medicine: ' +
+  '<a href="https://www.acsm.org" target="_blank" rel="noopener">acsm.org</a>. ' +
+  'You register and test with ACSM \u2014 not inside this app. No fee is stated ' +
+  'here because it was not verified against ACSM.';
+
+const NSCA_WHERE =
+  'The real NSCA Certified Strength and Conditioning Specialist exam is taken ' +
+  'at a Pearson VUE testing centre. Start at the National Strength and ' +
+  'Conditioning Association: ' +
+  '<a href="https://www.nsca.com" target="_blank" rel="noopener">nsca.com</a>. ' +
+  'You register and test with NSCA \u2014 not inside this app. No fee is stated ' +
+  'here because it was not verified against NSCA.';
+
 const BLS_WHERE =
   'The AHA BLS Provider course is taken in person with an American Heart ' +
   'Association instructor, or as HeartCode BLS online plus an in-person skills ' +
@@ -1515,6 +1531,92 @@ const CERTS = [
       'real pass mark for the NASM Certified Nutrition Coach exam.',
     guideId: 'nasm-cnc',
     guideLabel: 'NASM Certified Nutrition Coach study guide',
+    where: NASM_WHERE,
+  },
+  {
+    id: 'acsm-ep',
+    capstone: 'med201',
+    name: 'ACSM Certified Exercise Physiologist',
+    blurb:
+      'The American College of Sports Medicine exercise physiologist ' +
+      'credential: the real exam is 140 items (125 scored) in 210 minutes, ' +
+      'and pass is a scaled score of 550 on a 200\u2013800 scale \u2014 NOT a ' +
+      'percentage. It requires a bachelor\u2019s degree in exercise science, ' +
+      'exercise physiology, or kinesiology plus current adult CPR/AED, and ' +
+      'from 15 August 2027 candidates must graduate from a CAAHEP-accredited ' +
+      'program. This app alone does not make anyone eligible.',
+    kind: 'single',
+    examKey: 'acsm-ep',
+    examLabel: 'ACSM Certified Exercise Physiologist practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by med113 (sports science). Practice exam: the ACSM ' +
+      'Certified Exercise Physiologist practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark only. The real ACSM-EP exam passes at a scaled score of ' +
+      '550 on a 200\u2013800 scale, not a percentage, and real eligibility ' +
+      'needs a bachelor\u2019s degree plus CPR/AED.',
+    guideId: 'acsm-ep',
+    guideLabel: 'ACSM Certified Exercise Physiologist study guide',
+    where: ACSM_WHERE,
+  },
+  {
+    id: 'nsca-cscs',
+    capstone: 'med201',
+    name: 'NSCA Certified Strength and Conditioning Specialist',
+    blurb:
+      'The National Strength and Conditioning Association strength and ' +
+      'conditioning credential: the real exam is 220 questions (190 scored) ' +
+      'in two sections \u2014 Scientific Foundations 95 questions in 1.5 hours ' +
+      'and Practical/Applied 125 questions in 2.5 hours \u2014 and pass is a ' +
+      'scaled score of 70 on EACH section (NOT a percentage). It requires a ' +
+      'bachelor\u2019s degree (any major) plus current CPR/AED, and from 1 ' +
+      'January 2030 US candidates need a bachelor\u2019s from a ' +
+      'CASCE-accredited program. This app alone does not make anyone eligible.',
+    kind: 'single',
+    examKey: 'nsca-cscs',
+    examLabel: 'NSCA Certified Strength and Conditioning Specialist practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by med113 (sports science). Practice exam: the NSCA ' +
+      'Certified Strength and Conditioning Specialist practice exam in this ' +
+      'course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark only. The real CSCS exam passes at a scaled score of 70 on ' +
+      'each section, not a percentage, and real eligibility needs a ' +
+      'bachelor\u2019s degree plus CPR/AED.',
+    guideId: 'nsca-cscs',
+    guideLabel: 'NSCA Certified Strength and Conditioning Specialist study guide',
+    where: NSCA_WHERE,
+  },
+  {
+    id: 'nasm-ces',
+    capstone: 'med201',
+    name: 'NASM Corrective Exercise Specialist',
+    blurb:
+      'The National Academy of Sports Medicine corrective exercise ' +
+      'specialization: the real exam is 100 multiple-choice questions in 90 ' +
+      'minutes, 70% to pass, online open-book, up to 3 attempts within 1 year ' +
+      'of purchase. There are no required prerequisites (a CPT, a degree, or ' +
+      'another accredited certification is recommended). It is a ' +
+      'specialization, NOT an NCCA-accredited certification, and does NOT ' +
+      'qualify anyone to diagnose or treat injuries.',
+    kind: 'single',
+    examKey: 'nasm-ces',
+    examLabel: 'NASM Corrective Exercise Specialist practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by med113 (sports science). Practice exam: the NASM ' +
+      'Corrective Exercise Specialist practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 the verified ' +
+      'real pass mark for the NASM Corrective Exercise Specialist exam.',
+    guideId: 'nasm-ces',
+    guideLabel: 'NASM Corrective Exercise Specialist study guide',
     where: NASM_WHERE,
   },
   {

@@ -4004,15 +4004,15 @@ module.exports = {
       },
       {
         "module": 9,
-        "q": "The term “tachycardia” means:",
+        "q": "The term “bradypnoea” means:",
         "choices": [
-          "A fast heart rate",
-          "A slow heart rate",
-          "No heart rate at all",
-          "Irregular breathing"
+          "Slow breathing",
+          "Fast breathing",
+          "No breathing at all",
+          "Painful breathing"
         ],
         "answer": 0,
-        "explanation": "Correct: (a). Tachy- means fast and -cardia means heart, so tachycardia is a fast heart rate. (b) is wrong: a slow heart rate is bradycardia. (c) is wrong: no heart rate is asystole. (d) is wrong: irregular breathing is not a heart-rate term at all."
+        "explanation": "Correct: (a). Brady- means slow and -pnoea means breathing, so bradypnoea is slow breathing. (b) is wrong: fast breathing is tachypnoea. (c) is wrong: no breathing is apnoea. (d) is wrong: painful breathing is not bradypnoea."
       },
       {
         "module": 9,
@@ -4229,6 +4229,3030 @@ module.exports = {
         ],
         "answer": 0,
         "explanation": "Correct: (a). The letter q means every, so q5min means every 5 minutes. (b) is wrong: 5 times a day would be written as five times daily. (c) is wrong: after 5 minutes only would be written as a single time, not q5min. (d) is wrong: q5min is a frequency, not a delay."
+      }
+    ]
+  },
+  "acsm-ep": {
+    "title": "ACSM Certified Exercise Physiologist Practice Exam",
+    "minutes": 180,
+    "passPercent": 70,
+    "coverage": "ACSM Certified Exercise Physiologist practice exam: 100 original questions in the real exam's style and format, spanning the four ACSM domains — health/fitness assessment (33%), exercise prescription and implementation (40%), exercise counselling and behaviour modification (20%), and risk management and professional responsibilities (7%). Practice benchmark only: the real ACSM-EP exam is 140 items (125 scored) in 210 minutes and passes at a SCALED score of 550 on a 200–800 scale — NOT a percentage. The 70% used here is a practice benchmark for this course, never the real pass mark. Real eligibility needs a bachelor's degree in exercise science, exercise physiology, or kinesiology plus current adult CPR/AED, and from 15 August 2027 a CAAHEP-accredited program.",
+    "questions": [
+      {
+        "module": 5,
+        "q": "What is the main purpose of the PAR-Q+ before a client starts exercising?",
+        "choices": [
+          "To measure the client's maximum strength",
+          "To screen for symptoms and conditions that need medical clearance before exercise",
+          "To diagnose heart disease",
+          "To set the client's weekly calorie target"
+        ],
+        "answer": 1,
+        "explanation": "Correct: To screen for symptoms and conditions that need medical clearance before exercise — The PAR-Q+ asks about symptoms and known conditions so a client who needs a doctor's clearance is spotted before training starts. To measure the client's maximum strength is wrong: A strength test measures force, not health risk, and comes only after screening. To set the client's weekly calorie target is wrong: A calorie target is a nutrition decision, not what a pre-exercise screen is for. To diagnose heart disease is wrong: A PAR-Q+ never diagnoses disease; it only flags who should see a clinician first."
+      },
+      {
+        "module": 5,
+        "q": "A client with no known cardiovascular, metabolic, or kidney disease, no symptoms, and one risk factor is classified as:",
+        "choices": [
+          "Very high risk",
+          "High risk",
+          "Moderate risk",
+          "Low risk"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Low risk — Low risk means asymptomatic with no known disease and at most one risk factor. Moderate risk is wrong: Moderate risk needs two or more risk factors. High risk is wrong: High risk needs known disease or symptoms. Very high risk is wrong: There is no separate very high risk category in this stratification."
+      },
+      {
+        "module": 5,
+        "q": "Which client is classified as HIGH risk and needs medical clearance before exercise?",
+        "choices": [
+          "A client with known heart disease",
+          "A client with one risk factor and no symptoms",
+          "A client with a family history of heart disease only",
+          "A healthy 25-year-old with no risk factors"
+        ],
+        "answer": 0,
+        "explanation": "Correct: A client with known heart disease — Known cardiovascular, metabolic, or kidney disease, or any sign or symptom of disease, makes a client high risk. A client with one risk factor and no symptoms is wrong: One risk factor with no symptoms and no known disease is low risk. A healthy 25-year-old with no risk factors is wrong: A healthy young adult with no risk factors is low risk. A client with a family history of heart disease only is wrong: Family history alone is one risk factor, not known disease."
+      },
+      {
+        "module": 5,
+        "q": "Which symptom should stop a fitness assessment and prompt a referral to a clinician?",
+        "choices": [
+          "A resting heart rate of 62 beats per minute",
+          "Chest pain at rest",
+          "Mild muscle soreness the day after a workout",
+          "Feeling thirsty during exercise"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Chest pain at rest — Chest pain at rest is a major sign of possible heart disease and always needs medical review before exercise continues. Mild muscle soreness the day after a workout is wrong: Mild soreness after a workout is normal delayed-onset muscle soreness. Feeling thirsty during exercise is wrong: Thirst during exercise is normal and is fixed by drinking. A resting heart rate of 62 beats per minute is wrong: A resting heart rate of 62 is within the normal range of 60 to 100."
+      },
+      {
+        "module": 5,
+        "q": "A resting blood pressure of 118/76 mmHg is classified as:",
+        "choices": [
+          "Elevated",
+          "Normal",
+          "Stage 2 hypertension",
+          "Stage 1 hypertension"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Normal — Normal is below 120 systolic and below 80 diastolic, which 118/76 meets. Elevated is wrong: Elevated is 120-129 systolic with diastolic below 80. Stage 1 hypertension is wrong: Stage 1 is 130-139 systolic or 80-89 diastolic. Stage 2 hypertension is wrong: Stage 2 is 140 or higher systolic or 90 or higher diastolic."
+      },
+      {
+        "module": 5,
+        "q": "A resting blood pressure of 135/85 mmHg is classified as:",
+        "choices": [
+          "Stage 2 hypertension",
+          "Elevated",
+          "Stage 1 hypertension",
+          "Normal"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Stage 1 hypertension — Stage 1 hypertension is 130-139 systolic or 80-89 diastolic, and 135/85 fits both. Normal is wrong: Normal is below 120 and below 80. Elevated is wrong: Elevated is 120-129 systolic with diastolic below 80. Stage 2 hypertension is wrong: Stage 2 needs 140 or higher systolic or 90 or higher diastolic."
+      },
+      {
+        "module": 5,
+        "q": "Which body-composition method is usually treated as the reference standard in research?",
+        "choices": [
+          "Bioelectrical impedance (BIA)",
+          "Body mass index (BMI)",
+          "Waist circumference",
+          "Dual-energy X-ray absorptiometry (DEXA)"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Dual-energy X-ray absorptiometry (DEXA) — DEXA measures fat, lean tissue, and bone directly and is the usual research reference. Bioelectrical impedance (BIA) is wrong: BIA estimates composition from electrical resistance and is affected by hydration. Body mass index (BMI) is wrong: BMI is a height-weight ratio, not a body-composition method. Waist circumference is wrong: Waist circumference estimates abdominal fat only, not whole-body composition."
+      },
+      {
+        "module": 5,
+        "q": "What is the main limitation of body mass index (BMI) as a fitness measure?",
+        "choices": [
+          "It requires a blood sample",
+          "It changes too quickly to track",
+          "It only works for children",
+          "It cannot tell muscle apart from fat"
+        ],
+        "answer": 3,
+        "explanation": "Correct: It cannot tell muscle apart from fat — A muscular person can have a high BMI from muscle, not fat, because BMI only uses height and weight. It changes too quickly to track is wrong: BMI is stable over days and is easy to track over time. It only works for children is wrong: BMI was designed for adults and is used in adults. It requires a blood sample is wrong: BMI needs only height and weight, no blood sample."
+      },
+      {
+        "module": 5,
+        "q": "Waist circumference above which value signals increased health risk in a man?",
+        "choices": [
+          "Above 80 cm (31 inches)",
+          "Above 120 cm (47 inches)",
+          "Above 102 cm (40 inches)",
+          "Above 94 cm (37 inches)"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Above 102 cm (40 inches) — Above 102 cm in men (above 88 cm in women) marks increased risk from abdominal fat. Above 80 cm (31 inches) is wrong: 80 cm is below the risk threshold for men. Above 94 cm (37 inches) is wrong: 94 cm is the lower action level in some guidelines, not the ACSM increased-risk cut point. Above 120 cm (47 inches) is wrong: 120 cm is far above the threshold and would already be high risk."
+      },
+      {
+        "module": 5,
+        "q": "Before a one-repetition maximum (1RM) strength test, which client must NOT be tested?",
+        "choices": [
+          "A client with well-controlled high blood pressure",
+          "A client who has lifted for two years",
+          "A client with unstable angina",
+          "A healthy adult with no symptoms"
+        ],
+        "answer": 2,
+        "explanation": "Correct: A client with unstable angina — Unstable angina is a contraindication to maximal testing because the effort can trigger a cardiac event. A healthy adult with no symptoms is wrong: A healthy asymptomatic adult can be tested after screening. A client who has lifted for two years is wrong: Training experience makes a 1RM test safer, not riskier. A client with well-controlled high blood pressure is wrong: Well-controlled blood pressure is not a contraindication to testing."
+      },
+      {
+        "module": 5,
+        "q": "What is the main purpose of a submaximal aerobic test such as the YMCA cycle test?",
+        "choices": [
+          "To measure maximum strength",
+          "To estimate VO2max without a maximal effort",
+          "To find the client's exact lactate threshold",
+          "To diagnose coronary artery disease"
+        ],
+        "answer": 1,
+        "explanation": "Correct: To estimate VO2max without a maximal effort — Submaximal tests predict VO2max from heart rate at known workloads, avoiding a maximal effort. To diagnose coronary artery disease is wrong: Diagnosis of heart disease needs a clinical graded exercise test with ECG, not a fitness test. To measure maximum strength is wrong: Strength is measured by 1RM or repetition tests, not by cycling. To find the client's exact lactate threshold is wrong: Lactate threshold needs blood lactate sampling, which submaximal fitness tests do not do."
+      },
+      {
+        "module": 5,
+        "q": "The Rockport 1-mile walk test estimates VO2max using which information?",
+        "choices": [
+          "Walk time, heart rate, age, weight, and sex",
+          "Blood lactate and resting blood pressure",
+          "Jump height and body weight only",
+          "Grip strength and flexibility"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Walk time, heart rate, age, weight, and sex — The Rockport equation combines 1-mile walk time, end heart rate, age, weight, and sex. Jump height and body weight only is wrong: Jump height measures power, not aerobic fitness. Blood lactate and resting blood pressure is wrong: Blood lactate is not measured in a walk test. Grip strength and flexibility is wrong: Grip strength and flexibility do not predict VO2max."
+      },
+      {
+        "module": 5,
+        "q": "In the YMCA cycle ergometer test, heart rate is used to:",
+        "choices": [
+          "Diagnose a heart rhythm problem",
+          "Predict VO2max from the heart-rate response to known workloads",
+          "Measure the client's leg strength",
+          "Set the client's daily calorie intake"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Predict VO2max from the heart-rate response to known workloads — As workload rises, heart rate rises in a predictable way, so the pattern predicts maximal oxygen uptake. Diagnose a heart rhythm problem is wrong: Diagnosing rhythm problems needs an ECG interpreted by a clinician. Measure the client's leg strength is wrong: Leg strength is measured by resistance tests, not by heart rate on a bike. Set the client's daily calorie intake is wrong: Calorie intake is a nutrition calculation, not a cycle-test result."
+      },
+      {
+        "module": 5,
+        "q": "The sit-and-reach test measures:",
+        "choices": [
+          "Aerobic fitness",
+          "Upper-body strength",
+          "Balance",
+          "Hamstring and low-back flexibility"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Hamstring and low-back flexibility — Sit-and-reach measures how far a person can reach forward while seated, which reflects hamstring and low-back flexibility. Aerobic fitness is wrong: Aerobic fitness is measured by walk, run, or cycle tests. Upper-body strength is wrong: Upper-body strength is measured by push-ups or bench press. Balance is wrong: Balance is measured by single-leg or reach tests, not sit-and-reach."
+      },
+      {
+        "module": 5,
+        "q": "A push-up test is used to measure:",
+        "choices": [
+          "Maximum leg strength",
+          "Flexibility of the shoulders",
+          "Muscular endurance of the upper body",
+          "Aerobic capacity"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Muscular endurance of the upper body — Counting how many push-ups a person can do before failing measures endurance, not one maximal effort. Maximum leg strength is wrong: Leg strength is measured by squats or leg press. Aerobic capacity is wrong: Aerobic capacity is measured by walk, run, or cycle tests. Flexibility of the shoulders is wrong: Flexibility is measured by reach tests, not by push-ups."
+      },
+      {
+        "module": 5,
+        "q": "A handgrip dynamometer measures:",
+        "choices": [
+          "Aerobic fitness",
+          "Body fat percentage",
+          "Shoulder flexibility",
+          "Grip strength"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Grip strength — Squeezing the dynamometer as hard as possible measures hand and forearm strength. Aerobic fitness is wrong: Aerobic fitness is measured by walk, run, or cycle tests. Shoulder flexibility is wrong: Flexibility is measured by reach tests. Body fat percentage is wrong: Body fat is measured by skinfolds, BIA, or DEXA."
+      },
+      {
+        "module": 5,
+        "q": "What is the main purpose of an overhead squat assessment?",
+        "choices": [
+          "To measure the client's 1RM squat",
+          "To test aerobic fitness",
+          "To measure body fat",
+          "To observe movement compensations such as knees caving in or arms falling forward"
+        ],
+        "answer": 3,
+        "explanation": "Correct: To observe movement compensations such as knees caving in or arms falling forward — Watching the overhead squat reveals compensations in the feet, knees, hips, and shoulders. To measure the client's 1RM squat is wrong: A 1RM test measures maximum strength with a loaded barbell. To test aerobic fitness is wrong: Aerobic fitness is measured by walk, run, or cycle tests. To measure body fat is wrong: Body fat is measured by skinfolds, BIA, or DEXA."
+      },
+      {
+        "module": 3,
+        "q": "A client's VO2max tells the exercise physiologist:",
+        "choices": [
+          "The amount of oxygen in the blood at rest",
+          "The maximum rate at which the body can take in, transport, and use oxygen during intense exercise",
+          "The number of calories burned in one minute",
+          "The heart rate at which breathing becomes laboured"
+        ],
+        "answer": 1,
+        "explanation": "Correct: The maximum rate at which the body can take in, transport, and use oxygen during intense exercise — VO2max is the highest rate at which the body can take in, transport, and use oxygen during maximal effort. The amount of oxygen in the blood at rest is wrong: Oxygen in the blood at rest is measured by pulse oximetry, not VO2max. The heart rate at which breathing becomes laboured is wrong: The heart rate where breathing becomes laboured relates to the ventilatory threshold. The number of calories burned in one minute is wrong: Calories burned per minute is energy expenditure, not oxygen uptake."
+      },
+      {
+        "module": 4,
+        "q": "Resting heart rate is measured most accurately when the client is:",
+        "choices": [
+          "Lying down, relaxed, after waking, before getting up",
+          "Immediately after a warm-up",
+          "Standing up straight after climbing stairs",
+          "Sitting after drinking coffee"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Lying down, relaxed, after waking, before getting up — A true resting rate is taken supine, relaxed, and on waking, before activity or stimulants raise it. Standing up straight after climbing stairs is wrong: Standing after stairs is an active, elevated heart rate. Sitting after drinking coffee is wrong: Coffee is a stimulant that raises heart rate. Immediately after a warm-up is wrong: A warm-up raises heart rate above resting."
+      },
+      {
+        "module": 4,
+        "q": "Heart-rate reserve (HRR) is calculated as:",
+        "choices": [
+          "Maximum heart rate minus resting heart rate",
+          "Resting heart rate minus maximum heart rate",
+          "Maximum heart rate plus resting heart rate",
+          "Resting heart rate divided by age"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Maximum heart rate minus resting heart rate — HRR is the range between resting and maximum heart rate, so it is HRmax minus HRrest. Resting heart rate minus maximum heart rate is wrong: Resting minus maximum would give a negative number. Maximum heart rate plus resting heart rate is wrong: Adding the two gives a meaningless total above the maximum. Resting heart rate divided by age is wrong: Dividing resting heart rate by age is not a recognised formula."
+      },
+      {
+        "module": 4,
+        "q": "Using the Karvonen method, a target heart rate of 60% HRR is found by:",
+        "choices": [
+          "Adding 60 beats to the resting heart rate",
+          "Taking 60% of the maximum heart rate only",
+          "Taking 60% of the resting heart rate",
+          "Adding 60% of heart-rate reserve to the resting heart rate"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Adding 60% of heart-rate reserve to the resting heart rate — Karvonen target equals (HRR x intensity) plus resting heart rate, which adjusts for fitness. Taking 60% of the maximum heart rate only is wrong: 60% of HRmax ignores resting heart rate and overestimates the target for fit people. Adding 60 beats to the resting heart rate is wrong: Adding a fixed 60 beats has no link to the person's heart-rate range. Taking 60% of the resting heart rate is wrong: 60% of resting heart rate would be below resting, which is impossible as a target."
+      },
+      {
+        "module": 4,
+        "q": "On the Borg 6-20 rating of perceived exertion scale, a rating of 13 means the exercise feels:",
+        "choices": [
+          "Maximal",
+          "Very, very light",
+          "Somewhat hard",
+          "Very light"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Somewhat hard — 13 on the Borg scale is anchored to somewhat hard, around moderate-to-vigorous effort. Very, very light is wrong: Very, very light is 7 on the scale. Maximal is wrong: Maximal is 19 or 20. Very light is wrong: Very light is 9 or 10."
+      },
+      {
+        "module": 4,
+        "q": "The talk test is used during exercise to estimate:",
+        "choices": [
+          "Whether the client is near the ventilatory threshold",
+          "The client's maximum heart rate",
+          "The client's exact VO2max",
+          "The client's blood lactate level"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Whether the client is near the ventilatory threshold — Being able to speak in short sentences but not comfortably hold a conversation marks roughly the ventilatory threshold. The client's exact VO2max is wrong: VO2max needs a maximal or submaximal test with measured oxygen use. The client's blood lactate level is wrong: Blood lactate needs a blood sample. The client's maximum heart rate is wrong: Maximum heart rate is estimated from age or measured in a maximal test."
+      },
+      {
+        "module": 5,
+        "q": "What is the correct order for pre-exercise screening?",
+        "choices": [
+          "Risk stratification first, then health history, then the PAR-Q+",
+          "Referral first, then the PAR-Q+, then the health history",
+          "1RM testing, then health history, then risk stratification",
+          "Health history, then PAR-Q+, then risk stratification, then referral if needed"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Health history, then PAR-Q+, then risk stratification, then referral if needed — Screening starts with history and the PAR-Q+, stratifies risk from what was found, and refers only if the findings require it. 1RM testing, then health history, then risk stratification is wrong: Maximal testing before screening is unsafe. Risk stratification first, then health history, then the PAR-Q+ is wrong: Risk cannot be stratified before the history is taken. Referral first, then the PAR-Q+, then the health history is wrong: Referral is the outcome of screening, not the first step."
+      },
+      {
+        "module": 5,
+        "q": "The main purpose of informed consent before fitness testing is to:",
+        "choices": [
+          "Make sure the client understands the risks, benefits, and procedures and agrees freely",
+          "Guarantee the client will pass the test",
+          "Diagnose any hidden disease",
+          "Remove all risk from the test"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Make sure the client understands the risks, benefits, and procedures and agrees freely — Informed consent means the client knows what the test involves, its risks and benefits, and chooses to take part. Guarantee the client will pass the test is wrong: Consent cannot guarantee a result. Remove all risk from the test is wrong: No form removes risk; it only documents understanding. Diagnose any hidden disease is wrong: Consent is not a diagnostic tool."
+      },
+      {
+        "module": 11,
+        "q": "When assessing an older adult before exercise, which test is most important to include?",
+        "choices": [
+          "A balance and fall-risk assessment",
+          "A 1RM deadlift test",
+          "A maximal sprint test",
+          "A Wingate anaerobic test"
+        ],
+        "answer": 0,
+        "explanation": "Correct: A balance and fall-risk assessment — Falls are the main exercise-related risk for older adults, so balance and gait must be assessed before training. A maximal sprint test is wrong: A maximal sprint is unsafe and unnecessary for a general older adult. A 1RM deadlift test is wrong: A maximal deadlift is a high-risk test for a deconditioned older adult. A Wingate anaerobic test is wrong: A Wingate test is a maximal anaerobic test used for athletes, not older adults."
+      },
+      {
+        "module": 11,
+        "q": "Before exercise, a client with type 2 diabetes should be asked about:",
+        "choices": [
+          "Their 1RM bench press",
+          "Blood glucose control, medication, and any foot problems",
+          "Only their favourite foods",
+          "Their sprint time"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Blood glucose control, medication, and any foot problems — Glucose control, medication (especially insulin), and foot ulcers or numbness all change how exercise is prescribed and monitored. Only their favourite foods is wrong: Favourite foods do not affect exercise safety. Their 1RM bench press is wrong: A bench press result says nothing about diabetes risk during exercise. Their sprint time is wrong: Sprint time is a performance measure, not a diabetes safety check."
+      },
+      {
+        "module": 5,
+        "q": "Which condition is a contraindication to exercise testing?",
+        "choices": [
+          "Well-controlled asthma",
+          "Mild osteoarthritis",
+          "Unstable angina",
+          "A healed ankle sprain"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Unstable angina — Unstable angina means chest pain at rest or worsening pain, and testing could trigger a cardiac event. Well-controlled asthma is wrong: Well-controlled asthma is managed with an inhaler and does not bar testing. Mild osteoarthritis is wrong: Mild osteoarthritis may limit some movements but does not bar testing. A healed ankle sprain is wrong: A healed sprain is not a contraindication once cleared."
+      },
+      {
+        "module": 4,
+        "q": "A normal resting heart rate for an adult is:",
+        "choices": [
+          "120 to 140 beats per minute",
+          "60 to 100 beats per minute",
+          "30 to 50 beats per minute",
+          "150 to 170 beats per minute"
+        ],
+        "answer": 1,
+        "explanation": "Correct: 60 to 100 beats per minute — The normal adult resting range is 60 to 100 beats per minute. 30 to 50 beats per minute is wrong: 30 to 50 is abnormally slow for most adults and needs checking. 120 to 140 beats per minute is wrong: 120 to 140 at rest is abnormally fast. 150 to 170 beats per minute is wrong: 150 to 170 at rest is a medical emergency, not a normal rate."
+      },
+      {
+        "module": 5,
+        "q": "Orthostatic hypotension is:",
+        "choices": [
+          "A drop in blood pressure when standing up",
+          "High blood pressure during exercise",
+          "Low blood sugar after exercise",
+          "A fast heart rate at rest"
+        ],
+        "answer": 0,
+        "explanation": "Correct: A drop in blood pressure when standing up — Orthostatic hypotension is a fall in blood pressure on standing, which can cause dizziness or fainting. High blood pressure during exercise is wrong: High blood pressure during exercise is a different response. A fast heart rate at rest is wrong: A fast resting heart rate is tachycardia, not a blood-pressure drop. Low blood sugar after exercise is wrong: Low blood sugar is hypoglycaemia, not a blood-pressure change."
+      },
+      {
+        "module": 5,
+        "q": "A graded exercise test (GXT) is mainly used to measure:",
+        "choices": [
+          "Flexibility of the hamstrings",
+          "The heart, blood pressure, and ECG response to increasing workload",
+          "Body fat percentage",
+          "Maximum grip strength"
+        ],
+        "answer": 1,
+        "explanation": "Correct: The heart, blood pressure, and ECG response to increasing workload — A GXT raises workload in stages while watching heart rate, blood pressure, ECG, and symptoms. Maximum grip strength is wrong: Grip strength is measured with a dynamometer. Body fat percentage is wrong: Body fat is measured by skinfolds, BIA, or DEXA. Flexibility of the hamstrings is wrong: Flexibility is measured by reach tests."
+      },
+      {
+        "module": 5,
+        "q": "Which finding is a reason to STOP a graded exercise test immediately?",
+        "choices": [
+          "Sweating",
+          "Chest pain",
+          "Mild leg fatigue",
+          "A heart rate that rises steadily with workload"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Chest pain — Chest pain during a test is a major warning sign and the test must stop at once. Mild leg fatigue is wrong: Mild leg fatigue is expected as workload rises. Sweating is wrong: Sweating is a normal response to exercise. A heart rate that rises steadily with workload is wrong: Heart rate should rise steadily with workload; that is the expected response."
+      },
+      {
+        "module": 5,
+        "q": "A field test differs from a laboratory test mainly because it is:",
+        "choices": [
+          "Always more accurate than a laboratory test",
+          "Only usable for elite athletes",
+          "Less precise but cheaper and easier to run with groups",
+          "A blood test"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Less precise but cheaper and easier to run with groups — Field tests trade some precision for low cost and practicality, which is why they are used with groups and clients. Always more accurate than a laboratory test is wrong: Laboratory tests are more accurate because they control conditions and measure directly. Only usable for elite athletes is wrong: Field tests are designed for general clients, not only elite athletes. A blood test is wrong: Field tests use performance (time, distance, reps), not blood samples."
+      },
+      {
+        "module": 6,
+        "q": "When a coach writes a FITT-VP prescription, the six parts are:",
+        "choices": [
+          "Flexibility, Interval, Tempo, Training, Velocity, and Power",
+          "Frequency, Injury, Time, Type, Velocity, and Performance",
+          "Fitness, Injury, Testing, Treatment, Volume, and Practice",
+          "Frequency, Intensity, Time, Type, Volume, and Progression"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Frequency, Intensity, Time, Type, Volume, and Progression — FITT-VP is Frequency, Intensity, Time, Type, Volume, and Progression — the six parts of an exercise prescription. Flexibility, Interval, Tempo, Training, Velocity, and Power is wrong: The other options mix real words with terms that are not part of the principle. Fitness, Injury, Testing, Treatment, Volume, and Practice is wrong: Injury and treatment are not components of FITT-VP. Frequency, Injury, Time, Type, Velocity, and Performance is wrong: Performance is an outcome of training, not a FITT-VP component."
+      },
+      {
+        "module": 6,
+        "q": "For cardiorespiratory fitness, ACSM recommends adults accumulate:",
+        "choices": [
+          "150 minutes of moderate aerobic activity per week",
+          "300 minutes of vigorous activity every day",
+          "30 minutes of vigorous activity per month",
+          "10 minutes of aerobic activity per week"
+        ],
+        "answer": 0,
+        "explanation": "Correct: 150 minutes of moderate aerobic activity per week — The ACSM guideline is 150 minutes of moderate, or 75 minutes of vigorous, aerobic activity per week. 30 minutes of vigorous activity per month is wrong: 30 minutes a month is far below the guideline. 10 minutes of aerobic activity per week is wrong: 10 minutes a week is far below the guideline. 300 minutes of vigorous activity every day is wrong: 300 minutes of vigorous activity daily is excessive and unsafe."
+      },
+      {
+        "module": 6,
+        "q": "Moderate-intensity aerobic exercise is defined as:",
+        "choices": [
+          "40% to 59% of heart-rate reserve",
+          "0% of heart-rate reserve",
+          "90% to 100% of heart-rate reserve",
+          "10% to 20% of heart-rate reserve"
+        ],
+        "answer": 0,
+        "explanation": "Correct: 40% to 59% of heart-rate reserve — Moderate intensity is 40-59% of HRR (or 64-76% of HRmax). 90% to 100% of heart-rate reserve is wrong: 90-100% of HRR is near-maximal, not moderate. 10% to 20% of heart-rate reserve is wrong: 10-20% of HRR is very light activity. 0% of heart-rate reserve is wrong: 0% of HRR is rest."
+      },
+      {
+        "module": 6,
+        "q": "Vigorous-intensity aerobic exercise is defined as:",
+        "choices": [
+          "5% to 10% of heart-rate reserve",
+          "40% to 59% of heart-rate reserve",
+          "20% to 39% of heart-rate reserve",
+          "60% to 89% of heart-rate reserve"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 60% to 89% of heart-rate reserve — Vigorous intensity is 60-89% of HRR. 20% to 39% of heart-rate reserve is wrong: 20-39% of HRR is light intensity. 40% to 59% of heart-rate reserve is wrong: 40-59% of HRR is moderate intensity. 5% to 10% of heart-rate reserve is wrong: 5-10% of HRR is barely above rest."
+      },
+      {
+        "module": 6,
+        "q": "The ACSM weekly target can also be met with:",
+        "choices": [
+          "15 minutes of moderate activity per week",
+          "75 minutes of vigorous aerobic activity per week",
+          "75 minutes of light stretching per week",
+          "No aerobic activity at all"
+        ],
+        "answer": 1,
+        "explanation": "Correct: 75 minutes of vigorous aerobic activity per week — 75 minutes of vigorous activity is the recognised equivalent of 150 minutes of moderate activity. 75 minutes of light stretching per week is wrong: Light stretching does not count as aerobic activity. 15 minutes of moderate activity per week is wrong: 15 minutes a week is far below the target. No aerobic activity at all is wrong: No aerobic activity cannot meet an aerobic target."
+      },
+      {
+        "module": 6,
+        "q": "When progressing a beginner's aerobic program, what should usually increase FIRST?",
+        "choices": [
+          "Load to near-maximal",
+          "Duration",
+          "Frequency to daily maximal sessions",
+          "Intensity"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Duration — Beginners should add minutes first, because extra duration is safer than extra intensity. Intensity is wrong: Raising intensity first increases injury and dropout risk in beginners. Frequency to daily maximal sessions is wrong: Daily maximal sessions are too much for a beginner. Load to near-maximal is wrong: Near-maximal loads belong to advanced training, not a beginner program."
+      },
+      {
+        "module": 6,
+        "q": "The overload principle states that to improve fitness, the body must be:",
+        "choices": [
+          "Worked at exactly the same level every session",
+          "Worked less than it is used to",
+          "Worked harder than it is used to",
+          "Rested completely for a month"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Worked harder than it is used to — Overload means the training stress must exceed the current level so the body adapts. Worked less than it is used to is wrong: Working less than usual causes detraining, not improvement. Worked at exactly the same level every session is wrong: The same level every session maintains fitness but does not improve it. Rested completely for a month is wrong: A month of complete rest causes loss of fitness."
+      },
+      {
+        "module": 6,
+        "q": "The principle of specificity means:",
+        "choices": [
+          "Any exercise improves every fitness quality equally",
+          "Flexibility training builds muscle best",
+          "Training gains are specific to the type of exercise performed",
+          "Strength training improves aerobic fitness most"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Training gains are specific to the type of exercise performed — Specificity means the body adapts to the exact demand placed on it — running improves running, not swimming. Any exercise improves every fitness quality equally is wrong: Different exercises improve different qualities. Strength training improves aerobic fitness most is wrong: Strength training mainly improves strength, not aerobic fitness. Flexibility training builds muscle best is wrong: Flexibility training improves range of motion, not muscle size."
+      },
+      {
+        "module": 6,
+        "q": "Reversibility (detraining) means:",
+        "choices": [
+          "Aerobic fitness improves during complete rest",
+          "Fitness gains are lost when training stops",
+          "Fitness gains last forever once earned",
+          "Strength never declines with age"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Fitness gains are lost when training stops — Use it or lose it: stopping training reverses the adaptations over weeks. Fitness gains last forever once earned is wrong: Fitness gains fade without training, they do not last forever. Strength never declines with age is wrong: Strength declines with age without training. Aerobic fitness improves during complete rest is wrong: Complete rest reduces aerobic fitness, it does not improve it."
+      },
+      {
+        "module": 6,
+        "q": "A macrocycle in periodisation is:",
+        "choices": [
+          "A single week of training",
+          "A single workout",
+          "The longest training block, lasting months to a year",
+          "A single set of an exercise"
+        ],
+        "answer": 2,
+        "explanation": "Correct: The longest training block, lasting months to a year — A macrocycle is the big picture — months to a year, often a season or a year. A single workout is wrong: A single workout is one session. A single week of training is wrong: A single week is a microcycle. A single set of an exercise is wrong: A single set is part of one exercise."
+      },
+      {
+        "module": 6,
+        "q": "A mesocycle in periodisation is:",
+        "choices": [
+          "A single day of training",
+          "A training block of about 2 to 6 weeks",
+          "The whole year of training",
+          "A single repetition"
+        ],
+        "answer": 1,
+        "explanation": "Correct: A training block of about 2 to 6 weeks — A mesocycle is a block of 2-6 weeks aimed at one goal, such as hypertrophy or strength. A single day of training is wrong: A single day is one session, not a mesocycle. The whole year of training is wrong: The whole year is the macrocycle. A single repetition is wrong: A single repetition is one rep."
+      },
+      {
+        "module": 6,
+        "q": "A microcycle in periodisation is usually:",
+        "choices": [
+          "The entire competitive season",
+          "A single muscle contraction",
+          "About one week of training",
+          "About six months of training"
+        ],
+        "answer": 2,
+        "explanation": "Correct: About one week of training — A microcycle is usually one week, the smallest block in the plan. About six months of training is wrong: Six months is a mesocycle or longer block. A single muscle contraction is wrong: A muscle contraction is one rep. The entire competitive season is wrong: The whole season is the macrocycle."
+      },
+      {
+        "module": 6,
+        "q": "Which is a SMART goal?",
+        "choices": [
+          "Get fitter someday",
+          "Be healthier",
+          "Exercise more",
+          "Walk briskly for 30 minutes, five days a week, for the next four weeks"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Walk briskly for 30 minutes, five days a week, for the next four weeks — It is Specific, Measurable, Achievable, Relevant, and Time-bound. Get fitter someday is wrong: Get fitter someday has no measure or deadline. Exercise more is wrong: Exercise more is vague and unmeasurable. Be healthier is wrong: Be healthier is not specific or time-bound."
+      },
+      {
+        "module": 6,
+        "q": "For general health, ACSM recommends resistance training:",
+        "choices": [
+          "Every day at maximum load",
+          "Only on weekends at high intensity",
+          "Once a month",
+          "2 to 3 days per week, with at least 48 hours between sessions for the same muscles"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 2 to 3 days per week, with at least 48 hours between sessions for the same muscles — Two to three sessions a week with recovery between them builds strength without overtraining. Every day at maximum load is wrong: Daily maximal lifting does not allow recovery. Once a month is wrong: Once a month is too little to build strength. Only on weekends at high intensity is wrong: Weekend-only high-intensity sessions risk injury."
+      },
+      {
+        "module": 7,
+        "q": "For a novice adult aiming to build strength, ACSM recommends loads of about:",
+        "choices": [
+          "20% of 1RM, for 50 repetitions",
+          "60% to 70% of 1RM, for 8 to 12 repetitions",
+          "10% of 1RM, for 3 repetitions",
+          "100% of 1RM, for 1 repetition, every day"
+        ],
+        "answer": 1,
+        "explanation": "Correct: 60% to 70% of 1RM, for 8 to 12 repetitions — Novices build strength well at 60-70% of 1RM for 8-12 reps. 20% of 1RM, for 50 repetitions is wrong: 20% for 50 reps trains endurance, not strength. 100% of 1RM, for 1 repetition, every day is wrong: 100% daily is a maximal load that risks injury and overtraining. 10% of 1RM, for 3 repetitions is wrong: 10% for 3 reps is far too light to stimulate strength."
+      },
+      {
+        "module": 7,
+        "q": "For muscular strength, rest between sets should usually be:",
+        "choices": [
+          "No rest at all",
+          "5 seconds",
+          "30 minutes",
+          "2 to 3 minutes"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 2 to 3 minutes — Strength work needs 2-3 minutes so the muscles recover enough to lift heavy again. 5 seconds is wrong: 5 seconds is not enough recovery for heavy sets. 30 minutes is wrong: 30 minutes is far longer than needed and wastes the session. No rest at all is wrong: No rest prevents the client from lifting with good form."
+      },
+      {
+        "module": 7,
+        "q": "For muscular endurance, rest between sets should usually be:",
+        "choices": [
+          "5 to 10 minutes",
+          "30 to 60 seconds",
+          "2 to 3 minutes",
+          "20 minutes"
+        ],
+        "answer": 1,
+        "explanation": "Correct: 30 to 60 seconds — Short rests of 30-60 seconds keep the muscles fatigued, which is the point of endurance training. 5 to 10 minutes is wrong: 5-10 minutes is a strength rest, not an endurance rest. 2 to 3 minutes is wrong: 2-3 minutes is the strength range. 20 minutes is wrong: 20 minutes is far too long for any training goal."
+      },
+      {
+        "module": 7,
+        "q": "A novice should usually perform how many sets per exercise?",
+        "choices": [
+          "No sets at all",
+          "1 to 3 sets",
+          "10 to 12 sets",
+          "20 sets"
+        ],
+        "answer": 1,
+        "explanation": "Correct: 1 to 3 sets — One to three sets is enough stimulus for a novice without excessive fatigue. 10 to 12 sets is wrong: 10-12 sets is an advanced volume that would exhaust a novice. 20 sets is wrong: 20 sets is far beyond any sensible novice program. No sets at all is wrong: No sets means no training at all."
+      },
+      {
+        "module": 4,
+        "q": "A good warm-up should last about:",
+        "choices": [
+          "30 seconds",
+          "2 hours",
+          "5 to 10 minutes",
+          "45 minutes"
+        ],
+        "answer": 2,
+        "explanation": "Correct: 5 to 10 minutes — 5-10 minutes of light activity raises temperature and prepares the body without tiring it. 45 minutes is wrong: 45 minutes is a workout, not a warm-up. 30 seconds is wrong: 30 seconds is too short to raise muscle temperature. 2 hours is wrong: 2 hours would exhaust the client before training starts."
+      },
+      {
+        "module": 4,
+        "q": "The main purpose of a cool-down after exercise is to:",
+        "choices": [
+          "Let heart rate and blood pressure return gradually to resting levels",
+          "Stop the heart as quickly as possible",
+          "Build maximum strength",
+          "Replace the warm-up"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Let heart rate and blood pressure return gradually to resting levels — A gradual cool-down lets the circulation adjust and reduces dizziness from blood pooling in the legs. Stop the heart as quickly as possible is wrong: The heart should slow gradually, not stop quickly. Build maximum strength is wrong: Strength is built by resistance training, not by cooling down. Replace the warm-up is wrong: A cool-down follows the workout; it does not replace the warm-up."
+      },
+      {
+        "module": 8,
+        "q": "A pre-exercise meal is best eaten:",
+        "choices": [
+          "5 minutes before exercise, mainly fat",
+          "12 hours before exercise, with no food at all",
+          "1 to 4 hours before exercise, mainly carbohydrate with some protein",
+          "Immediately before a sprint, as a large meal"
+        ],
+        "answer": 2,
+        "explanation": "Correct: 1 to 4 hours before exercise, mainly carbohydrate with some protein — Eating 1-4 hours before gives time to digest and tops up glycogen. 5 minutes before exercise, mainly fat is wrong: Fat eaten 5 minutes before exercise is slow to digest and can cause discomfort. 12 hours before exercise, with no food at all is wrong: 12 hours before is too long; glycogen would be low. Immediately before a sprint, as a large meal is wrong: A large meal right before a sprint causes stomach discomfort."
+      },
+      {
+        "module": 8,
+        "q": "Carbohydrate during exercise becomes important when exercise lasts longer than:",
+        "choices": [
+          "10 seconds",
+          "5 minutes",
+          "24 hours",
+          "60 to 90 minutes"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 60 to 90 minutes — Glycogen runs low after about 60-90 minutes, so carbohydrate intake then helps maintain performance. 5 minutes is wrong: 5 minutes of exercise uses mainly stored ATP and phosphocreatine. 10 seconds is wrong: 10 seconds uses the ATP-PC system, not carbohydrate feeding. 24 hours is wrong: 24 hours is far beyond a normal session."
+      },
+      {
+        "module": 8,
+        "q": "After a hard training session, a useful protein intake is about:",
+        "choices": [
+          "5 grams once a week",
+          "0 grams",
+          "200 grams in one meal",
+          "20 to 40 grams within a couple of hours"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 20 to 40 grams within a couple of hours — 20-40 g of protein after training provides the amino acids needed for muscle repair. 0 grams is wrong: 0 g gives the muscles nothing to rebuild with. 200 grams in one meal is wrong: 200 g in one meal is far more than the body can use at once. 5 grams once a week is wrong: 5 g once a week is far too little and too infrequent."
+      },
+      {
+        "module": 8,
+        "q": "To start exercise well hydrated, ACSM advises drinking about:",
+        "choices": [
+          "1 litre of fluid in the last 30 seconds before exercise",
+          "No fluid at all on the day of exercise",
+          "5 to 7 mL of fluid per kilogram of body weight, about 4 hours before exercise",
+          "10 litres of fluid the night before"
+        ],
+        "answer": 2,
+        "explanation": "Correct: 5 to 7 mL of fluid per kilogram of body weight, about 4 hours before exercise — 5-7 mL/kg about 4 hours before exercise allows time to hydrate and empty the bladder. 1 litre of fluid in the last 30 seconds before exercise is wrong: A litre in 30 seconds would cause stomach discomfort. No fluid at all on the day of exercise is wrong: No fluid leads to dehydration. 10 litres of fluid the night before is wrong: 10 litres is excessive and dangerous."
+      },
+      {
+        "module": 8,
+        "q": "During prolonged sweaty exercise, why is sodium useful?",
+        "choices": [
+          "It removes the need to drink",
+          "It makes the blood thicker",
+          "It stops the muscles from using carbohydrate",
+          "It replaces the salt lost in sweat and helps the body hold on to fluid"
+        ],
+        "answer": 3,
+        "explanation": "Correct: It replaces the salt lost in sweat and helps the body hold on to fluid — Sodium lost in sweat must be replaced so fluid is retained and blood volume stays up. It makes the blood thicker is wrong: Sodium does not make blood thicker at normal intakes. It stops the muscles from using carbohydrate is wrong: Sodium does not stop carbohydrate use. It removes the need to drink is wrong: Sodium never replaces the need to drink fluid."
+      },
+      {
+        "module": 11,
+        "q": "For a client with type 2 diabetes, the general exercise recommendation is:",
+        "choices": [
+          "Only one session per month",
+          "Sprinting to exhaustion every day",
+          "No exercise at all",
+          "At least 150 minutes of aerobic exercise per week plus resistance training"
+        ],
+        "answer": 3,
+        "explanation": "Correct: At least 150 minutes of aerobic exercise per week plus resistance training — 150 minutes of aerobic work plus resistance training improves blood glucose control and insulin sensitivity. No exercise at all is wrong: No exercise worsens diabetes control. Only one session per month is wrong: One session a month is far too little. Sprinting to exhaustion every day is wrong: Daily exhaustive sprinting is unsafe and unsustainable."
+      },
+      {
+        "module": 11,
+        "q": "Regular aerobic exercise lowers blood pressure in people with hypertension by about:",
+        "choices": [
+          "0 mmHg — exercise has no effect on blood pressure",
+          "50 mmHg systolic",
+          "5 to 7 mmHg systolic",
+          "100 mmHg systolic"
+        ],
+        "answer": 2,
+        "explanation": "Correct: 5 to 7 mmHg systolic — Aerobic training typically lowers systolic pressure by about 5-7 mmHg, a real and useful effect. 50 mmHg systolic is wrong: A 50 mmHg drop from exercise alone is unrealistic. 0 mmHg — exercise has no effect on blood pressure is wrong: Exercise does lower blood pressure; it is not zero effect. 100 mmHg systolic is wrong: A 100 mmHg drop would be dangerous, not a training effect."
+      },
+      {
+        "module": 11,
+        "q": "For an older adult, a good exercise program includes:",
+        "choices": [
+          "Sprinting only",
+          "Aerobic, strength, balance, and flexibility work",
+          "Heavy maximal lifting only",
+          "No exercise at all"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Aerobic, strength, balance, and flexibility work — Older adults need all four: aerobic fitness, strength, balance to prevent falls, and flexibility. Sprinting only is wrong: Sprinting alone ignores strength and balance. Heavy maximal lifting only is wrong: Heavy maximal lifting alone is risky and incomplete. No exercise at all is wrong: No exercise speeds up decline."
+      },
+      {
+        "module": 11,
+        "q": "In pregnancy, the general guidance for a healthy woman is:",
+        "choices": [
+          "No exercise of any kind",
+          "Exercising in extreme heat",
+          "About 150 minutes of moderate aerobic activity per week, avoiding contact sports and lying flat after the first trimester",
+          "Maximal lifting and contact sports"
+        ],
+        "answer": 2,
+        "explanation": "Correct: About 150 minutes of moderate aerobic activity per week, avoiding contact sports and lying flat after the first trimester — 150 minutes of moderate activity is recommended, with contact sports avoided and supine exercise avoided after the first trimester. No exercise of any kind is wrong: Healthy pregnant women are encouraged to exercise, not to avoid it. Maximal lifting and contact sports is wrong: Maximal lifting and contact sports risk injury to mother and baby. Exercising in extreme heat is wrong: Extreme heat is dangerous in pregnancy."
+      },
+      {
+        "module": 11,
+        "q": "Children and adolescents should accumulate how much moderate-to-vigorous activity daily?",
+        "choices": [
+          "10 minutes once a week",
+          "0 minutes",
+          "5 minutes",
+          "60 minutes or more"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 60 minutes or more — The guideline is 60 minutes or more of moderate-to-vigorous activity every day for youth. 5 minutes is wrong: 5 minutes is far below the guideline. 10 minutes once a week is wrong: 10 minutes once a week is far below the guideline. 0 minutes is wrong: 0 minutes is no activity at all."
+      },
+      {
+        "module": 7,
+        "q": "When landing from a jump, the safest technique is to:",
+        "choices": [
+          "Land on one foot with a locked knee",
+          "Land softly with knees tracking over the toes and hips and knees bending to absorb force",
+          "Land stiff-legged on the heels",
+          "Land with the knees collapsing inward"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Land softly with knees tracking over the toes and hips and knees bending to absorb force — A soft landing with knees over toes and bent hips and knees spreads the force safely. Land stiff-legged on the heels is wrong: Stiff-legged landings send shock straight into the joints. Land with the knees collapsing inward is wrong: Knees collapsing inward (valgus) raises injury risk. Land on one foot with a locked knee is wrong: Landing on one locked knee concentrates force dangerously."
+      },
+      {
+        "module": 7,
+        "q": "For speed training, rest between sprints should be:",
+        "choices": [
+          "Long enough for near-full recovery",
+          "Only 5 seconds",
+          "Skipped entirely",
+          "As short as possible"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Long enough for near-full recovery — Speed work needs near-full recovery so each sprint is at maximum quality. As short as possible is wrong: Very short rests turn speed work into endurance work. Skipped entirely is wrong: Skipping rest means later sprints are slow and technique breaks down. Only 5 seconds is wrong: 5 seconds is far too short to recover from a sprint."
+      },
+      {
+        "module": 7,
+        "q": "When a program lists a tempo of 3-1-1 for a squat, what does the tempo describe?",
+        "choices": [
+          "The temperature of the room",
+          "The number of exercises in a session",
+          "The music played in the gym",
+          "The speed of each part of the repetition"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The speed of each part of the repetition — Tempo describes how fast the lowering, pause, and lifting parts of a rep are done. The music played in the gym is wrong: Music is background, not a training variable. The temperature of the room is wrong: Room temperature does not define tempo. The number of exercises in a session is wrong: The number of exercises is exercise selection, not tempo."
+      },
+      {
+        "module": 6,
+        "q": "For flexibility, static stretches should usually be held for:",
+        "choices": [
+          "No time at all — stretching is never useful",
+          "5 minutes, once",
+          "1 second, once",
+          "15 to 30 seconds, for 2 to 4 repetitions per muscle"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 15 to 30 seconds, for 2 to 4 repetitions per muscle — 15-30 second holds for 2-4 reps is the standard dose for improving flexibility. 1 second, once is wrong: 1 second is too short to stretch the muscle. 5 minutes, once is wrong: 5 minutes is excessive and can reduce performance if done before training. No time at all — stretching is never useful is wrong: Stretching is useful, especially after exercise."
+      },
+      {
+        "module": 6,
+        "q": "Neuromotor training, such as balance and agility work, is especially recommended for:",
+        "choices": [
+          "Older adults",
+          "Children under 5 only",
+          "Only elite sprinters",
+          "People who never exercise"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Older adults — Balance and agility training reduces falls in older adults, so it is a core part of their program. Only elite sprinters is wrong: Elite sprinters benefit too, but older adults are the main group it is recommended for. People who never exercise is wrong: People who never exercise need basic aerobic and strength work first. Children under 5 only is wrong: Children under 5 are not the target group for structured neuromotor training."
+      },
+      {
+        "module": 3,
+        "q": "High-intensity interval training (HIIT) alternates:",
+        "choices": [
+          "Sleep with exercise",
+          "Rest only, with no effort",
+          "Long slow efforts only, with no rest",
+          "Short hard efforts with rest or easy recovery"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Short hard efforts with rest or easy recovery — HIIT is work intervals at high intensity separated by recovery, which builds fitness in less time. Long slow efforts only, with no rest is wrong: Long slow efforts with no rest is continuous training. Rest only, with no effort is wrong: Rest only is not training. Sleep with exercise is wrong: Sleep is recovery, not an interval."
+      },
+      {
+        "module": 3,
+        "q": "A 400-metre sprint relies mainly on which energy system?",
+        "choices": [
+          "The ATP-PC system alone",
+          "Fat oxidation alone",
+          "The oxidative system",
+          "The glycolytic system"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The glycolytic system — A 400 m sprint lasts about 45-60 seconds, which is the glycolytic system's main range. The oxidative system is wrong: The oxidative system dominates efforts lasting several minutes or more. The ATP-PC system alone is wrong: ATP-PC lasts only about 10 seconds. Fat oxidation alone is wrong: Fat oxidation is too slow for a sprint."
+      },
+      {
+        "module": 4,
+        "q": "With regular aerobic training, stroke volume at a given workload:",
+        "choices": [
+          "Falls to zero",
+          "Decreases, so the heart pumps less per beat",
+          "Increases, so the heart pumps more blood per beat",
+          "Stays exactly the same forever"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Increases, so the heart pumps more blood per beat — Training strengthens the heart, so stroke volume rises and heart rate can be lower for the same work. Decreases, so the heart pumps less per beat is wrong: Stroke volume does not decrease with training. Stays exactly the same forever is wrong: Stroke volume changes with training; it does not stay fixed. Falls to zero is wrong: Stroke volume never falls to zero in a living person."
+      },
+      {
+        "module": 4,
+        "q": "VO2max typically improves by about how much with a structured aerobic program?",
+        "choices": [
+          "1000%",
+          "15% to 20%",
+          "0%",
+          "200%"
+        ],
+        "answer": 1,
+        "explanation": "Correct: 15% to 20% — A typical gain is 15-20%, with larger gains in very unfit people. 200% is wrong: A 200% gain would mean tripling VO2max, which does not happen. 0% is wrong: VO2max does improve with training; it is not zero. 1000% is wrong: A 1000% gain is impossible."
+      },
+      {
+        "module": 6,
+        "q": "A safe rate of progression for training load is about:",
+        "choices": [
+          "Never increasing the load",
+          "100% per week",
+          "Doubling the load every session",
+          "5% to 10% per week"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 5% to 10% per week — Increasing load by about 5-10% a week gives the body time to adapt without injury. 100% per week is wrong: Doubling weekly is far too fast and risks injury. Doubling the load every session is wrong: Doubling every session is dangerous. Never increasing the load is wrong: Never increasing the load means no further improvement."
+      },
+      {
+        "module": 4,
+        "q": "During the first minutes of exercise, heart rate and cardiac output rise mainly because:",
+        "choices": [
+          "Blood stops flowing to the muscles",
+          "The muscles stop working",
+          "The lungs stop exchanging gas",
+          "The nervous system withdraws parasympathetic slowing and increases sympathetic drive"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The nervous system withdraws parasympathetic slowing and increases sympathetic drive — At the start of exercise the vagus brake is released and sympathetic drive rises, lifting heart rate and output. The muscles stop working is wrong: The muscles work harder, not stop. Blood stops flowing to the muscles is wrong: Blood flow to muscles increases, not stops. The lungs stop exchanging gas is wrong: The lungs exchange more gas, not less."
+      },
+      {
+        "module": 10,
+        "q": "Intrinsic motivation means the person exercises because:",
+        "choices": [
+          "They fear punishment if they stop",
+          "They enjoy it or value it for its own sake",
+          "They are paid to exercise",
+          "Someone else forces them to train"
+        ],
+        "answer": 1,
+        "explanation": "Correct: They enjoy it or value it for its own sake — Intrinsic motivation comes from inside — enjoyment, satisfaction, or personal value. They are paid to exercise is wrong: Being paid is extrinsic motivation. They fear punishment if they stop is wrong: Fear of punishment is extrinsic and controlling. Someone else forces them to train is wrong: Being forced is not motivation from within."
+      },
+      {
+        "module": 10,
+        "q": "Self-efficacy is:",
+        "choices": [
+          "A type of injury",
+          "A person's belief that they can succeed at a task",
+          "A heart-rate zone",
+          "A measure of muscle strength"
+        ],
+        "answer": 1,
+        "explanation": "Correct: A person's belief that they can succeed at a task — Self-efficacy is confidence in one's own ability to do the task, and it predicts whether people start and persist. A measure of muscle strength is wrong: Muscle strength is measured by strength tests. A heart-rate zone is wrong: A heart-rate zone is a training intensity range. A type of injury is wrong: An injury is tissue damage, not a belief."
+      },
+      {
+        "module": 10,
+        "q": "A client in the precontemplation stage of change:",
+        "choices": [
+          "Is not thinking about changing their behaviour",
+          "Is actively planning to start next week",
+          "Has been exercising for over a year",
+          "Has maintained the change for six months"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Is not thinking about changing their behaviour — Precontemplation means not yet considering change at all. Has been exercising for over a year is wrong: Exercising for over a year is maintenance. Is actively planning to start next week is wrong: Actively planning is the preparation stage. Has maintained the change for six months is wrong: Six months of maintenance is the maintenance stage."
+      },
+      {
+        "module": 10,
+        "q": "A client in the contemplation stage of change is:",
+        "choices": [
+          "Thinking about changing but has not committed to a plan",
+          "Exercising regularly for six months",
+          "Already maintaining a new habit",
+          "Not aware that any change is needed"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Thinking about changing but has not committed to a plan — Contemplation means weighing change and thinking about it, without yet acting. Exercising regularly for six months is wrong: Regular exercise for six months is maintenance. Not aware that any change is needed is wrong: Not aware of any need to change is precontemplation. Already maintaining a new habit is wrong: Maintaining a habit is the maintenance stage."
+      },
+      {
+        "module": 10,
+        "q": "A client in the preparation stage of change is:",
+        "choices": [
+          "Exercising regularly for a year",
+          "Refusing to think about exercise",
+          "Planning to start and taking small steps towards it",
+          "Relapsing after a long break"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Planning to start and taking small steps towards it — Preparation means intending to act soon and taking small steps, such as buying shoes or joining a gym. Refusing to think about exercise is wrong: Refusing to think about it is precontemplation. Exercising regularly for a year is wrong: A year of regular exercise is maintenance. Relapsing after a long break is wrong: Relapsing is a return to an earlier stage, not preparation."
+      },
+      {
+        "module": 10,
+        "q": "In motivational interviewing, the coach should mainly:",
+        "choices": [
+          "Ask open questions and listen reflectively",
+          "Lecture the client about what they are doing wrong",
+          "Tell the client exactly what to do",
+          "Argue the client into exercising"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Ask open questions and listen reflectively — Motivational interviewing uses open questions and reflective listening so the client finds their own reasons to change. Lecture the client about what they are doing wrong is wrong: Lecturing and arguing create resistance, not change. Argue the client into exercising is wrong: Arguing pushes the client to defend the old behaviour. Tell the client exactly what to do is wrong: Telling the client exactly what to do is directing, not motivational interviewing."
+      },
+      {
+        "module": 10,
+        "q": "A process goal differs from an outcome goal because it focuses on:",
+        "choices": [
+          "The final result only, such as losing 10 kg",
+          "A goal with no deadline",
+          "A goal the coach sets without the client",
+          "The behaviours the client will do, such as training three times a week"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The behaviours the client will do, such as training three times a week — Process goals track the actions (train three times a week), which the client controls directly. The final result only, such as losing 10 kg is wrong: The final result is an outcome goal. A goal with no deadline is wrong: A goal with no deadline is not a SMART goal at all. A goal the coach sets without the client is wrong: A goal set without the client ignores the client's own motivation."
+      },
+      {
+        "module": 10,
+        "q": "Positive self-talk is useful in sport and exercise because it:",
+        "choices": [
+          "Guarantees a win",
+          "Replaces all physical training",
+          "Helps the athlete focus and stay confident under pressure",
+          "Stops the athlete from feeling anything"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Helps the athlete focus and stay confident under pressure — Helpful self-talk directs attention and supports confidence, which improves performance under pressure. Guarantees a win is wrong: No mental skill guarantees a win. Replaces all physical training is wrong: Self-talk supports training; it never replaces it. Stops the athlete from feeling anything is wrong: Athletes still feel nerves; self-talk helps them manage feelings, not remove them."
+      },
+      {
+        "module": 10,
+        "q": "Imagery (mental rehearsal) works best when the athlete:",
+        "choices": [
+          "Imagines failing in detail",
+          "Practises it regularly, picturing the skill vividly from their own perspective",
+          "Only imagines the crowd, not the movement",
+          "Uses it once the night before a competition"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Practises it regularly, picturing the skill vividly from their own perspective — Regular, vivid, first-person imagery builds the same movement patterns as physical practice. Uses it once the night before a competition is wrong: One use the night before is too little to help. Imagines failing in detail is wrong: Imagining failure rehearses the wrong outcome. Only imagines the crowd, not the movement is wrong: Imagining the crowd without the movement misses the skill itself."
+      },
+      {
+        "module": 10,
+        "q": "The inverted-U idea about arousal says performance is best at:",
+        "choices": [
+          "A moderate level of arousal",
+          "Any level — arousal does not matter",
+          "The highest possible arousal",
+          "The lowest possible arousal"
+        ],
+        "answer": 0,
+        "explanation": "Correct: A moderate level of arousal — The inverted-U says too little arousal means low effort and too much means tension and errors, so moderate is best. The highest possible arousal is wrong: Maximum arousal usually causes shaking, rushing, and mistakes. The lowest possible arousal is wrong: Minimum arousal usually means flat, unfocused performance. Any level — arousal does not matter is wrong: Arousal clearly affects performance; it is not irrelevant."
+      },
+      {
+        "module": 10,
+        "q": "Which strategy best helps an athlete manage performance anxiety before competition?",
+        "choices": [
+          "Arriving late and rushing",
+          "A pre-performance routine with controlled breathing",
+          "Thinking about all the ways it could go wrong",
+          "Drinking a large amount of caffeine"
+        ],
+        "answer": 1,
+        "explanation": "Correct: A pre-performance routine with controlled breathing — A familiar routine with slow breathing calms arousal and focuses attention. Drinking a large amount of caffeine is wrong: Large amounts of caffeine raise arousal and anxiety. Arriving late and rushing is wrong: Rushing increases stress and errors. Thinking about all the ways it could go wrong is wrong: Dwelling on failure increases anxiety."
+      },
+      {
+        "module": 10,
+        "q": "When a client misses a week of training, the best coaching response is to:",
+        "choices": [
+          "Treat it as normal, find what got in the way, and plan the next step",
+          "Tell them they have failed and must start over",
+          "Double their training load to make up for it",
+          "Ignore it completely"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Treat it as normal, find what got in the way, and plan the next step — A lapse is normal; problem-solving what blocked them and restarting keeps them going. Tell them they have failed and must start over is wrong: Calling it failure damages confidence and motivation. Ignore it completely is wrong: Ignoring it misses the chance to solve the barrier. Double their training load to make up for it is wrong: Doubling the load risks injury and burnout."
+      },
+      {
+        "module": 10,
+        "q": "Social support helps exercise adherence mainly because it:",
+        "choices": [
+          "Removes all barriers automatically",
+          "Makes exercise unnecessary",
+          "Gives encouragement, accountability, and practical help",
+          "Guarantees weight loss"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Gives encouragement, accountability, and practical help — Support from family, friends, or a group encourages the person, holds them accountable, and helps with practical problems. Makes exercise unnecessary is wrong: Support does not replace exercise itself. Removes all barriers automatically is wrong: Barriers still need solving; support only helps with them. Guarantees weight loss is wrong: No support guarantees weight loss."
+      },
+      {
+        "module": 10,
+        "q": "Self-determination theory says people stay active when they feel:",
+        "choices": [
+          "Controlled, helpless, and isolated",
+          "Autonomous, competent, and connected to others",
+          "Bored, confused, and alone",
+          "Watched, judged, and pressured"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Autonomous, competent, and connected to others — Autonomy, competence, and relatedness are the three needs that sustain motivation. Controlled, helpless, and isolated is wrong: Feeling controlled and helpless undermines motivation. Watched, judged, and pressured is wrong: Judgement and pressure create resistance. Bored, confused, and alone is wrong: Boredom and isolation kill adherence."
+      },
+      {
+        "module": 10,
+        "q": "Feedback that describes HOW the movement was performed is called:",
+        "choices": [
+          "Knowledge of performance",
+          "Punishment",
+          "Ignoring the client",
+          "Knowledge of results"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Knowledge of performance — Knowledge of performance tells the learner about the movement itself, such as knee position. Knowledge of results is wrong: Knowledge of results tells the outcome, such as the time or score. Punishment is wrong: Punishment is a consequence, not feedback about movement quality. Ignoring the client is wrong: Ignoring the client is the absence of feedback."
+      },
+      {
+        "module": 10,
+        "q": "Positive reinforcement in coaching means:",
+        "choices": [
+          "Ignoring good performance",
+          "Punishing every mistake",
+          "Adding something pleasant after a desired behaviour to make it more likely",
+          "Removing all rewards"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Adding something pleasant after a desired behaviour to make it more likely — Positive reinforcement adds a pleasant consequence (praise, a reward) after good behaviour so it repeats. Punishing every mistake is wrong: Punishing mistakes is punishment, not reinforcement. Removing all rewards is wrong: Removing rewards weakens behaviour. Ignoring good performance is wrong: Ignoring good performance misses the chance to strengthen it."
+      },
+      {
+        "module": 10,
+        "q": "When a client says lack of time is their main barrier, the best first step is to:",
+        "choices": [
+          "Remove all exercise from their plan",
+          "Tell them they are making excuses",
+          "Problem-solve together: find short sessions or fit activity into their day",
+          "Insist on 90-minute sessions"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Problem-solve together: find short sessions or fit activity into their day — Problem-solving turns a barrier into a plan — shorter sessions, active commuting, or home workouts. Tell them they are making excuses is wrong: Calling it an excuse damages the relationship. Remove all exercise from their plan is wrong: Removing exercise abandons the goal. Insist on 90-minute sessions is wrong: Longer sessions make a time barrier worse."
+      },
+      {
+        "module": 10,
+        "q": "Readiness to change is best assessed by:",
+        "choices": [
+          "Asking the client what they are willing and able to do now",
+          "Assuming every client is ready",
+          "Measuring their body fat",
+          "Testing their 1RM"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Asking the client what they are willing and able to do now — Readiness is judged by the client's own words about willingness and confidence, not by assumption. Assuming every client is ready is wrong: Not every client is ready; that is why stages of change exist. Testing their 1RM is wrong: A 1RM measures strength, not readiness. Measuring their body fat is wrong: Body fat measures composition, not readiness."
+      },
+      {
+        "module": 10,
+        "q": "An external-focus coaching cue (for example, push the floor away) is often better than an internal-focus cue because it:",
+        "choices": [
+          "Directs attention to the effect of the movement, which usually improves performance",
+          "Only works for beginners",
+          "Confuses the athlete",
+          "Stops the athlete thinking at all"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Directs attention to the effect of the movement, which usually improves performance — External cues focus on the outcome of the movement, which research shows usually improves performance and learning. Confuses the athlete is wrong: External cues clarify, not confuse. Stops the athlete thinking at all is wrong: The athlete still thinks, but about the task outcome. Only works for beginners is wrong: External cues help performers at all levels."
+      },
+      {
+        "module": 12,
+        "q": "In professional practice, the term scope of practice describes:",
+        "choices": [
+          "Doing whatever the client asks, even outside your training",
+          "Diagnosing injuries for clients",
+          "Working only within the limits of your training, certification, and the law",
+          "Prescribing diets for medical conditions"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Working only within the limits of your training, certification, and the law — Scope of practice is the boundary of what you are trained and allowed to do; outside it, you refer. Doing whatever the client asks, even outside your training is wrong: Doing whatever the client asks ignores safety and competence. Diagnosing injuries for clients is wrong: Diagnosing injuries is outside an exercise professional's scope. Prescribing diets for medical conditions is wrong: Prescribing diets for disease is a dietitian's or doctor's job."
+      },
+      {
+        "module": 12,
+        "q": "Informed consent differs from a liability waiver because informed consent:",
+        "choices": [
+          "Shows the client understood the risks and agreed freely, while a waiver tries to limit legal claims",
+          "Guarantees no injury will happen",
+          "Replaces the need for insurance",
+          "Is never needed in a gym"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Shows the client understood the risks and agreed freely, while a waiver tries to limit legal claims — Consent documents understanding and free agreement; a waiver is a legal document about liability, and neither guarantees safety. Guarantees no injury will happen is wrong: No form guarantees no injury. Is never needed in a gym is wrong: Consent is needed before testing and training. Replaces the need for insurance is wrong: Insurance is still needed; consent does not replace it."
+      },
+      {
+        "module": 12,
+        "q": "An emergency action plan for a fitness facility should include:",
+        "choices": [
+          "Who calls emergency services, where the AED is, and each person's role",
+          "Only the price of membership",
+          "The gym's music playlist",
+          "The colour of the walls"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Who calls emergency services, where the AED is, and each person's role — An emergency plan names roles, the AED location, and how help is summoned so no time is wasted. Only the price of membership is wrong: Membership prices are irrelevant in an emergency. The gym's music playlist is wrong: A playlist does not help in an emergency. The colour of the walls is wrong: Wall colour does not help in an emergency."
+      },
+      {
+        "module": 5,
+        "q": "During a training session, which sign means STOP exercising and seek medical help?",
+        "choices": [
+          "Slight breathlessness at a hard effort",
+          "Muscle tiredness after a set",
+          "Chest pain or pressure",
+          "Mild sweating"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Chest pain or pressure — Chest pain during exercise is a warning sign of a heart problem and needs immediate medical attention. Mild sweating is wrong: Mild sweating is a normal response to exercise. Slight breathlessness at a hard effort is wrong: Slight breathlessness at hard effort is expected. Muscle tiredness after a set is wrong: Muscle tiredness after a set is normal fatigue."
+      },
+      {
+        "module": 12,
+        "q": "Accurate client records matter for risk management because they:",
+        "choices": [
+          "Show what was done, track progress, and provide evidence if something goes wrong",
+          "Should never include any test results",
+          "Can be skipped when the trainer is busy",
+          "Are only useful for billing"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Show what was done, track progress, and provide evidence if something goes wrong — Good records document screening, programs, and progress, which protects the client and the professional. Are only useful for billing is wrong: Records are for safety and progress, not only billing. Can be skipped when the trainer is busy is wrong: Skipping records when busy leaves gaps that matter later. Should never include any test results is wrong: Test results belong in the record so progress can be tracked."
+      },
+      {
+        "module": 12,
+        "q": "An exercise professional must hold current CPR/AED certification because:",
+        "choices": [
+          "They may be the first person able to help if a client collapses",
+          "It replaces the need for an emergency plan",
+          "It guarantees no client will ever collapse",
+          "It makes them a doctor"
+        ],
+        "answer": 0,
+        "explanation": "Correct: They may be the first person able to help if a client collapses — CPR/AED skills let the professional respond in the first minutes before emergency services arrive. It makes them a doctor is wrong: CPR certification does not make anyone a doctor. It replaces the need for an emergency plan is wrong: An emergency plan is still needed alongside CPR skills. It guarantees no client will ever collapse is wrong: No certification can guarantee a client will never collapse."
+      },
+      {
+        "module": 12,
+        "q": "Equipment safety in a facility is maintained mainly by:",
+        "choices": [
+          "Hiding broken equipment behind other machines",
+          "Never cleaning the equipment",
+          "Regular inspection, maintenance, and removing broken equipment from use",
+          "Letting clients fix broken machines themselves"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Regular inspection, maintenance, and removing broken equipment from use — Regular checks and taking faulty equipment out of service prevent injuries. Never cleaning the equipment is wrong: Dirty equipment spreads infection and hides damage. Letting clients fix broken machines themselves is wrong: Clients should not repair equipment. Hiding broken equipment behind other machines is wrong: Hiding broken equipment leaves the danger in place."
+      }
+    ]
+  },
+  "nsca-cscs": {
+    "title": "NSCA Certified Strength and Conditioning Specialist Practice Exam",
+    "minutes": 180,
+    "passPercent": 70,
+    "coverage": "NSCA Certified Strength and Conditioning Specialist practice exam: 100 original questions in the real exam's style and format, spanning exercise science (muscle and neuromuscular function, biomechanics, bioenergetics, adaptations), sport psychology, nutrition, program design, testing, technique, and organisation/administration. Practice benchmark only: the real CSCS exam is 220 questions (190 scored) in two sections — Scientific Foundations (95 questions in 1.5 hours) and Practical/Applied (125 questions in 2.5 hours) — and passes at a SCALED score of 70 on EACH section — NOT a percentage. The 70% used here is a practice benchmark for this course, never the real pass mark. Real eligibility needs a bachelor's degree (any major) plus current CPR/AED, and from 1 January 2030 US candidates need a bachelor's from a CASCE-accredited program.",
+    "questions": [
+      {
+        "module": 2,
+        "q": "The elbow joint during a biceps curl is an example of which class of lever?",
+        "choices": [
+          "Fourth-class lever",
+          "Third-class lever",
+          "First-class lever",
+          "Second-class lever"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Third-class lever — The elbow is third-class: the effort (biceps) is between the fulcrum (elbow joint) and the load (hand). First-class lever is wrong: A first-class lever has the fulcrum between effort and load, like the head on the spine. Second-class lever is wrong: A second-class lever has the load between fulcrum and effort, like standing on tiptoe. Fourth-class lever is wrong: There is no fourth class of lever."
+      },
+      {
+        "module": 2,
+        "q": "Standing on tiptoe (a calf raise) is an example of which class of lever?",
+        "choices": [
+          "Third-class lever",
+          "First-class lever",
+          "Second-class lever",
+          "No lever is involved"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Second-class lever — In a calf raise the load (body weight through the ankle) is between the fulcrum (ball of the foot) and the effort (calf muscles). First-class lever is wrong: A first-class lever has the fulcrum between effort and load. Third-class lever is wrong: A third-class lever has the effort between fulcrum and load, like the elbow. No lever is involved is wrong: All joint movements use levers; the body has no movement without them."
+      },
+      {
+        "module": 2,
+        "q": "Which two halves does the sagittal plane separate?",
+        "choices": [
+          "Left and right halves",
+          "Front and back halves",
+          "Inner and outer halves",
+          "Top and bottom halves"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Left and right halves — The sagittal plane runs front to back and divides left from right. Front and back halves is wrong: The frontal plane divides front from back. Top and bottom halves is wrong: The transverse plane divides top from bottom. Inner and outer halves is wrong: Inner and outer is not a body plane."
+      },
+      {
+        "module": 2,
+        "q": "A squat takes place mainly in which plane?",
+        "choices": [
+          "Diagonal plane",
+          "Sagittal plane",
+          "Frontal plane",
+          "Transverse plane"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Sagittal plane — A squat is a forward-and-back hinge at the hips and knees, which is sagittal-plane movement. Frontal plane is wrong: The frontal plane is side-to-side movement, such as a lateral lunge. Transverse plane is wrong: The transverse plane is rotational movement, such as a twist. Diagonal plane is wrong: Diagonal is not one of the three anatomical planes."
+      },
+      {
+        "module": 2,
+        "q": "Torque at a joint increases when:",
+        "choices": [
+          "The load is held further from the joint",
+          "The muscle gets weaker",
+          "The load is held closer to the joint",
+          "The joint stops moving"
+        ],
+        "answer": 0,
+        "explanation": "Correct: The load is held further from the joint — Torque equals force times the distance from the joint, so a longer distance means more torque. The load is held closer to the joint is wrong: Holding the load closer reduces the distance and so reduces torque. The muscle gets weaker is wrong: A weaker muscle produces less force, not more torque. The joint stops moving is wrong: A joint that stops moving has no movement, but torque can still exist."
+      },
+      {
+        "module": 2,
+        "q": "The force-velocity relationship states that as the speed of a muscle contraction increases:",
+        "choices": [
+          "The muscle stops producing force immediately",
+          "The force stays exactly the same",
+          "The force it can produce decreases",
+          "The force it can produce increases without limit"
+        ],
+        "answer": 2,
+        "explanation": "Correct: The force it can produce decreases — Faster contractions produce less force; the most force is produced in slow or isometric contractions. The force it can produce increases without limit is wrong: Force does not rise without limit as speed rises. The force stays exactly the same is wrong: Force changes with speed; it is not constant. The muscle stops producing force immediately is wrong: Muscles still produce force at speed, just less of it."
+      },
+      {
+        "module": 2,
+        "q": "An eccentric muscle action is one in which the muscle:",
+        "choices": [
+          "Shortens while producing force",
+          "Lengthens while producing force",
+          "Stays the same length while producing force",
+          "Produces no force at all"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Lengthens while producing force — In an eccentric action the muscle lengthens under tension, as in lowering a weight. Shortens while producing force is wrong: Shortening under tension is a concentric action. Stays the same length while producing force is wrong: Staying the same length is an isometric action. Produces no force at all is wrong: A muscle producing no force is relaxed, not acting eccentrically."
+      },
+      {
+        "module": 2,
+        "q": "The kinetic chain concept means that:",
+        "choices": [
+          "Only the upper body matters in sport",
+          "Force and movement in one joint affect the joints above and below it",
+          "Each joint works completely on its own",
+          "Muscles never work together"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Force and movement in one joint affect the joints above and below it — The body works as linked segments, so a problem at the ankle can change how the knee and hip move. Each joint works completely on its own is wrong: Joints are linked through muscles and fascia; none works in isolation. Only the upper body matters in sport is wrong: The lower body matters as much as the upper body in the chain. Muscles never work together is wrong: Muscles work in groups and sequences, not alone."
+      },
+      {
+        "module": 2,
+        "q": "The ATP-PC system provides energy for efforts lasting about:",
+        "choices": [
+          "2 to 3 minutes",
+          "30 to 60 minutes",
+          "0 to 10 seconds",
+          "Several hours"
+        ],
+        "answer": 2,
+        "explanation": "Correct: 0 to 10 seconds — ATP and phosphocreatine fuel maximal efforts of about 10 seconds, such as a sprint start or a heavy lift. 2 to 3 minutes is wrong: 2-3 minutes is mainly the glycolytic system. 30 to 60 minutes is wrong: 30-60 minutes is mainly the oxidative system. Several hours is wrong: Several hours is entirely oxidative."
+      },
+      {
+        "module": 3,
+        "q": "The glycolytic system is the main energy source for efforts lasting about:",
+        "choices": [
+          "10 hours",
+          "30 seconds to 2 minutes",
+          "2 to 3 hours",
+          "1 to 5 seconds"
+        ],
+        "answer": 1,
+        "explanation": "Correct: 30 seconds to 2 minutes — Glycolysis dominates high-intensity efforts of about 30 seconds to 2 minutes, such as a 400 m run. 1 to 5 seconds is wrong: 1-5 seconds is the ATP-PC system. 2 to 3 hours is wrong: 2-3 hours is the oxidative system. 10 hours is wrong: 10 hours is far beyond glycolytic capacity."
+      },
+      {
+        "module": 3,
+        "q": "The oxidative system uses which fuels?",
+        "choices": [
+          "Carbohydrate and fat, with oxygen",
+          "Protein only, with no oxygen",
+          "Phosphocreatine only",
+          "Lactate only"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Carbohydrate and fat, with oxygen — The oxidative system burns carbohydrate and fat using oxygen, which is why it powers long, steady exercise. Phosphocreatine only is wrong: Phosphocreatine fuels the ATP-PC system, not the oxidative system. Protein only, with no oxygen is wrong: Protein is a minor fuel, not the main one. Lactate only is wrong: Lactate is a product of glycolysis that can be reused, not the only fuel."
+      },
+      {
+        "module": 3,
+        "q": "Lactate threshold is the exercise intensity above which:",
+        "choices": [
+          "The muscles stop producing lactate",
+          "Oxygen use stops completely",
+          "Blood lactate falls to zero",
+          "Blood lactate rises sharply because production exceeds clearance"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Blood lactate rises sharply because production exceeds clearance — Above the threshold, lactate is made faster than it can be cleared, so blood levels climb steeply. Blood lactate falls to zero is wrong: Lactate does not fall to zero during hard exercise. The muscles stop producing lactate is wrong: Muscles keep producing lactate during hard exercise. Oxygen use stops completely is wrong: Oxygen use continues and rises with intensity."
+      },
+      {
+        "module": 3,
+        "q": "Excess post-exercise oxygen consumption (EPOC) is:",
+        "choices": [
+          "The extra oxygen used after exercise to restore the body to rest",
+          "The oxygen in the blood at rest",
+          "The oxygen used during the warm-up only",
+          "A measure of maximum strength"
+        ],
+        "answer": 0,
+        "explanation": "Correct: The extra oxygen used after exercise to restore the body to rest — After exercise the body uses extra oxygen to repay oxygen debt, clear lactate, and restore temperature and hormones. The oxygen used during the warm-up only is wrong: The warm-up uses oxygen before exercise, not after. A measure of maximum strength is wrong: EPOC is about oxygen use, not strength. The oxygen in the blood at rest is wrong: Resting blood oxygen is measured by pulse oximetry."
+      },
+      {
+        "module": 4,
+        "q": "To work out a client's cardiac output during exercise, a coach would multiply:",
+        "choices": [
+          "Stroke volume multiplied by heart rate",
+          "Stroke volume divided by heart rate",
+          "Blood pressure plus heart rate",
+          "Heart rate minus stroke volume"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Stroke volume multiplied by heart rate — Cardiac output is the volume pumped per minute: stroke volume times heart rate. Stroke volume divided by heart rate is wrong: Dividing stroke volume by heart rate gives a meaningless number. Heart rate minus stroke volume is wrong: Subtracting the two mixes different units. Blood pressure plus heart rate is wrong: Blood pressure is not part of the cardiac output equation."
+      },
+      {
+        "module": 4,
+        "q": "With aerobic training, stroke volume at rest and during exercise:",
+        "choices": [
+          "Falls to zero",
+          "Decreases",
+          "Increases",
+          "Stays exactly the same"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Increases — Training enlarges the heart's chambers and improves filling, so each beat pumps more blood. Decreases is wrong: Stroke volume does not fall with training. Stays exactly the same is wrong: Stroke volume changes with training; it is not fixed. Falls to zero is wrong: Stroke volume never falls to zero in a living person."
+      },
+      {
+        "module": 4,
+        "q": "Type I muscle fibres are best suited to:",
+        "choices": [
+          "Explosive jumps",
+          "Long, endurance exercise",
+          "Short sprints",
+          "Maximal single lifts"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Long, endurance exercise — Type I (slow-twitch) fibres are fatigue-resistant and built for sustained aerobic work. Maximal single lifts is wrong: Maximal lifts rely on Type II fibres. Explosive jumps is wrong: Explosive jumps rely on Type II fibres. Short sprints is wrong: Short sprints rely on Type II fibres."
+      },
+      {
+        "module": 4,
+        "q": "Type IIx muscle fibres are best suited to:",
+        "choices": [
+          "Long slow cycling",
+          "Short, explosive, high-power efforts",
+          "Standing still",
+          "Marathon running"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Short, explosive, high-power efforts — Type IIx (fast-twitch) fibres produce high force quickly but fatigue fast. Marathon running is wrong: Marathons rely on Type I fibres. Long slow cycling is wrong: Long cycling relies on Type I fibres. Standing still is wrong: Standing still uses mainly postural Type I fibres."
+      },
+      {
+        "module": 4,
+        "q": "The main neural adaptation in the first weeks of strength training is:",
+        "choices": [
+          "A large increase in muscle size",
+          "A change in muscle fibre type",
+          "Improved motor-unit recruitment and firing rate",
+          "Bone growth"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Improved motor-unit recruitment and firing rate — Early strength gains come from the nervous system learning to recruit more motor units and fire them faster. A large increase in muscle size is wrong: Big muscle growth takes weeks to months, not days. A change in muscle fibre type is wrong: Fibre type does not change in a few weeks. Bone growth is wrong: Bone adapts over months, not in the first weeks."
+      },
+      {
+        "module": 4,
+        "q": "Delayed-onset muscle soreness (DOMS) is mainly caused by:",
+        "choices": [
+          "A lack of protein in one meal",
+          "Dehydration alone",
+          "Microscopic muscle damage, especially from eccentric exercise",
+          "Lactic acid permanently damaging the muscle"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Microscopic muscle damage, especially from eccentric exercise — DOMS follows micro-damage to muscle fibres, mainly from unfamiliar eccentric work, and peaks at 24-72 hours. Lactic acid permanently damaging the muscle is wrong: Lactate is cleared within an hour and does not cause DOMS. Dehydration alone is wrong: Dehydration can worsen soreness but is not the main cause. A lack of protein in one meal is wrong: One meal does not cause DOMS."
+      },
+      {
+        "module": 4,
+        "q": "Overtraining syndrome is best recognised by:",
+        "choices": [
+          "One bad workout",
+          "A small gain in strength",
+          "A single night of poor sleep",
+          "A persistent fall in performance with fatigue, poor sleep, and mood changes"
+        ],
+        "answer": 3,
+        "explanation": "Correct: A persistent fall in performance with fatigue, poor sleep, and mood changes — Overtraining is a lasting drop in performance plus fatigue, disturbed sleep, and mood change that does not clear with a few days of rest. One bad workout is wrong: One bad workout is normal variation. A single night of poor sleep is wrong: One poor night of sleep is not overtraining. A small gain in strength is wrong: A strength gain is progress, not overtraining."
+      },
+      {
+        "module": 2,
+        "q": "The stretch-shortening cycle in a jump works because:",
+        "choices": [
+          "An eccentric stretch stores elastic energy that is released in the following concentric action",
+          "Muscles only work concentrically",
+          "The joints lock during the jump",
+          "Gravity does all the work"
+        ],
+        "answer": 0,
+        "explanation": "Correct: An eccentric stretch stores elastic energy that is released in the following concentric action — A quick stretch of the muscle-tendon unit stores elastic energy and triggers a reflex, adding power to the jump. Muscles only work concentrically is wrong: Muscles work eccentrically, concentrically, and isometrically in a jump. The joints lock during the jump is wrong: Locked joints cannot produce a jump. Gravity does all the work is wrong: Gravity resists the jump; the muscles do the work."
+      },
+      {
+        "module": 2,
+        "q": "The amortization phase of a plyometric jump is:",
+        "choices": [
+          "The short transition between the landing (eccentric) and the take-off (concentric)",
+          "The rest period after the session",
+          "The warm-up before jumping",
+          "The landing itself, with no take-off"
+        ],
+        "answer": 0,
+        "explanation": "Correct: The short transition between the landing (eccentric) and the take-off (concentric) — Amortization is the brief pause between absorbing force and producing force; shorter is more powerful. The warm-up before jumping is wrong: The warm-up happens before any jumping. The rest period after the session is wrong: Rest after the session is recovery. The landing itself, with no take-off is wrong: The landing is the eccentric phase that comes before amortization."
+      },
+      {
+        "module": 4,
+        "q": "The SAID principle states that the body adapts:",
+        "choices": [
+          "Only in the first week of training",
+          "Only to aerobic exercise",
+          "To any demand in the same way",
+          "Specifically to the imposed demand"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Specifically to the imposed demand — Specific Adaptations to Imposed Demands: the body adapts to exactly what it is asked to do. To any demand in the same way is wrong: Different demands produce different adaptations. Only to aerobic exercise is wrong: SAID applies to all training, not only aerobic work. Only in the first week of training is wrong: Adaptation continues for months and years."
+      },
+      {
+        "module": 3,
+        "q": "The respiratory exchange ratio (RER) is used to estimate:",
+        "choices": [
+          "Muscle fibre type",
+          "Maximum heart rate",
+          "Which fuel (carbohydrate or fat) is being used during exercise",
+          "Blood pressure"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Which fuel (carbohydrate or fat) is being used during exercise — RER is the ratio of carbon dioxide produced to oxygen used; near 0.7 means mostly fat, near 1.0 means mostly carbohydrate. Maximum heart rate is wrong: Maximum heart rate is estimated from age or measured directly. Muscle fibre type is wrong: Fibre type needs a muscle biopsy. Blood pressure is wrong: Blood pressure is measured with a cuff."
+      },
+      {
+        "module": 4,
+        "q": "During exercise, systolic blood pressure normally:",
+        "choices": [
+          "Stays exactly the same",
+          "Becomes unmeasurable",
+          "Falls to zero",
+          "Rises"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Rises — Systolic pressure rises with workload as cardiac output increases. Falls to zero is wrong: Blood pressure does not fall to zero during exercise. Stays exactly the same is wrong: Systolic pressure changes with intensity; it is not fixed. Becomes unmeasurable is wrong: It remains measurable with a cuff or monitor."
+      },
+      {
+        "module": 3,
+        "q": "Creatine phosphate in muscle is used to:",
+        "choices": [
+          "Store oxygen for long exercise",
+          "Carry fat into the muscle",
+          "Build new muscle protein",
+          "Rapidly rebuild ATP during very short, intense efforts"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Rapidly rebuild ATP during very short, intense efforts — Phosphocreatine donates a phosphate to ADP to remake ATP in seconds, powering the ATP-PC system. Store oxygen for long exercise is wrong: Oxygen is stored in myoglobin, not in creatine phosphate. Build new muscle protein is wrong: Protein is built from amino acids, not creatine phosphate. Carry fat into the muscle is wrong: Fat is carried by the blood, not by creatine phosphate."
+      },
+      {
+        "module": 4,
+        "q": "Capillarization improves with aerobic training, which means:",
+        "choices": [
+          "More capillaries grow around muscle fibres, improving oxygen delivery",
+          "Fewer capillaries supply the muscle",
+          "The heart gets smaller",
+          "Blood flow to muscle falls"
+        ],
+        "answer": 0,
+        "explanation": "Correct: More capillaries grow around muscle fibres, improving oxygen delivery — More capillaries mean more oxygen reaches the muscle, which improves endurance. Fewer capillaries supply the muscle is wrong: Fewer capillaries would reduce oxygen delivery. The heart gets smaller is wrong: The heart gets larger and stronger with training. Blood flow to muscle falls is wrong: Blood flow to working muscle rises with training."
+      },
+      {
+        "module": 4,
+        "q": "Mitochondria increase in number and size with endurance training, which improves:",
+        "choices": [
+          "Maximum single-rep strength",
+          "Bone density only",
+          "Flexibility",
+          "The muscle's ability to produce energy aerobically"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The muscle's ability to produce energy aerobically — More mitochondria mean more aerobic energy production in the muscle. Maximum single-rep strength is wrong: Maximal strength depends on muscle size and neural drive, not mitochondria. Bone density only is wrong: Bone density improves with resistance training, not mitochondria. Flexibility is wrong: Flexibility depends on muscle and joint range, not mitochondria."
+      },
+      {
+        "module": 4,
+        "q": "Testosterone and growth hormone released during heavy resistance exercise mainly support:",
+        "choices": [
+          "Muscle repair and growth",
+          "Reduced bone density",
+          "Fat storage only",
+          "Slower recovery"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Muscle repair and growth — These anabolic hormones signal muscle protein synthesis and repair after training. Fat storage only is wrong: They support muscle building, not fat storage. Reduced bone density is wrong: They support bone health, not bone loss. Slower recovery is wrong: They support faster, not slower, recovery."
+      },
+      {
+        "module": 4,
+        "q": "Detraining after stopping aerobic training for several weeks causes:",
+        "choices": [
+          "A fall in VO2max and plasma volume",
+          "A rise in VO2max",
+          "A permanent increase in strength",
+          "No change in fitness"
+        ],
+        "answer": 0,
+        "explanation": "Correct: A fall in VO2max and plasma volume — Without training, VO2max and blood volume fall within weeks. A rise in VO2max is wrong: VO2max falls, not rises, when training stops. No change in fitness is wrong: Fitness clearly changes with detraining. A permanent increase in strength is wrong: Strength does not permanently increase from stopping training."
+      },
+      {
+        "module": 2,
+        "q": "Centre of gravity is best described as:",
+        "choices": [
+          "The fastest joint in the body",
+          "The point where the body's weight is balanced",
+          "The strongest muscle in the body",
+          "The point where the heart sits"
+        ],
+        "answer": 1,
+        "explanation": "Correct: The point where the body's weight is balanced — The centre of gravity is the balance point of the body's mass. The strongest muscle in the body is wrong: No single muscle is the centre of gravity. The fastest joint in the body is wrong: Joints are not measured by speed in this way. The point where the heart sits is wrong: The heart sits in the chest, not at the balance point."
+      },
+      {
+        "module": 2,
+        "q": "A wider base of support makes an athlete:",
+        "choices": [
+          "Faster in a sprint",
+          "More stable",
+          "Weaker",
+          "Less stable"
+        ],
+        "answer": 1,
+        "explanation": "Correct: More stable — A wider base (feet further apart) makes the body harder to topple. Less stable is wrong: A wider base increases stability, not reduces it. Faster in a sprint is wrong: Sprint speed depends on force and technique, not a wide stance. Weaker is wrong: Stability does not make the athlete weaker."
+      },
+      {
+        "module": 2,
+        "q": "Newton's third law applied to running means:",
+        "choices": [
+          "The runner pushes the air to move",
+          "The runner needs no contact with the ground",
+          "The foot pushes down and back on the ground, and the ground pushes up and forward on the runner",
+          "The ground pulls the runner forward"
+        ],
+        "answer": 2,
+        "explanation": "Correct: The foot pushes down and back on the ground, and the ground pushes up and forward on the runner — Every action has an equal and opposite reaction: the ground returns the force the foot applies. The runner needs no contact with the ground is wrong: Running needs ground contact to generate force. The ground pulls the runner forward is wrong: The ground does not pull; it reacts to the push. The runner pushes the air to move is wrong: Air resistance is tiny compared with ground reaction force."
+      },
+      {
+        "module": 2,
+        "q": "An agonist muscle is:",
+        "choices": [
+          "A muscle that never contracts",
+          "A bone in the joint",
+          "The muscle opposing a movement",
+          "The main muscle producing a movement"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The main muscle producing a movement — The agonist is the prime mover that produces the action. The muscle opposing a movement is wrong: The opposing muscle is the antagonist. A muscle that never contracts is wrong: All working muscles contract. A bone in the joint is wrong: A bone is not a muscle."
+      },
+      {
+        "module": 2,
+        "q": "An antagonist muscle is:",
+        "choices": [
+          "A muscle with no role in the movement",
+          "The main muscle producing a movement",
+          "A tendon",
+          "The muscle that opposes the agonist's movement"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The muscle that opposes the agonist's movement — The antagonist works against the agonist and controls the movement by braking it. The main muscle producing a movement is wrong: The main mover is the agonist. A muscle with no role in the movement is wrong: An antagonist has a real role — controlling and stabilising. A tendon is wrong: A tendon connects muscle to bone; it is not a muscle."
+      },
+      {
+        "module": 10,
+        "q": "Arousal in sport psychology refers to:",
+        "choices": [
+          "The level of physiological and psychological activation",
+          "The size of the stadium",
+          "The number of spectators",
+          "The athlete's favourite sport"
+        ],
+        "answer": 0,
+        "explanation": "Correct: The level of physiological and psychological activation — Arousal is how activated or alert the body and mind are, from sleepy to highly charged. The athlete's favourite sport is wrong: A favourite sport is a preference, not arousal. The size of the stadium is wrong: Stadium size does not define arousal. The number of spectators is wrong: Spectator numbers may raise arousal but are not arousal itself."
+      },
+      {
+        "module": 10,
+        "q": "An athlete who pictures themselves completing a lift successfully before stepping up to the bar is using:",
+        "choices": [
+          "A spotter",
+          "A warm-up set",
+          "Imagery",
+          "Punishment"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Imagery — Imagery is mentally rehearsing the skill, which prepares the nervous system and builds confidence. Punishment is wrong: Punishment is a consequence for behaviour, not mental rehearsal. A warm-up set is wrong: A warm-up set is physical, not mental. A spotter is wrong: A spotter is a person who assists, not a mental skill."
+      },
+      {
+        "module": 10,
+        "q": "A mastery (task) goal focuses on:",
+        "choices": [
+          "Improving personal skill and performance",
+          "Winning a medal at any cost",
+          "Avoiding practice",
+          "Beating every opponent"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Improving personal skill and performance — Mastery goals aim at getting better at the task, which supports long-term motivation. Beating every opponent is wrong: Beating opponents is an ego or outcome goal. Winning a medal at any cost is wrong: Winning at any cost is an outcome goal. Avoiding practice is wrong: Avoiding practice is the opposite of a mastery goal."
+      },
+      {
+        "module": 10,
+        "q": "Team cohesion is:",
+        "choices": [
+          "The size of the team",
+          "The colour of the team kit",
+          "The degree to which team members stick together and work towards shared goals",
+          "The number of fans"
+        ],
+        "answer": 2,
+        "explanation": "Correct: The degree to which team members stick together and work towards shared goals — Cohesion is the bond and shared purpose that holds a team together. The size of the team is wrong: Team size does not define cohesion. The colour of the team kit is wrong: Kit colour is irrelevant to cohesion. The number of fans is wrong: Fan numbers do not define team cohesion."
+      },
+      {
+        "module": 10,
+        "q": "Athlete burnout is most likely when training load is high and:",
+        "choices": [
+          "Recovery is excellent and the athlete enjoys training",
+          "The coach gives the athlete choices",
+          "Recovery, autonomy, and enjoyment are all low",
+          "The athlete is well rested"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Recovery, autonomy, and enjoyment are all low — Burnout comes from chronic stress without recovery, control, or enjoyment. Recovery is excellent and the athlete enjoys training is wrong: Excellent recovery and enjoyment protect against burnout. The athlete is well rested is wrong: Being well rested protects against burnout. The coach gives the athlete choices is wrong: Having choices supports autonomy and protects against burnout."
+      },
+      {
+        "module": 10,
+        "q": "The best time to give an athlete detailed technical feedback is:",
+        "choices": [
+          "Before the athlete has ever tried the skill",
+          "During the middle of the maximal lift",
+          "Never — feedback is useless",
+          "After the attempt, briefly, while the movement is fresh"
+        ],
+        "answer": 3,
+        "explanation": "Correct: After the attempt, briefly, while the movement is fresh — Brief feedback right after the attempt lets the athlete connect the words to what they just felt. Before the athlete has ever tried the skill is wrong: Before the first attempt the athlete has no experience to attach feedback to. During the middle of the maximal lift is wrong: Talking during a maximal lift distracts and is unsafe. Never — feedback is useless is wrong: Feedback is one of the main tools of coaching."
+      },
+      {
+        "module": 10,
+        "q": "Attentional focus in sport means:",
+        "choices": [
+          "The length of the match",
+          "How loud the crowd is",
+          "What the athlete pays attention to during performance",
+          "The athlete's heart rate"
+        ],
+        "answer": 2,
+        "explanation": "Correct: What the athlete pays attention to during performance — Attention is the direction and width of focus — on the task, the opponent, or the crowd. How loud the crowd is is wrong: Crowd noise is a distraction, not attention itself. The athlete's heart rate is wrong: Heart rate is a physiological measure. The length of the match is wrong: Match length is a time measure."
+      },
+      {
+        "module": 10,
+        "q": "Mental toughness is best described as:",
+        "choices": [
+          "Staying focused and persistent under pressure and setbacks",
+          "Winning every competition",
+          "Ignoring all pain and injury",
+          "Never feeling nervous"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Staying focused and persistent under pressure and setbacks — Mental toughness is coping well with pressure, setbacks, and discomfort — not never feeling them. Never feeling nervous is wrong: Even tough athletes feel nervous. Ignoring all pain and injury is wrong: Ignoring injury is reckless, not tough. Winning every competition is wrong: No one wins every competition."
+      },
+      {
+        "module": 10,
+        "q": "A coach who gives athletes choices about their training supports:",
+        "choices": [
+          "Learned helplessness",
+          "Fear of failure",
+          "Autonomy, which strengthens motivation",
+          "Burnout"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Autonomy, which strengthens motivation — Choices support autonomy, one of the three basic needs for lasting motivation. Learned helplessness is wrong: Helplessness comes from having no control, not from choices. Burnout is wrong: Burnout comes from overload without recovery or control. Fear of failure is wrong: Fear of failure grows when athletes feel judged, not when they choose."
+      },
+      {
+        "module": 10,
+        "q": "Goal-setting works best when goals are:",
+        "choices": [
+          "Specific, challenging, and accepted by the athlete",
+          "Vague and easy",
+          "Changed every day",
+          "Set by the coach alone and never discussed"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Specific, challenging, and accepted by the athlete — Specific, challenging, athlete-accepted goals direct effort and give clear feedback. Vague and easy is wrong: Vague easy goals do not direct effort. Set by the coach alone and never discussed is wrong: Goals the athlete rejects are rarely pursued. Changed every day is wrong: Changing goals daily gives no time to work towards them."
+      },
+      {
+        "module": 8,
+        "q": "For most athletes, the recommended daily protein intake is about:",
+        "choices": [
+          "1.2 to 2.0 grams per kilogram of body weight",
+          "0 grams per day",
+          "0.2 grams per kilogram of body weight",
+          "5.0 grams per kilogram of body weight"
+        ],
+        "answer": 0,
+        "explanation": "Correct: 1.2 to 2.0 grams per kilogram of body weight — Athletes need about 1.2-2.0 g/kg/day to support repair and adaptation, more than sedentary people. 0.2 grams per kilogram of body weight is wrong: 0.2 g/kg is far below even the basic requirement. 5.0 grams per kilogram of body weight is wrong: 5.0 g/kg is far above what is useful. 0 grams per day is wrong: 0 g would cause muscle loss."
+      },
+      {
+        "module": 8,
+        "q": "Carbohydrate loading before a long endurance event aims to:",
+        "choices": [
+          "Replace all protein with carbohydrate",
+          "Maximise muscle glycogen stores",
+          "Remove fat from the diet",
+          "Empty glycogen stores"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Maximise muscle glycogen stores — Loading tops up glycogen so the athlete can sustain effort longer before running low. Empty glycogen stores is wrong: Emptying glycogen would cause early fatigue. Replace all protein with carbohydrate is wrong: Protein is still needed; loading does not replace it. Remove fat from the diet is wrong: Fat is still part of the diet; loading does not remove it."
+      },
+      {
+        "module": 8,
+        "q": "The main role of carbohydrate for an athlete is to:",
+        "choices": [
+          "Provide the main fuel for high-intensity exercise",
+          "Carry oxygen in the blood",
+          "Build muscle tissue directly",
+          "Replace water"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Provide the main fuel for high-intensity exercise — Carbohydrate is stored as glycogen and is the main fuel for hard exercise. Build muscle tissue directly is wrong: Muscle tissue is built from protein, not carbohydrate. Carry oxygen in the blood is wrong: Oxygen is carried by haemoglobin. Replace water is wrong: Water is replaced by drinking fluid."
+      },
+      {
+        "module": 8,
+        "q": "The main role of protein for an athlete is to:",
+        "choices": [
+          "Build and repair muscle tissue",
+          "Replace electrolytes",
+          "Carry oxygen",
+          "Provide the main fuel for a sprint"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Build and repair muscle tissue — Protein supplies amino acids that build and repair muscle. Provide the main fuel for a sprint is wrong: Sprint fuel comes from ATP-PC and glycolysis. Replace electrolytes is wrong: Electrolytes come from salt and fluid. Carry oxygen is wrong: Oxygen is carried by haemoglobin."
+      },
+      {
+        "module": 8,
+        "q": "During exercise lasting more than an hour in the heat, an athlete should drink:",
+        "choices": [
+          "A large amount of alcohol",
+          "Only pure water in one large amount at the end",
+          "No fluid at all",
+          "Fluid with electrolytes, mainly sodium, in regular small amounts"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Fluid with electrolytes, mainly sodium, in regular small amounts — Regular small drinks with sodium replace sweat losses and maintain blood volume. Only pure water in one large amount at the end is wrong: One large drink at the end is too late and causes stomach discomfort. No fluid at all is wrong: No fluid causes dehydration. A large amount of alcohol is wrong: Alcohol worsens dehydration and impairs performance."
+      },
+      {
+        "module": 8,
+        "q": "Creatine monohydrate is one of the few supplements with strong evidence for:",
+        "choices": [
+          "Improving eyesight",
+          "Replacing all food",
+          "Curing all injuries",
+          "Increasing strength and power in short, high-intensity efforts"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Increasing strength and power in short, high-intensity efforts — Creatine increases phosphocreatine stores, which supports repeated short, intense efforts. Curing all injuries is wrong: Creatine does not cure injuries. Replacing all food is wrong: No supplement replaces food. Improving eyesight is wrong: Creatine does not improve eyesight."
+      },
+      {
+        "module": 8,
+        "q": "A tested athlete must be careful with supplements because:",
+        "choices": [
+          "Vitamins are banned substances",
+          "Supplements never work",
+          "Some products contain banned substances not listed on the label",
+          "All supplements are banned"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Some products contain banned substances not listed on the label — Contaminated or mislabelled supplements have caused positive drug tests, so tested athletes must use certified products. All supplements are banned is wrong: Most supplements are legal; only banned substances are a problem. Supplements never work is wrong: Some supplements, such as creatine, do work. Vitamins are banned substances is wrong: Ordinary vitamins are not banned."
+      },
+      {
+        "module": 8,
+        "q": "Rapid weight-cutting by dehydration is dangerous mainly because it:",
+        "choices": [
+          "Reduces blood volume, raises heart rate, and risks heat illness and kidney damage",
+          "Improves performance",
+          "Increases blood volume",
+          "Builds muscle"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Reduces blood volume, raises heart rate, and risks heat illness and kidney damage — Losing water fast drops blood volume, strains the heart and kidneys, and raises heat-illness risk. Improves performance is wrong: Dehydration harms performance, it does not improve it. Builds muscle is wrong: Dehydration does not build muscle. Increases blood volume is wrong: Dehydration reduces blood volume, not increases it."
+      },
+      {
+        "module": 8,
+        "q": "Caffeine can improve endurance performance mainly because it:",
+        "choices": [
+          "Builds muscle directly",
+          "Replaces carbohydrate",
+          "Reduces the perception of effort and fatigue",
+          "Stops sweating"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Reduces the perception of effort and fatigue — Caffeine blocks adenosine and lowers perceived effort, letting athletes sustain work longer. Builds muscle directly is wrong: Caffeine does not build muscle. Replaces carbohydrate is wrong: Caffeine does not replace carbohydrate fuel. Stops sweating is wrong: Caffeine does not stop sweating."
+      },
+      {
+        "module": 8,
+        "q": "After exercise, the priority for recovery nutrition is to:",
+        "choices": [
+          "Eat nothing until the next day",
+          "Replace fluid and electrolytes, eat carbohydrate, and eat protein",
+          "Drink nothing for 24 hours",
+          "Eat only fat"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Replace fluid and electrolytes, eat carbohydrate, and eat protein — Recovery needs fluid and salt, carbohydrate to refill glycogen, and protein to repair muscle. Eat only fat is wrong: Fat alone does not refill glycogen or repair muscle. Drink nothing for 24 hours is wrong: Avoiding fluid for a day causes dehydration. Eat nothing until the next day is wrong: Eating nothing delays recovery."
+      },
+      {
+        "module": 6,
+        "q": "Linear periodisation is characterised by:",
+        "choices": [
+          "Gradually increasing intensity while decreasing volume over the training cycle",
+          "Randomly changing the program every day",
+          "Training only one exercise",
+          "Keeping intensity and volume the same all year"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Gradually increasing intensity while decreasing volume over the training cycle — Linear periodisation moves from high volume and low intensity towards low volume and high intensity. Keeping intensity and volume the same all year is wrong: Keeping everything the same is not periodisation. Randomly changing the program every day is wrong: Random daily change is not a plan. Training only one exercise is wrong: One exercise alone is not a program."
+      },
+      {
+        "module": 6,
+        "q": "Undulating (non-linear) periodisation differs from linear periodisation because it:",
+        "choices": [
+          "Never changes volume or intensity",
+          "Varies volume and intensity frequently, often within the same week",
+          "Has no plan at all",
+          "Only trains one quality per year"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Varies volume and intensity frequently, often within the same week — Undulating plans change load often, such as heavy, moderate, and light days in one week. Never changes volume or intensity is wrong: Never changing load is not periodisation. Only trains one quality per year is wrong: One quality per year is closer to a linear block. Has no plan at all is wrong: Undulating periodisation is a structured plan."
+      },
+      {
+        "module": 6,
+        "q": "A taper before a competition aims to:",
+        "choices": [
+          "Add new exercises the week of the competition",
+          "Increase training load to maximum the day before",
+          "Reduce training load so the athlete recovers and peaks on competition day",
+          "Stop all training for a month"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Reduce training load so the athlete recovers and peaks on competition day — A taper cuts volume while keeping some intensity, letting fatigue fade while fitness stays. Increase training load to maximum the day before is wrong: Maximum load the day before leaves the athlete exhausted. Stop all training for a month is wrong: A month off causes detraining. Add new exercises the week of the competition is wrong: New exercises before competition risk soreness and poor technique."
+      },
+      {
+        "module": 6,
+        "q": "In a resistance training session, the best order of exercises is usually:",
+        "choices": [
+          "Small single-joint exercises first, then large multi-joint exercises",
+          "Cardio first, then all lifting",
+          "Abdominal exercises first, then everything else",
+          "Large multi-joint exercises first, then smaller single-joint exercises"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Large multi-joint exercises first, then smaller single-joint exercises — Big lifts need the most energy and focus, so they come first while the athlete is fresh. Small single-joint exercises first, then large multi-joint exercises is wrong: Small exercises first would fatigue stabilisers before the big lifts. Abdominal exercises first, then everything else is wrong: Abdominals first wastes freshness on a small muscle group. Cardio first, then all lifting is wrong: Cardio first would tire the athlete before lifting."
+      },
+      {
+        "module": 6,
+        "q": "Progressive overload in a strength program is achieved by:",
+        "choices": [
+          "Skipping sessions",
+          "Reducing the load every week",
+          "Using the same weight forever",
+          "Gradually increasing load, volume, or difficulty over time"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Gradually increasing load, volume, or difficulty over time — Overload means the demand rises bit by bit so the body keeps adapting. Using the same weight forever is wrong: The same weight forever maintains but does not improve strength. Reducing the load every week is wrong: Reducing load each week is detraining. Skipping sessions is wrong: Skipping sessions reduces the training stimulus."
+      },
+      {
+        "module": 6,
+        "q": "In a periodised strength program, what is the purpose of a planned deload week?",
+        "choices": [
+          "A week with no plan at all",
+          "A week of testing only",
+          "A planned week of reduced training load to allow recovery",
+          "A week of maximum training load"
+        ],
+        "answer": 2,
+        "explanation": "Correct: A planned week of reduced training load to allow recovery — A deload cuts volume and intensity on purpose so fatigue clears and adaptation catches up. A week of maximum training load is wrong: A maximum week adds fatigue, the opposite of a deload. A week with no plan at all is wrong: A deload is planned, not random. A week of testing only is wrong: Testing is part of assessment, not a deload."
+      },
+      {
+        "module": 6,
+        "q": "During the in-season period, a strength program for a team-sport athlete should mainly:",
+        "choices": [
+          "Stop all strength training",
+          "Maintain strength with lower volume while the sport takes priority",
+          "Double the training volume",
+          "Try to set personal bests every week"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Maintain strength with lower volume while the sport takes priority — In-season work maintains the strength built in the off-season without adding fatigue to competition. Try to set personal bests every week is wrong: Chasing personal bests in-season risks fatigue and injury. Stop all strength training is wrong: Stopping strength training loses the gains. Double the training volume is wrong: Doubling volume in-season adds fatigue on top of matches."
+      },
+      {
+        "module": 6,
+        "q": "The off-season is the best time to:",
+        "choices": [
+          "Avoid all training",
+          "Rest completely for six months",
+          "Build general strength and fitness with higher training volume",
+          "Peak for competition"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Build general strength and fitness with higher training volume — The off-season has no competitions, so higher volume can build the base for the year. Peak for competition is wrong: Peaking belongs to the competition period. Rest completely for six months is wrong: Six months of complete rest causes detraining. Avoid all training is wrong: Avoiding all training wastes the off-season."
+      },
+      {
+        "module": 6,
+        "q": "Block periodisation organises training into blocks that each focus on:",
+        "choices": [
+          "No quality at all",
+          "Every quality at once, every day",
+          "Only flexibility",
+          "One main quality, such as strength or power, for several weeks"
+        ],
+        "answer": 3,
+        "explanation": "Correct: One main quality, such as strength or power, for several weeks — Each block concentrates on one quality, such as hypertrophy, then strength, then power. Every quality at once, every day is wrong: Training every quality every day spreads the stimulus too thin. No quality at all is wrong: A block with no focus is not a plan. Only flexibility is wrong: Flexibility alone is not a block."
+      },
+      {
+        "module": 6,
+        "q": "Exercise variation in a program is important because it:",
+        "choices": [
+          "Removes the need for progression",
+          "Means changing every exercise daily",
+          "Prevents staleness and overuse while keeping the training stimulus fresh",
+          "Confuses the athlete and stops progress"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Prevents staleness and overuse while keeping the training stimulus fresh — Planned variation keeps athletes engaged and reduces overuse injury. Confuses the athlete and stops progress is wrong: Variation is planned, not confusing. Means changing every exercise daily is wrong: Changing everything daily prevents learning the lifts. Removes the need for progression is wrong: Variation does not replace progression."
+      },
+      {
+        "module": 7,
+        "q": "For maximal strength, the recommended load range is about:",
+        "choices": [
+          "50% of 1RM, for 20 repetitions",
+          "30% of 1RM, for 30 repetitions",
+          "10% of 1RM, for 100 repetitions",
+          "85% to 100% of 1RM, for 1 to 6 repetitions"
+        ],
+        "answer": 3,
+        "explanation": "Correct: 85% to 100% of 1RM, for 1 to 6 repetitions — Maximal strength needs heavy loads of 85-100% for low reps. 30% of 1RM, for 30 repetitions is wrong: 30% for 30 reps trains endurance. 50% of 1RM, for 20 repetitions is wrong: 50% for 20 reps trains endurance. 10% of 1RM, for 100 repetitions is wrong: 10% for 100 reps is not a strength stimulus."
+      },
+      {
+        "module": 7,
+        "q": "For power development, the recommended load is usually:",
+        "choices": [
+          "The heaviest possible load moved slowly",
+          "The lightest possible load with no effort",
+          "Only bodyweight exercises",
+          "Moderate to heavy for strength-speed, or light and fast for speed-strength, moved with maximal intent"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Moderate to heavy for strength-speed, or light and fast for speed-strength, moved with maximal intent — Power needs the bar moved fast; strength-speed uses heavier loads and speed-strength uses lighter loads, both with maximal intent. The heaviest possible load moved slowly is wrong: Moving heavy loads slowly trains strength, not power. The lightest possible load with no effort is wrong: Light loads with no effort produce no power. Only bodyweight exercises is wrong: Bodyweight alone is only one power tool."
+      },
+      {
+        "module": 7,
+        "q": "For hypertrophy (muscle growth), the usual prescription is:",
+        "choices": [
+          "Very light loads for 100 reps only",
+          "Moderate loads of about 65% to 85% of 1RM, for 6 to 12 reps, with moderate rest",
+          "One set per month",
+          "Maximal singles only"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Moderate loads of about 65% to 85% of 1RM, for 6 to 12 reps, with moderate rest — Moderate loads for 6-12 reps with moderate volume is the classic hypertrophy range. Maximal singles only is wrong: Singles alone build strength more than size. Very light loads for 100 reps only is wrong: Very light loads for 100 reps train endurance. One set per month is wrong: One set a month is far too little volume."
+      },
+      {
+        "module": 7,
+        "q": "Rest between sets for power training should be:",
+        "choices": [
+          "No rest at all",
+          "10 seconds",
+          "2 to 5 minutes, so each set is performed at full power",
+          "30 minutes"
+        ],
+        "answer": 2,
+        "explanation": "Correct: 2 to 5 minutes, so each set is performed at full power — Power sets need near-full recovery, so 2-5 minutes keeps quality high. 10 seconds is wrong: 10 seconds leaves the athlete fatigued and slow. No rest at all is wrong: No rest turns power work into endurance work. 30 minutes is wrong: 30 minutes is far longer than needed."
+      },
+      {
+        "module": 7,
+        "q": "In a plyometric program, volume is best counted by:",
+        "choices": [
+          "Foot contacts (the number of landings)",
+          "Heart rate",
+          "The weight lifted",
+          "Minutes spent stretching"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Foot contacts (the number of landings) — Plyometric volume is measured in foot contacts because each landing is a loading event. Minutes spent stretching is wrong: Stretching time is not plyometric volume. The weight lifted is wrong: Weight lifted is resistance volume. Heart rate is wrong: Heart rate does not measure jump volume."
+      },
+      {
+        "module": 5,
+        "q": "A 1RM test is most appropriate for:",
+        "choices": [
+          "Complete beginners on their first day",
+          "Injured athletes",
+          "Experienced lifters with good technique",
+          "Clients with unstable heart disease"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Experienced lifters with good technique — A true 1RM needs skill and safety, so it suits experienced lifters with sound technique. Complete beginners on their first day is wrong: Beginners should use submaximal repetition tests, not a true 1RM. Injured athletes is wrong: Injured athletes should not maximal-test the injured area. Clients with unstable heart disease is wrong: Unstable heart disease bars maximal testing."
+      },
+      {
+        "module": 5,
+        "q": "The vertical jump test measures:",
+        "choices": [
+          "Body fat",
+          "Lower-body power",
+          "Aerobic fitness",
+          "Flexibility"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Lower-body power — Jump height reflects how much power the legs can produce in one explosive effort. Aerobic fitness is wrong: Aerobic fitness is measured by walk, run, or cycle tests. Flexibility is wrong: Flexibility is measured by reach tests. Body fat is wrong: Body fat is measured by skinfolds, BIA, or DEXA."
+      },
+      {
+        "module": 5,
+        "q": "The 40-yard dash is used to measure:",
+        "choices": [
+          "Upper-body strength",
+          "Balance",
+          "Acceleration and sprint speed",
+          "Aerobic endurance"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Acceleration and sprint speed — A 40-yard sprint measures how fast an athlete accelerates and runs. Aerobic endurance is wrong: Aerobic endurance is measured by longer runs. Upper-body strength is wrong: Upper-body strength is measured by pressing or pulling tests. Balance is wrong: Balance is measured by single-leg tests."
+      },
+      {
+        "module": 5,
+        "q": "The pro-agility (5-10-5) shuttle test measures:",
+        "choices": [
+          "Change-of-direction speed and agility",
+          "Body composition",
+          "Maximum strength",
+          "Flexibility"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Change-of-direction speed and agility — The 5-10-5 shuttle times how fast an athlete changes direction, which is agility. Maximum strength is wrong: Maximum strength is measured by 1RM tests. Flexibility is wrong: Flexibility is measured by reach tests. Body composition is wrong: Body composition is measured by skinfolds, BIA, or DEXA."
+      },
+      {
+        "module": 5,
+        "q": "The Wingate anaerobic test measures:",
+        "choices": [
+          "Peak and mean anaerobic power on a cycle ergometer",
+          "Flexibility",
+          "Balance",
+          "VO2max directly"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Peak and mean anaerobic power on a cycle ergometer — The 30-second all-out Wingate measures peak and average power from anaerobic energy systems. VO2max directly is wrong: VO2max needs a graded aerobic test. Flexibility is wrong: Flexibility is measured by reach tests. Balance is wrong: Balance is measured by single-leg tests."
+      },
+      {
+        "module": 5,
+        "q": "Test reliability means the test:",
+        "choices": [
+          "Is free to run",
+          "Measures what it claims to measure",
+          "Gives consistent results when repeated",
+          "Is easy to administer"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Gives consistent results when repeated — Reliability is consistency — the same person gets a similar score on repeat testing. Measures what it claims to measure is wrong: Measuring what it claims to measure is validity. Is easy to administer is wrong: Ease of administration is practicality, not reliability. Is free to run is wrong: Cost is not reliability."
+      },
+      {
+        "module": 5,
+        "q": "Test validity means the test:",
+        "choices": [
+          "Measures what it claims to measure",
+          "Is the cheapest test available",
+          "Gives the same result every time",
+          "Takes the least time"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Measures what it claims to measure — Validity is whether the test truly measures the quality it is supposed to. Gives the same result every time is wrong: Giving the same result every time is reliability. Is the cheapest test available is wrong: Cost does not define validity. Takes the least time is wrong: Speed does not define validity."
+      },
+      {
+        "module": 5,
+        "q": "When testing a group of athletes, the best order is:",
+        "choices": [
+          "Non-fatiguing tests first, then strength and power, then anaerobic and aerobic tests last",
+          "Maximal strength first, then flexibility",
+          "Anaerobic tests first, then everything else",
+          "Aerobic tests first, then power tests"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Non-fatiguing tests first, then strength and power, then anaerobic and aerobic tests last — Fatiguing tests last prevents fatigue from ruining the other results. Aerobic tests first, then power tests is wrong: Aerobic tests first would tire athletes before power testing. Maximal strength first, then flexibility is wrong: Maximal strength first would fatigue athletes before other tests. Anaerobic tests first, then everything else is wrong: Anaerobic tests first would exhaust athletes for the rest."
+      },
+      {
+        "module": 5,
+        "q": "A movement screen is used to:",
+        "choices": [
+          "Diagnose an injury",
+          "Measure VO2max",
+          "Replace all strength testing",
+          "Observe how an athlete moves and spot limitations before loading them heavily"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Observe how an athlete moves and spot limitations before loading them heavily — Screens observe movement quality and find limitations to address before heavy loading. Diagnose an injury is wrong: Screens do not diagnose injuries; clinicians do that. Replace all strength testing is wrong: Screens complement strength testing, they do not replace it. Measure VO2max is wrong: VO2max needs an aerobic test."
+      },
+      {
+        "module": 5,
+        "q": "Body composition testing is useful in sport mainly to:",
+        "choices": [
+          "Diagnose heart disease",
+          "Measure speed",
+          "Set the athlete's salary",
+          "Track changes in fat and lean mass over a training block"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Track changes in fat and lean mass over a training block — Tracking fat and lean mass shows whether training and nutrition are working. Diagnose heart disease is wrong: Heart disease is diagnosed clinically, not by body composition. Measure speed is wrong: Speed is measured by sprint tests. Set the athlete's salary is wrong: Salary is not a fitness measure."
+      },
+      {
+        "module": 7,
+        "q": "In a back squat, the bar should rest:",
+        "choices": [
+          "On the lower back",
+          "On the neck bones",
+          "Across the upper back, on the trapezius (high bar) or across the rear deltoids (low bar)",
+          "Balanced on the head"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Across the upper back, on the trapezius (high bar) or across the rear deltoids (low bar) — The bar sits on the muscle of the upper back, never on the neck bones. On the neck bones is wrong: The neck bones cannot safely carry the bar. On the lower back is wrong: The lower back is not a shelf for the bar. Balanced on the head is wrong: The head cannot hold a barbell."
+      },
+      {
+        "module": 7,
+        "q": "During a squat, the knees should track:",
+        "choices": [
+          "As far inward as possible",
+          "In line with the toes",
+          "Locked straight throughout",
+          "As far outward as possible"
+        ],
+        "answer": 1,
+        "explanation": "Correct: In line with the toes — Knees tracking over the toes keeps the joint aligned and the force distributed safely. As far inward as possible is wrong: Knees caving inward (valgus) raises injury risk. As far outward as possible is wrong: Knees forced far outward is not the natural tracking line. Locked straight throughout is wrong: Locked knees remove the squat movement itself."
+      },
+      {
+        "module": 7,
+        "q": "In a deadlift, the back should be kept:",
+        "choices": [
+          "Rounded as much as possible",
+          "Flat and braced, with the chest up",
+          "Twisted to one side",
+          "Completely relaxed"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Flat and braced, with the chest up — A flat, braced back with the chest up keeps the spine safe under load. Rounded as much as possible is wrong: A rounded back under load raises injury risk. Twisted to one side is wrong: Twisting under load risks the spine. Completely relaxed is wrong: A relaxed back cannot protect the spine."
+      },
+      {
+        "module": 7,
+        "q": "In a bench press, the safest bar path is:",
+        "choices": [
+          "Down to the chest with control, then pressed up, with the wrists straight",
+          "Pressed with bent wrists and elbows flared wide",
+          "Dropped quickly onto the chest and bounced",
+          "Lowered to the neck"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Down to the chest with control, then pressed up, with the wrists straight — A controlled touch on the chest with straight wrists keeps the load stable and the shoulders safe. Dropped quickly onto the chest and bounced is wrong: Bouncing the bar off the chest is dangerous and uncontrolled. Pressed with bent wrists and elbows flared wide is wrong: Bent wrists and flared elbows stress the wrists and shoulders. Lowered to the neck is wrong: Lowering to the neck risks the throat and shoulders."
+      },
+      {
+        "module": 7,
+        "q": "The Valsalva manoeuvre during a heavy lift is:",
+        "choices": [
+          "Breathing only through the nose",
+          "Holding the breath and bracing the trunk to increase pressure and stability",
+          "Breathing out as fast as possible",
+          "Holding the breath for the whole session"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Holding the breath and bracing the trunk to increase pressure and stability — A brief breath-hold with bracing raises trunk pressure and stabilises the spine under heavy load. Breathing out as fast as possible is wrong: Fast breathing out during the lift reduces bracing. Holding the breath for the whole session is wrong: Holding the breath for a whole session is impossible and unsafe. Breathing only through the nose is wrong: Nose breathing alone does not create the brace."
+      },
+      {
+        "module": 7,
+        "q": "A spotter for a back squat should stand:",
+        "choices": [
+          "Far away from the platform",
+          "Behind the lifter, ready to assist at the hips or chest if the lifter fails",
+          "In front of the lifter, blocking their view",
+          "At the side, holding the bar"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Behind the lifter, ready to assist at the hips or chest if the lifter fails — The spotter stands behind, ready to help the lifter up or guide them to the safeties. In front of the lifter, blocking their view is wrong: Standing in front blocks the lifter and cannot help a failed squat. At the side, holding the bar is wrong: Holding the bar from the side interferes with the lift. Far away from the platform is wrong: A spotter far away cannot help in time."
+      },
+      {
+        "module": 7,
+        "q": "The power clean is mainly used to develop:",
+        "choices": [
+          "Balance while standing still",
+          "Long-distance endurance",
+          "Explosive power and the ability to produce force quickly",
+          "Flexibility of the shoulders only"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Explosive power and the ability to produce force quickly — The clean trains rapid force production through the hips and legs, which transfers to jumping and sprinting. Long-distance endurance is wrong: Endurance is trained by aerobic work. Flexibility of the shoulders only is wrong: Shoulder flexibility is a small part of the lift, not its purpose. Balance while standing still is wrong: Balance is trained by balance work, not the clean."
+      },
+      {
+        "module": 7,
+        "q": "In a power clean, the bar should be caught:",
+        "choices": [
+          "On the wrists with the elbows down",
+          "Behind the neck",
+          "On the top of the head",
+          "On the front of the shoulders with the elbows high"
+        ],
+        "answer": 3,
+        "explanation": "Correct: On the front of the shoulders with the elbows high — The bar is caught on the front deltoids with elbows high, forming a shelf. On the wrists with the elbows down is wrong: Catching on the wrists with elbows down stresses the wrists. On the top of the head is wrong: The head cannot catch a barbell. Behind the neck is wrong: Behind the neck is a back squat position, not a clean catch."
+      },
+      {
+        "module": 7,
+        "q": "The snatch differs from the clean mainly because the bar is:",
+        "choices": [
+          "Lifted only to the knees",
+          "Lifted overhead in one continuous movement",
+          "Never lifted above the waist",
+          "Lifted slowly with no speed"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Lifted overhead in one continuous movement — The snatch takes the bar from the floor to overhead in one movement, while the clean catches it at the shoulders first. Lifted only to the knees is wrong: The bar travels to overhead, not only to the knees. Never lifted above the waist is wrong: The bar goes well above the waist. Lifted slowly with no speed is wrong: The snatch is a fast, explosive lift."
+      },
+      {
+        "module": 7,
+        "q": "When spotting a bench press, the spotter should:",
+        "choices": [
+          "Stand at the lifter's feet",
+          "Leave the room",
+          "Push down on the bar",
+          "Stand behind the bench, hands near the bar, ready to help if the lifter struggles"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Stand behind the bench, hands near the bar, ready to help if the lifter struggles — The spotter stands at the head of the bench, ready to take the bar if the lifter fails. Stand at the lifter's feet is wrong: Standing at the feet cannot reach the bar. Push down on the bar is wrong: Pushing down adds load and danger. Leave the room is wrong: Leaving the room abandons the lifter."
+      },
+      {
+        "module": 12,
+        "q": "Good facility design in a strength and conditioning room should include:",
+        "choices": [
+          "No mirrors or platforms",
+          "Enough space between stations, clear walkways, and safe flooring",
+          "Equipment packed as tightly as possible",
+          "A single exit blocked by equipment"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Enough space between stations, clear walkways, and safe flooring — Space, clear paths, and proper flooring prevent collisions and injuries. Equipment packed as tightly as possible is wrong: Tightly packed equipment creates trip and collision hazards. No mirrors or platforms is wrong: Platforms are needed for Olympic lifting; mirrors help technique. A single exit blocked by equipment is wrong: A blocked exit is a fire and safety hazard."
+      },
+      {
+        "module": 12,
+        "q": "A strength and conditioning coach's first duty when an athlete is injured is to:",
+        "choices": [
+          "Ignore it and continue the session",
+          "Tell the athlete to train through it",
+          "Diagnose the injury themselves",
+          "Stop the activity, assess the situation, and get appropriate medical help"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Stop the activity, assess the situation, and get appropriate medical help — Stopping, assessing, and referring protects the athlete; coaches do not diagnose. Tell the athlete to train through it is wrong: Training through injury makes it worse. Diagnose the injury themselves is wrong: Diagnosis is outside a coach's scope of practice. Ignore it and continue the session is wrong: Ignoring an injury is negligent."
+      },
+      {
+        "module": 12,
+        "q": "Accurate training records help a coach because they:",
+        "choices": [
+          "Can be skipped when busy",
+          "Show what was done, track progress, and guide the next program",
+          "Are only needed for billing",
+          "Should be kept secret from the athlete"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Show what was done, track progress, and guide the next program — Records show loads, volumes, and results, which is how the next program is planned. Are only needed for billing is wrong: Records are for coaching, not only billing. Can be skipped when busy is wrong: Skipping records loses the training history. Should be kept secret from the athlete is wrong: Athletes should see their own records and progress."
+      },
+      {
+        "module": 12,
+        "q": "When scheduling a team's strength sessions, the coach must consider:",
+        "choices": [
+          "The weather forecast for next year",
+          "Practice, competition, travel, and recovery time",
+          "The colour of the gym walls",
+          "Only the coach's own preference"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Practice, competition, travel, and recovery time — Training must fit around practices, games, travel, and rest, or athletes will be overtrained. Only the coach's own preference is wrong: The coach's preference alone ignores the athletes' schedule. The colour of the gym walls is wrong: Wall colour is irrelevant to scheduling. The weather forecast for next year is wrong: Next year's weather does not affect this week's schedule."
+      },
+      {
+        "module": 12,
+        "q": "The most important rule for supervising a weight room is:",
+        "choices": [
+          "Leave beginners alone to learn by themselves",
+          "Allow maximal lifts with no spotter",
+          "Let athletes use any equipment without instruction",
+          "Never leave athletes unsupervised while lifting"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Never leave athletes unsupervised while lifting — Unsupervised lifting risks injury, especially with beginners and heavy loads. Leave beginners alone to learn by themselves is wrong: Beginners need the most supervision, not the least. Allow maximal lifts with no spotter is wrong: Maximal lifts need a spotter and safeties. Let athletes use any equipment without instruction is wrong: Athletes must be taught how to use equipment safely."
+      },
+      {
+        "module": 2,
+        "q": "In a vertical jump, the main joints that extend to produce the jump are:",
+        "choices": [
+          "Elbows and wrists",
+          "Hips, knees, and ankles",
+          "Shoulders only",
+          "Neck and jaw"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Hips, knees, and ankles — Jumping is triple extension: hips, knees, and ankles extending together. Elbows and wrists is wrong: Elbows and wrists are upper-body joints. Shoulders only is wrong: Shoulders alone cannot produce a jump. Neck and jaw is wrong: The neck and jaw do not produce jumping power."
+      },
+      {
+        "module": 4,
+        "q": "Muscle soreness that peaks 24 to 72 hours after unfamiliar exercise is called:",
+        "choices": [
+          "A muscle tear",
+          "A fracture",
+          "Acute muscle cramp",
+          "Delayed-onset muscle soreness (DOMS)"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Delayed-onset muscle soreness (DOMS) — DOMS is the normal soreness that peaks 1-3 days after unfamiliar, often eccentric, exercise. Acute muscle cramp is wrong: A cramp is a sudden involuntary contraction during or just after exercise. A muscle tear is wrong: A tear is an injury with sharp pain and loss of function. A fracture is wrong: A fracture is a broken bone."
+      },
+      {
+        "module": 4,
+        "q": "The main fuel for a 10-second maximal sprint is:",
+        "choices": [
+          "Fat oxidation",
+          "Blood glucose over 30 minutes",
+          "Protein breakdown",
+          "Phosphocreatine and stored ATP"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Phosphocreatine and stored ATP — A 10-second sprint runs on stored ATP and phosphocreatine, the fastest energy system. Fat oxidation is wrong: Fat oxidation is far too slow for a sprint. Blood glucose over 30 minutes is wrong: Blood glucose over 30 minutes is an endurance fuel pattern. Protein breakdown is wrong: Protein is not a main fuel for a sprint."
+      },
+      {
+        "module": 7,
+        "q": "The first thing a coach should check before teaching a new lift is:",
+        "choices": [
+          "The athlete's 1RM",
+          "Whether the athlete can perform the basic movement pattern safely",
+          "The athlete's sprint time",
+          "The athlete's favourite colour"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Whether the athlete can perform the basic movement pattern safely — A new lift is taught only if the athlete can do the pattern safely, often starting with a dowel or light load. The athlete's favourite colour is wrong: Favourite colour is irrelevant. The athlete's 1RM is wrong: A 1RM is measured after technique is learned. The athlete's sprint time is wrong: Sprint time does not show lifting technique."
+      },
+      {
+        "module": 7,
+        "q": "During a lift, which kind of coaching cue is most likely to improve the athlete's technique?",
+        "choices": [
+          "Shouted angrily",
+          "A long lecture during the lift",
+          "Vague and confusing",
+          "Short, clear, and focused on one thing at a time"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Short, clear, and focused on one thing at a time — Short, single-focus cues are heard and acted on; long lectures are not. A long lecture during the lift is wrong: A lecture during the lift distracts the athlete. Vague and confusing is wrong: Vague cues do not change movement. Shouted angrily is wrong: Shouting angrily damages the coach-athlete relationship."
+      }
+    ]
+  },
+  "nasm-ces": {
+    "title": "NASM Corrective Exercise Specialist Practice Exam",
+    "minutes": 90,
+    "passPercent": 70,
+    "coverage": "NASM Corrective Exercise Specialist practice exam: 50 original questions in the real exam's style and format, spanning functional anatomy, movement assessment, muscle imbalances and compensations, the Corrective Exercise Continuum (inhibit, lengthen, activate, integrate), and programming. The real NASM CES exam is 100 multiple-choice questions in 90 minutes, 70% to pass, online open-book, with up to 3 attempts within 1 year of purchase. There are no required prerequisites (a CPT, a degree, or another accredited certification is recommended). The CES is a specialization, NOT an NCCA-accredited certification, and does NOT qualify anyone to diagnose or treat injuries.",
+    "questions": [
+      {
+        "module": 2,
+        "q": "In the overhead squat assessment, the feet turning outward suggests:",
+        "choices": [
+          "Overactive calves and underactive gluteus medius and maximus",
+          "Underactive calves",
+          "Perfect movement with no issue",
+          "Overactive hamstrings only"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Overactive calves and underactive gluteus medius and maximus — Feet turning out is a common sign of tight calves with weak glutes that cannot control the foot and hip. Overactive hamstrings only is wrong: The hamstrings alone do not explain feet turning out. Perfect movement with no issue is wrong: Feet turning out is a compensation, not perfect movement. Underactive calves is wrong: The calves are overactive, not underactive, in this pattern."
+      },
+      {
+        "module": 2,
+        "q": "In the overhead squat assessment, the knees moving inward (valgus) suggests:",
+        "choices": [
+          "Underactive hip adductors",
+          "Overactive gluteus maximus",
+          "Strong gluteus medius",
+          "Overactive hip adductors and weak gluteus medius"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Overactive hip adductors and weak gluteus medius — Knees caving in is linked to overactive adductors pulling the knee in and a weak gluteus medius that cannot hold it out. Strong gluteus medius is wrong: A strong gluteus medius would hold the knee in line. Overactive gluteus maximus is wrong: The gluteus maximus is underactive, not overactive, in this pattern. Underactive hip adductors is wrong: The adductors are overactive, pulling the knee inward."
+      },
+      {
+        "module": 2,
+        "q": "In the overhead squat assessment, the arms falling forward suggests:",
+        "choices": [
+          "Overactive latissimus dorsi and weak lower trapezius",
+          "Strong lower trapezius",
+          "Perfect shoulder mobility",
+          "Overactive lower trapezius"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Overactive latissimus dorsi and weak lower trapezius — Arms falling forward is linked to a tight latissimus dorsi pulling the arms down and a weak lower trapezius. Strong lower trapezius is wrong: A strong lower trapezius would hold the arms up. Overactive lower trapezius is wrong: The lower trapezius is underactive, not overactive, here. Perfect shoulder mobility is wrong: Arms falling forward is a compensation, not perfect mobility."
+      },
+      {
+        "module": 2,
+        "q": "In the overhead squat assessment, an excessive forward lean of the trunk suggests:",
+        "choices": [
+          "Underactive hip flexors",
+          "Perfect hip mobility",
+          "Overactive hip flexors and weak gluteus maximus",
+          "Strong gluteus maximus"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Overactive hip flexors and weak gluteus maximus — A forward lean is linked to tight hip flexors and a weak gluteus maximus that cannot keep the trunk upright. Strong gluteus maximus is wrong: A strong gluteus maximus would keep the trunk more upright. Underactive hip flexors is wrong: The hip flexors are overactive, not underactive, in this pattern. Perfect hip mobility is wrong: An excessive lean is a compensation, not perfect mobility."
+      },
+      {
+        "module": 2,
+        "q": "In the overhead squat assessment, the heels rising off the floor suggests:",
+        "choices": [
+          "Strong ankle mobility",
+          "Overactive gluteus maximus",
+          "Underactive calves",
+          "Overactive calves (gastrocnemius and soleus)"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Overactive calves (gastrocnemius and soleus) — Tight calves limit ankle dorsiflexion, so the heels lift to complete the squat. Underactive calves is wrong: The calves are overactive and tight, not underactive. Overactive gluteus maximus is wrong: The gluteus maximus does not control the heel. Strong ankle mobility is wrong: Good ankle mobility would keep the heels down."
+      },
+      {
+        "module": 2,
+        "q": "The prime mover (agonist) for knee extension is the:",
+        "choices": [
+          "Gluteus maximus",
+          "Quadriceps",
+          "Gastrocnemius",
+          "Hamstrings"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Quadriceps — The quadriceps extend the knee and are the prime movers for that action. Hamstrings is wrong: The hamstrings flex the knee, the opposite action. Gastrocnemius is wrong: The gastrocnemius plantarflexes the ankle. Gluteus maximus is wrong: The gluteus maximus extends the hip."
+      },
+      {
+        "module": 2,
+        "q": "The prime mover for hip extension is the:",
+        "choices": [
+          "Tibialis anterior",
+          "Rectus abdominis",
+          "Gluteus maximus",
+          "Quadriceps"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Gluteus maximus — The gluteus maximus is the main hip extensor. Quadriceps is wrong: The quadriceps extend the knee. Tibialis anterior is wrong: The tibialis anterior dorsiflexes the ankle. Rectus abdominis is wrong: The rectus abdominis flexes the trunk."
+      },
+      {
+        "module": 2,
+        "q": "A stabiliser muscle's main job is to:",
+        "choices": [
+          "Produce the main movement",
+          "Relax completely during exercise",
+          "Hold a joint steady while the prime mover works",
+          "Generate maximum power"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Hold a joint steady while the prime mover works — Stabilisers control and steady the joint so the prime mover can work safely. Produce the main movement is wrong: Producing the main movement is the prime mover's job. Relax completely during exercise is wrong: Stabilisers work actively, not by relaxing. Generate maximum power is wrong: Maximum power comes from prime movers, not stabilisers."
+      },
+      {
+        "module": 2,
+        "q": "The kinetic chain in corrective exercise means:",
+        "choices": [
+          "Each joint works in isolation",
+          "Only the painful joint matters",
+          "Muscles never affect each other",
+          "A problem at one joint changes how the joints above and below it move"
+        ],
+        "answer": 3,
+        "explanation": "Correct: A problem at one joint changes how the joints above and below it move — The body is linked, so a foot problem can change knee, hip, and back movement. Each joint works in isolation is wrong: Joints do not work in isolation. Only the painful joint matters is wrong: The painful joint is often the victim of a problem elsewhere. Muscles never affect each other is wrong: Muscles affect each other through the chain."
+      },
+      {
+        "module": 2,
+        "q": "In the frontal plane, the main movement at the hip is:",
+        "choices": [
+          "Flexion and extension",
+          "Plantarflexion",
+          "Abduction and adduction",
+          "Rotation only"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Abduction and adduction — The frontal plane is side-to-side, so the hip moves into abduction and adduction there. Flexion and extension is wrong: Flexion and extension happen in the sagittal plane. Rotation only is wrong: Rotation happens mainly in the transverse plane. Plantarflexion is wrong: Plantarflexion is an ankle movement in the sagittal plane."
+      },
+      {
+        "module": 2,
+        "q": "The transverse plane movement at the shoulder is:",
+        "choices": [
+          "Flexion and extension",
+          "Dorsiflexion",
+          "Abduction and adduction",
+          "Horizontal abduction and adduction"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Horizontal abduction and adduction — Horizontal abduction and adduction (across the chest) are transverse-plane shoulder movements. Flexion and extension is wrong: Flexion and extension are sagittal-plane movements. Abduction and adduction is wrong: Abduction and adduction are frontal-plane movements. Dorsiflexion is wrong: Dorsiflexion is an ankle movement."
+      },
+      {
+        "module": 2,
+        "q": "Which muscle is most likely overactive in a client whose shoulders round forward?",
+        "choices": [
+          "Deep neck flexors",
+          "Lower trapezius",
+          "Rhomboids",
+          "Pectoralis major and minor"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Pectoralis major and minor — Tight chest muscles pull the shoulders forward into a rounded posture. Lower trapezius is wrong: The lower trapezius is underactive in rounded shoulders. Rhomboids is wrong: The rhomboids are underactive in rounded shoulders. Deep neck flexors is wrong: The deep neck flexors are underactive in forward-head posture."
+      },
+      {
+        "module": 2,
+        "q": "Which muscles are typically underactive when the shoulders round forward?",
+        "choices": [
+          "Latissimus dorsi",
+          "Upper trapezius",
+          "Lower trapezius and rhomboids",
+          "Pectoralis major and minor"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Lower trapezius and rhomboids — Rounded shoulders come with weak lower trapezius and rhomboids that cannot pull the shoulders back. Pectoralis major and minor is wrong: The pectoralis muscles are overactive, pulling the shoulders forward. Latissimus dorsi is wrong: The latissimus dorsi is overactive in this pattern. Upper trapezius is wrong: The upper trapezius is overactive, not underactive."
+      },
+      {
+        "module": 2,
+        "q": "The anterior oblique subsystem connects:",
+        "choices": [
+          "The same-side gluteus maximus with the same-side latissimus dorsi",
+          "The external oblique on one side with the opposite hip adductors",
+          "The calf with the hamstring on the same leg",
+          "The biceps with the triceps"
+        ],
+        "answer": 1,
+        "explanation": "Correct: The external oblique on one side with the opposite hip adductors — The anterior oblique subsystem links the external oblique to the opposite adductors across the front of the body. The same-side gluteus maximus with the same-side latissimus dorsi is wrong: The gluteus maximus and opposite latissimus dorsi form the posterior oblique subsystem. The calf with the hamstring on the same leg is wrong: The calf and hamstring are not an oblique subsystem. The biceps with the triceps is wrong: The biceps and triceps are an arm pair, not a subsystem."
+      },
+      {
+        "module": 2,
+        "q": "The posterior oblique subsystem connects:",
+        "choices": [
+          "The quadriceps with the calves",
+          "The chest with the biceps",
+          "The external oblique with the opposite adductors",
+          "The latissimus dorsi with the opposite gluteus maximus"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The latissimus dorsi with the opposite gluteus maximus — The posterior oblique subsystem links the latissimus dorsi to the opposite gluteus maximus across the back. The external oblique with the opposite adductors is wrong: The external oblique and opposite adductors form the anterior oblique subsystem. The quadriceps with the calves is wrong: The quadriceps and calves are not an oblique subsystem. The chest with the biceps is wrong: The chest and biceps are not a subsystem."
+      },
+      {
+        "module": 5,
+        "q": "The first step in a corrective exercise assessment is to:",
+        "choices": [
+          "Load the client with a maximal squat",
+          "Prescribe exercises immediately",
+          "Ignore the client's history",
+          "Observe the client's static posture"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Observe the client's static posture — Static posture shows the starting alignment before any movement is tested. Load the client with a maximal squat is wrong: A maximal squat before assessment is unsafe. Prescribe exercises immediately is wrong: Exercises are prescribed after assessment, not before. Ignore the client's history is wrong: History is part of assessment and must not be ignored."
+      },
+      {
+        "module": 5,
+        "q": "A single-leg squat assessment mainly tests:",
+        "choices": [
+          "Aerobic fitness",
+          "Balance, hip stability, and knee control on one leg",
+          "Shoulder flexibility",
+          "Maximum bench press strength"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Balance, hip stability, and knee control on one leg — Standing on one leg and squatting reveals hip drop, knee valgus, and balance problems. Maximum bench press strength is wrong: Bench press strength is an upper-body test. Aerobic fitness is wrong: Aerobic fitness is measured by walk, run, or cycle tests. Shoulder flexibility is wrong: Shoulder flexibility is measured by reach tests."
+      },
+      {
+        "module": 5,
+        "q": "During a pushing assessment (such as a push-up), the head jutting forward suggests:",
+        "choices": [
+          "Strong deep neck flexors",
+          "Overactive upper trapezius and weak deep neck flexors",
+          "Underactive upper trapezius",
+          "Perfect neck alignment"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Overactive upper trapezius and weak deep neck flexors — A forward head in pushing is linked to a tight upper trapezius and weak deep neck flexors. Strong deep neck flexors is wrong: Strong deep neck flexors would hold the head in line. Underactive upper trapezius is wrong: The upper trapezius is overactive, not underactive, here. Perfect neck alignment is wrong: A jutting head is a compensation, not perfect alignment."
+      },
+      {
+        "module": 5,
+        "q": "During a pulling assessment (such as a row), the shoulders shrugging up suggests:",
+        "choices": [
+          "Strong lower trapezius",
+          "Perfect scapular control",
+          "Underactive upper trapezius",
+          "Overactive upper trapezius and levator scapulae"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Overactive upper trapezius and levator scapulae — Shrugging during a row is linked to overactive upper trapezius and levator scapulae taking over. Strong lower trapezius is wrong: A strong lower trapezius would depress the shoulders. Underactive upper trapezius is wrong: The upper trapezius is overactive, not underactive, here. Perfect scapular control is wrong: Shrugging is a compensation, not perfect control."
+      },
+      {
+        "module": 5,
+        "q": "A gait assessment is useful in corrective exercise because it:",
+        "choices": [
+          "Only measures walking speed",
+          "Replaces all other assessments",
+          "Diagnoses a fracture",
+          "Shows how the whole kinetic chain works during walking"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Shows how the whole kinetic chain works during walking — Walking reveals how the feet, knees, hips, and trunk work together in a real movement. Only measures walking speed is wrong: Walking speed alone says little about movement quality. Diagnoses a fracture is wrong: A fracture is diagnosed by imaging, not by watching gait. Replaces all other assessments is wrong: Gait is one assessment among several, not a replacement."
+      },
+      {
+        "module": 5,
+        "q": "When assessing movement, the coach should watch from:",
+        "choices": [
+          "Only from above",
+          "Only the front",
+          "The front, side, and back",
+          "Only in a mirror"
+        ],
+        "answer": 2,
+        "explanation": "Correct: The front, side, and back — All three views are needed because different compensations show from different angles. Only the front is wrong: The front alone misses side-view problems such as forward lean. Only from above is wrong: From above alone shows almost nothing useful. Only in a mirror is wrong: A mirror alone does not replace the coach's own views."
+      },
+      {
+        "module": 5,
+        "q": "A movement assessment should be done:",
+        "choices": [
+          "After the client has finished the program",
+          "Never — assessments are not needed",
+          "Before prescribing corrective exercises",
+          "Only once a year"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Before prescribing corrective exercises — Assessment comes first so the exercises target the real problem. After the client has finished the program is wrong: Prescribing after the program is finished is too late. Only once a year is wrong: Once a year is too rare to track change. Never — assessments are not needed is wrong: Assessment is the basis of corrective exercise."
+      },
+      {
+        "module": 9,
+        "q": "The most common compensation seen at the knee in a squat is:",
+        "choices": [
+          "The knees locking straight",
+          "The knees moving inward (valgus)",
+          "The knees not bending at all",
+          "The knees moving outward too far"
+        ],
+        "answer": 1,
+        "explanation": "Correct: The knees moving inward (valgus) — Knee valgus — knees collapsing inward — is the most common squat compensation. The knees moving outward too far is wrong: Knees moving outward is less common and less risky. The knees locking straight is wrong: Locked knees mean no squat is happening. The knees not bending at all is wrong: Knees not bending means the squat is not being performed."
+      },
+      {
+        "module": 9,
+        "q": "The most common compensation seen at the feet in a squat is:",
+        "choices": [
+          "The toes lifting off the floor",
+          "The heels staying perfectly down with no issue",
+          "The feet turning inward",
+          "The feet turning outward"
+        ],
+        "answer": 3,
+        "explanation": "Correct: The feet turning outward — Feet turning out is the most common foot compensation in the overhead squat. The feet turning inward is wrong: Feet turning inward is much less common. The heels staying perfectly down with no issue is wrong: Heels staying down is correct, not a compensation. The toes lifting off the floor is wrong: Toes lifting is uncommon; heels lifting is the usual problem."
+      },
+      {
+        "module": 9,
+        "q": "A client whose low back arches excessively during an overhead squat may have:",
+        "choices": [
+          "Overactive hip flexors and erector spinae, with weak gluteus maximus and core",
+          "Perfect spinal control",
+          "Underactive hip flexors",
+          "Strong core muscles"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Overactive hip flexors and erector spinae, with weak gluteus maximus and core — An arched low back is linked to tight hip flexors and back extensors with weak glutes and core. Strong core muscles is wrong: A strong core would control the pelvis better. Underactive hip flexors is wrong: The hip flexors are overactive, not underactive, here. Perfect spinal control is wrong: Excessive arching is a compensation, not perfect control."
+      },
+      {
+        "module": 9,
+        "q": "Lower crossed syndrome is characterised by:",
+        "choices": [
+          "A perfectly balanced pelvis",
+          "Tight chest and weak back only",
+          "Tight hip flexors and lower back, with weak abdominals and gluteals",
+          "Tight calves and weak arms only"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Tight hip flexors and lower back, with weak abdominals and gluteals — Lower crossed syndrome is the crossed pattern of tight hip flexors and erector spinae with weak abdominals and glutes. Tight chest and weak back only is wrong: Tight chest and weak back is upper crossed syndrome. Tight calves and weak arms only is wrong: Calves and arms are not the lower crossed pattern. A perfectly balanced pelvis is wrong: A balanced pelvis is the opposite of this syndrome."
+      },
+      {
+        "module": 9,
+        "q": "Upper crossed syndrome is characterised by:",
+        "choices": [
+          "Tight upper trapezius, levator scapulae, and chest, with weak deep neck flexors and lower trapezius",
+          "Tight hip flexors and weak glutes",
+          "A perfectly aligned neck and shoulders",
+          "Tight hamstrings and weak quadriceps"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Tight upper trapezius, levator scapulae, and chest, with weak deep neck flexors and lower trapezius — Upper crossed syndrome is the crossed pattern of tight upper traps, levator, and chest with weak deep neck flexors and lower traps. Tight hip flexors and weak glutes is wrong: Tight hip flexors and weak glutes is lower crossed syndrome. Tight hamstrings and weak quadriceps is wrong: Hamstrings and quadriceps are a leg pattern, not upper crossed. A perfectly aligned neck and shoulders is wrong: Perfect alignment is the opposite of this syndrome."
+      },
+      {
+        "module": 9,
+        "q": "Pronation distortion syndrome is characterised by:",
+        "choices": [
+          "Only a shoulder problem",
+          "A perfectly aligned foot and ankle",
+          "High arches and knees moving outward",
+          "Flat feet, knees moving inward, and hips rotating inward"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Flat feet, knees moving inward, and hips rotating inward — Pronation distortion is the chain of flat feet, knee valgus, and internal hip rotation. High arches and knees moving outward is wrong: High arches and outward knees are the opposite pattern. A perfectly aligned foot and ankle is wrong: Perfect alignment is the opposite of this syndrome. Only a shoulder problem is wrong: Pronation distortion is a lower-body pattern, not a shoulder problem."
+      },
+      {
+        "module": 9,
+        "q": "In pronation distortion syndrome, which muscles are typically overactive?",
+        "choices": [
+          "Vastus medialis",
+          "Peroneals, gastrocnemius, soleus, and hip adductors",
+          "Gluteus medius and maximus",
+          "Posterior tibialis and gluteus medius"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Peroneals, gastrocnemius, soleus, and hip adductors — The overactive muscles in pronation distortion include the peroneals, calves, and adductors. Gluteus medius and maximus is wrong: The gluteus medius and maximus are underactive in this pattern. Posterior tibialis and gluteus medius is wrong: The posterior tibialis and gluteus medius are underactive here. Vastus medialis is wrong: The vastus medialis is underactive in this pattern."
+      },
+      {
+        "module": 9,
+        "q": "In pronation distortion syndrome, which muscles are typically underactive?",
+        "choices": [
+          "Peroneals",
+          "Hip adductors",
+          "Gluteus medius and maximus, posterior tibialis, and vastus medialis",
+          "Gastrocnemius and soleus"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Gluteus medius and maximus, posterior tibialis, and vastus medialis — The underactive muscles include the gluteus medius and maximus, posterior tibialis, and vastus medialis. Gastrocnemius and soleus is wrong: The calves are overactive in this pattern. Hip adductors is wrong: The adductors are overactive in this pattern. Peroneals is wrong: The peroneals are overactive in this pattern."
+      },
+      {
+        "module": 9,
+        "q": "An overactive muscle in the NASM model is one that is:",
+        "choices": [
+          "Always injured",
+          "Completely inactive",
+          "Tight and dominant, taking over work from weaker muscles",
+          "Weak and lengthened"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Tight and dominant, taking over work from weaker muscles — Overactive muscles are tight and overwork, compensating for underactive muscles. Weak and lengthened is wrong: Weak and lengthened describes an underactive muscle. Completely inactive is wrong: An overactive muscle is working too much, not inactive. Always injured is wrong: Overactivity is a pattern, not an injury itself."
+      },
+      {
+        "module": 9,
+        "q": "An underactive muscle in the NASM model is one that is:",
+        "choices": [
+          "Tight and dominant",
+          "The strongest muscle in the body",
+          "Always torn",
+          "Weak and lengthened, not doing its share of the work"
+        ],
+        "answer": 3,
+        "explanation": "Correct: Weak and lengthened, not doing its share of the work — Underactive muscles are weak and lengthened, so other muscles take over their job. Tight and dominant is wrong: Tight and dominant describes an overactive muscle. Always torn is wrong: Underactivity is a pattern, not a tear. The strongest muscle in the body is wrong: The strongest muscle is not underactive."
+      },
+      {
+        "module": 9,
+        "q": "The altered reciprocal inhibition that drives many imbalances means:",
+        "choices": [
+          "A tight muscle inhibits its opposite muscle, making it weaker",
+          "Stretching always weakens a muscle",
+          "Muscles never affect each other",
+          "A weak muscle makes its opposite stronger"
+        ],
+        "answer": 0,
+        "explanation": "Correct: A tight muscle inhibits its opposite muscle, making it weaker — When one muscle is overactive and tight, it neurologically inhibits its antagonist, which becomes underactive. A weak muscle makes its opposite stronger is wrong: A weak muscle does not strengthen its opposite; the opposite is what happens. Muscles never affect each other is wrong: Muscles affect each other through reciprocal inhibition. Stretching always weakens a muscle is wrong: Stretching an overactive muscle helps release the inhibition, not weaken it permanently."
+      },
+      {
+        "module": 9,
+        "q": "The first phase of the Corrective Exercise Continuum is:",
+        "choices": [
+          "Inhibit",
+          "Activate",
+          "Lengthen",
+          "Integrate"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Inhibit — Inhibit comes first: self-myofascial release calms overactive tissue before anything else. Lengthen is wrong: Lengthen is the second phase. Activate is wrong: Activate is the third phase. Integrate is wrong: Integrate is the fourth and last phase."
+      },
+      {
+        "module": 9,
+        "q": "The second phase of the Corrective Exercise Continuum is:",
+        "choices": [
+          "Activate",
+          "Lengthen",
+          "Integrate",
+          "Inhibit"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Lengthen — Lengthen (static stretching) comes second, after inhibiting the overactive muscle. Inhibit is wrong: Inhibit is the first phase. Activate is wrong: Activate is the third phase. Integrate is wrong: Integrate is the fourth phase."
+      },
+      {
+        "module": 9,
+        "q": "The third phase of the Corrective Exercise Continuum is:",
+        "choices": [
+          "Lengthen",
+          "Inhibit",
+          "Activate",
+          "Integrate"
+        ],
+        "answer": 2,
+        "explanation": "Correct: Activate — Activate (isolated strengthening) comes third, waking up the underactive muscle. Inhibit is wrong: Inhibit is the first phase. Lengthen is wrong: Lengthen is the second phase. Integrate is wrong: Integrate is the fourth phase."
+      },
+      {
+        "module": 9,
+        "q": "The fourth phase of the Corrective Exercise Continuum is:",
+        "choices": [
+          "Integrate",
+          "Inhibit",
+          "Activate",
+          "Lengthen"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Integrate — Integrate comes last: the corrected pattern is practised in a functional, whole-body movement. Inhibit is wrong: Inhibit is the first phase. Lengthen is wrong: Lengthen is the second phase. Activate is wrong: Activate is the third phase."
+      },
+      {
+        "module": 9,
+        "q": "In the inhibit phase, the main tool used is:",
+        "choices": [
+          "Self-myofascial release with a foam roller or ball",
+          "Static stretching of the weak muscle",
+          "Heavy barbell squats",
+          "Maximum sprinting"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Self-myofascial release with a foam roller or ball — Foam rolling reduces tension in overactive tissue, which is the goal of the inhibit phase. Heavy barbell squats is wrong: Heavy squats load the pattern before it is corrected. Maximum sprinting is wrong: Sprinting is high-intensity training, not inhibition. Static stretching of the weak muscle is wrong: Static stretching belongs to the lengthen phase, and it targets the tight muscle."
+      },
+      {
+        "module": 9,
+        "q": "In the lengthen phase, the main tool used is:",
+        "choices": [
+          "Plyometric jumps",
+          "Static stretching of the overactive muscle",
+          "Heavy lifting of the tight muscle",
+          "Foam rolling the weak muscle"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Static stretching of the overactive muscle — Static stretching lengthens the overactive muscle after it has been inhibited. Foam rolling the weak muscle is wrong: Foam rolling belongs to the inhibit phase, and targets the overactive muscle. Heavy lifting of the tight muscle is wrong: Heavy lifting the tight muscle would make it tighter. Plyometric jumps is wrong: Plyometrics belong to performance training, not the lengthen phase."
+      },
+      {
+        "module": 9,
+        "q": "In the activate phase, the exercise should be:",
+        "choices": [
+          "Isolated, slow, and focused on the underactive muscle",
+          "A maximal sprint",
+          "A long run",
+          "Heavy and explosive"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Isolated, slow, and focused on the underactive muscle — Activation uses light, isolated, controlled work so the weak muscle fires without stronger muscles taking over. Heavy and explosive is wrong: Heavy explosive work lets stronger muscles dominate. A maximal sprint is wrong: A sprint is a whole-body power effort. A long run is wrong: A long run is endurance training, not activation."
+      },
+      {
+        "module": 9,
+        "q": "In the integrate phase, the exercise should be:",
+        "choices": [
+          "A static stretch held for 10 minutes",
+          "A functional, whole-body movement using the corrected pattern",
+          "A foam-rolling session",
+          "An isolated exercise for one muscle only"
+        ],
+        "answer": 1,
+        "explanation": "Correct: A functional, whole-body movement using the corrected pattern — Integration retrains the whole pattern, such as a squat or lunge with the corrected alignment. An isolated exercise for one muscle only is wrong: Isolated work belongs to the activate phase. A foam-rolling session is wrong: Foam rolling belongs to the inhibit phase. A static stretch held for 10 minutes is wrong: A static stretch belongs to the lengthen phase."
+      },
+      {
+        "module": 9,
+        "q": "The correct order of the Corrective Exercise Continuum is:",
+        "choices": [
+          "Activate, inhibit, integrate, lengthen",
+          "Inhibit, lengthen, activate, integrate",
+          "Integrate, activate, lengthen, inhibit",
+          "Lengthen, activate, inhibit, integrate"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Inhibit, lengthen, activate, integrate — The continuum runs inhibit, then lengthen, then activate, then integrate. Activate, inhibit, integrate, lengthen is wrong: Starting with activation lets overactive muscles dominate the weak ones. Lengthen, activate, inhibit, integrate is wrong: Lengthening before inhibiting misses the first step. Integrate, activate, lengthen, inhibit is wrong: Integrating first practises the faulty pattern."
+      },
+      {
+        "module": 9,
+        "q": "Self-myofascial release should be held on a tender spot for about:",
+        "choices": [
+          "No time at all",
+          "1 second",
+          "30 seconds",
+          "10 minutes"
+        ],
+        "answer": 2,
+        "explanation": "Correct: 30 seconds — Holding pressure on a tender spot for about 30 seconds is the usual dose. 1 second is wrong: 1 second is too short to have any effect. 10 minutes is wrong: 10 minutes on one spot is excessive. No time at all is wrong: No time at all means no release happens."
+      },
+      {
+        "module": 6,
+        "q": "Corrective exercises are best placed in a session:",
+        "choices": [
+          "Never — they do not belong in a program",
+          "In the warm-up, before the main training",
+          "Only once a month",
+          "Only after the session, never before"
+        ],
+        "answer": 1,
+        "explanation": "Correct: In the warm-up, before the main training — Correctives in the warm-up prepare the pattern so the main training uses good movement. Only after the session, never before is wrong: Doing them only after the session misses the chance to improve the training that follows. Only once a month is wrong: Once a month is too rare to change a pattern. Never — they do not belong in a program is wrong: Correctives belong in the program; that is their purpose."
+      },
+      {
+        "module": 6,
+        "q": "How often should a corrective exercise program be performed?",
+        "choices": [
+          "Only when pain is severe",
+          "Regularly, often daily or several times a week, in short sessions",
+          "Once a year",
+          "Never"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Regularly, often daily or several times a week, in short sessions — Correctives need regular, frequent, short practice to change a movement pattern. Once a year is wrong: Once a year cannot change a pattern. Never is wrong: Never doing them leaves the imbalance in place. Only when pain is severe is wrong: Waiting for severe pain is too late; correctives are preventive."
+      },
+      {
+        "module": 9,
+        "q": "A client with knee valgus in a squat should FIRST have their movement corrected with:",
+        "choices": [
+          "Inhibit and lengthen the overactive adductors and calves, then activate the gluteus medius",
+          "No assessment at all",
+          "Heavy barbell squats with the knees caving in",
+          "A maximal sprint"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Inhibit and lengthen the overactive adductors and calves, then activate the gluteus medius — The continuum order is inhibit, lengthen, then activate the weak glutes before loading the pattern. Heavy barbell squats with the knees caving in is wrong: Heavy squats with valgus reinforce the faulty pattern. No assessment at all is wrong: No assessment means guessing at the problem. A maximal sprint is wrong: A sprint loads the faulty pattern at speed."
+      },
+      {
+        "module": 9,
+        "q": "When should a corrective exercise specialist refer a client to a clinician?",
+        "choices": [
+          "When there is pain, a suspected injury, or a medical condition outside the specialist's scope",
+          "Never — the specialist should treat all injuries",
+          "Only when the client asks",
+          "Only after a year of training"
+        ],
+        "answer": 0,
+        "explanation": "Correct: When there is pain, a suspected injury, or a medical condition outside the specialist's scope — Pain, injury, or medical conditions are outside a corrective exercise specialist's scope, so referral is required. Never — the specialist should treat all injuries is wrong: A specialist must never diagnose or treat injuries. Only when the client asks is wrong: Waiting for the client to ask delays needed care. Only after a year of training is wrong: Waiting a year lets a problem get worse."
+      },
+      {
+        "module": 9,
+        "q": "A corrective exercise specialist must NOT:",
+        "choices": [
+          "Design a corrective program",
+          "Diagnose or treat injuries",
+          "Assess movement",
+          "Teach a warm-up"
+        ],
+        "answer": 1,
+        "explanation": "Correct: Diagnose or treat injuries — Diagnosis and treatment are the clinician's job; the specialist assesses movement and designs corrective programs within scope. Assess movement is wrong: Assessing movement is the specialist's core job. Teach a warm-up is wrong: Teaching a warm-up is within scope. Design a corrective program is wrong: Designing a corrective program is the specialist's core job."
+      },
+      {
+        "module": 9,
+        "q": "Progress in a corrective exercise program is best measured by:",
+        "choices": [
+          "Repeating the movement assessment and seeing fewer compensations",
+          "Only by asking the client if they feel better",
+          "Only by weighing the client",
+          "Never measuring anything"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Repeating the movement assessment and seeing fewer compensations — Re-assessment shows whether the compensations have actually improved. Only by weighing the client is wrong: Weight does not measure movement quality. Only by asking the client if they feel better is wrong: Feeling better helps but does not show the movement pattern. Never measuring anything is wrong: Without measurement, progress cannot be shown."
+      },
+      {
+        "module": 6,
+        "q": "When integrating correctives into a full program, the main training should:",
+        "choices": [
+          "Use the corrected movement pattern, with load added only when the pattern is good",
+          "Add maximal load immediately regardless of form",
+          "Skip the warm-up",
+          "Ignore the corrections and lift with the old pattern"
+        ],
+        "answer": 0,
+        "explanation": "Correct: Use the corrected movement pattern, with load added only when the pattern is good — Load is added only once the pattern is correct, so the new pattern is strengthened. Ignore the corrections and lift with the old pattern is wrong: Ignoring corrections wastes the corrective work. Add maximal load immediately regardless of form is wrong: Maximal load with poor form risks injury. Skip the warm-up is wrong: Skipping the warm-up removes the corrective preparation."
       }
     ]
   }
