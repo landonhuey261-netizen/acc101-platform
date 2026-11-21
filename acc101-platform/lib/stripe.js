@@ -59,7 +59,7 @@ async function createCheckoutSession({ userId, programSlug, programName, success
   body.set('mode', 'payment');
   body.set('line_items[0][price_data][currency]', CURRENCY);
   body.set('line_items[0][price_data][unit_amount]', String(PRICE_CENTS));
-  body.set('line_items[0][price_data][product_data][name]', programName + ' program');
+  body.set('line_items[0][price_data][product_data][name]', programName);
   body.set('line_items[0][quantity]', '1');
   body.set('metadata[user_id]', String(userId));
   body.set('metadata[program_slug]', programSlug);
