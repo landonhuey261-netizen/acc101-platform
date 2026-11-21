@@ -426,6 +426,67 @@ const PROGRAMS = [
       'or license. CLEP College Composition credit, if pursued, is granted ' +
       'by your target college, not by this app.',
   },
+  {
+    name: 'General Medical program',
+    slug: 'medical',
+    order: [
+      'med101',
+      'med102',
+      'med103',
+      'med104',
+      'med105',
+      'med106',
+      'med107',
+      'med108',
+      'med109',
+      'med110',
+      'med111',
+      'med112',
+      'med201',
+    ],
+    // Prerequisite guidance: each course builds directly on the listed
+    // earlier course. The capstone has no PREREQS entry (same as the
+    // other capstones); the final-step banner covers it.
+    prereqs: {
+      med102: 'med101',
+      med103: 'med102',
+      med104: 'med101',
+      med105: 'med101',
+      med106: 'med105',
+      med107: 'med106',
+      med108: 'med106',
+      med109: 'med108',
+      med110: 'med104',
+      med111: 'med101',
+      med112: 'med111',
+    },
+    blurb:
+      'Thirteen courses taken in order, modeled on Lansing Community ' +
+      'College\u2019s Emergency Medical Services A.A.S. and Basic EMT ' +
+      'Certificate with Sacramento City College\u2019s Pre-Health ' +
+      'Occupations A.S. and North Hennepin Community College\u2019s ' +
+      'Nutrition A.S. as the continuity layer \u2014 from healthcare ' +
+      'foundations, anatomy and physiology, and medical terminology ' +
+      'through first aid and CPR, EMT airway, trauma, medical, and ' +
+      'special-populations care, pharmacology basics, and two nutrition ' +
+      'courses to a capstone that readies you for the NREMT EMT cognitive ' +
+      'exam and the NASM Certified Nutrition Coach exam. This program ' +
+      'teaches knowledge only and certifies no one: it is not a ' +
+      'state-approved EMT course, it provides no clinical hours or ' +
+      'skills verification, and completing it does not make anyone an ' +
+      'EMT, a nutrition coach, or a healthcare professional.',
+    capstoneLine:
+      'This is the final step of the program \u2014 the capstone. When the ' +
+      'certification tracker on this page shows READY for the credentials ' +
+      'you want, book the real exams through the approved providers ' +
+      'listed there. The practice exams here do not grant credentials or ' +
+      'licenses \u2014 the real NREMT EMT exam is computer-adaptive with ' +
+      'no percentage pass mark (it passes at a scaled score of 950 on a ' +
+      '100\u20131500 scale), real EMT certification also needs a ' +
+      'state-approved course with skills verification plus a state ' +
+      'license, and the AHA BLS Provider eCard needs an in-person ' +
+      'hands-on skills session.',
+  },
 ];
 
 const PROGRAM_NAME = PROGRAMS[0].name;

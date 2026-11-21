@@ -2,7 +2,7 @@
 
 // Certification tracker definitions + rendering for the program capstones
 // (hvac-cert-prep, plb-cert-prep, bus-capstone, eco-capstone,
-// ase-cert-prep, asl-capstone, con301, ele290, and eng495). Each entry names its capstone; the
+// ase-cert-prep, asl-capstone, con301, ele290, eng495, and med201). Each entry names its capstone; the
 // tracker panel renders only the entries for the capstone dashboard it is
 // shown on. Readiness is computed from the student's REAL stored data:
 // best practice-exam scores (exam_scores), module completion in mapped
@@ -133,6 +133,28 @@ const CLEP_WHERE =
   'ACE-recommended credit-granting score is 50. Whether your target college ' +
   'awards credit, and how much, is that college\u2019s decision — no fee is ' +
   'stated here because it was not verified against College Board.';
+
+const NREMT_WHERE =
+  'The real NREMT EMT exam is computer-adaptive, given at Pearson VUE test ' +
+  'centers or online via OnVUE. Start at the National Registry of Emergency ' +
+  'Medical Technicians: ' +
+  '<a href="https://www.nremt.org" target="_blank" rel="noopener">nremt.org</a>. ' +
+  'You register and test with them \u2014 not inside this app. The exam fee is ' +
+  '$104 per attempt.';
+
+const NASM_WHERE =
+  'The NASM Certified Nutrition Coach exam is taken online through NASM. Start ' +
+  'at the National Academy of Sports Medicine: ' +
+  '<a href="https://www.nasm.org" target="_blank" rel="noopener">nasm.org</a>. ' +
+  'You register and test with NASM \u2014 not inside this app. No fee is stated ' +
+  'here because it was not verified against NASM.';
+
+const BLS_WHERE =
+  'The AHA BLS Provider course is taken in person with an American Heart ' +
+  'Association instructor, or as HeartCode BLS online plus an in-person skills ' +
+  'session. Find a course through the American Heart Association: ' +
+  '<a href="https://cpr.heart.org" target="_blank" rel="noopener">cpr.heart.org</a>. ' +
+  'An online-only course with no skills demonstration does not earn the eCard.';
 
 const CERTS = [
   {
@@ -1321,6 +1343,127 @@ const CERTS = [
     guideLabel: 'CLEP College Composition study guide',
     where: CLEP_WHERE,
   },
+  {
+    id: 'nremt-emt',
+    capstone: 'med201',
+    name: 'NREMT EMT Certification',
+    blurb:
+      'The National Registry of Emergency Medical Technicians cognitive exam ' +
+      'for Emergency Medical Technicians: computer-adaptive, 70\u2013120 ' +
+      'questions in 2 hours plus 10 unscored pilot items, at a Pearson VUE ' +
+      'center or online via OnVUE. The real exam has NO percentage pass mark ' +
+      '\u2014 it passes at a scaled score of 950 on a 100\u20131500 scale. The ' +
+      '70% used here is a practice benchmark only, never the real pass mark.',
+    kind: 'sections',
+    standard: 70,
+    benchmark: true,
+    sections: [
+      { label: 'NREMT EMT Practice Exam I \u2014 Comprehensive', examKey: 'midterm' },
+      { label: 'NREMT EMT Practice Exam II \u2014 Comprehensive', examKey: 'nremt-2' },
+    ],
+    mapped:
+      'Prepared by med105 (first aid, CPR, vital signs) and med106\u2013med109 ' +
+      '(the EMT sequence: airway and assessment, trauma, medical emergencies, ' +
+      'special populations and operations), with med102\u2013med104 for the ' +
+      'anatomy, physiology, and terminology underneath. Practice exams: the ' +
+      'two NREMT EMT comprehensive practice exams in this course.',
+    readyRule:
+      'READY here means your best practice score reached 70% on BOTH exams ' +
+      '\u2014 a practice benchmark only. The real NREMT exam is ' +
+      'computer-adaptive and has no percentage pass mark: it passes at a ' +
+      'scaled score of 950 on a 100\u20131500 scale, and real certification ' +
+      'also needs a state-approved EMT course with skills verification plus ' +
+      'a state license.',
+    guideId: 'nremt-emt',
+    guideLabel: 'NREMT EMT study guide',
+    where: NREMT_WHERE,
+  },
+  {
+    id: 'nasm-cnc',
+    capstone: 'med201',
+    name: 'NASM Certified Nutrition Coach',
+    blurb:
+      'The National Academy of Sports Medicine coach-tier credential: 100 ' +
+      'multiple-choice questions in 90 minutes, 70% or better to pass, online ' +
+      'open-book unproctored, 3 attempts within 365 days of purchase. A ' +
+      'coach gives general nutrition guidance and behaviour-change coaching ' +
+      'within scope \u2014 not diagnosis, not medical nutrition therapy, not ' +
+      'prescribed diets. That work belongs to a clinician or a Registered ' +
+      'Dietitian Nutritionist.',
+    kind: 'single',
+    examKey: 'nasm-cnc',
+    examLabel: 'NASM Certified Nutrition Coach practice exam',
+    standard: 70,
+    mapped:
+      'Prepared by med111 (nutrition foundations) and med112 (nutrition ' +
+      'across the lifespan, disease, and public health). Practice exam: the ' +
+      'NASM Certified Nutrition Coach practice exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 the verified ' +
+      'real pass mark for the NASM Certified Nutrition Coach exam.',
+    guideId: 'nasm-cnc',
+    guideLabel: 'NASM Certified Nutrition Coach study guide',
+    where: NASM_WHERE,
+  },
+  {
+    id: 'bls-provider',
+    capstone: 'med201',
+    name: 'AHA BLS Provider (in-person course)',
+    blurb:
+      'The American Heart Association Basic Life Support Provider course: ' +
+      'CPR, AED use, and choking relief for adults, children, and infants, ' +
+      'with a hands-on skills session. The eCard is valid 2 years. An ' +
+      'online-only course with no skills demonstration does not earn the ' +
+      'eCard \u2014 this app cannot verify BLS skills competency.',
+    kind: 'attestation',
+    steps: [
+      'Complete an in-person AHA BLS Provider course, or HeartCode BLS online plus an in-person skills session, with an AHA instructor.',
+      'Demonstrate the skills hands-on in the session \u2014 compressions, ventilations, AED use, and choking relief.',
+      'Your AHA BLS Provider eCard is issued after the course and is valid 2 years.',
+      'Record the date and training centre below \u2014 the app takes your word for it; it cannot verify the course.',
+    ],
+    mapped:
+      'Prepared by med105 (first aid, CPR, and vital signs) and the ' +
+      'capstone\u2019s BLS review modules.',
+    readyRule:
+      'There is no exam score for BLS \u2014 the real credential comes only ' +
+      'from completing an in-person AHA BLS Provider course with a hands-on ' +
+      'skills session. This card shows READY only once you have reviewed ' +
+      'the study guide below, and that means only that you reviewed the ' +
+      'guide \u2014 no exam score exists.',
+    guideId: 'bls-provider',
+    guideLabel: 'BLS Provider study guide',
+    where: BLS_WHERE,
+  },
+  {
+    id: 'medical-terminology',
+    capstone: 'med201',
+    name: 'Medical Terminology & Clinical Knowledge',
+    blurb:
+      'A knowledge check on the language of medicine: word parts by body ' +
+      'system, prefixes, suffixes, roots, abbreviations, and plain accurate ' +
+      'charting and handover language. There is no national certification ' +
+      'exam for medical terminology \u2014 this is the app\u2019s own ' +
+      'benchmark, not an external credential.',
+    kind: 'single',
+    examKey: 'final',
+    examLabel: 'Medical Terminology & Clinical Knowledge practice exam',
+    standard: 70,
+    benchmark: true,
+    mapped:
+      'Prepared by med101 (first medical word parts) and med104 (full ' +
+      'body-system terminology and clinical documentation). Practice exam: ' +
+      'the Medical Terminology & Clinical Knowledge exam in this course.',
+    readyRule:
+      'READY when your best practice score reaches 70% \u2014 a practice ' +
+      'benchmark the app sets for itself. No outside body issues a ' +
+      'credential for medical terminology.',
+    guideId: 'medical-terminology',
+    guideLabel: 'Medical Terminology study guide',
+    where: 'There is no national exam for medical terminology \u2014 this is ' +
+      'the app\u2019s own knowledge check, completed inside this course. ' +
+      'No outside body issues a credential for it.',
+  },
 ];
 
 const ALL_MAPPED_COURSES = Array.from(
@@ -1453,7 +1596,14 @@ function renderCertPanel(ctx, capstone) {
             ? 'Michigan journeyman and master electrician exams are scheduled through PSI and also need supervised apprenticeship hours (8,000 for journeyman); Detroit issues its own licenses. NCCER tests are taken at accredited sponsors with hands-on performance profiles. The NABCEP PV Associate exam passes at a scaled score of 65, not a percentage \u2014 the 70% here is a practice benchmark. The OSHA DOL card comes only from an authorized trainer after the required hours \u2014 OSHA requires no test for the card.'
             : slug === 'eng495'
             ? 'There is no license for English — the comprehensive exams are the app\u2019s own benchmarks, the portfolio and paper are the app\u2019s own capstone work, and CLEP credit, if pursued, is granted by your target college, not by this app.'
-            : 'State and local licensing is separate from all of these and varies by state.';
+: slug === 'med201'
+            ? 'The NREMT EMT exam is computer-adaptive with no percentage pass mark ' +
+              '— it passes at a scaled score of 950 on a 100–1500 scale — and real EMT ' +
+              'certification also needs a state-approved course with skills verification ' +
+              'plus a state license. The AHA BLS Provider eCard needs an in-person ' +
+              'hands-on skills session. This program teaches knowledge only and ' +
+              'certifies no one.'
+                        : 'State and local licensing is separate from all of these and varies by state.';
   return (
     '<section class="cert-tracker">\n' +
     '  <h2>Certification tracker</h2>\n' +
