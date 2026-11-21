@@ -23,8 +23,9 @@ function aboutPage(user, enrolled) {
       'solutions, auto-graded quizzes with instant explanations, spreadsheet-style labs, ' +
       'timed exams, and a live gradebook \u2014 everything a real semester delivers, ' +
       'on your schedule.</p>\n' +
-      '  <p>There are six programs: accounting and business, HVAC/R, plumbing and ' +
-      'pipefitting, economics, automotive service technology, and American Sign Language. ' +
+      '  <p>There are twelve programs: accounting and business, HVAC/R, plumbing and ' +
+      'pipefitting, economics, automotive service technology, American Sign Language, ' +
+      'general construction, electrical, English, general medical, computer, and engineering. ' +
       'Each program is a sequence of courses taken in order, step by step, ending in a ' +
       'capstone that readies you for the real certification exams or a finished project.</p>\n' +
       '  <h2>Why I built it</h2>\n' +
